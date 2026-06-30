@@ -2911,6 +2911,402 @@
         "e00130"
       ],
       "settings": {
+        "_background": {
+          "color": {
+            "hex": "#efe9db"
+          }
+        },
+        "_padding": {
+          "top": "56px",
+          "right": "24px",
+          "bottom": "56px",
+          "left": "24px"
+        },
+        "_padding:mobile_portrait": {
+          "top": "44px",
+          "right": "20px",
+          "bottom": "44px",
+          "left": "20px"
+        }
+      },
+      "label": "Trust Band"
+    },
+    {
+      "id": "e00130",
+      "name": "container",
+      "parent": "e00129",
+      "children": [
+        "e00131"
+      ],
+      "settings": {
+        "_widthMax": "1180px"
+      },
+      "label": "Trust Inner"
+    },
+    {
+      "id": "e00131",
+      "name": "block",
+      "parent": "e00130",
+      "children": [
+        "e00132",
+        "e00136",
+        "e00140",
+        "e00144"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "gggrd3"
+        ],
+        "_gridTemplateColumns": "repeat(4, minmax(0, 1fr))",
+        "_gridTemplateColumns:tablet_portrait": "repeat(2, minmax(0, 1fr))",
+        "_gridTemplateColumns:mobile_portrait": "repeat(2, minmax(0, 1fr))"
+      },
+      "label": "Trust Grid"
+    },
+    {
+      "id": "e00132",
+      "name": "block",
+      "parent": "e00131",
+      "children": [
+        "e00133",
+        "e00134",
+        "e00135"
+      ],
+      "settings": {
+        "_display": "flex",
+        "_direction": "column",
+        "_alignItems": "center"
+      },
+      "label": "Trust: Worldwide shipping"
+    },
+    {
+      "id": "e00133",
+      "name": "icon",
+      "parent": "e00132",
+      "children": [],
+      "settings": {
+        "icon": {
+          "library": "themify",
+          "icon": "ti-truck"
+        },
+        "_typography": {
+          "font-size": "1.6rem",
+          "color": {
+            "hex": "#b8924f"
+          }
+        },
+        "_margin": {
+          "bottom": "12px"
+        }
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "e00134",
+      "name": "heading",
+      "parent": "e00132",
+      "children": [],
+      "settings": {
+        "text": "Worldwide shipping",
+        "tag": "h3",
+        "_typography": {
+          "font-family": "Inter",
+          "font-size": "1rem",
+          "font-weight": "700",
+          "color": {
+            "hex": "#1c1b18"
+          },
+          "text-align": "center"
+        },
+        "_margin": {
+          "bottom": "6px"
+        }
+      },
+      "label": "h3: Worldwide shipping"
+    },
+    {
+      "id": "e00135",
+      "name": "text-basic",
+      "parent": "e00132",
+      "children": [],
+      "settings": {
+        "text": "BRT in Italy, FedEx worldwide — shipped within 5–6 business days.",
+        "tag": "p",
+        "_typography": {
+          "font-family": "Inter",
+          "font-size": "0.88rem",
+          "line-height": "1.6",
+          "color": {
+            "hex": "#5d5a52"
+          },
+          "text-align": "center"
+        },
+        "_margin": {
+          "bottom": "0px"
+        }
+      },
+      "label": "Paragraph"
+    },
+    {
+      "id": "e00136",
+      "name": "block",
+      "parent": "e00131",
+      "children": [
+        "e00137",
+        "e00138",
+        "e00139"
+      ],
+      "settings": {
+        "_display": "flex",
+        "_direction": "column",
+        "_alignItems": "center"
+      },
+      "label": "Trust: 2-year warranty"
+    },
+    {
+      "id": "e00137",
+      "name": "icon",
+      "parent": "e00136",
+      "children": [],
+      "settings": {
+        "icon": {
+          "library": "themify",
+          "icon": "ti-shield"
+        },
+        "_typography": {
+          "font-size": "1.6rem",
+          "color": {
+            "hex": "#b8924f"
+          }
+        },
+        "_margin": {
+          "bottom": "12px"
+        }
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "e00138",
+      "name": "heading",
+      "parent": "e00136",
+      "children": [],
+      "settings": {
+        "text": "2-year warranty",
+        "tag": "h3",
+        "_typography": {
+          "font-family": "Inter",
+          "font-size": "1rem",
+          "font-weight": "700",
+          "color": {
+            "hex": "#1c1b18"
+          },
+          "text-align": "center"
+        },
+        "_margin": {
+          "bottom": "6px"
+        }
+      },
+      "label": "h3: 2-year warranty"
+    },
+    {
+      "id": "e00139",
+      "name": "text-basic",
+      "parent": "e00136",
+      "children": [],
+      "settings": {
+        "text": "Covered against conformity defects and failures.",
+        "tag": "p",
+        "_typography": {
+          "font-family": "Inter",
+          "font-size": "0.88rem",
+          "line-height": "1.6",
+          "color": {
+            "hex": "#5d5a52"
+          },
+          "text-align": "center"
+        },
+        "_margin": {
+          "bottom": "0px"
+        }
+      },
+      "label": "Paragraph"
+    },
+    {
+      "id": "e00140",
+      "name": "block",
+      "parent": "e00131",
+      "children": [
+        "e00141",
+        "e00142",
+        "e00143"
+      ],
+      "settings": {
+        "_display": "flex",
+        "_direction": "column",
+        "_alignItems": "center"
+      },
+      "label": "Trust: 14-day returns"
+    },
+    {
+      "id": "e00141",
+      "name": "icon",
+      "parent": "e00140",
+      "children": [],
+      "settings": {
+        "icon": {
+          "library": "themify",
+          "icon": "ti-reload"
+        },
+        "_typography": {
+          "font-size": "1.6rem",
+          "color": {
+            "hex": "#b8924f"
+          }
+        },
+        "_margin": {
+          "bottom": "12px"
+        }
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "e00142",
+      "name": "heading",
+      "parent": "e00140",
+      "children": [],
+      "settings": {
+        "text": "14-day returns",
+        "tag": "h3",
+        "_typography": {
+          "font-family": "Inter",
+          "font-size": "1rem",
+          "font-weight": "700",
+          "color": {
+            "hex": "#1c1b18"
+          },
+          "text-align": "center"
+        },
+        "_margin": {
+          "bottom": "6px"
+        }
+      },
+      "label": "h3: 14-day returns"
+    },
+    {
+      "id": "e00143",
+      "name": "text-basic",
+      "parent": "e00140",
+      "children": [],
+      "settings": {
+        "text": "Right of withdrawal within 14 days; refund within 30 days.",
+        "tag": "p",
+        "_typography": {
+          "font-family": "Inter",
+          "font-size": "0.88rem",
+          "line-height": "1.6",
+          "color": {
+            "hex": "#5d5a52"
+          },
+          "text-align": "center"
+        },
+        "_margin": {
+          "bottom": "0px"
+        }
+      },
+      "label": "Paragraph"
+    },
+    {
+      "id": "e00144",
+      "name": "block",
+      "parent": "e00131",
+      "children": [
+        "e00145",
+        "e00146",
+        "e00147"
+      ],
+      "settings": {
+        "_display": "flex",
+        "_direction": "column",
+        "_alignItems": "center"
+      },
+      "label": "Trust: Secure payments"
+    },
+    {
+      "id": "e00145",
+      "name": "icon",
+      "parent": "e00144",
+      "children": [],
+      "settings": {
+        "icon": {
+          "library": "themify",
+          "icon": "ti-credit-card"
+        },
+        "_typography": {
+          "font-size": "1.6rem",
+          "color": {
+            "hex": "#b8924f"
+          }
+        },
+        "_margin": {
+          "bottom": "12px"
+        }
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "e00146",
+      "name": "heading",
+      "parent": "e00144",
+      "children": [],
+      "settings": {
+        "text": "Secure payments",
+        "tag": "h3",
+        "_typography": {
+          "font-family": "Inter",
+          "font-size": "1rem",
+          "font-weight": "700",
+          "color": {
+            "hex": "#1c1b18"
+          },
+          "text-align": "center"
+        },
+        "_margin": {
+          "bottom": "6px"
+        }
+      },
+      "label": "h3: Secure payments"
+    },
+    {
+      "id": "e00147",
+      "name": "text-basic",
+      "parent": "e00144",
+      "children": [],
+      "settings": {
+        "text": "Visa, Mastercard, Amex, PayPal &amp; Klarna. Prices include VAT.",
+        "tag": "p",
+        "_typography": {
+          "font-family": "Inter",
+          "font-size": "0.88rem",
+          "line-height": "1.6",
+          "color": {
+            "hex": "#5d5a52"
+          },
+          "text-align": "center"
+        },
+        "_margin": {
+          "bottom": "0px"
+        }
+      },
+      "label": "Paragraph"
+    },
+    {
+      "id": "e00148",
+      "name": "section",
+      "parent": 0,
+      "children": [
+        "e00149"
+      ],
+      "settings": {
         "_cssId": "fitters",
         "_background": {
           "color": {
@@ -2933,11 +3329,11 @@
       "label": "Fitter Kit"
     },
     {
-      "id": "e00130",
+      "id": "e00149",
       "name": "container",
-      "parent": "e00129",
+      "parent": "e00148",
       "children": [
-        "e00131"
+        "e00150"
       ],
       "settings": {
         "_widthMax": "1180px"
@@ -2945,12 +3341,12 @@
       "label": "Fitter Inner"
     },
     {
-      "id": "e00131",
+      "id": "e00150",
       "name": "block",
-      "parent": "e00130",
+      "parent": "e00149",
       "children": [
-        "e00132",
-        "e00138"
+        "e00151",
+        "e00157"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -2961,23 +3357,23 @@
       "label": "Fitter Grid"
     },
     {
-      "id": "e00132",
+      "id": "e00151",
       "name": "block",
-      "parent": "e00131",
+      "parent": "e00150",
       "children": [
-        "e00133",
-        "e00134",
-        "e00135",
-        "e00136",
-        "e00137"
+        "e00152",
+        "e00153",
+        "e00154",
+        "e00155",
+        "e00156"
       ],
       "settings": {},
       "label": "Fitter Text"
     },
     {
-      "id": "e00133",
+      "id": "e00152",
       "name": "heading",
-      "parent": "e00132",
+      "parent": "e00151",
       "children": [],
       "settings": {
         "text": "For fitters",
@@ -2989,9 +3385,9 @@
       "label": "div: For fitters"
     },
     {
-      "id": "e00134",
+      "id": "e00153",
       "name": "heading",
-      "parent": "e00132",
+      "parent": "e00151",
       "children": [],
       "settings": {
         "text": "The GG Putters Fitter Kit",
@@ -3008,9 +3404,9 @@
       "label": "h2: The GG Putters Fitter Ki"
     },
     {
-      "id": "e00135",
+      "id": "e00154",
       "name": "text-basic",
-      "parent": "e00132",
+      "parent": "e00151",
       "children": [],
       "settings": {
         "text": "The Fitter Kit is a modular fitting system that lets professionals test every putter configuration with a client in a single session.",
@@ -3027,9 +3423,9 @@
       "label": "Paragraph"
     },
     {
-      "id": "e00136",
+      "id": "e00155",
       "name": "text-basic",
-      "parent": "e00132",
+      "parent": "e00151",
       "children": [],
       "settings": {
         "text": "Handcrafted in Italy and fully modular — from head shape to insert, feel and balance — so each player leaves with a putter that is uniquely theirs.",
@@ -3046,9 +3442,9 @@
       "label": "Paragraph"
     },
     {
-      "id": "e00137",
+      "id": "e00156",
       "name": "button",
-      "parent": "e00132",
+      "parent": "e00151",
       "children": [],
       "settings": {
         "text": "Request the Fitter Kit",
@@ -3071,12 +3467,12 @@
       "label": "Button: Request the Fitter Kit"
     },
     {
-      "id": "e00138",
+      "id": "e00157",
       "name": "block",
-      "parent": "e00131",
+      "parent": "e00150",
       "children": [
-        "e00139",
-        "e00140"
+        "e00158",
+        "e00159"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -3109,9 +3505,9 @@
       "label": "Fitter Kit Card"
     },
     {
-      "id": "e00139",
+      "id": "e00158",
       "name": "heading",
-      "parent": "e00138",
+      "parent": "e00157",
       "children": [],
       "settings": {
         "text": "What's inside the Fitter Kit",
@@ -3131,9 +3527,9 @@
       "label": "h3: What's inside the Fitter"
     },
     {
-      "id": "e00140",
+      "id": "e00159",
       "name": "text",
-      "parent": "e00138",
+      "parent": "e00157",
       "children": [],
       "settings": {
         "text": "<ul><li>2 heads — one Antares and one Orion</li><li>3 lofts (1°, 2°, 3°)</li><li>Weights kit — 2 heavy and 2 light (bullet or flat)</li><li>Necks (lie and offset)</li><li>Screws and hex screwdriver</li></ul>",
@@ -3152,12 +3548,12 @@
       "label": "Kit list"
     },
     {
-      "id": "e00141",
+      "id": "e00160",
       "name": "section",
       "parent": 0,
       "children": [
-        "e00142",
-        "e00146"
+        "e00161",
+        "e00165"
       ],
       "settings": {
         "_cssId": "faq",
@@ -3182,13 +3578,13 @@
       "label": "FAQ"
     },
     {
-      "id": "e00142",
+      "id": "e00161",
       "name": "container",
-      "parent": "e00141",
+      "parent": "e00160",
       "children": [
-        "e00143",
-        "e00144",
-        "e00145"
+        "e00162",
+        "e00163",
+        "e00164"
       ],
       "settings": {
         "_widthMax": "1180px",
@@ -3199,9 +3595,9 @@
       "label": "Section Header"
     },
     {
-      "id": "e00143",
+      "id": "e00162",
       "name": "heading",
-      "parent": "e00142",
+      "parent": "e00161",
       "children": [],
       "settings": {
         "text": "FAQ",
@@ -3213,9 +3609,9 @@
       "label": "div: FAQ"
     },
     {
-      "id": "e00144",
+      "id": "e00163",
       "name": "heading",
-      "parent": "e00142",
+      "parent": "e00161",
       "children": [],
       "settings": {
         "text": "Frequently Asked Questions",
@@ -3233,9 +3629,9 @@
       "label": "h2: Frequently Asked Questio"
     },
     {
-      "id": "e00145",
+      "id": "e00164",
       "name": "text-basic",
-      "parent": "e00142",
+      "parent": "e00161",
       "children": [],
       "settings": {
         "text": "Quick answers about models, customization, pricing and where GG Putters are made.",
@@ -3255,15 +3651,17 @@
       "label": "Paragraph"
     },
     {
-      "id": "e00146",
+      "id": "e00165",
       "name": "block",
-      "parent": "e00141",
+      "parent": "e00160",
       "children": [
-        "e00147",
-        "e00150",
-        "e00153",
-        "e00156",
-        "e00159"
+        "e00166",
+        "e00169",
+        "e00172",
+        "e00175",
+        "e00178",
+        "e00181",
+        "e00184"
       ],
       "settings": {
         "_widthMax": "780px",
@@ -3275,12 +3673,12 @@
       "label": "FAQ List"
     },
     {
-      "id": "e00147",
+      "id": "e00166",
       "name": "block",
-      "parent": "e00146",
+      "parent": "e00165",
       "children": [
-        "e00148",
-        "e00149"
+        "e00167",
+        "e00168"
       ],
       "settings": {
         "_padding": {
@@ -3302,9 +3700,9 @@
       "label": "FAQ: What makes GG Putters di"
     },
     {
-      "id": "e00148",
+      "id": "e00167",
       "name": "heading",
-      "parent": "e00147",
+      "parent": "e00166",
       "children": [],
       "settings": {
         "text": "What makes GG Putters different from other putters?",
@@ -3324,9 +3722,9 @@
       "label": "h3: What makes GG Putters di"
     },
     {
-      "id": "e00149",
+      "id": "e00168",
       "name": "text-basic",
-      "parent": "e00147",
+      "parent": "e00166",
       "children": [],
       "settings": {
         "text": "GG Putters are milled in Brescia, Italy from a single block of aluminum and steel, with a 3-position adjustable weight system and interchangeable faces (1°–3°) and necks for full customization.",
@@ -3341,12 +3739,12 @@
       "label": "Paragraph"
     },
     {
-      "id": "e00150",
+      "id": "e00169",
       "name": "block",
-      "parent": "e00146",
+      "parent": "e00165",
       "children": [
-        "e00151",
-        "e00152"
+        "e00170",
+        "e00171"
       ],
       "settings": {
         "_padding": {
@@ -3368,9 +3766,9 @@
       "label": "FAQ: Should I choose the Anta"
     },
     {
-      "id": "e00151",
+      "id": "e00170",
       "name": "heading",
-      "parent": "e00150",
+      "parent": "e00169",
       "children": [],
       "settings": {
         "text": "Should I choose the Antares or the Orion?",
@@ -3390,9 +3788,9 @@
       "label": "h3: Should I choose the Anta"
     },
     {
-      "id": "e00152",
+      "id": "e00171",
       "name": "text-basic",
-      "parent": "e00150",
+      "parent": "e00169",
       "children": [],
       "settings": {
         "text": "Choose the Antares blade if you favour feel and an arc stroke; choose the Orion mallet for higher stability and forgiveness. Both are priced at €353.",
@@ -3407,12 +3805,12 @@
       "label": "Paragraph"
     },
     {
-      "id": "e00153",
+      "id": "e00172",
       "name": "block",
-      "parent": "e00146",
+      "parent": "e00165",
       "children": [
-        "e00154",
-        "e00155"
+        "e00173",
+        "e00174"
       ],
       "settings": {
         "_padding": {
@@ -3434,9 +3832,9 @@
       "label": "FAQ: Are GG Putters customiza"
     },
     {
-      "id": "e00154",
+      "id": "e00173",
       "name": "heading",
-      "parent": "e00153",
+      "parent": "e00172",
       "children": [],
       "settings": {
         "text": "Are GG Putters customizable?",
@@ -3456,9 +3854,9 @@
       "label": "h3: Are GG Putters customiza"
     },
     {
-      "id": "e00155",
+      "id": "e00174",
       "name": "text-basic",
-      "parent": "e00153",
+      "parent": "e00172",
       "children": [],
       "settings": {
         "text": "Yes. You can adjust the three weights, swap clubfaces from 1° to 3°, and change necks (lie and offset) to match your stroke.",
@@ -3473,12 +3871,12 @@
       "label": "Paragraph"
     },
     {
-      "id": "e00156",
+      "id": "e00175",
       "name": "block",
-      "parent": "e00146",
+      "parent": "e00165",
       "children": [
-        "e00157",
-        "e00158"
+        "e00176",
+        "e00177"
       ],
       "settings": {
         "_padding": {
@@ -3500,9 +3898,9 @@
       "label": "FAQ: How much does a GG Putte"
     },
     {
-      "id": "e00157",
+      "id": "e00176",
       "name": "heading",
-      "parent": "e00156",
+      "parent": "e00175",
       "children": [],
       "settings": {
         "text": "How much does a GG Putter cost?",
@@ -3522,9 +3920,9 @@
       "label": "h3: How much does a GG Putte"
     },
     {
-      "id": "e00158",
+      "id": "e00177",
       "name": "text-basic",
-      "parent": "e00156",
+      "parent": "e00175",
       "children": [],
       "settings": {
         "text": "A full GG Putter costs €353; the clubhead-only version is €285. Accessories range from €21 (extra weights) to €149 (spare parts kit).",
@@ -3539,12 +3937,12 @@
       "label": "Paragraph"
     },
     {
-      "id": "e00159",
+      "id": "e00178",
       "name": "block",
-      "parent": "e00146",
+      "parent": "e00165",
       "children": [
-        "e00160",
-        "e00161"
+        "e00179",
+        "e00180"
       ],
       "settings": {
         "_padding": {
@@ -3566,9 +3964,9 @@
       "label": "FAQ: Where are GG Putters mad"
     },
     {
-      "id": "e00160",
+      "id": "e00179",
       "name": "heading",
-      "parent": "e00159",
+      "parent": "e00178",
       "children": [],
       "settings": {
         "text": "Where are GG Putters made and what warranty applies?",
@@ -3588,9 +3986,9 @@
       "label": "h3: Where are GG Putters mad"
     },
     {
-      "id": "e00161",
+      "id": "e00180",
       "name": "text-basic",
-      "parent": "e00159",
+      "parent": "e00178",
       "children": [],
       "settings": {
         "text": "GG Putters are made in Palazzolo sull'Oglio (Brescia), Italy by GM PRODUCTION srl, milled without heating, and covered by a 2-year warranty; orders ship within 5–6 business days.",
@@ -3605,12 +4003,144 @@
       "label": "Paragraph"
     },
     {
-      "id": "e00162",
+      "id": "e00181",
+      "name": "block",
+      "parent": "e00165",
+      "children": [
+        "e00182",
+        "e00183"
+      ],
+      "settings": {
+        "_padding": {
+          "top": "24px",
+          "right": "0px",
+          "bottom": "24px",
+          "left": "0px"
+        },
+        "_border": {
+          "width": {
+            "bottom": "1px"
+          },
+          "style": "solid",
+          "color": {
+            "rgb": "rgba(17,17,15,0.10)"
+          }
+        }
+      },
+      "label": "FAQ: How can I pay and how is"
+    },
+    {
+      "id": "e00182",
+      "name": "heading",
+      "parent": "e00181",
+      "children": [],
+      "settings": {
+        "text": "How can I pay and how is my order shipped?",
+        "tag": "h3",
+        "_typography": {
+          "font-family": "Playfair Display",
+          "font-size": "1.25rem",
+          "font-weight": "600",
+          "color": {
+            "hex": "#1c1b18"
+          }
+        },
+        "_margin": {
+          "bottom": "10px"
+        }
+      },
+      "label": "h3: How can I pay and how is"
+    },
+    {
+      "id": "e00183",
+      "name": "text-basic",
+      "parent": "e00181",
+      "children": [],
+      "settings": {
+        "text": "You can pay by credit card (Visa, Mastercard, American Express), PayPal or Klarna; prices include VAT. Orders ship with BRT in Italy and FedEx worldwide, usually within 5–6 business days.",
+        "tag": "p",
+        "_cssGlobalClasses": [
+          "ggbody"
+        ],
+        "_margin": {
+          "bottom": "0px"
+        }
+      },
+      "label": "Paragraph"
+    },
+    {
+      "id": "e00184",
+      "name": "block",
+      "parent": "e00165",
+      "children": [
+        "e00185",
+        "e00186"
+      ],
+      "settings": {
+        "_padding": {
+          "top": "24px",
+          "right": "0px",
+          "bottom": "24px",
+          "left": "0px"
+        },
+        "_border": {
+          "width": {
+            "bottom": "1px"
+          },
+          "style": "solid",
+          "color": {
+            "rgb": "rgba(17,17,15,0.10)"
+          }
+        }
+      },
+      "label": "FAQ: Can I return a GG Putter"
+    },
+    {
+      "id": "e00185",
+      "name": "heading",
+      "parent": "e00184",
+      "children": [],
+      "settings": {
+        "text": "Can I return a GG Putter?",
+        "tag": "h3",
+        "_typography": {
+          "font-family": "Playfair Display",
+          "font-size": "1.25rem",
+          "font-weight": "600",
+          "color": {
+            "hex": "#1c1b18"
+          }
+        },
+        "_margin": {
+          "bottom": "10px"
+        }
+      },
+      "label": "h3: Can I return a GG Putter"
+    },
+    {
+      "id": "e00186",
+      "name": "text-basic",
+      "parent": "e00184",
+      "children": [],
+      "settings": {
+        "text": "Yes. You can exercise the right of withdrawal within 14 days of receipt; once the returned product is verified, the refund is issued within 30 days to your original payment method.",
+        "tag": "p",
+        "_cssGlobalClasses": [
+          "ggbody"
+        ],
+        "_margin": {
+          "bottom": "0px"
+        }
+      },
+      "label": "Paragraph"
+    },
+    {
+      "id": "e00187",
       "name": "section",
       "parent": 0,
       "children": [
-        "e00163",
-        "e00167"
+        "e00188",
+        "e00192"
       ],
       "settings": {
         "_cssId": "contact",
@@ -3635,13 +4165,13 @@
       "label": "Contact"
     },
     {
-      "id": "e00163",
+      "id": "e00188",
       "name": "container",
-      "parent": "e00162",
+      "parent": "e00187",
       "children": [
-        "e00164",
-        "e00165",
-        "e00166"
+        "e00189",
+        "e00190",
+        "e00191"
       ],
       "settings": {
         "_widthMax": "1180px",
@@ -3652,9 +4182,9 @@
       "label": "Section Header"
     },
     {
-      "id": "e00164",
+      "id": "e00189",
       "name": "heading",
-      "parent": "e00163",
+      "parent": "e00188",
       "children": [],
       "settings": {
         "text": "Get in touch",
@@ -3666,9 +4196,9 @@
       "label": "div: Get in touch"
     },
     {
-      "id": "e00165",
+      "id": "e00190",
       "name": "heading",
-      "parent": "e00163",
+      "parent": "e00188",
       "children": [],
       "settings": {
         "text": "Contact Us",
@@ -3686,9 +4216,9 @@
       "label": "h2: Contact Us"
     },
     {
-      "id": "e00166",
+      "id": "e00191",
       "name": "text-basic",
-      "parent": "e00163",
+      "parent": "e00188",
       "children": [],
       "settings": {
         "text": "Questions about a build, an order or becoming a partner? Our team in Brescia is here to help.",
@@ -3708,13 +4238,13 @@
       "label": "Paragraph"
     },
     {
-      "id": "e00167",
+      "id": "e00192",
       "name": "block",
-      "parent": "e00162",
+      "parent": "e00187",
       "children": [
-        "e00168",
-        "e00172",
-        "e00175"
+        "e00193",
+        "e00197",
+        "e00200"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -3729,13 +4259,13 @@
       "label": "Contact Grid"
     },
     {
-      "id": "e00168",
+      "id": "e00193",
       "name": "block",
-      "parent": "e00167",
+      "parent": "e00192",
       "children": [
-        "e00169",
-        "e00170",
-        "e00171"
+        "e00194",
+        "e00195",
+        "e00196"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -3746,9 +4276,9 @@
       "label": "Contact: Info &amp; Sales"
     },
     {
-      "id": "e00169",
+      "id": "e00194",
       "name": "heading",
-      "parent": "e00168",
+      "parent": "e00193",
       "children": [],
       "settings": {
         "text": "Info &amp; Sales",
@@ -3770,9 +4300,9 @@
       "label": "h3: Info &amp; Sales"
     },
     {
-      "id": "e00170",
+      "id": "e00195",
       "name": "text-link",
-      "parent": "e00168",
+      "parent": "e00193",
       "children": [],
       "settings": {
         "text": "info@ggputters.com",
@@ -3797,9 +4327,9 @@
       "label": "Email"
     },
     {
-      "id": "e00171",
+      "id": "e00196",
       "name": "text-link",
-      "parent": "e00168",
+      "parent": "e00193",
       "children": [],
       "settings": {
         "text": "+39 331 1099739",
@@ -3821,12 +4351,12 @@
       "label": "Phone"
     },
     {
-      "id": "e00172",
+      "id": "e00197",
       "name": "block",
-      "parent": "e00167",
+      "parent": "e00192",
       "children": [
-        "e00173",
-        "e00174"
+        "e00198",
+        "e00199"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -3837,9 +4367,9 @@
       "label": "Contact: Office &amp; Dealers"
     },
     {
-      "id": "e00173",
+      "id": "e00198",
       "name": "heading",
-      "parent": "e00172",
+      "parent": "e00197",
       "children": [],
       "settings": {
         "text": "Office &amp; Dealers",
@@ -3861,9 +4391,9 @@
       "label": "h3: Office &amp; Dealers"
     },
     {
-      "id": "e00174",
+      "id": "e00199",
       "name": "text-link",
-      "parent": "e00172",
+      "parent": "e00197",
       "children": [],
       "settings": {
         "text": "office@ggputters.com",
@@ -3888,12 +4418,12 @@
       "label": "Email"
     },
     {
-      "id": "e00175",
+      "id": "e00200",
       "name": "block",
-      "parent": "e00167",
+      "parent": "e00192",
       "children": [
-        "e00176",
-        "e00177"
+        "e00201",
+        "e00202"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -3904,9 +4434,9 @@
       "label": "Contact: Headquarters"
     },
     {
-      "id": "e00176",
+      "id": "e00201",
       "name": "heading",
-      "parent": "e00175",
+      "parent": "e00200",
       "children": [],
       "settings": {
         "text": "Headquarters",
@@ -3928,9 +4458,9 @@
       "label": "h3: Headquarters"
     },
     {
-      "id": "e00177",
+      "id": "e00202",
       "name": "text-link",
-      "parent": "e00175",
+      "parent": "e00200",
       "children": [],
       "settings": {
         "text": "Palazzolo sull'Oglio (BS), Italy",
@@ -3952,11 +4482,11 @@
       "label": "Address"
     },
     {
-      "id": "e00178",
+      "id": "e00203",
       "name": "section",
       "parent": 0,
       "children": [
-        "e00179"
+        "e00204"
       ],
       "settings": {
         "_cssId": "newsletter",
@@ -3981,14 +4511,14 @@
       "label": "Newsletter"
     },
     {
-      "id": "e00179",
+      "id": "e00204",
       "name": "container",
-      "parent": "e00178",
+      "parent": "e00203",
       "children": [
-        "e00180",
-        "e00181",
-        "e00182",
-        "e00183"
+        "e00205",
+        "e00206",
+        "e00207",
+        "e00208"
       ],
       "settings": {
         "_widthMax": "640px",
@@ -3999,9 +4529,9 @@
       "label": "Newsletter Inner"
     },
     {
-      "id": "e00180",
+      "id": "e00205",
       "name": "heading",
-      "parent": "e00179",
+      "parent": "e00204",
       "children": [],
       "settings": {
         "text": "Stay in the loop",
@@ -4013,9 +4543,9 @@
       "label": "div: Stay in the loop"
     },
     {
-      "id": "e00181",
+      "id": "e00206",
       "name": "heading",
-      "parent": "e00179",
+      "parent": "e00204",
       "children": [],
       "settings": {
         "text": "Join the Newsletter",
@@ -4033,9 +4563,9 @@
       "label": "h2: Join the Newsletter"
     },
     {
-      "id": "e00182",
+      "id": "e00207",
       "name": "text-basic",
-      "parent": "e00179",
+      "parent": "e00204",
       "children": [],
       "settings": {
         "text": "Be the first to hear about new releases, limited editions and craftsmanship stories.",
@@ -4058,9 +4588,9 @@
       "label": "Paragraph"
     },
     {
-      "id": "e00183",
+      "id": "e00208",
       "name": "form",
-      "parent": "e00179",
+      "parent": "e00204",
       "children": [],
       "settings": {
         "fields": [
@@ -4091,11 +4621,11 @@
       "label": "Newsletter Form"
     },
     {
-      "id": "e00184",
+      "id": "e00209",
       "name": "section",
       "parent": 0,
       "children": [
-        "e00185"
+        "e00210"
       ],
       "settings": {
         "_background": {
@@ -4122,14 +4652,14 @@
       "label": "Footer"
     },
     {
-      "id": "e00185",
+      "id": "e00210",
       "name": "container",
-      "parent": "e00184",
+      "parent": "e00209",
       "children": [
-        "e00186",
-        "e00187",
-        "e00188",
-        "e00189"
+        "e00211",
+        "e00212",
+        "e00213",
+        "e00214"
       ],
       "settings": {
         "_widthMax": "1180px",
@@ -4140,9 +4670,9 @@
       "label": "Footer Inner"
     },
     {
-      "id": "e00186",
+      "id": "e00211",
       "name": "heading",
-      "parent": "e00185",
+      "parent": "e00210",
       "children": [],
       "settings": {
         "text": "GG Putters",
@@ -4163,9 +4693,9 @@
       "label": "div: GG Putters"
     },
     {
-      "id": "e00187",
+      "id": "e00212",
       "name": "text-basic",
-      "parent": "e00185",
+      "parent": "e00210",
       "children": [],
       "settings": {
         "text": "Italian craft, Brescia engineering. Putters with a metalworking soul.",
@@ -4185,9 +4715,9 @@
       "label": "Paragraph"
     },
     {
-      "id": "e00188",
+      "id": "e00213",
       "name": "text-basic",
-      "parent": "e00185",
+      "parent": "e00210",
       "children": [],
       "settings": {
         "text": "GG PUTTERS is a brand of GM PRODUCTION srl · VAT IT03351530989 · Palazzolo sull'Oglio (BS), Italy",
@@ -4207,9 +4737,9 @@
       "label": "Paragraph"
     },
     {
-      "id": "e00189",
+      "id": "e00214",
       "name": "text-basic",
-      "parent": "e00185",
+      "parent": "e00210",
       "children": [],
       "settings": {
         "text": "© 2026 GG Putters. All rights reserved.",
@@ -4233,7 +4763,7 @@
     "pageTitle": "Custom Milled Putters Made in Italy | Antares &amp; Orion — GG Putters",
     "metaDescription": "GG Putters: custom milled golf putters made in Brescia, Italy. Antares blade and Orion mallet from €353, 3-position adjustable weights and interchangeable faces.",
     "customCss": "html{scroll-behavior:smooth;}::selection{background:#b8924f;color:#11110f;}body{font-family:'Inter',sans-serif;}",
-    "customScriptsBodyFooter": "<script type=\"application/ld+json\">{\"@context\": \"https://schema.org\", \"@graph\": [{\"@type\": \"Organization\", \"@id\": \"https://shop.ggputters.com/#organization\", \"name\": \"GG Putters\", \"legalName\": \"GM PRODUCTION srl\", \"url\": \"https://shop.ggputters.com/\", \"description\": \"Handcrafted, CNC-milled custom golf putters made in Brescia, Italy.\", \"email\": \"info@ggputters.com\", \"telephone\": \"+39 331 1099739\", \"vatID\": \"IT03351530989\", \"address\": {\"@type\": \"PostalAddress\", \"streetAddress\": \"Via Taranto, 7\", \"addressLocality\": \"Palazzolo sull'Oglio\", \"addressRegion\": \"BS\", \"postalCode\": \"25036\", \"addressCountry\": \"IT\"}, \"contactPoint\": [{\"@type\": \"ContactPoint\", \"contactType\": \"sales\", \"email\": \"info@ggputters.com\", \"telephone\": \"+39 331 1099739\"}, {\"@type\": \"ContactPoint\", \"contactType\": \"customer service\", \"email\": \"office@ggputters.com\"}]}, {\"@type\": \"WebSite\", \"@id\": \"https://shop.ggputters.com/#website\", \"url\": \"https://shop.ggputters.com/\", \"name\": \"GG Putters\", \"publisher\": {\"@id\": \"https://shop.ggputters.com/#organization\"}}, {\"@type\": \"Product\", \"name\": \"GG Antares\", \"brand\": {\"@type\": \"Brand\", \"name\": \"GG Putters\"}, \"category\": \"Golf Putter\", \"material\": \"Aluminum, Steel\", \"description\": \"Milled blade putter for feel and arc strokes, with a 3-position adjustable weight system and interchangeable faces.\", \"url\": \"https://shop.ggputters.com/putters/antares/\", \"offers\": {\"@type\": \"Offer\", \"price\": \"353.00\", \"priceCurrency\": \"EUR\", \"availability\": \"https://schema.org/InStock\", \"url\": \"https://shop.ggputters.com/putters/antares/\"}}, {\"@type\": \"Product\", \"name\": \"GG Orion\", \"brand\": {\"@type\": \"Brand\", \"name\": \"GG Putters\"}, \"category\": \"Golf Putter\", \"material\": \"Aluminum, Steel\", \"description\": \"Milled mallet putter engineered for stability and higher forgiveness (MOI), with a 3-position adjustable weight system.\", \"url\": \"https://shop.ggputters.com/putters/orion/\", \"offers\": {\"@type\": \"Offer\", \"price\": \"353.00\", \"priceCurrency\": \"EUR\", \"availability\": \"https://schema.org/InStock\", \"url\": \"https://shop.ggputters.com/putters/orion/\"}}, {\"@type\": \"Product\", \"name\": \"GG Clubfaces\", \"brand\": {\"@type\": \"Brand\", \"name\": \"GG Putters\"}, \"category\": \"Golf Putter\", \"material\": \"Aluminum, Steel\", \"description\": \"Interchangeable face inserts (1°–3°) to tune loft and feel.\", \"url\": \"https://shop.ggputters.com/putters/clubfaces/\", \"offers\": {\"@type\": \"Offer\", \"price\": \"52.00\", \"priceCurrency\": \"EUR\", \"availability\": \"https://schema.org/InStock\", \"url\": \"https://shop.ggputters.com/putters/clubfaces/\"}}, {\"@type\": \"Product\", \"name\": \"GG Extra Weights\", \"brand\": {\"@type\": \"Brand\", \"name\": \"GG Putters\"}, \"category\": \"Golf Putter\", \"material\": \"Aluminum, Steel\", \"description\": \"Heavy and light weights for the 3-position weighting system.\", \"url\": \"https://shop.ggputters.com/putters/extra-weights/\", \"offers\": {\"@type\": \"Offer\", \"price\": \"21.00\", \"priceCurrency\": \"EUR\", \"availability\": \"https://schema.org/InStock\", \"url\": \"https://shop.ggputters.com/putters/extra-weights/\"}}, {\"@type\": \"FAQPage\", \"@id\": \"https://shop.ggputters.com/#faq\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"What makes GG Putters different from other putters?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"GG Putters are milled in Brescia, Italy from a single block of aluminum and steel, with a 3-position adjustable weight system and interchangeable faces (1°–3°) and necks for full customization.\"}}, {\"@type\": \"Question\", \"name\": \"Should I choose the Antares or the Orion?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Choose the Antares blade if you favour feel and an arc stroke; choose the Orion mallet for higher stability and forgiveness. Both are priced at €353.\"}}, {\"@type\": \"Question\", \"name\": \"Are GG Putters customizable?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Yes. You can adjust the three weights, swap clubfaces from 1° to 3°, and change necks (lie and offset) to match your stroke.\"}}, {\"@type\": \"Question\", \"name\": \"How much does a GG Putter cost?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"A full GG Putter costs €353; the clubhead-only version is €285. Accessories range from €21 (extra weights) to €149 (spare parts kit).\"}}, {\"@type\": \"Question\", \"name\": \"Where are GG Putters made and what warranty applies?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"GG Putters are made in Palazzolo sull'Oglio (Brescia), Italy by GM PRODUCTION srl, milled without heating, and covered by a 2-year warranty; orders ship within 5–6 business days.\"}}]}]}</script>"
+    "customScriptsBodyFooter": "<script type=\"application/ld+json\">{\"@context\": \"https://schema.org\", \"@graph\": [{\"@type\": \"Organization\", \"@id\": \"https://shop.ggputters.com/#organization\", \"name\": \"GG Putters\", \"legalName\": \"GM PRODUCTION srl\", \"url\": \"https://shop.ggputters.com/\", \"description\": \"Handcrafted, CNC-milled custom golf putters made in Brescia, Italy.\", \"email\": \"info@ggputters.com\", \"telephone\": \"+39 331 1099739\", \"vatID\": \"IT03351530989\", \"address\": {\"@type\": \"PostalAddress\", \"streetAddress\": \"Via Taranto, 7\", \"addressLocality\": \"Palazzolo sull'Oglio\", \"addressRegion\": \"BS\", \"postalCode\": \"25036\", \"addressCountry\": \"IT\"}, \"contactPoint\": [{\"@type\": \"ContactPoint\", \"contactType\": \"sales\", \"email\": \"info@ggputters.com\", \"telephone\": \"+39 331 1099739\"}, {\"@type\": \"ContactPoint\", \"contactType\": \"customer service\", \"email\": \"office@ggputters.com\"}]}, {\"@type\": \"WebSite\", \"@id\": \"https://shop.ggputters.com/#website\", \"url\": \"https://shop.ggputters.com/\", \"name\": \"GG Putters\", \"publisher\": {\"@id\": \"https://shop.ggputters.com/#organization\"}}, {\"@type\": \"Product\", \"name\": \"GG Antares\", \"brand\": {\"@type\": \"Brand\", \"name\": \"GG Putters\"}, \"category\": \"Golf Putter\", \"material\": \"Aluminum, Steel\", \"description\": \"Milled blade putter for feel and arc strokes, with a 3-position adjustable weight system and interchangeable faces.\", \"url\": \"https://shop.ggputters.com/putters/antares/\", \"offers\": {\"@type\": \"Offer\", \"price\": \"353.00\", \"priceCurrency\": \"EUR\", \"availability\": \"https://schema.org/InStock\", \"url\": \"https://shop.ggputters.com/putters/antares/\", \"priceValidUntil\": \"2026-12-31\", \"shippingDetails\": {\"@type\": \"OfferShippingDetails\", \"shippingDestination\": {\"@type\": \"DefinedRegion\", \"addressCountry\": \"IT\"}, \"deliveryTime\": {\"@type\": \"ShippingDeliveryTime\", \"handlingTime\": {\"@type\": \"QuantitativeValue\", \"minValue\": 5, \"maxValue\": 6, \"unitCode\": \"DAY\"}}}, \"hasMerchantReturnPolicy\": {\"@type\": \"MerchantReturnPolicy\", \"applicableCountry\": \"IT\", \"returnPolicyCategory\": \"https://schema.org/MerchantReturnFiniteReturnWindow\", \"merchantReturnDays\": 14, \"returnMethod\": \"https://schema.org/ReturnByMail\", \"refundType\": \"https://schema.org/FullRefund\"}}}, {\"@type\": \"Product\", \"name\": \"GG Orion\", \"brand\": {\"@type\": \"Brand\", \"name\": \"GG Putters\"}, \"category\": \"Golf Putter\", \"material\": \"Aluminum, Steel\", \"description\": \"Milled mallet putter engineered for stability and higher forgiveness (MOI), with a 3-position adjustable weight system.\", \"url\": \"https://shop.ggputters.com/putters/orion/\", \"offers\": {\"@type\": \"Offer\", \"price\": \"353.00\", \"priceCurrency\": \"EUR\", \"availability\": \"https://schema.org/InStock\", \"url\": \"https://shop.ggputters.com/putters/orion/\", \"priceValidUntil\": \"2026-12-31\", \"shippingDetails\": {\"@type\": \"OfferShippingDetails\", \"shippingDestination\": {\"@type\": \"DefinedRegion\", \"addressCountry\": \"IT\"}, \"deliveryTime\": {\"@type\": \"ShippingDeliveryTime\", \"handlingTime\": {\"@type\": \"QuantitativeValue\", \"minValue\": 5, \"maxValue\": 6, \"unitCode\": \"DAY\"}}}, \"hasMerchantReturnPolicy\": {\"@type\": \"MerchantReturnPolicy\", \"applicableCountry\": \"IT\", \"returnPolicyCategory\": \"https://schema.org/MerchantReturnFiniteReturnWindow\", \"merchantReturnDays\": 14, \"returnMethod\": \"https://schema.org/ReturnByMail\", \"refundType\": \"https://schema.org/FullRefund\"}}}, {\"@type\": \"Product\", \"name\": \"GG Clubfaces\", \"brand\": {\"@type\": \"Brand\", \"name\": \"GG Putters\"}, \"category\": \"Golf Putter\", \"material\": \"Aluminum, Steel\", \"description\": \"Interchangeable face inserts (1°–3°) to tune loft and feel.\", \"url\": \"https://shop.ggputters.com/putters/clubfaces/\", \"offers\": {\"@type\": \"Offer\", \"price\": \"52.00\", \"priceCurrency\": \"EUR\", \"availability\": \"https://schema.org/InStock\", \"url\": \"https://shop.ggputters.com/putters/clubfaces/\", \"priceValidUntil\": \"2026-12-31\"}}, {\"@type\": \"Product\", \"name\": \"GG Extra Weights\", \"brand\": {\"@type\": \"Brand\", \"name\": \"GG Putters\"}, \"category\": \"Golf Putter\", \"material\": \"Aluminum, Steel\", \"description\": \"Heavy and light weights for the 3-position weighting system.\", \"url\": \"https://shop.ggputters.com/putters/extra-weights/\", \"offers\": {\"@type\": \"Offer\", \"price\": \"21.00\", \"priceCurrency\": \"EUR\", \"availability\": \"https://schema.org/InStock\", \"url\": \"https://shop.ggputters.com/putters/extra-weights/\", \"priceValidUntil\": \"2026-12-31\"}}, {\"@type\": \"FAQPage\", \"@id\": \"https://shop.ggputters.com/#faq\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"What makes GG Putters different from other putters?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"GG Putters are milled in Brescia, Italy from a single block of aluminum and steel, with a 3-position adjustable weight system and interchangeable faces (1°–3°) and necks for full customization.\"}}, {\"@type\": \"Question\", \"name\": \"Should I choose the Antares or the Orion?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Choose the Antares blade if you favour feel and an arc stroke; choose the Orion mallet for higher stability and forgiveness. Both are priced at €353.\"}}, {\"@type\": \"Question\", \"name\": \"Are GG Putters customizable?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Yes. You can adjust the three weights, swap clubfaces from 1° to 3°, and change necks (lie and offset) to match your stroke.\"}}, {\"@type\": \"Question\", \"name\": \"How much does a GG Putter cost?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"A full GG Putter costs €353; the clubhead-only version is €285. Accessories range from €21 (extra weights) to €149 (spare parts kit).\"}}, {\"@type\": \"Question\", \"name\": \"Where are GG Putters made and what warranty applies?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"GG Putters are made in Palazzolo sull'Oglio (Brescia), Italy by GM PRODUCTION srl, milled without heating, and covered by a 2-year warranty; orders ship within 5–6 business days.\"}}, {\"@type\": \"Question\", \"name\": \"How can I pay and how is my order shipped?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"You can pay by credit card (Visa, Mastercard, American Express), PayPal or Klarna; prices include VAT. Orders ship with BRT in Italy and FedEx worldwide, usually within 5–6 business days.\"}}, {\"@type\": \"Question\", \"name\": \"Can I return a GG Putter?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Yes. You can exercise the right of withdrawal within 14 days of receipt; once the returned product is verified, the refund is issued within 30 days to your original payment method.\"}}]}]}</script>"
   },
   "templateSettings": {
     "templateConditions": [

@@ -466,6 +466,45 @@ accessories = section(css_id="accessories", settings=light_sec(CREAM), label="Ac
 ])
 
 # ============================================================================
+# 6b. TRUST BAND — shipping, warranty, returns, payments (transactional)
+# ============================================================================
+def trust_item(ti, title, text):
+    return block(settings={"_display": "flex", "_direction": "column", "_alignItems": "center"}, children=[
+        icon(ti, settings={"_typography": {"font-size": "1.6rem", "color": {"hex": GOLD}},
+                            "_margin": {"bottom": "12px"}}),
+        heading(title, "h3", settings={
+            "_typography": {"font-family": SANS, "font-size": "1rem", "font-weight": "700",
+                             "color": {"hex": INK_TXT}, "text-align": "center"},
+            "_margin": {"bottom": "6px"}}),
+        para(text, settings={
+            "_typography": {"font-family": SANS, "font-size": "0.88rem", "line-height": "1.6",
+                             "color": {"hex": MUTED}, "text-align": "center"},
+            "_margin": {"bottom": "0px"}}),
+    ], label=f"Trust: {title}")
+
+trust = section(settings={
+        "_background": {"color": {"hex": CREAM_AL}},
+        "_padding": {"top": "56px", "right": "24px", "bottom": "56px", "left": "24px"},
+        "_padding:mobile_portrait": {"top": "44px", "right": "20px", "bottom": "44px", "left": "20px"}},
+        label="Trust Band", children=[
+    container(children=[
+        block(classes=["gggrd3"], settings={
+            "_gridTemplateColumns": "repeat(4, minmax(0, 1fr))",
+            "_gridTemplateColumns:tablet_portrait": "repeat(2, minmax(0, 1fr))",
+            "_gridTemplateColumns:mobile_portrait": "repeat(2, minmax(0, 1fr))"}, children=[
+            trust_item("ti-truck", "Worldwide shipping",
+                       "BRT in Italy, FedEx worldwide — shipped within 5–6 business days."),
+            trust_item("ti-shield", "2-year warranty",
+                       "Covered against conformity defects and failures."),
+            trust_item("ti-reload", "14-day returns",
+                       "Right of withdrawal within 14 days; refund within 30 days."),
+            trust_item("ti-credit-card", "Secure payments",
+                       "Visa, Mastercard, Amex, PayPal &amp; Klarna. Prices include VAT."),
+        ], label="Trust Grid"),
+    ], label="Trust Inner"),
+])
+
+# ============================================================================
 # 7. FITTER KIT — B2B
 # ============================================================================
 fitter = section(css_id="fitters", settings=dark_sec(INK), label="Fitter Kit", children=[
@@ -513,6 +552,10 @@ faq_items = [
      "A full GG Putter costs €353; the clubhead-only version is €285. Accessories range from €21 (extra weights) to €149 (spare parts kit)."),
     ("Where are GG Putters made and what warranty applies?",
      "GG Putters are made in Palazzolo sull'Oglio (Brescia), Italy by GM PRODUCTION srl, milled without heating, and covered by a 2-year warranty; orders ship within 5–6 business days."),
+    ("How can I pay and how is my order shipped?",
+     "You can pay by credit card (Visa, Mastercard, American Express), PayPal or Klarna; prices include VAT. Orders ship with BRT in Italy and FedEx worldwide, usually within 5–6 business days."),
+    ("Can I return a GG Putter?",
+     "Yes. You can exercise the right of withdrawal within 14 days of receipt; once the returned product is verified, the refund is issued within 30 days to your original payment method."),
 ]
 
 def faq_block(q, a):
@@ -625,7 +668,7 @@ footer = section(settings={
 # ----------------------------------------------------------------------------
 # Flatten
 # ----------------------------------------------------------------------------
-roots = [hero, features, models, comparison, about, accessories, fitter, faq,
+roots = [hero, features, models, comparison, about, accessories, trust, fitter, faq,
          contact, newsletter, footer]
 for r in roots:
     flatten(r, 0)
@@ -634,13 +677,28 @@ for r in roots:
 # Page settings: SEO meta, custom CSS, JSON-LD (Organization, WebSite,
 # Products, FAQPage)
 # ----------------------------------------------------------------------------
-def product(name, desc, price, url):
+def product(name, desc, price, url, rich_offer=False):
+    offer = {"@type": "Offer", "price": price, "priceCurrency": "EUR",
+             "availability": "https://schema.org/InStock", "url": url,
+             "priceValidUntil": "2026-12-31"}
+    if rich_offer:
+        offer["shippingDetails"] = {
+            "@type": "OfferShippingDetails",
+            "shippingDestination": {"@type": "DefinedRegion", "addressCountry": "IT"},
+            "deliveryTime": {"@type": "ShippingDeliveryTime",
+                              "handlingTime": {"@type": "QuantitativeValue", "minValue": 5,
+                                                "maxValue": 6, "unitCode": "DAY"}}}
+        offer["hasMerchantReturnPolicy"] = {
+            "@type": "MerchantReturnPolicy",
+            "applicableCountry": "IT",
+            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+            "merchantReturnDays": 14,
+            "returnMethod": "https://schema.org/ReturnByMail",
+            "refundType": "https://schema.org/FullRefund"}
     return {"@type": "Product", "name": f"GG {name}",
             "brand": {"@type": "Brand", "name": "GG Putters"},
             "category": "Golf Putter", "material": "Aluminum, Steel",
-            "description": desc, "url": url,
-            "offers": {"@type": "Offer", "price": price, "priceCurrency": "EUR",
-                        "availability": "https://schema.org/InStock", "url": url}}
+            "description": desc, "url": url, "offers": offer}
 
 graph = [
     {"@type": "Organization", "@id": f"{SHOP}/#organization", "name": "GG Putters",
@@ -657,8 +715,8 @@ graph = [
         {"@type": "ContactPoint", "contactType": "customer service", "email": "office@ggputters.com"}]},
     {"@type": "WebSite", "@id": f"{SHOP}/#website", "url": f"{SHOP}/", "name": "GG Putters",
      "publisher": {"@id": f"{SHOP}/#organization"}},
-    product("Antares", "Milled blade putter for feel and arc strokes, with a 3-position adjustable weight system and interchangeable faces.", "353.00", f"{SHOP}/putters/antares/"),
-    product("Orion", "Milled mallet putter engineered for stability and higher forgiveness (MOI), with a 3-position adjustable weight system.", "353.00", f"{SHOP}/putters/orion/"),
+    product("Antares", "Milled blade putter for feel and arc strokes, with a 3-position adjustable weight system and interchangeable faces.", "353.00", f"{SHOP}/putters/antares/", rich_offer=True),
+    product("Orion", "Milled mallet putter engineered for stability and higher forgiveness (MOI), with a 3-position adjustable weight system.", "353.00", f"{SHOP}/putters/orion/", rich_offer=True),
     product("Clubfaces", "Interchangeable face inserts (1°–3°) to tune loft and feel.", "52.00", f"{SHOP}/putters/clubfaces/"),
     product("Extra Weights", "Heavy and light weights for the 3-position weighting system.", "21.00", f"{SHOP}/putters/extra-weights/"),
     {"@type": "FAQPage", "@id": f"{SHOP}/#faq",

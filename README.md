@@ -39,7 +39,10 @@ Tecniche GEO applicate:
 - **Dati concreti**: modelli, prezzi reali (€353 / €285 / €52 / €21 / €32 / €149 / €63),
   garanzia 2 anni, spedizione 5–6 giorni lavorativi, lofts 1°–3°.
 - **Tabella di confronto** Antares (blade) vs Orion (mallet).
-- **Blocco FAQ** (5 Q/A) + **`FAQPage` JSON-LD** per i featured snippet.
+- **Trust band** transazionale: spedizioni (BRT/FedEx, 5–6 gg), garanzia 2 anni,
+  reso 14 gg (rimborso 30 gg), pagamenti sicuri (Visa/Mastercard/Amex/PayPal/Klarna, IVA inclusa).
+- **Blocco FAQ** (7 Q/A) + **`FAQPage` JSON-LD** per i featured snippet.
+- **Offer** Antares/Orion arricchite con `shippingDetails` e `hasMerchantReturnPolicy`.
 - **Dati strutturati JSON-LD**: `Organization` (GM PRODUCTION srl, P.IVA, indirizzo),
   `WebSite`, 4× `Product` con `Offer` in EUR, `FAQPage` — iniettati via `customScriptsBodyFooter`.
 - `pageTitle` + `metaDescription` precompilati; `customCss` (smooth scroll, selection brand).
