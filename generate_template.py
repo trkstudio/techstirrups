@@ -1,41 +1,37 @@
 #!/usr/bin/env python3
 """Generate a Bricks Builder 2.3.6 template-export JSON for the GG Putters
-GEO/SEO-optimized landing page. Run: python3 generate_template.py
-Content is sourced from the official shop.ggputters.com extraction and follows
-the GEO "Regola d'Oro" (one-sentence definitions, concrete data, inverted
-pyramid, AI-preferred formats: lists, comparison table, FAQ + JSON-LD schema).
+landing page.
+
+Design goals (per feedback):
+- NO colors anywhere — the site's theme styles own all colors and typography.
+- Fully fluid responsive layout built ONLY with Flexbox (wrap + flex-basis),
+  no fragile media-query breakpoints.
+- Minimal, reusable global classes; almost no inline styling.
+- Accessibility kept (semantic headings, alt text, aria-hidden icons,
+  aria-labels, keyboard focus, reduced-motion).
+Run: python3 generate_template.py  ->  gg-putters-landing.json
 """
 import json
-
-# ----------------------------------------------------------------------------
-# Design tokens (luxury / metalworking feel)
-# ----------------------------------------------------------------------------
-INK      = "#11110f"
-CHARCOAL = "#1b1b18"
-GOLD     = "#b8924f"
-GOLD_LT  = "#d8b87a"   # accent on DARK backgrounds (AA on dark)
-GOLD_DK  = "#7d5f2b"   # accent on LIGHT backgrounds (AA ≥ 4.5:1 on cream/cream-alt/white)
-GOLD_DK2 = "#6f5526"   # darker gold for link hover on light
-CREAM    = "#f7f4ed"
-CREAM_AL = "#efe9db"
-WHITE    = "#ffffff"
-INK_TXT  = "#1c1b18"
-MUTED    = "#5d5a52"
-MUTED_D  = "#b6b1a5"
-
-SERIF = "Playfair Display"
-SANS  = "Inter"
 
 SHOP = "https://shop.ggputters.com"
 
 # ----------------------------------------------------------------------------
-# ID generator
+# ID helpers
 # ----------------------------------------------------------------------------
 _counter = 0
 def nid():
     global _counter
     _counter += 1
     return f"e{_counter:05d}"
+
+_attr = 0
+def attr_id():
+    global _attr
+    _attr += 1
+    return f"a{_attr:05d}"
+
+def attrs(pairs):
+    return [{"id": attr_id(), "name": k, "value": v} for k, v in pairs]
 
 elements = []
 
@@ -58,528 +54,277 @@ def flatten(el, parent_id):
     return eid
 
 # ----------------------------------------------------------------------------
-# Element helpers
+# Element builders (layout-only settings, no colors)
 # ----------------------------------------------------------------------------
-def heading(text, tag, settings=None, classes=None, label=None):
+def cls(*names):
+    return {"_cssGlobalClasses": list(names)}
+
+def heading(text, tag, classes=None, label=None):
     s = {"text": text, "tag": tag}
     if classes:
         s["_cssGlobalClasses"] = classes
-    if settings:
-        s.update(settings)
     return El("heading", s, label=label or f"{tag}: {text[:24]}")
 
-def para(text, settings=None, classes=None, label=None):
+def para(text, classes=None, label=None):
     s = {"text": text, "tag": "p"}
     if classes:
         s["_cssGlobalClasses"] = classes
-    if settings:
-        s.update(settings)
-    return El("text-basic", s, label=label or "Paragraph")
+    return El("text-basic", s, label=label or "Text")
 
-def rich(text, settings=None, classes=None, label=None):
+def rich(text, classes=None, label=None):
     s = {"text": text}
     if classes:
         s["_cssGlobalClasses"] = classes
-    if settings:
-        s.update(settings)
     return El("text", s, label=label or "Rich text")
 
-_attr = 0
-def attr_id():
-    global _attr
-    _attr += 1
-    return f"a{_attr:05d}"
+def eyebrow(text):
+    return heading(text, "p", classes=["gg-eyebrow"], label=f"Eyebrow: {text[:18]}")
 
-def attrs(pairs):
-    return [{"id": attr_id(), "name": k, "value": v} for k, v in pairs]
+def icon(ti):
+    return El("icon", {"icon": {"library": "themify", "icon": ti},
+                       "_attributes": attrs([("aria-hidden", "true")])}, label="Icon")
 
-def icon(ti, settings=None, decorative=True):
-    s = {"icon": {"library": "themify", "icon": ti}}
-    if decorative:
-        s["_attributes"] = attrs([("aria-hidden", "true")])
-    if settings:
-        s.update(settings)
-    return El("icon", s, label="Icon")
-
-def button(text, url, classes, settings=None, new_tab=True, aria=None, mobile_full=True):
+def button(text, url, aria=None, new_tab=True):
     link = {"type": "external", "url": url}
     if new_tab:
         link["newTab"] = True
     if aria:
         link["ariaLabel"] = aria
-    s = {"text": text, "link": link, "_cssGlobalClasses": classes}
-    if mobile_full:
-        # larger tap target on small screens (WCAG 2.5.5 / UX)
-        s["_width:mobile_portrait"] = "100%"
-        s["_justifyContent:mobile_portrait"] = "center"
-    if settings:
-        s.update(settings)
-    return El("button", s, label=f"Button: {text}")
+    return El("button", {"text": text, "link": link, "_cssGlobalClasses": ["gg-btn"]},
+              label=f"Button: {text}")
 
-def image_ph(alt, settings=None, label=None):
-    s = {"image": {"url": "", "alt": alt}, "altText": alt}
-    if settings:
-        s.update(settings)
-    return El("image", s, label=label or f"Image: {alt[:24]}")
+def text_link(text, url, label="Link"):
+    return El("text-link", {"text": text, "link": {"type": "external", "url": url},
+                            "_cssGlobalClasses": ["gg-link"]}, label=label)
 
-def container(children, settings=None, label=None):
-    s = {"_widthMax": "1180px"}
-    if settings:
-        s.update(settings)
-    return El("container", s, children=children, label=label or "Container")
+def image_ph(alt, ratio="16/10", label=None):
+    return El("image", {"image": {"url": "", "alt": alt}, "altText": alt,
+                        "_aspectRatio": ratio, "_cssGlobalClasses": ["gg-img"]},
+              label=label or f"Image: {alt[:22]}")
 
-def block(children, settings=None, label=None, classes=None):
-    s = {}
-    if classes:
-        s["_cssGlobalClasses"] = classes
-    if settings:
-        s.update(settings)
-    return El("block", s, children=children, label=label or "Block")
-
-def section(children, settings=None, label=None, css_id=None):
-    s = {}
+def section(children, classes=None, css_id=None, label=None):
+    s = {"_cssGlobalClasses": ["gg-section"] + (classes or [])}
     if css_id:
         s["_cssId"] = css_id
-    if settings:
-        s.update(settings)
     return El("section", s, children=children, label=label or "Section")
 
-def header_block(eyebrow, title, lead, on_dark=False, css=None):
-    title_color = WHITE if on_dark else INK_TXT
-    children = [heading(eyebrow, "div", classes=["ggeyeb"]),
-                heading(title, "h2", classes=["gghttl"],
-                        settings={"_typography": {"color": {"hex": title_color},
-                                                   "text-align": "center"}})]
+def container(children, label=None):
+    return El("container", {}, children=children, label=label or "Container")
+
+def header_block(eye, title, lead=None, tag="h2"):
+    kids = [eyebrow(eye), heading(title, tag, classes=["gg-h"])]
     if lead:
-        lead_set = {"_typography": {"text-align": "center"},
-                    "_margin": {"left": "auto", "right": "auto", "bottom": "52px"}}
-        if on_dark:
-            lead_set["_typography"]["color"] = {"hex": MUTED_D}
-        children.append(para(lead, classes=["gglead"], settings=lead_set))
-    return container(settings={"_display": "flex", "_direction": "column",
-                               "_alignItems": "center"}, children=children,
-                     label="Section Header")
+        kids.append(para(lead, classes=["gg-lead"]))
+    return El("block", cls("gg-header"), children=kids, label="Header")
+
+def row(children, classes=None, label=None):
+    return El("block", cls(*(["gg-row"] + (classes or []))), children=children, label=label or "Row")
+
+def col(children, wide=False, label=None):
+    return El("block", cls("gg-col-wide" if wide else "gg-col"), children=children,
+              label=label or "Column")
 
 # ----------------------------------------------------------------------------
-# Global classes
+# Global classes — layout only, fluid, NO colors
 # ----------------------------------------------------------------------------
 global_classes = [
-    {"id": "ggeyeb", "name": "gg-eyebrow", "settings": {
-        "_display": "inline-block",
-        "_typography": {"text-transform": "uppercase", "letter-spacing": "0.28em",
-                         "font-size": "0.8rem", "font-weight": "600",
-                         "font-family": SANS, "color": {"hex": GOLD_DK}},
-        "_margin": {"bottom": "18px"}}},
-    {"id": "gghttl", "name": "gg-title", "settings": {
-        "_typography": {"font-family": SERIF, "font-size": "clamp(2rem, 4vw, 3.1rem)",
-                         "font-weight": "600", "line-height": "1.12"},
-        "_margin": {"bottom": "22px"}}},
+    {"id": "ggsect", "name": "gg-section", "settings": {
+        "_padding": {"top": "clamp(3.5rem, 7vw, 7rem)", "bottom": "clamp(3.5rem, 7vw, 7rem)",
+                      "left": "clamp(1rem, 4vw, 2rem)", "right": "clamp(1rem, 4vw, 2rem)"}}},
+    {"id": "gghead", "name": "gg-header", "settings": {
+        "_display": "flex", "_direction": "column", "_alignItems": "center",
+        "_rowGap": "0.9rem", "_widthMax": "720px",
+        "_margin": {"left": "auto", "right": "auto", "bottom": "clamp(2rem, 4vw, 3.5rem)"},
+        "_typography": {"text-align": "center"}}},
+    {"id": "ggrow", "name": "gg-row", "settings": {
+        "_display": "flex", "_flexWrap": "wrap", "_justifyContent": "center",
+        "_alignItems": "stretch", "_rowGap": "clamp(1.5rem, 3vw, 2.5rem)",
+        "_columnGap": "clamp(1.5rem, 3vw, 2.5rem)", "_width": "100%"}},
+    {"id": "ggcol", "name": "gg-col", "settings": {
+        "_flexGrow": "1", "_flexShrink": "1", "_flexBasis": "300px", "_widthMin": "0",
+        "_display": "flex", "_direction": "column", "_rowGap": "0.75rem"}},
+    {"id": "ggcolw", "name": "gg-col-wide", "settings": {
+        "_flexGrow": "1", "_flexShrink": "1", "_flexBasis": "400px", "_widthMin": "0",
+        "_display": "flex", "_direction": "column", "_rowGap": "1rem",
+        "_justifyContent": "center"}},
+    {"id": "ggcta", "name": "gg-cta-row", "settings": {
+        "_display": "flex", "_flexWrap": "wrap", "_justifyContent": "center",
+        "_rowGap": "1rem", "_columnGap": "1rem"}},
+    {"id": "ggeye", "name": "gg-eyebrow", "settings": {
+        "_typography": {"text-transform": "uppercase", "letter-spacing": "0.18em",
+                         "font-weight": "600"}}},
     {"id": "gglead", "name": "gg-lead", "settings": {
-        "_typography": {"font-family": SANS, "font-size": "1.15rem",
-                         "line-height": "1.75", "color": {"hex": MUTED}},
-        "_widthMax": "680px"}},
-    {"id": "ggbody", "name": "gg-body", "settings": {
-        "_typography": {"font-family": SANS, "font-size": "1rem",
-                         "line-height": "1.7", "color": {"hex": MUTED}},
-        "_margin": {"bottom": "16px"}}},
-    {"id": "ggdefn", "name": "gg-definition", "settings": {
-        "_typography": {"font-family": SANS, "font-size": "1rem", "font-weight": "600",
-                         "line-height": "1.6", "color": {"hex": INK_TXT}},
-        "_margin": {"bottom": "12px"}}},
-    {"id": "ggcard", "name": "gg-card", "settings": {
-        "_background": {"color": {"hex": WHITE}},
-        "_border": {"width": {"top": "1px", "right": "1px", "bottom": "1px", "left": "1px"},
-                     "style": "solid", "color": {"rgb": "rgba(17,17,15,0.08)"},
-                     "radius": {"top": "16px", "right": "16px", "bottom": "16px", "left": "16px"}},
-        "_padding": {"top": "38px", "right": "32px", "bottom": "38px", "left": "32px"},
-        "_boxShadow": {"values": {"offsetX": "0", "offsetY": "18", "blur": "40", "spread": "-24"},
-                        "color": {"rgb": "rgba(17,17,15,0.18)"}},
-        "_height": "100%", "_display": "flex", "_direction": "column"}},
-    {"id": "gggrd3", "name": "gg-grid-3", "settings": {
-        "_display": "grid", "_gridTemplateColumns": "repeat(3, minmax(0, 1fr))",
-        "_gridGap": "28px",
-        "_gridTemplateColumns:tablet_portrait": "repeat(2, minmax(0, 1fr))",
-        "_gridTemplateColumns:mobile_portrait": "1fr"}},
-    {"id": "gggrd2", "name": "gg-grid-2", "settings": {
-        "_display": "grid", "_gridTemplateColumns": "repeat(2, minmax(0, 1fr))",
-        "_gridGap": "48px", "_alignItemsGrid": "center",
-        "_gridTemplateColumns:mobile_landscape": "1fr"}},
-    {"id": "ggbtnp", "name": "gg-btn-primary", "settings": {
-        "_background": {"color": {"hex": GOLD}},
-        "_typography": {"font-family": SANS, "font-weight": "600", "font-size": "0.9rem",
-                         "text-transform": "uppercase", "letter-spacing": "0.08em",
-                         "color": {"hex": INK}},
-        "_padding": {"top": "16px", "right": "32px", "bottom": "16px", "left": "32px"},
-        "_border": {"radius": {"top": "8px", "right": "8px", "bottom": "8px", "left": "8px"}},
-        "_cssTransition": "background-color 0.3s ease, transform 0.3s ease",
-        "_background:hover": {"color": {"hex": GOLD_LT}},
-        "_transform:hover": {"translateY": "-2"}}},
-    {"id": "ggbtno", "name": "gg-btn-outline", "settings": {
-        "_background": {"color": {"rgb": "rgba(0,0,0,0)"}},
-        "_typography": {"font-family": SANS, "font-weight": "600", "font-size": "0.9rem",
-                         "text-transform": "uppercase", "letter-spacing": "0.08em",
-                         "color": {"hex": WHITE}},
-        "_padding": {"top": "16px", "right": "32px", "bottom": "16px", "left": "32px"},
-        "_border": {"width": {"top": "1px", "right": "1px", "bottom": "1px", "left": "1px"},
-                     "style": "solid", "color": {"rgb": "rgba(255,255,255,0.45)"},
-                     "radius": {"top": "8px", "right": "8px", "bottom": "8px", "left": "8px"}},
-        "_cssTransition": "all 0.3s ease",
-        "_background:hover": {"color": {"hex": GOLD}},
-        "_border:hover": {"color": {"hex": GOLD}},
-        "_typography:hover": {"color": {"hex": INK}}}},
-    {"id": "ggfico", "name": "gg-feature-icon", "settings": {
-        "_typography": {"font-size": "2rem", "color": {"hex": GOLD_DK}},
-        "_margin": {"bottom": "22px"}}},
-    {"id": "ggclnk", "name": "gg-contact-link", "settings": {
-        "_typography": {"font-family": SANS, "font-weight": "600", "color": {"hex": GOLD_DK},
-                         "text-decoration": "underline"},
-        "_cssTransition": "color 0.25s ease",
-        "_typography:hover": {"color": {"hex": GOLD_DK2}}}},
-    {"id": "ggprice", "name": "gg-price", "settings": {
-        "_typography": {"font-family": SERIF, "font-size": "1.9rem", "font-weight": "600",
-                         "color": {"hex": GOLD_DK}}}},
+        "_widthMax": "65ch"}},
+    {"id": "ggimg", "name": "gg-img", "settings": {
+        "_width": "100%"}},
+    {"id": "gglink", "name": "gg-link", "settings": {
+        "_typography": {"text-decoration": "underline"}}},
+    {"id": "ggbtn", "name": "gg-btn", "settings": {
+        "_width:mobile_portrait": "100%", "_justifyContent:mobile_portrait": "center"}},
+    {"id": "ggh", "name": "gg-h", "settings": {
+        "_typography": {"text-wrap": "balance"}}},
 ]
 
-# ----------------------------------------------------------------------------
-# Section presets
-# ----------------------------------------------------------------------------
-def sec_pad():
-    return {"_padding": {"top": "112px", "right": "24px", "bottom": "112px", "left": "24px"},
-            "_padding:mobile_portrait": {"top": "68px", "right": "20px", "bottom": "68px", "left": "20px"}}
+# Note on classes: real names live in `name`; elements reference them by id via
+# `_cssGlobalClasses`. Map helper for readability.
+NAME2ID = {c["name"]: c["id"] for c in global_classes}
+def _remap(names):
+    return [NAME2ID.get(n, n) for n in names]
 
-def dark_sec(bg=INK):
-    s = {"_background": {"color": {"hex": bg}}}
-    s.update(sec_pad())
-    return s
-
-def light_sec(bg=CREAM):
-    s = {"_background": {"color": {"hex": bg}}}
-    s.update(sec_pad())
-    return s
-
+# ============================================================================
+# CONTENT
 # ============================================================================
 # 1. HERO
-# ============================================================================
-hero = section(css_id="top", settings=dark_sec(INK), label="Hero", children=[
-    container(settings={"_widthMax": "900px", "_display": "flex", "_direction": "column",
-                         "_alignItems": "center"}, label="Hero Inner", children=[
-        heading("GG Putters · Made in Italy", "div", classes=["ggeyeb"],
-                settings={"_typography": {"color": {"hex": GOLD_LT}}}),
-        heading("Custom Milled Putters — Antares &amp; Orion, Handcrafted in Italy", "h1",
-                classes=["gghttl"],
-                settings={"_typography": {"font-family": SERIF, "color": {"hex": WHITE},
-                                           "font-size": "clamp(2.4rem, 5vw, 3.9rem)",
-                                           "font-weight": "600", "line-height": "1.08",
-                                           "text-align": "center"},
-                           "_margin": {"bottom": "20px"}}, label="H1"),
-        heading("Light years ahead. Designed to win.", "div",
-                settings={"_typography": {"font-family": SERIF, "font-style": "italic",
-                                           "font-size": "1.4rem", "color": {"hex": GOLD_LT},
-                                           "line-height": "1.4", "text-align": "center"},
-                           "_margin": {"bottom": "26px"}}, label="Tagline"),
-        para("GG Putters are precision golf putters milled from a single block of aluminum and steel in Brescia, Italy, featuring a 3-position adjustable weight system and interchangeable faces for a straighter, more confident roll.",
-             classes=["gglead"],
-             settings={"_typography": {"color": {"hex": MUTED_D}, "text-align": "center"},
-                        "_margin": {"left": "auto", "right": "auto", "bottom": "38px"}}),
-        block(settings={"_display": "flex", "_justifyContent": "center", "_gap": "16px",
-                         "_flexWrap": "wrap"}, label="Hero CTAs", children=[
-            button("Shop Putters", f"{SHOP}/putters/", ["ggbtnp"], aria="Shop GG Putters"),
-            button("Download 2025 Catalog", f"{SHOP}/", ["ggbtno"], aria="Download the GG Putters 2025 catalog"),
+hero = section(css_id="top", label="Hero", children=[
+    container(children=[
+        El("block", cls("gg-header"), children=[
+            eyebrow("GG Putters · Made in Italy"),
+            heading("Custom Milled Putters — Antares &amp; Orion, Handcrafted in Italy", "h1",
+                    classes=["gg-h"], label="H1"),
+            para("Light years ahead. Designed to win.", classes=["gg-lead"], label="Tagline"),
+            para("GG Putters are precision golf putters milled from a single block of aluminum and steel in Brescia, Italy, with a 3-position adjustable weight system and interchangeable faces for a straighter, more confident roll.",
+                 classes=["gg-lead"]),
+            El("block", cls("gg-cta-row"), children=[
+                button("Shop Putters", f"{SHOP}/putters/", aria="Shop GG Putters"),
+                button("Download 2025 Catalog", f"{SHOP}/", aria="Download the GG Putters 2025 catalog"),
+            ], label="Hero CTAs"),
+        ], label="Hero Content"),
+    ]),
+])
+
+# 2. FEATURES
+def feature(ti, title, definition, body):
+    return col([icon(ti), heading(title, "h3", classes=["gg-h"]),
+                para(definition), para(body)], label=f"Feature: {title}")
+
+features = section(css_id="features", label="Features", children=[
+    container(children=[
+        header_block("Performance by design", "Why players choose our putters",
+                     "Billet milling, adjustable weighting and interchangeable faces combine for a cleaner, more repeatable stroke."),
+        row([
+            feature("ti-ruler-pencil", "Milled from a single block",
+                    "A milled putter is machined from one solid metal block for tighter tolerances and a more consistent face.",
+                    "Each head is milled from a single billet of aluminum with steel components, worked by turning and milling without heating to preserve elasticity and strength."),
+            feature("ti-settings", "3-position adjustable weighting",
+                    "An adjustable weighting system lets you reposition the three head weights to match your stroke arc.",
+                    "Move the three weights across three dedicated points; light and heavy options help compensate for stroke tendencies."),
+            feature("ti-layers", "Interchangeable faces &amp; necks",
+                    "Interchangeable face inserts and necks let you tune feel, loft and alignment without changing putter.",
+                    "Choose clubfaces from 1° to 3° and necks with different lie and offset for any green speed."),
         ]),
     ]),
 ])
 
-# ============================================================================
-# 2. FEATURES — definitions + concrete data
-# ============================================================================
-def feature_card(ti, title, definition, body):
-    return block(classes=["ggcard"], children=[
-        icon(ti, settings={"_cssGlobalClasses": ["ggfico"]}),
-        heading(title, "h3", settings={
-            "_typography": {"font-family": SERIF, "font-size": "1.4rem", "font-weight": "600",
-                             "color": {"hex": INK_TXT}}, "_margin": {"bottom": "12px"}}),
-        para(definition, classes=["ggdefn"]),
-        para(body, classes=["ggbody"], settings={"_margin": {"bottom": "0px"}}),
-    ], label=f"Feature: {title}")
-
-features = section(css_id="features", settings=light_sec(CREAM), label="Features", children=[
-    header_block("Performance by design", "Why players choose our putters",
-                 "Three engineering choices — billet milling, adjustable weighting and interchangeable faces — combine to deliver a cleaner, more repeatable stroke."),
-    block(classes=["gggrd3"], settings={"_widthMax": "1180px",
-                                         "_margin": {"left": "auto", "right": "auto"}},
-          label="Feature Grid", children=[
-        feature_card("ti-ruler-pencil", "Milled from a single block",
-                     "A milled putter is machined from one solid metal block for tighter tolerances and a more consistent face.",
-                     "Each head is milled from a single billet of aluminum, combined with steel components and worked by turning and milling without heating to preserve the metal's natural elasticity and strength."),
-        feature_card("ti-settings", "3-position adjustable weighting",
-                     "An adjustable weighting system lets you reposition the three head weights to match your stroke arc and balance.",
-                     "Move the three weights across three dedicated points to fine-tune the arc and balance — light and heavy options let you compensate for individual stroke tendencies."),
-        feature_card("ti-layers", "Interchangeable faces &amp; necks",
-                     "Interchangeable face inserts and necks let you tune feel, loft and alignment without changing putter.",
-                     "Choose clubfaces from 1° to 3° and necks with different lie and offset to optimize feel and responsiveness for any green speed."),
-    ]),
-])
-
-# ============================================================================
-# 3. MODELS / SHOP — Antares & Orion (real products + prices)
-# ============================================================================
-def model_card(name, model_type, definition, price, ch_price, url, specs):
+# 3. MODELS / SHOP
+def model(name, model_type, definition, price, url, specs):
     spec_items = "".join(f"<li>{s}</li>" for s in specs)
-    return block(classes=["ggcard"], children=[
-        image_ph(f"GG {name} {model_type.lower()} putter, milled in Italy",
-                 settings={"_border": {"radius": {"top": "12px", "right": "12px", "bottom": "12px", "left": "12px"}},
-                            "_aspectRatio": "16/10", "_objectFit": "cover",
-                            "_margin": {"bottom": "24px"}}),
-        block(settings={"_display": "flex", "_justifyContent": "space-between",
-                         "_alignItems": "baseline", "_gap": "12px", "_flexWrap": "wrap"}, children=[
-            heading(name, "h3", settings={
-                "_typography": {"font-family": SERIF, "font-size": "1.7rem", "font-weight": "600",
-                                 "color": {"hex": INK_TXT}}}),
-            heading(price, "div", classes=["ggprice"]),
-        ], label="Title + Price"),
-        heading(model_type, "div", settings={
-            "_typography": {"font-family": SANS, "font-size": "0.8rem", "font-weight": "700",
-                             "text-transform": "uppercase", "letter-spacing": "0.16em",
-                             "color": {"hex": GOLD_DK}}, "_margin": {"top": "4px", "bottom": "14px"}}),
-        para(definition, classes=["ggdefn"]),
-        rich(f"<ul>{spec_items}</ul>", classes=["ggbody"],
-             settings={"_margin": {"bottom": "22px"}}, label="Specs"),
-        para(f"Clubhead only available at {ch_price}.", classes=["ggbody"],
-             settings={"_typography": {"font-size": "0.9rem", "color": {"hex": MUTED}},
-                        "_margin": {"bottom": "24px"}}),
-        block(settings={"_margin": {"top": "auto"}}, children=[
-            button(f"View {name}", url, ["ggbtnp"],
-                   settings={"_typography": {"color": {"hex": INK}}, "_width": "fit-content"},
-                   aria=f"View the GG {name} putter"),
-        ], label="Buy"),
+    return col([
+        image_ph(f"GG {name} {model_type.lower()} putter, milled in Italy"),
+        heading(name, "h3", classes=["gg-h"]),
+        para(f"{model_type} · {price} (clubhead only €285)"),
+        para(definition),
+        rich(f"<ul>{spec_items}</ul>", label="Specs"),
+        button(f"View {name}", url, aria=f"View the GG {name} putter"),
     ], label=f"Model: {name}")
 
-models = section(css_id="shop", settings=light_sec(WHITE), label="Models / Shop", children=[
-    header_block("Our products", "Choose your putter: Antares or Orion",
-                 "Two milled putters, both €353: the Antares blade for feel and the Orion mallet for stability. Clubhead-only options start at €285."),
-    block(classes=["gggrd2"], settings={"_widthMax": "960px",
-                                         "_margin": {"left": "auto", "right": "auto"},
-                                         "_alignItemsGrid": "stretch"}, label="Models Grid", children=[
-        model_card("Antares", "Blade Putter",
-                   "The Antares is a blade putter for golfers who favour feel and an arc-style stroke.",
-                   "€353", "€285", f"{SHOP}/putters/antares/",
-                   ["Milled aluminum + steel head", "3-position adjustable weights",
-                    "Interchangeable faces 1°–3°", "Lie &amp; offset necks available"]),
-        model_card("Orion", "Mallet Putter",
-                   "The Orion is a mallet putter engineered for stability and higher forgiveness (MOI).",
-                   "€353", "€285", f"{SHOP}/putters/orion/",
-                   ["Milled aluminum + steel head", "3-position adjustable weights",
-                    "Interchangeable faces 1°–3°", "Straighter, immediate roll"]),
-    ]),
-])
-
-# ============================================================================
-# 4. COMPARISON TABLE — Antares vs Orion
-# ============================================================================
-def table_block(headers, rows):
-    def th(text, i):
-        return heading(text, "div", settings={
-            "_background": {"color": {"hex": INK}},
-            "_typography": {"font-family": SANS, "font-size": "0.85rem", "font-weight": "700",
-                             "text-transform": "uppercase", "letter-spacing": "0.08em",
-                             "color": {"hex": GOLD_LT},
-                             "text-align": "left" if i == 0 else "center"},
-            "_padding": {"top": "16px", "right": "20px", "bottom": "16px", "left": "20px"},
-            "_attributes": attrs([("role", "columnheader"), ("scope", "col")])}, label="TH")
-
-    def td(text, i):
-        a = [("role", "rowheader"), ("scope", "row")] if i == 0 else [("role", "cell")]
-        return para(text, settings={
-            "_typography": {"font-family": SANS, "font-size": "0.98rem",
-                             "color": {"hex": INK_TXT if i == 0 else MUTED},
-                             "font-weight": "600" if i == 0 else "400",
-                             "text-align": "left" if i == 0 else "center"},
-            "_padding": {"top": "14px", "right": "20px", "bottom": "14px", "left": "20px"},
-            "_border": {"width": {"bottom": "1px"}, "style": "solid",
-                         "color": {"rgb": "rgba(17,17,15,0.08)"}},
-            "_margin": {"bottom": "0px"},
-            "_attributes": attrs(a)}, label="TD")
-
-    def trow(cells):
-        # display:contents keeps the row's cells as direct grid items while
-        # preserving the role="row" grouping for assistive technology.
-        return block(children=cells, settings={
-            "_cssCustom": "%root%{display:contents;}",
-            "_attributes": attrs([("role", "row")])}, label="Row")
-
-    children = [trow([th(h, i) for i, h in enumerate(headers)])]
-    children += [trow([td(c, i) for i, c in enumerate(r)]) for r in rows]
-
-    grid = block(children=children, settings={
-        "_display": "grid", "_gridTemplateColumns": "1.4fr 1fr 1fr",
-        "_widthMin": "560px",
-        "_background": {"color": {"hex": WHITE}},
-        "_border": {"width": {"top": "1px", "right": "1px", "bottom": "1px", "left": "1px"},
-                     "style": "solid", "color": {"rgb": "rgba(17,17,15,0.10)"},
-                     "radius": {"top": "14px", "right": "14px", "bottom": "14px", "left": "14px"}},
-        "_overflow": "hidden",
-        "_attributes": attrs([("role", "table"),
-                               ("aria-label", "Comparison of Antares and Orion putters")])},
-        label="Table Grid")
-    # Scrollable region focusable by keyboard (WCAG 2.1.1)
-    return block(children=[grid], settings={
-        "_overflow": "auto", "_widthMax": "860px",
-        "_margin": {"left": "auto", "right": "auto"},
-        "_attributes": attrs([("role", "region"),
-                               ("aria-label", "Antares vs Orion comparison table"),
-                               ("tabindex", "0")])}, label="Table Wrapper")
-
-comparison = section(css_id="compare", settings=light_sec(CREAM_AL), label="Comparison", children=[
-    header_block("Blade vs mallet", "Antares vs Orion: which putter is right for you?",
-                 "Quick answer: choose the Antares blade for feel and arc strokes, the Orion mallet for stability and forgiveness. Both cost €353."),
-    table_block(["Feature", "Antares (Blade)", "Orion (Mallet)"], [
-        ["Head style", "Blade", "Mallet"],
-        ["Forgiveness (MOI)", "Medium", "High"],
-        ["Best for", "Feel &amp; arc stroke", "Stability &amp; straight stroke"],
-        ["Weight system", "3 positions", "3 positions"],
-        ["Full putter", "€353", "€353"],
-        ["Clubhead only", "€285", "€285"],
-    ]),
-])
-
-# ============================================================================
-# 5. ABOUT — real story
-# ============================================================================
-about_text = block(children=[
-    heading("About us", "div", classes=["ggeyeb"],
-            settings={"_typography": {"color": {"hex": GOLD_LT}}}),
-    heading("Italian Craft, Brescia Engineering — Made in Italy, Game-Ready", "h2",
-            classes=["gghttl"], settings={"_typography": {"color": {"hex": WHITE}}}),
-    para("GG Putters is a golf brand by GM PRODUCTION srl, born in a garage in the 1980s in the Oglio river valley near Brescia, Italy — a region with a centuries-old metalworking tradition.",
-         classes=["ggbody"], settings={"_typography": {"color": {"hex": MUTED_D}}}),
-    para("Every putter is milled in-house from premium materials, turned and milled without heating to preserve the metal's original elasticity and strength. The fusion of decades of metalworking expertise and a love for golf gives life to a genuinely unique, fully customizable product.",
-         classes=["ggbody"], settings={"_typography": {"color": {"hex": MUTED_D}}, "_margin": {"bottom": "0px"}}),
-], label="About Text")
-about_img = image_ph("GG Putters CNC milling in the Brescia workshop, Italy",
-                     settings={"_border": {"radius": {"top": "16px", "right": "16px", "bottom": "16px", "left": "16px"}},
-                                "_height": "100%", "_objectFit": "cover", "_aspectRatio": "4/5"},
-                     label="About Image")
-
-about = section(css_id="about", settings=dark_sec(CHARCOAL), label="About", children=[
+models = section(css_id="shop", label="Models / Shop", children=[
     container(children=[
-        block(classes=["gggrd2"], children=[about_text, about_img], label="About Grid"),
-    ], label="About Inner"),
-])
-
-# ============================================================================
-# 6. ACCESSORIES — real range + prices
-# ============================================================================
-def acc_card(name, price, desc):
-    return block(classes=["ggcard"], settings={"_padding": {"top": "28px", "right": "26px",
-                                                             "bottom": "28px", "left": "26px"}}, children=[
-        block(settings={"_display": "flex", "_justifyContent": "space-between",
-                         "_alignItems": "baseline", "_gap": "10px", "_flexWrap": "wrap"}, children=[
-            heading(name, "h3", settings={
-                "_typography": {"font-family": SERIF, "font-size": "1.2rem", "font-weight": "600",
-                                 "color": {"hex": INK_TXT}}}),
-            heading(price, "div", settings={
-                "_typography": {"font-family": SERIF, "font-size": "1.2rem", "font-weight": "600",
-                                 "color": {"hex": GOLD_DK}}}),
-        ], label="Name + Price"),
-        para(desc, classes=["ggbody"], settings={"_typography": {"font-size": "0.92rem"},
-                                                  "_margin": {"top": "8px", "bottom": "0px"}}),
-    ], label=f"Accessory: {name}")
-
-accessories = section(css_id="accessories", settings=light_sec(CREAM), label="Accessories", children=[
-    header_block("Optional accessories", "Accessories &amp; Spare Parts",
-                 "Make your putter unique: extra weights, interchangeable clubfaces, covers and tools — priced from €21 to €149."),
-    block(classes=["gggrd3"], settings={"_widthMax": "1080px",
-                                         "_margin": {"left": "auto", "right": "auto", "bottom": "44px"}},
-          label="Accessories Grid", children=[
-        acc_card("Clubfaces 1°–3°", "€52", "Interchangeable face inserts to tune loft and feel."),
-        acc_card("Extra Weights", "€21", "Heavy &amp; light weights for the 3-position system."),
-        acc_card("Putter Cover", "€32", "Protective headcover for your GG putter."),
-        acc_card("Spare Parts Kit", "€149", "Replacement components to keep your putter game-ready."),
-        acc_card("Torque Wrench", "€63", "Precision tool to set weights and faces correctly."),
+        header_block("Our products", "Choose your putter: Antares or Orion",
+                     "Two milled putters, both €353: the Antares blade for feel and arc strokes, the Orion mallet for stability and higher forgiveness."),
+        row([
+            model("Antares", "Blade Putter",
+                  "The Antares is a blade putter for golfers who favour feel and an arc-style stroke.",
+                  "€353", f"{SHOP}/putters/antares/",
+                  ["Milled aluminum + steel head", "3-position adjustable weights",
+                   "Interchangeable faces 1°–3°", "Lie &amp; offset necks available"]),
+            model("Orion", "Mallet Putter",
+                  "The Orion is a mallet putter engineered for stability and higher forgiveness (MOI).",
+                  "€353", f"{SHOP}/putters/orion/",
+                  ["Milled aluminum + steel head", "3-position adjustable weights",
+                   "Interchangeable faces 1°–3°", "Straighter, immediate roll"]),
+        ]),
     ]),
-    block(settings={"_display": "flex", "_justifyContent": "center"}, children=[
-        button("Shop All Accessories", f"{SHOP}/accessories/", ["ggbtnp"],
-               settings={"_typography": {"color": {"hex": INK}}}, aria="Shop all GG Putters accessories"),
-    ], label="Accessories CTA"),
 ])
 
-# ============================================================================
-# 6b. TRUST BAND — shipping, warranty, returns, payments (transactional)
-# ============================================================================
+# 4. ABOUT
+about = section(css_id="about", label="About", children=[
+    container(children=[
+        row([
+            col([
+                eyebrow("About us"),
+                heading("Italian Craft, Brescia Engineering — Made in Italy, Game-Ready", "h2",
+                        classes=["gg-h"]),
+                para("GG Putters is a golf brand by GM PRODUCTION srl, born in a garage in the 1980s in the Oglio river valley near Brescia, Italy — a region with a centuries-old metalworking tradition."),
+                para("Every putter is milled in-house from premium materials, turned and milled without heating to preserve the metal's original elasticity and strength — a genuinely unique, fully customizable product."),
+            ], wide=True, label="About Text"),
+            col([image_ph("GG Putters CNC milling in the Brescia workshop, Italy", ratio="4/5")],
+                wide=True, label="About Image"),
+        ]),
+    ]),
+])
+
+# 5. ACCESSORIES
+def acc(name, price, desc):
+    return col([heading(name, "h3", classes=["gg-h"]), para(price), para(desc)],
+               label=f"Accessory: {name}")
+
+accessories = section(css_id="accessories", label="Accessories", children=[
+    container(children=[
+        header_block("Optional accessories", "Accessories &amp; Spare Parts",
+                     "Make your putter unique: weights, clubfaces, covers and tools, priced from €21 to €149."),
+        row([
+            acc("Clubfaces 1°–3°", "€52", "Interchangeable face inserts to tune loft and feel."),
+            acc("Extra Weights", "€21", "Heavy &amp; light weights for the 3-position system."),
+            acc("Putter Cover", "€32", "Protective headcover for your GG putter."),
+            acc("Spare Parts Kit", "€149", "Replacement components to keep your putter game-ready."),
+            acc("Torque Wrench", "€63", "Precision tool to set weights and faces correctly."),
+        ]),
+        El("block", cls("gg-cta-row"), children=[
+            button("Shop All Accessories", f"{SHOP}/accessories/", aria="Shop all accessories"),
+        ], label="Accessories CTA"),
+    ]),
+])
+
+# 6. TRUST
 def trust_item(ti, title, text):
-    return block(settings={"_display": "flex", "_direction": "column", "_alignItems": "center"}, children=[
-        icon(ti, settings={"_typography": {"font-size": "1.6rem", "color": {"hex": GOLD_DK}},
-                            "_margin": {"bottom": "12px"}}),
-        heading(title, "h3", settings={
-            "_typography": {"font-family": SANS, "font-size": "1rem", "font-weight": "700",
-                             "color": {"hex": INK_TXT}, "text-align": "center"},
-            "_margin": {"bottom": "6px"}}),
-        para(text, settings={
-            "_typography": {"font-family": SANS, "font-size": "0.88rem", "line-height": "1.6",
-                             "color": {"hex": MUTED}, "text-align": "center"},
-            "_margin": {"bottom": "0px"}}),
-    ], label=f"Trust: {title}")
+    return col([icon(ti), heading(title, "h3", classes=["gg-h"]), para(text)],
+               label=f"Trust: {title}")
 
-trust = section(settings={
-        "_background": {"color": {"hex": CREAM_AL}},
-        "_padding": {"top": "56px", "right": "24px", "bottom": "56px", "left": "24px"},
-        "_padding:mobile_portrait": {"top": "44px", "right": "20px", "bottom": "44px", "left": "20px"}},
-        label="Trust Band", children=[
+trust = section(label="Trust", children=[
     container(children=[
-        block(classes=["gggrd3"], settings={
-            "_gridTemplateColumns": "repeat(4, minmax(0, 1fr))",
-            "_gridTemplateColumns:tablet_portrait": "repeat(2, minmax(0, 1fr))",
-            "_gridTemplateColumns:mobile_portrait": "repeat(2, minmax(0, 1fr))"}, children=[
+        row([
             trust_item("ti-truck", "Worldwide shipping",
                        "BRT in Italy, FedEx worldwide — shipped within 5–6 business days."),
-            trust_item("ti-shield", "2-year warranty",
-                       "Covered against conformity defects and failures."),
-            trust_item("ti-reload", "14-day returns",
-                       "Right of withdrawal within 14 days; refund within 30 days."),
-            trust_item("ti-credit-card", "Secure payments",
-                       "Visa, Mastercard, Amex, PayPal &amp; Klarna. Prices include VAT."),
-        ], label="Trust Grid"),
-    ], label="Trust Inner"),
+            trust_item("ti-shield", "2-year warranty", "Covered against conformity defects and failures."),
+            trust_item("ti-reload", "14-day returns", "Right of withdrawal within 14 days; refund within 30 days."),
+            trust_item("ti-credit-card", "Secure payments", "Visa, Mastercard, Amex, PayPal &amp; Klarna. Prices include VAT."),
+        ]),
+    ]),
 ])
 
-# ============================================================================
-# 7. FITTER KIT — B2B
-# ============================================================================
-fitter = section(css_id="fitters", settings=dark_sec(INK), label="Fitter Kit", children=[
+# 7. FITTER KIT
+fitter = section(css_id="fitters", label="Fitter Kit", children=[
     container(children=[
-        block(classes=["gggrd2"], settings={"_alignItemsGrid": "center"}, children=[
-            block(children=[
-                heading("For fitters", "div", classes=["ggeyeb"],
-                        settings={"_typography": {"color": {"hex": GOLD_LT}}}),
-                heading("The GG Putters Fitter Kit", "h2", classes=["gghttl"],
-                        settings={"_typography": {"color": {"hex": WHITE}}}),
-                para("The Fitter Kit is a modular fitting system that lets professionals test every putter configuration with a client in a single session.",
-                     classes=["ggdefn"], settings={"_typography": {"color": {"hex": WHITE}}}),
-                para("Handcrafted in Italy and fully modular — from head shape to insert, feel and balance — so each player leaves with a putter that is uniquely theirs.",
-                     classes=["ggbody"], settings={"_typography": {"color": {"hex": MUTED_D}}}),
-                button("Request the Fitter Kit", f"{SHOP}/for-fitters/", ["ggbtnp"],
-                       settings={"_typography": {"color": {"hex": INK}}, "_width": "fit-content"},
-                       aria="Request the GG Putters Fitter Kit"),
-            ], label="Fitter Text"),
-            block(classes=["ggcard"], settings={"_background": {"color": {"hex": CHARCOAL}},
-                                                 "_border": {"width": {"top": "1px", "right": "1px", "bottom": "1px", "left": "1px"},
-                                                              "style": "solid", "color": {"rgb": "rgba(184,146,79,0.35)"},
-                                                              "radius": {"top": "16px", "right": "16px", "bottom": "16px", "left": "16px"}}},
-                  children=[
-                heading("What's inside the Fitter Kit", "h3", settings={
-                    "_typography": {"font-family": SERIF, "font-size": "1.35rem", "font-weight": "600",
-                                     "color": {"hex": WHITE}}, "_margin": {"bottom": "16px"}}),
+        row([
+            col([
+                eyebrow("For fitters"),
+                heading("The GG Putters Fitter Kit", "h2", classes=["gg-h"]),
+                para("The Fitter Kit is a modular fitting system that lets professionals test every putter configuration with a client in a single session."),
+                para("Handcrafted in Italy and fully modular — from head shape to insert, feel and balance — so each player leaves with a putter that is uniquely theirs."),
+                El("block", cls("gg-cta-row"), children=[
+                    button("Request the Fitter Kit", f"{SHOP}/for-fitters/", aria="Request the Fitter Kit"),
+                ], label="Fitter CTA"),
+            ], wide=True, label="Fitter Text"),
+            col([
+                heading("What's inside the Fitter Kit", "h3", classes=["gg-h"]),
                 rich("<ul><li>2 heads — one Antares and one Orion</li><li>3 lofts (1°, 2°, 3°)</li><li>Weights kit — 2 heavy and 2 light (bullet or flat)</li><li>Necks (lie and offset)</li><li>Screws and hex screwdriver</li></ul>",
-                     classes=["ggbody"],
-                     settings={"_typography": {"color": {"hex": MUTED_D}}, "_margin": {"bottom": "0px"}}, label="Kit list"),
-            ], label="Fitter Kit Card"),
-        ], label="Fitter Grid"),
-    ], label="Fitter Inner"),
+                     label="Kit list"),
+            ], wide=True, label="Fitter Kit List"),
+        ]),
+    ]),
 ])
 
-# ============================================================================
-# 8. FAQ — visible Q/A + FAQPage schema
-# ============================================================================
+# 8. FAQ
 faq_items = [
     ("What makes GG Putters different from other putters?",
      "GG Putters are milled in Brescia, Italy from a single block of aluminum and steel, with a 3-position adjustable weight system and interchangeable faces (1°–3°) and necks for full customization."),
@@ -594,187 +339,150 @@ faq_items = [
     ("How can I pay and how is my order shipped?",
      "You can pay by credit card (Visa, Mastercard, American Express), PayPal or Klarna; prices include VAT. Orders ship with BRT in Italy and FedEx worldwide, usually within 5–6 business days."),
     ("Can I return a GG Putter?",
-     "Yes. You can exercise the right of withdrawal within 14 days of receipt; once the returned product is verified, the refund is issued within 30 days to your original payment method."),
+     "Yes. You can exercise the right of withdrawal within 14 days of receipt; once the returned product is verified, the refund is issued within 30 days."),
 ]
 
-def faq_block(q, a):
-    return block(settings={"_padding": {"top": "24px", "right": "0px", "bottom": "24px", "left": "0px"},
-                            "_border": {"width": {"bottom": "1px"}, "style": "solid",
-                                         "color": {"rgb": "rgba(17,17,15,0.10)"}}}, children=[
-        heading(q, "h3", settings={
-            "_typography": {"font-family": SERIF, "font-size": "1.25rem", "font-weight": "600",
-                             "color": {"hex": INK_TXT}}, "_margin": {"bottom": "10px"}}),
-        para(a, classes=["ggbody"], settings={"_margin": {"bottom": "0px"}}),
-    ], label=f"FAQ: {q[:24]}")
-
-faq = section(css_id="faq", settings=light_sec(WHITE), label="FAQ", children=[
-    header_block("FAQ", "Frequently Asked Questions",
-                 "Quick answers about models, customization, pricing and where GG Putters are made."),
-    block(settings={"_widthMax": "780px", "_margin": {"left": "auto", "right": "auto"}},
-          children=[faq_block(q, a) for q, a in faq_items], label="FAQ List"),
+faq = section(css_id="faq", label="FAQ", children=[
+    container(children=[
+        header_block("FAQ", "Frequently Asked Questions",
+                     "Quick answers about models, customization, pricing, shipping and returns."),
+        El("block", {"_cssGlobalClasses": ["gg-col"], "_widthMax": "780px",
+                     "_margin": {"left": "auto", "right": "auto"}, "_rowGap": "1.5rem"},
+           children=[El("block", cls("gg-col"), children=[
+               heading(q, "h3", classes=["gg-h"]), para(a)], label=f"FAQ: {q[:22]}")
+               for q, a in faq_items], label="FAQ List"),
+    ]),
 ])
 
-# ============================================================================
 # 9. CONTACT
-# ============================================================================
-def contact_card(title, rows):
-    children = [heading(title, "h3", settings={
-        "_typography": {"font-family": SANS, "font-size": "0.85rem", "font-weight": "700",
-                         "text-transform": "uppercase", "letter-spacing": "0.16em",
-                         "color": {"hex": GOLD_DK}}, "_margin": {"bottom": "16px"}})]
-    for kind, value, href in rows:
-        s = {"text": value, "link": {"type": "external", "url": href},
-             "_display": "block", "_margin": {"bottom": "6px"}}
-        if href.startswith("mailto"):
-            s["_cssGlobalClasses"] = ["ggclnk"]
-        else:
-            s["_typography"] = {"color": {"hex": MUTED}, "text-decoration": "underline"}
-        children.append(El("text-link", s, label=kind))
-    children[-1].settings["_margin"]["bottom"] = "0px"
-    return block(classes=["ggcard"], settings={"_alignItems": "center"}, children=children,
-                 label=f"Contact: {title}")
+def contact_card(title, links):
+    kids = [heading(title, "h3", classes=["gg-h"])]
+    kids += [text_link(v, h, label=k) for k, v, h in links]
+    return col(kids, label=f"Contact: {title}")
 
-contact = section(css_id="contact", settings=light_sec(CREAM), label="Contact", children=[
-    header_block("Get in touch", "Contact Us",
-                 "Questions about a build, an order or becoming a partner? Our team in Brescia is here to help."),
-    block(classes=["gggrd3"], settings={"_widthMax": "1040px",
-                                         "_margin": {"left": "auto", "right": "auto"}},
-          label="Contact Grid", children=[
-        contact_card("Info &amp; Sales", [("Email", "info@ggputters.com", "mailto:info@ggputters.com"),
-                                          ("Phone", "+39 331 1099739", "tel:+393311099739")]),
-        contact_card("Office &amp; Dealers", [("Email", "office@ggputters.com", "mailto:office@ggputters.com")]),
-        contact_card("Headquarters", [("Address", "Palazzolo sull'Oglio (BS), Italy", f"{SHOP}/contact/")]),
+contact = section(css_id="contact", label="Contact", children=[
+    container(children=[
+        header_block("Get in touch", "Contact Us",
+                     "Questions about a build, an order or a partnership? Our team in Brescia is here to help."),
+        row([
+            contact_card("Info &amp; Sales", [("Email", "info@ggputters.com", "mailto:info@ggputters.com"),
+                                              ("Phone", "+39 331 1099739", "tel:+393311099739")]),
+            contact_card("Office &amp; Dealers", [("Email", "office@ggputters.com", "mailto:office@ggputters.com")]),
+            contact_card("Headquarters", [("Address", "Palazzolo sull'Oglio (BS), Italy", f"{SHOP}/contact/")]),
+        ]),
     ]),
 ])
 
-# ============================================================================
 # 10. NEWSLETTER
-# ============================================================================
-newsletter = section(css_id="newsletter", settings={
-        "_background": {"color": {"hex": INK}},
-        "_padding": {"top": "92px", "right": "24px", "bottom": "92px", "left": "24px"},
-        "_padding:mobile_portrait": {"top": "62px", "right": "20px", "bottom": "62px", "left": "20px"}},
-        label="Newsletter", children=[
-    container(settings={"_widthMax": "640px", "_display": "flex", "_direction": "column",
-                         "_alignItems": "center"}, label="Newsletter Inner", children=[
-        heading("Stay in the loop", "div", classes=["ggeyeb"],
-                settings={"_typography": {"color": {"hex": GOLD_LT}}}),
-        heading("Join the Newsletter", "h2", classes=["gghttl"],
-                settings={"_typography": {"color": {"hex": WHITE}, "text-align": "center"}}),
-        para("Be the first to hear about new releases, limited editions and craftsmanship stories.",
-             classes=["gglead"], settings={"_typography": {"color": {"hex": MUTED_D}, "text-align": "center"},
-                                            "_margin": {"left": "auto", "right": "auto", "bottom": "32px"}}),
-        El("form", {
-            "fields": [{"type": "email", "label": "Email", "placeholder": "Enter your email address",
-                        "required": True, "id": "newslttr", "width": "100"}],
-            "showLabels": True, "submitButtonText": "Subscribe", "actions": ["email"],
-            "emailSubject": "New newsletter subscription — GG Putters",
-            "emailTo": "info@ggputters.com", "emailFromName": "GG Putters Website",
-            "successMessage": "Thank you for subscribing!",
-            "_widthMax": "480px", "_margin": {"left": "auto", "right": "auto"}
-        }, label="Newsletter Form"),
+newsletter = section(css_id="newsletter", label="Newsletter", children=[
+    container(children=[
+        El("block", cls("gg-header"), children=[
+            eyebrow("Stay in the loop"),
+            heading("Join the Newsletter", "h2", classes=["gg-h"]),
+            para("Be the first to hear about new releases, limited editions and craftsmanship stories.",
+                 classes=["gg-lead"]),
+            El("form", {
+                "fields": [{"type": "email", "label": "Email",
+                            "placeholder": "Enter your email address",
+                            "required": True, "id": "newslttr", "width": "100"}],
+                "showLabels": True, "submitButtonText": "Subscribe", "actions": ["email"],
+                "emailSubject": "New newsletter subscription — GG Putters",
+                "emailTo": "info@ggputters.com", "emailFromName": "GG Putters Website",
+                "successMessage": "Thank you for subscribing!",
+                "_width": "100%", "_widthMax": "480px"}, label="Newsletter Form"),
+        ], label="Newsletter Content"),
     ]),
 ])
 
-# ============================================================================
 # 11. FOOTER
-# ============================================================================
-footer = section(settings={
-        "_background": {"color": {"hex": "#0b0b0a"}},
-        "_padding": {"top": "44px", "right": "24px", "bottom": "44px", "left": "24px"},
-        "_border": {"width": {"top": "1px"}, "style": "solid",
-                     "color": {"rgb": "rgba(255,255,255,0.08)"}}}, label="Footer", children=[
-    container(settings={"_display": "flex", "_direction": "column", "_alignItems": "center"},
-              children=[
-        heading("GG Putters", "div", settings={
-            "_typography": {"font-family": SERIF, "font-size": "1.4rem", "font-weight": "600",
-                             "letter-spacing": "0.12em", "color": {"hex": GOLD}},
-            "_margin": {"bottom": "10px"}}),
-        para("Italian craft, Brescia engineering. Putters with a metalworking soul.",
-             settings={"_typography": {"font-family": SANS, "font-size": "0.9rem",
-                                        "color": {"hex": MUTED_D}, "text-align": "center"},
-                        "_margin": {"bottom": "14px"}}),
-        para("GG PUTTERS is a brand of GM PRODUCTION srl · VAT IT03351530989 · Palazzolo sull'Oglio (BS), Italy",
-             settings={"_typography": {"font-family": SANS, "font-size": "0.82rem",
-                                        "color": {"hex": "#c9c4ba"}, "text-align": "center"},
-                        "_margin": {"bottom": "8px"}}),
-        para("© 2026 GG Putters. All rights reserved.",
-             settings={"_typography": {"font-family": SANS, "font-size": "0.78rem",
-                                        "color": {"hex": "#b0aa9f"}, "text-align": "center"},
-                        "_margin": {"bottom": "0px"}}),
-    ], label="Footer Inner"),
+footer = section(label="Footer", children=[
+    container(children=[
+        El("block", cls("gg-header"), children=[
+            heading("GG Putters", "p", classes=["gg-eyebrow"], label="Brand"),
+            para("Italian craft, Brescia engineering. Putters with a metalworking soul."),
+            para("GG PUTTERS is a brand of GM PRODUCTION srl · VAT IT03351530989 · Palazzolo sull'Oglio (BS), Italy"),
+            para("© 2026 GG Putters. All rights reserved."),
+        ], label="Footer Content"),
+    ]),
 ])
 
-# ----------------------------------------------------------------------------
-# Flatten
-# ----------------------------------------------------------------------------
-roots = [hero, features, models, comparison, about, accessories, trust, fitter, faq,
+roots = [hero, features, models, about, accessories, trust, fitter, faq,
          contact, newsletter, footer]
 for r in roots:
     flatten(r, 0)
 
 # ----------------------------------------------------------------------------
-# Strip font-family only: the site already provides the fonts. Font-size is
-# kept (responsive clamp() values improve scaling across breakpoints).
+# Remap class names -> ids in element settings (we authored using ids already,
+# but eyebrow/gg-h etc. were passed by NAME in `classes=[...]`). Normalize all
+# `_cssGlobalClasses` entries to ids.
 # ----------------------------------------------------------------------------
-def strip_font_family(settings):
-    for key in list(settings.keys()):
-        if key == "_typography" or key.startswith("_typography:"):
-            typo = settings[key]
+for node in elements:
+    g = node["settings"].get("_cssGlobalClasses")
+    if g:
+        node["settings"]["_cssGlobalClasses"] = _remap(g)
+
+# ----------------------------------------------------------------------------
+# SAFETY SANITIZER — guarantee: no colors, no decorative paint, no font-family.
+# Removes background/border/box-shadow/gradient/filter entirely and strips
+# color-ish + font-family keys from every _typography* object.
+# ----------------------------------------------------------------------------
+PAINT_KEYS = ("_background", "_border", "_boxShadow", "_gradient", "_cssFilters",
+              "_backgroundColor", "_borderColor")
+TYPO_DROP = ("color", "background-color", "border-color", "font-family",
+             "text-shadow", "-webkit-text-fill-color")
+
+def sanitize(settings):
+    for k in list(settings.keys()):
+        if k in PAINT_KEYS or k.startswith(("_background", "_border", "_boxShadow", "_gradient")):
+            del settings[k]
+            continue
+        if k == "_typography" or k.startswith("_typography:"):
+            typo = settings[k]
             if isinstance(typo, dict):
-                typo.pop("font-family", None)
+                for dk in TYPO_DROP:
+                    typo.pop(dk, None)
                 if not typo:
-                    del settings[key]
+                    del settings[k]
 
 for node in elements:
-    strip_font_family(node["settings"])
-for cls in global_classes:
-    strip_font_family(cls["settings"])
+    sanitize(node["settings"])
+for c in global_classes:
+    sanitize(c["settings"])
 
 # ----------------------------------------------------------------------------
-# Page settings: SEO meta, custom CSS, JSON-LD (Organization, WebSite,
-# Products, FAQPage)
+# Page settings: SEO meta + minimal a11y CSS + JSON-LD (no colors in CSS)
 # ----------------------------------------------------------------------------
 def product(name, desc, price, url, rich_offer=False):
     offer = {"@type": "Offer", "price": price, "priceCurrency": "EUR",
              "availability": "https://schema.org/InStock", "url": url,
              "priceValidUntil": "2026-12-31"}
     if rich_offer:
-        offer["shippingDetails"] = {
-            "@type": "OfferShippingDetails",
+        offer["shippingDetails"] = {"@type": "OfferShippingDetails",
             "shippingDestination": {"@type": "DefinedRegion", "addressCountry": "IT"},
             "deliveryTime": {"@type": "ShippingDeliveryTime",
-                              "handlingTime": {"@type": "QuantitativeValue", "minValue": 5,
-                                                "maxValue": 6, "unitCode": "DAY"}}}
-        offer["hasMerchantReturnPolicy"] = {
-            "@type": "MerchantReturnPolicy",
+                "handlingTime": {"@type": "QuantitativeValue", "minValue": 5, "maxValue": 6,
+                                  "unitCode": "DAY"}}}
+        offer["hasMerchantReturnPolicy"] = {"@type": "MerchantReturnPolicy",
             "applicableCountry": "IT",
             "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-            "merchantReturnDays": 14,
-            "returnMethod": "https://schema.org/ReturnByMail",
+            "merchantReturnDays": 14, "returnMethod": "https://schema.org/ReturnByMail",
             "refundType": "https://schema.org/FullRefund"}
     return {"@type": "Product", "name": f"GG {name}",
-            "brand": {"@type": "Brand", "name": "GG Putters"},
-            "category": "Golf Putter", "material": "Aluminum, Steel",
-            "description": desc, "url": url, "offers": offer}
+            "brand": {"@type": "Brand", "name": "GG Putters"}, "category": "Golf Putter",
+            "material": "Aluminum, Steel", "description": desc, "url": url, "offers": offer}
 
 graph = [
     {"@type": "Organization", "@id": f"{SHOP}/#organization", "name": "GG Putters",
      "legalName": "GM PRODUCTION srl", "url": f"{SHOP}/",
      "description": "Handcrafted, CNC-milled custom golf putters made in Brescia, Italy.",
-     "email": "info@ggputters.com", "telephone": "+39 331 1099739",
-     "vatID": "IT03351530989",
+     "email": "info@ggputters.com", "telephone": "+39 331 1099739", "vatID": "IT03351530989",
      "address": {"@type": "PostalAddress", "streetAddress": "Via Taranto, 7",
                   "addressLocality": "Palazzolo sull'Oglio", "addressRegion": "BS",
-                  "postalCode": "25036", "addressCountry": "IT"},
-     "contactPoint": [
-        {"@type": "ContactPoint", "contactType": "sales", "email": "info@ggputters.com",
-         "telephone": "+39 331 1099739"},
-        {"@type": "ContactPoint", "contactType": "customer service", "email": "office@ggputters.com"}]},
+                  "postalCode": "25036", "addressCountry": "IT"}},
     {"@type": "WebSite", "@id": f"{SHOP}/#website", "url": f"{SHOP}/", "name": "GG Putters",
      "publisher": {"@id": f"{SHOP}/#organization"}},
-    product("Antares", "Milled blade putter for feel and arc strokes, with a 3-position adjustable weight system and interchangeable faces.", "353.00", f"{SHOP}/putters/antares/", rich_offer=True),
-    product("Orion", "Milled mallet putter engineered for stability and higher forgiveness (MOI), with a 3-position adjustable weight system.", "353.00", f"{SHOP}/putters/orion/", rich_offer=True),
+    product("Antares", "Milled blade putter for feel and arc strokes, with a 3-position adjustable weight system.", "353.00", f"{SHOP}/putters/antares/", rich_offer=True),
+    product("Orion", "Milled mallet putter engineered for stability and higher forgiveness (MOI).", "353.00", f"{SHOP}/putters/orion/", rich_offer=True),
     product("Clubfaces", "Interchangeable face inserts (1°–3°) to tune loft and feel.", "52.00", f"{SHOP}/putters/clubfaces/"),
     product("Extra Weights", "Heavy and light weights for the 3-position weighting system.", "21.00", f"{SHOP}/putters/extra-weights/"),
     {"@type": "FAQPage", "@id": f"{SHOP}/#faq",
@@ -783,20 +491,14 @@ graph = [
 ]
 json_ld = {"@context": "https://schema.org", "@graph": graph}
 
+# Minimal accessibility CSS only — no colors (focus uses currentColor).
 custom_css = (
-    "html{scroll-behavior:smooth;}"
-    "::selection{background:#b8924f;color:#11110f;}"
-    # WCAG 2.4.7 — visible keyboard focus (currentColor always contrasts with its bg)
-    ":where(a,button,input,textarea,select,summary,[tabindex]):focus-visible{"
-    "outline:3px solid currentColor;outline-offset:3px;border-radius:3px;}"
-    # WCAG 2.4.11 — anchored sections are not hidden under fixed headers
-    "[id]{scroll-margin-top:2rem;}"
+    ":where(a,button,input,textarea,select,summary,[tabindex]):focus-visible"
+    "{outline:3px solid currentColor;outline-offset:3px;}"
+    "[id]{scroll-margin-top:1.5rem;}"
     "img{max-width:100%;height:auto;}"
-    # WCAG 2.3.3 / 2.2.2 — respect reduced-motion preference
-    "@media (prefers-reduced-motion:reduce){"
-    "html{scroll-behavior:auto;}"
-    "*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;"
-    "transition-duration:.01ms!important;scroll-behavior:auto!important;}}"
+    "@media(prefers-reduced-motion:reduce){*,*::before,*::after"
+    "{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important;}}"
 )
 
 page_settings = {
@@ -808,7 +510,7 @@ page_settings = {
 
 template = {
     "name": "gg-putters-landing",
-    "title": "GG Putters — SEO/GEO Landing Page",
+    "title": "GG Putters — Landing Page",
     "type": "content",
     "content": elements,
     "pageSettings": page_settings,
