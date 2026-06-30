@@ -13,7 +13,9 @@ import json
 INK      = "#11110f"
 CHARCOAL = "#1b1b18"
 GOLD     = "#b8924f"
-GOLD_LT  = "#d8b87a"
+GOLD_LT  = "#d8b87a"   # accent on DARK backgrounds (AA on dark)
+GOLD_DK  = "#7d5f2b"   # accent on LIGHT backgrounds (AA ≥ 4.5:1 on cream/cream-alt/white)
+GOLD_DK2 = "#6f5526"   # darker gold for link hover on light
 CREAM    = "#f7f4ed"
 CREAM_AL = "#efe9db"
 WHITE    = "#ffffff"
@@ -82,19 +84,34 @@ def rich(text, settings=None, classes=None, label=None):
         s.update(settings)
     return El("text", s, label=label or "Rich text")
 
-def icon(ti, settings=None):
+_attr = 0
+def attr_id():
+    global _attr
+    _attr += 1
+    return f"a{_attr:05d}"
+
+def attrs(pairs):
+    return [{"id": attr_id(), "name": k, "value": v} for k, v in pairs]
+
+def icon(ti, settings=None, decorative=True):
     s = {"icon": {"library": "themify", "icon": ti}}
+    if decorative:
+        s["_attributes"] = attrs([("aria-hidden", "true")])
     if settings:
         s.update(settings)
     return El("icon", s, label="Icon")
 
-def button(text, url, classes, settings=None, new_tab=True, aria=None):
+def button(text, url, classes, settings=None, new_tab=True, aria=None, mobile_full=True):
     link = {"type": "external", "url": url}
     if new_tab:
         link["newTab"] = True
     if aria:
         link["ariaLabel"] = aria
     s = {"text": text, "link": link, "_cssGlobalClasses": classes}
+    if mobile_full:
+        # larger tap target on small screens (WCAG 2.5.5 / UX)
+        s["_width:mobile_portrait"] = "100%"
+        s["_justifyContent:mobile_portrait"] = "center"
     if settings:
         s.update(settings)
     return El("button", s, label=f"Button: {text}")
@@ -151,7 +168,7 @@ global_classes = [
         "_display": "inline-block",
         "_typography": {"text-transform": "uppercase", "letter-spacing": "0.28em",
                          "font-size": "0.8rem", "font-weight": "600",
-                         "font-family": SANS, "color": {"hex": GOLD}},
+                         "font-family": SANS, "color": {"hex": GOLD_DK}},
         "_margin": {"bottom": "18px"}}},
     {"id": "gghttl", "name": "gg-title", "settings": {
         "_typography": {"font-family": SERIF, "font-size": "clamp(2rem, 4vw, 3.1rem)",
@@ -211,15 +228,16 @@ global_classes = [
         "_border:hover": {"color": {"hex": GOLD}},
         "_typography:hover": {"color": {"hex": INK}}}},
     {"id": "ggfico", "name": "gg-feature-icon", "settings": {
-        "_typography": {"font-size": "2rem", "color": {"hex": GOLD}},
+        "_typography": {"font-size": "2rem", "color": {"hex": GOLD_DK}},
         "_margin": {"bottom": "22px"}}},
     {"id": "ggclnk", "name": "gg-contact-link", "settings": {
-        "_typography": {"font-family": SANS, "font-weight": "600", "color": {"hex": GOLD}},
+        "_typography": {"font-family": SANS, "font-weight": "600", "color": {"hex": GOLD_DK},
+                         "text-decoration": "underline"},
         "_cssTransition": "color 0.25s ease",
-        "_typography:hover": {"color": {"hex": GOLD_LT}}}},
+        "_typography:hover": {"color": {"hex": GOLD_DK2}}}},
     {"id": "ggprice", "name": "gg-price", "settings": {
         "_typography": {"font-family": SERIF, "font-size": "1.9rem", "font-weight": "600",
-                         "color": {"hex": GOLD}}}},
+                         "color": {"hex": GOLD_DK}}}},
 ]
 
 # ----------------------------------------------------------------------------
@@ -245,7 +263,8 @@ def light_sec(bg=CREAM):
 hero = section(css_id="top", settings=dark_sec(INK), label="Hero", children=[
     container(settings={"_widthMax": "900px", "_display": "flex", "_direction": "column",
                          "_alignItems": "center"}, label="Hero Inner", children=[
-        heading("GG Putters · Made in Italy", "div", classes=["ggeyeb"]),
+        heading("GG Putters · Made in Italy", "div", classes=["ggeyeb"],
+                settings={"_typography": {"color": {"hex": GOLD_LT}}}),
         heading("Custom Milled Putters — Antares &amp; Orion, Handcrafted in Italy", "h1",
                 classes=["gghttl"],
                 settings={"_typography": {"font-family": SERIF, "color": {"hex": WHITE},
@@ -321,7 +340,7 @@ def model_card(name, model_type, definition, price, ch_price, url, specs):
         heading(model_type, "div", settings={
             "_typography": {"font-family": SANS, "font-size": "0.8rem", "font-weight": "700",
                              "text-transform": "uppercase", "letter-spacing": "0.16em",
-                             "color": {"hex": GOLD}}, "_margin": {"top": "4px", "bottom": "14px"}}),
+                             "color": {"hex": GOLD_DK}}, "_margin": {"top": "4px", "bottom": "14px"}}),
         para(definition, classes=["ggdefn"]),
         rich(f"<ul>{spec_items}</ul>", classes=["ggbody"],
              settings={"_margin": {"bottom": "22px"}}, label="Specs"),
@@ -358,39 +377,57 @@ models = section(css_id="shop", settings=light_sec(WHITE), label="Models / Shop"
 # 4. COMPARISON TABLE — Antares vs Orion
 # ============================================================================
 def table_block(headers, rows):
-    n = len(headers)
-    cells = []
-    for i, h in enumerate(headers):
-        cells.append(heading(h, "div", settings={
+    def th(text, i):
+        return heading(text, "div", settings={
             "_background": {"color": {"hex": INK}},
             "_typography": {"font-family": SANS, "font-size": "0.85rem", "font-weight": "700",
                              "text-transform": "uppercase", "letter-spacing": "0.08em",
                              "color": {"hex": GOLD_LT},
                              "text-align": "left" if i == 0 else "center"},
-            "_padding": {"top": "16px", "right": "20px", "bottom": "16px", "left": "20px"}},
-            label="TH"))
-    for row in rows:
-        for i, c in enumerate(row):
-            cells.append(para(c, settings={
-                "_typography": {"font-family": SANS, "font-size": "0.98rem",
-                                 "color": {"hex": INK_TXT if i == 0 else MUTED},
-                                 "font-weight": "600" if i == 0 else "400",
-                                 "text-align": "left" if i == 0 else "center"},
-                "_padding": {"top": "14px", "right": "20px", "bottom": "14px", "left": "20px"},
-                "_border": {"width": {"bottom": "1px"}, "style": "solid",
-                             "color": {"rgb": "rgba(17,17,15,0.08)"}},
-                "_margin": {"bottom": "0px"}}, label="TD"))
-    grid = block(children=cells, settings={
+            "_padding": {"top": "16px", "right": "20px", "bottom": "16px", "left": "20px"},
+            "_attributes": attrs([("role", "columnheader"), ("scope", "col")])}, label="TH")
+
+    def td(text, i):
+        a = [("role", "rowheader"), ("scope", "row")] if i == 0 else [("role", "cell")]
+        return para(text, settings={
+            "_typography": {"font-family": SANS, "font-size": "0.98rem",
+                             "color": {"hex": INK_TXT if i == 0 else MUTED},
+                             "font-weight": "600" if i == 0 else "400",
+                             "text-align": "left" if i == 0 else "center"},
+            "_padding": {"top": "14px", "right": "20px", "bottom": "14px", "left": "20px"},
+            "_border": {"width": {"bottom": "1px"}, "style": "solid",
+                         "color": {"rgb": "rgba(17,17,15,0.08)"}},
+            "_margin": {"bottom": "0px"},
+            "_attributes": attrs(a)}, label="TD")
+
+    def trow(cells):
+        # display:contents keeps the row's cells as direct grid items while
+        # preserving the role="row" grouping for assistive technology.
+        return block(children=cells, settings={
+            "_cssCustom": "%root%{display:contents;}",
+            "_attributes": attrs([("role", "row")])}, label="Row")
+
+    children = [trow([th(h, i) for i, h in enumerate(headers)])]
+    children += [trow([td(c, i) for i, c in enumerate(r)]) for r in rows]
+
+    grid = block(children=children, settings={
         "_display": "grid", "_gridTemplateColumns": "1.4fr 1fr 1fr",
         "_widthMin": "560px",
         "_background": {"color": {"hex": WHITE}},
         "_border": {"width": {"top": "1px", "right": "1px", "bottom": "1px", "left": "1px"},
                      "style": "solid", "color": {"rgb": "rgba(17,17,15,0.10)"},
                      "radius": {"top": "14px", "right": "14px", "bottom": "14px", "left": "14px"}},
-        "_overflow": "hidden"}, label="Table Grid")
-    return block(children=[grid], settings={"_overflow": "auto", "_widthMax": "860px",
-                                             "_margin": {"left": "auto", "right": "auto"}},
-                 label="Table Wrapper")
+        "_overflow": "hidden",
+        "_attributes": attrs([("role", "table"),
+                               ("aria-label", "Comparison of Antares and Orion putters")])},
+        label="Table Grid")
+    # Scrollable region focusable by keyboard (WCAG 2.1.1)
+    return block(children=[grid], settings={
+        "_overflow": "auto", "_widthMax": "860px",
+        "_margin": {"left": "auto", "right": "auto"},
+        "_attributes": attrs([("role", "region"),
+                               ("aria-label", "Antares vs Orion comparison table"),
+                               ("tabindex", "0")])}, label="Table Wrapper")
 
 comparison = section(css_id="compare", settings=light_sec(CREAM_AL), label="Comparison", children=[
     header_block("Blade vs mallet", "Antares vs Orion: which putter is right for you?",
@@ -409,7 +446,8 @@ comparison = section(css_id="compare", settings=light_sec(CREAM_AL), label="Comp
 # 5. ABOUT — real story
 # ============================================================================
 about_text = block(children=[
-    heading("About us", "div", classes=["ggeyeb"]),
+    heading("About us", "div", classes=["ggeyeb"],
+            settings={"_typography": {"color": {"hex": GOLD_LT}}}),
     heading("Italian Craft, Brescia Engineering — Made in Italy, Game-Ready", "h2",
             classes=["gghttl"], settings={"_typography": {"color": {"hex": WHITE}}}),
     para("GG Putters is a golf brand by GM PRODUCTION srl, born in a garage in the 1980s in the Oglio river valley near Brescia, Italy — a region with a centuries-old metalworking tradition.",
@@ -435,13 +473,13 @@ def acc_card(name, price, desc):
     return block(classes=["ggcard"], settings={"_padding": {"top": "28px", "right": "26px",
                                                              "bottom": "28px", "left": "26px"}}, children=[
         block(settings={"_display": "flex", "_justifyContent": "space-between",
-                         "_alignItems": "baseline", "_gap": "10px"}, children=[
+                         "_alignItems": "baseline", "_gap": "10px", "_flexWrap": "wrap"}, children=[
             heading(name, "h3", settings={
                 "_typography": {"font-family": SERIF, "font-size": "1.2rem", "font-weight": "600",
                                  "color": {"hex": INK_TXT}}}),
             heading(price, "div", settings={
                 "_typography": {"font-family": SERIF, "font-size": "1.2rem", "font-weight": "600",
-                                 "color": {"hex": GOLD}}}),
+                                 "color": {"hex": GOLD_DK}}}),
         ], label="Name + Price"),
         para(desc, classes=["ggbody"], settings={"_typography": {"font-size": "0.92rem"},
                                                   "_margin": {"top": "8px", "bottom": "0px"}}),
@@ -470,7 +508,7 @@ accessories = section(css_id="accessories", settings=light_sec(CREAM), label="Ac
 # ============================================================================
 def trust_item(ti, title, text):
     return block(settings={"_display": "flex", "_direction": "column", "_alignItems": "center"}, children=[
-        icon(ti, settings={"_typography": {"font-size": "1.6rem", "color": {"hex": GOLD}},
+        icon(ti, settings={"_typography": {"font-size": "1.6rem", "color": {"hex": GOLD_DK}},
                             "_margin": {"bottom": "12px"}}),
         heading(title, "h3", settings={
             "_typography": {"font-family": SANS, "font-size": "1rem", "font-weight": "700",
@@ -511,7 +549,8 @@ fitter = section(css_id="fitters", settings=dark_sec(INK), label="Fitter Kit", c
     container(children=[
         block(classes=["gggrd2"], settings={"_alignItemsGrid": "center"}, children=[
             block(children=[
-                heading("For fitters", "div", classes=["ggeyeb"]),
+                heading("For fitters", "div", classes=["ggeyeb"],
+                        settings={"_typography": {"color": {"hex": GOLD_LT}}}),
                 heading("The GG Putters Fitter Kit", "h2", classes=["gghttl"],
                         settings={"_typography": {"color": {"hex": WHITE}}}),
                 para("The Fitter Kit is a modular fitting system that lets professionals test every putter configuration with a client in a single session.",
@@ -582,14 +621,14 @@ def contact_card(title, rows):
     children = [heading(title, "h3", settings={
         "_typography": {"font-family": SANS, "font-size": "0.85rem", "font-weight": "700",
                          "text-transform": "uppercase", "letter-spacing": "0.16em",
-                         "color": {"hex": GOLD}}, "_margin": {"bottom": "16px"}})]
+                         "color": {"hex": GOLD_DK}}, "_margin": {"bottom": "16px"}})]
     for kind, value, href in rows:
         s = {"text": value, "link": {"type": "external", "url": href},
-             "_typography": {"font-family": SANS,
-                              "color": {"hex": GOLD if href.startswith("mailto") else MUTED}},
              "_display": "block", "_margin": {"bottom": "6px"}}
         if href.startswith("mailto"):
             s["_cssGlobalClasses"] = ["ggclnk"]
+        else:
+            s["_typography"] = {"color": {"hex": MUTED}, "text-decoration": "underline"}
         children.append(El("text-link", s, label=kind))
     children[-1].settings["_margin"]["bottom"] = "0px"
     return block(classes=["ggcard"], settings={"_alignItems": "center"}, children=children,
@@ -618,7 +657,8 @@ newsletter = section(css_id="newsletter", settings={
         label="Newsletter", children=[
     container(settings={"_widthMax": "640px", "_display": "flex", "_direction": "column",
                          "_alignItems": "center"}, label="Newsletter Inner", children=[
-        heading("Stay in the loop", "div", classes=["ggeyeb"]),
+        heading("Stay in the loop", "div", classes=["ggeyeb"],
+                settings={"_typography": {"color": {"hex": GOLD_LT}}}),
         heading("Join the Newsletter", "h2", classes=["gghttl"],
                 settings={"_typography": {"color": {"hex": WHITE}, "text-align": "center"}}),
         para("Be the first to hear about new releases, limited editions and craftsmanship stories.",
@@ -627,7 +667,7 @@ newsletter = section(css_id="newsletter", settings={
         El("form", {
             "fields": [{"type": "email", "label": "Email", "placeholder": "Enter your email address",
                         "required": True, "id": "newslttr", "width": "100"}],
-            "showLabels": False, "submitButtonText": "Subscribe", "actions": ["email"],
+            "showLabels": True, "submitButtonText": "Subscribe", "actions": ["email"],
             "emailSubject": "New newsletter subscription — GG Putters",
             "emailTo": "info@ggputters.com", "emailFromName": "GG Putters Website",
             "successMessage": "Thank you for subscribing!",
@@ -656,11 +696,11 @@ footer = section(settings={
                         "_margin": {"bottom": "14px"}}),
         para("GG PUTTERS is a brand of GM PRODUCTION srl · VAT IT03351530989 · Palazzolo sull'Oglio (BS), Italy",
              settings={"_typography": {"font-family": SANS, "font-size": "0.82rem",
-                                        "color": {"rgb": "rgba(255,255,255,0.5)"}, "text-align": "center"},
+                                        "color": {"hex": "#c9c4ba"}, "text-align": "center"},
                         "_margin": {"bottom": "8px"}}),
         para("© 2026 GG Putters. All rights reserved.",
              settings={"_typography": {"font-family": SANS, "font-size": "0.78rem",
-                                        "color": {"rgb": "rgba(255,255,255,0.38)"}, "text-align": "center"},
+                                        "color": {"hex": "#b0aa9f"}, "text-align": "center"},
                         "_margin": {"bottom": "0px"}}),
     ], label="Footer Inner"),
 ])
@@ -674,28 +714,22 @@ for r in roots:
     flatten(r, 0)
 
 # ----------------------------------------------------------------------------
-# Strip font-family / font-size: the site's theme styles already define fonts
-# and sizes for the relevant tags. Icon sizing (font-size on `icon` elements
-# and the `ggfico` icon class) is preserved, as there it is the icon size.
+# Strip font-family only: the site already provides the fonts. Font-size is
+# kept (responsive clamp() values improve scaling across breakpoints).
 # ----------------------------------------------------------------------------
-ICON_SIZE_CLASSES = {"ggfico"}
-
-def strip_fonts(settings, keep_font_size=False):
+def strip_font_family(settings):
     for key in list(settings.keys()):
         if key == "_typography" or key.startswith("_typography:"):
             typo = settings[key]
             if isinstance(typo, dict):
                 typo.pop("font-family", None)
-                if not keep_font_size:
-                    typo.pop("font-size", None)
                 if not typo:
                     del settings[key]
 
 for node in elements:
-    strip_fonts(node["settings"], keep_font_size=(node["name"] == "icon"))
-
+    strip_font_family(node["settings"])
 for cls in global_classes:
-    strip_fonts(cls["settings"], keep_font_size=(cls["id"] in ICON_SIZE_CLASSES))
+    strip_font_family(cls["settings"])
 
 # ----------------------------------------------------------------------------
 # Page settings: SEO meta, custom CSS, JSON-LD (Organization, WebSite,
@@ -749,8 +783,21 @@ graph = [
 ]
 json_ld = {"@context": "https://schema.org", "@graph": graph}
 
-custom_css = ("html{scroll-behavior:smooth;}"
-              "::selection{background:#b8924f;color:#11110f;}")
+custom_css = (
+    "html{scroll-behavior:smooth;}"
+    "::selection{background:#b8924f;color:#11110f;}"
+    # WCAG 2.4.7 — visible keyboard focus (currentColor always contrasts with its bg)
+    ":where(a,button,input,textarea,select,summary,[tabindex]):focus-visible{"
+    "outline:3px solid currentColor;outline-offset:3px;border-radius:3px;}"
+    # WCAG 2.4.11 — anchored sections are not hidden under fixed headers
+    "[id]{scroll-margin-top:2rem;}"
+    "img{max-width:100%;height:auto;}"
+    # WCAG 2.3.3 / 2.2.2 — respect reduced-motion preference
+    "@media (prefers-reduced-motion:reduce){"
+    "html{scroll-behavior:auto;}"
+    "*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;"
+    "transition-duration:.01ms!important;scroll-behavior:auto!important;}}"
+)
 
 page_settings = {
     "pageTitle": "Custom Milled Putters Made in Italy | Antares &amp; Orion — GG Putters",
