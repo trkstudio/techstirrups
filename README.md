@@ -5,8 +5,23 @@ italiano di Brescia) pronto da importare in Bricks Builder 2.3.6.
 
 ## File
 
-- `gg-putters-landing.json` — template nel formato *Template Export* di Bricks, pronto all'import.
-- `generate_template.py` — generatore Python che produce il JSON (sorgente di verità, riproducibile).
+- `gg-putters-landing.json` — landing principale (Template Export di Bricks), pronta all'import.
+- `gg-accessories-page.json` — pagina **Accessories & Fitter Kit** (Template Export), pronta all'import.
+- `generate_template.py` — generatore della landing principale.
+- `generate_accessories.py` — generatore della pagina accessori (stesse classi/stile).
+
+### Pagina Accessories & Fitter Kit (`gg-accessories-page.json`)
+
+Costruita dalle sezioni **Accessories** e **Fitter Kit**, con una **Head SEO/GEO** completa:
+
+- `pageTitle` + `metaDescription`, **`<link rel="canonical">`**, `robots`,
+  **Open Graph** e **Twitter Card** (immagine OG segnaposto da sostituire) — iniettati in `<head>` via `customScriptsHeader`.
+- **JSON-LD**: `Organization`, `BreadcrumbList`, `CollectionPage`, `ItemList` dei 5
+  accessori (`Product` + `Offer` in EUR, `isAccessoryOrSparePartFor` → Antares/Orion),
+  `Product` (Fitter Kit), **`HowTo`** (setup pesi/facce) e **`FAQPage`** (7 Q/A).
+- Contenuti GEO: definizioni in una frase, dati concreti (pesi 1.19/1.48/1.97 oz, lofts 1°–3°,
+  prezzi €21–€149), guida **HowTo** in 4 step, FAQ, link interni ai prodotti reali.
+- Stesso stile della landing: **nessun colore**, layout **Flex fluido**, accessibilità.
 
 ## Come importare in Bricks
 
