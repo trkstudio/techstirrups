@@ -1,0 +1,2735 @@
+{
+  "name": "gg-putters-landing",
+  "title": "GG Putters — SEO Landing Page",
+  "type": "content",
+  "content": [
+    {
+      "id": "e00001",
+      "name": "section",
+      "parent": 0,
+      "children": [
+        "e00002"
+      ],
+      "settings": {
+        "_cssId": "top",
+        "_background": {
+          "color": {
+            "hex": "#11110f"
+          }
+        },
+        "_padding": {
+          "top": "120px",
+          "right": "24px",
+          "bottom": "120px",
+          "left": "24px"
+        },
+        "_padding:mobile_portrait": {
+          "top": "72px",
+          "right": "20px",
+          "bottom": "72px",
+          "left": "20px"
+        }
+      },
+      "label": "Hero"
+    },
+    {
+      "id": "e00002",
+      "name": "container",
+      "parent": "e00001",
+      "children": [
+        "e00003",
+        "e00004",
+        "e00005",
+        "e00006",
+        "e00007"
+      ],
+      "settings": {
+        "_widthMax": "880px",
+        "_display": "flex",
+        "_direction": "column",
+        "_alignItems": "center"
+      },
+      "label": "Hero Inner"
+    },
+    {
+      "id": "e00003",
+      "name": "heading",
+      "parent": "e00002",
+      "children": [],
+      "settings": {
+        "text": "GG Putters",
+        "tag": "div",
+        "_cssGlobalClasses": [
+          "ggeyeb"
+        ]
+      },
+      "label": "Eyebrow"
+    },
+    {
+      "id": "e00004",
+      "name": "heading",
+      "parent": "e00002",
+      "children": [],
+      "settings": {
+        "text": "Handcrafted Italian Putters, CNC-Milled in Brescia",
+        "tag": "h1",
+        "_cssGlobalClasses": [
+          "gghttl"
+        ],
+        "_typography": {
+          "font-family": "Playfair Display",
+          "color": {
+            "hex": "#ffffff"
+          },
+          "font-size": "clamp(2.4rem, 5vw, 4rem)",
+          "font-weight": "600",
+          "line-height": "1.08",
+          "text-align": "center"
+        },
+        "_margin": {
+          "bottom": "22px"
+        }
+      },
+      "label": "H1"
+    },
+    {
+      "id": "e00005",
+      "name": "heading",
+      "parent": "e00002",
+      "children": [],
+      "settings": {
+        "text": "Customization, innovation and peak performance on every green.",
+        "tag": "div",
+        "_typography": {
+          "font-family": "Playfair Display",
+          "font-style": "italic",
+          "font-size": "1.4rem",
+          "color": {
+            "hex": "#d8b87a"
+          },
+          "line-height": "1.4",
+          "text-align": "center"
+        },
+        "_margin": {
+          "bottom": "26px"
+        }
+      },
+      "label": "Tagline"
+    },
+    {
+      "id": "e00006",
+      "name": "text-basic",
+      "parent": "e00002",
+      "children": [],
+      "settings": {
+        "text": "Every GG putter combines Italian craftsmanship with expert CNC milling to deliver a soft, responsive feel and a consistently straighter roll.",
+        "tag": "p",
+        "_cssGlobalClasses": [
+          "gglead"
+        ],
+        "_typography": {
+          "color": {
+            "hex": "#b6b1a5"
+          },
+          "text-align": "center"
+        },
+        "_margin": {
+          "left": "auto",
+          "right": "auto",
+          "bottom": "38px"
+        }
+      },
+      "label": "Paragraph"
+    },
+    {
+      "id": "e00007",
+      "name": "block",
+      "parent": "e00002",
+      "children": [
+        "e00008",
+        "e00009"
+      ],
+      "settings": {
+        "_display": "flex",
+        "_justifyContent": "center",
+        "_gap": "16px",
+        "_flexWrap": "wrap"
+      },
+      "label": "Hero CTAs"
+    },
+    {
+      "id": "e00008",
+      "name": "button",
+      "parent": "e00007",
+      "children": [],
+      "settings": {
+        "text": "Shop Putters",
+        "link": {
+          "type": "external",
+          "url": "#shop",
+          "ariaLabel": "Shop GG Putters"
+        },
+        "_cssGlobalClasses": [
+          "ggbtnp"
+        ]
+      },
+      "label": "Button: Shop Putters"
+    },
+    {
+      "id": "e00009",
+      "name": "button",
+      "parent": "e00007",
+      "children": [],
+      "settings": {
+        "text": "Discover the Craft",
+        "link": {
+          "type": "external",
+          "url": "#about",
+          "ariaLabel": "Learn about GG Putters"
+        },
+        "_cssGlobalClasses": [
+          "ggbtno"
+        ]
+      },
+      "label": "Button: Discover the Craft"
+    },
+    {
+      "id": "e00010",
+      "name": "section",
+      "parent": 0,
+      "children": [
+        "e00011",
+        "e00015"
+      ],
+      "settings": {
+        "_cssId": "features",
+        "_background": {
+          "color": {
+            "hex": "#f7f4ed"
+          }
+        },
+        "_padding": {
+          "top": "120px",
+          "right": "24px",
+          "bottom": "120px",
+          "left": "24px"
+        },
+        "_padding:mobile_portrait": {
+          "top": "72px",
+          "right": "20px",
+          "bottom": "72px",
+          "left": "20px"
+        }
+      },
+      "label": "Features"
+    },
+    {
+      "id": "e00011",
+      "name": "container",
+      "parent": "e00010",
+      "children": [
+        "e00012",
+        "e00013",
+        "e00014"
+      ],
+      "settings": {
+        "_widthMax": "1180px",
+        "_display": "flex",
+        "_direction": "column",
+        "_alignItems": "center"
+      },
+      "label": "Features Header"
+    },
+    {
+      "id": "e00012",
+      "name": "heading",
+      "parent": "e00011",
+      "children": [],
+      "settings": {
+        "text": "Performance by design",
+        "tag": "div",
+        "_cssGlobalClasses": [
+          "ggeyeb"
+        ]
+      },
+      "label": "div: Performance by design"
+    },
+    {
+      "id": "e00013",
+      "name": "heading",
+      "parent": "e00011",
+      "children": [],
+      "settings": {
+        "text": "Why players choose our putters",
+        "tag": "h2",
+        "_cssGlobalClasses": [
+          "gghttl"
+        ],
+        "_typography": {
+          "color": {
+            "hex": "#1c1b18"
+          },
+          "text-align": "center"
+        }
+      },
+      "label": "h2: Why players choose our p"
+    },
+    {
+      "id": "e00014",
+      "name": "text-basic",
+      "parent": "e00011",
+      "children": [],
+      "settings": {
+        "text": "Engineered to perform, refined to last — every detail is built around a cleaner, more confident stroke.",
+        "tag": "p",
+        "_cssGlobalClasses": [
+          "gglead"
+        ],
+        "_typography": {
+          "text-align": "center"
+        },
+        "_margin": {
+          "left": "auto",
+          "right": "auto",
+          "bottom": "56px"
+        }
+      },
+      "label": "Paragraph"
+    },
+    {
+      "id": "e00015",
+      "name": "block",
+      "parent": "e00010",
+      "children": [
+        "e00016",
+        "e00020",
+        "e00024"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "gggrd3"
+        ],
+        "_widthMax": "1180px",
+        "_margin": {
+          "left": "auto",
+          "right": "auto"
+        }
+      },
+      "label": "Feature Grid"
+    },
+    {
+      "id": "e00016",
+      "name": "block",
+      "parent": "e00015",
+      "children": [
+        "e00017",
+        "e00018",
+        "e00019"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "ggcard"
+        ]
+      },
+      "label": "Feature: Stability & straighter roll"
+    },
+    {
+      "id": "e00017",
+      "name": "icon",
+      "parent": "e00016",
+      "children": [],
+      "settings": {
+        "icon": {
+          "library": "themify",
+          "icon": "ti-target"
+        },
+        "_cssGlobalClasses": [
+          "ggfico"
+        ]
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "e00018",
+      "name": "heading",
+      "parent": "e00016",
+      "children": [],
+      "settings": {
+        "text": "Stability & straighter roll",
+        "tag": "h3",
+        "_typography": {
+          "font-family": "Playfair Display",
+          "font-size": "1.45rem",
+          "font-weight": "600",
+          "color": {
+            "hex": "#1c1b18"
+          }
+        },
+        "_margin": {
+          "bottom": "14px"
+        }
+      },
+      "label": "h3: Stability & straighter r"
+    },
+    {
+      "id": "e00019",
+      "name": "text-basic",
+      "parent": "e00016",
+      "children": [],
+      "settings": {
+        "text": "A lighter aluminum central structure paired with heavier stainless steel perimeter weighting creates exceptional stability at impact, reducing unwanted vibration and promoting a cleaner, straighter roll.",
+        "tag": "p",
+        "_cssGlobalClasses": [
+          "ggbody"
+        ],
+        "_margin": {
+          "bottom": "0px"
+        }
+      },
+      "label": "Paragraph"
+    },
+    {
+      "id": "e00020",
+      "name": "block",
+      "parent": "e00015",
+      "children": [
+        "e00021",
+        "e00022",
+        "e00023"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "ggcard"
+        ]
+      },
+      "label": "Feature: Adjustable weighting system"
+    },
+    {
+      "id": "e00021",
+      "name": "icon",
+      "parent": "e00020",
+      "children": [],
+      "settings": {
+        "icon": {
+          "library": "themify",
+          "icon": "ti-settings"
+        },
+        "_cssGlobalClasses": [
+          "ggfico"
+        ]
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "e00022",
+      "name": "heading",
+      "parent": "e00020",
+      "children": [],
+      "settings": {
+        "text": "Adjustable weighting system",
+        "tag": "h3",
+        "_typography": {
+          "font-family": "Playfair Display",
+          "font-size": "1.45rem",
+          "font-weight": "600",
+          "color": {
+            "hex": "#1c1b18"
+          }
+        },
+        "_margin": {
+          "bottom": "14px"
+        }
+      },
+      "label": "h3: Adjustable weighting sys"
+    },
+    {
+      "id": "e00023",
+      "name": "text-basic",
+      "parent": "e00020",
+      "children": [],
+      "settings": {
+        "text": "Designed to adapt to the player, the adjustable weighting system allows complete balance customization to fine-tune performance and help compensate for stroke tendencies.",
+        "tag": "p",
+        "_cssGlobalClasses": [
+          "ggbody"
+        ],
+        "_margin": {
+          "bottom": "0px"
+        }
+      },
+      "label": "Paragraph"
+    },
+    {
+      "id": "e00024",
+      "name": "block",
+      "parent": "e00015",
+      "children": [
+        "e00025",
+        "e00026",
+        "e00027"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "ggcard"
+        ]
+      },
+      "label": "Feature: Interchangeable face inserts"
+    },
+    {
+      "id": "e00025",
+      "name": "icon",
+      "parent": "e00024",
+      "children": [],
+      "settings": {
+        "icon": {
+          "library": "themify",
+          "icon": "ti-layers"
+        },
+        "_cssGlobalClasses": [
+          "ggfico"
+        ]
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "e00026",
+      "name": "heading",
+      "parent": "e00024",
+      "children": [],
+      "settings": {
+        "text": "Interchangeable face inserts",
+        "tag": "h3",
+        "_typography": {
+          "font-family": "Playfair Display",
+          "font-size": "1.45rem",
+          "font-weight": "600",
+          "color": {
+            "hex": "#1c1b18"
+          }
+        },
+        "_margin": {
+          "bottom": "14px"
+        }
+      },
+      "label": "h3: Interchangeable face ins"
+    },
+    {
+      "id": "e00027",
+      "name": "text-basic",
+      "parent": "e00024",
+      "children": [],
+      "settings": {
+        "text": "Interchangeable face inserts let golfers optimize feel and responsiveness for different green speeds and playing conditions.",
+        "tag": "p",
+        "_cssGlobalClasses": [
+          "ggbody"
+        ],
+        "_margin": {
+          "bottom": "0px"
+        }
+      },
+      "label": "Paragraph"
+    },
+    {
+      "id": "e00028",
+      "name": "section",
+      "parent": 0,
+      "children": [
+        "e00029"
+      ],
+      "settings": {
+        "_cssId": "about",
+        "_background": {
+          "color": {
+            "hex": "#1b1b18"
+          }
+        },
+        "_padding": {
+          "top": "120px",
+          "right": "24px",
+          "bottom": "120px",
+          "left": "24px"
+        },
+        "_padding:mobile_portrait": {
+          "top": "72px",
+          "right": "20px",
+          "bottom": "72px",
+          "left": "20px"
+        }
+      },
+      "label": "About"
+    },
+    {
+      "id": "e00029",
+      "name": "container",
+      "parent": "e00028",
+      "children": [
+        "e00030"
+      ],
+      "settings": {
+        "_widthMax": "1180px"
+      },
+      "label": "About Inner"
+    },
+    {
+      "id": "e00030",
+      "name": "block",
+      "parent": "e00029",
+      "children": [
+        "e00031",
+        "e00037"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "gggrd2"
+        ]
+      },
+      "label": "About Grid"
+    },
+    {
+      "id": "e00031",
+      "name": "block",
+      "parent": "e00030",
+      "children": [
+        "e00032",
+        "e00033",
+        "e00034",
+        "e00035",
+        "e00036"
+      ],
+      "settings": {},
+      "label": "About Text"
+    },
+    {
+      "id": "e00032",
+      "name": "heading",
+      "parent": "e00031",
+      "children": [],
+      "settings": {
+        "text": "About us",
+        "tag": "div",
+        "_cssGlobalClasses": [
+          "ggeyeb"
+        ]
+      },
+      "label": "div: About us"
+    },
+    {
+      "id": "e00033",
+      "name": "heading",
+      "parent": "e00031",
+      "children": [],
+      "settings": {
+        "text": "Italian Craft, Brescia Engineering — Putters With a Metalworking Soul",
+        "tag": "h2",
+        "_cssGlobalClasses": [
+          "gghttl"
+        ],
+        "_typography": {
+          "color": {
+            "hex": "#ffffff"
+          }
+        }
+      },
+      "label": "h2: Italian Craft, Brescia E"
+    },
+    {
+      "id": "e00034",
+      "name": "text-basic",
+      "parent": "e00031",
+      "children": [],
+      "settings": {
+        "text": "Deeply rooted in Brescia’s historic legacy of precision engineering, our putters are born from generations of manufacturing expertise. Drawing on our expertise in luxury and design, we create one-of-a-kind putters.",
+        "tag": "p",
+        "_cssGlobalClasses": [
+          "ggbody"
+        ],
+        "_typography": {
+          "color": {
+            "hex": "#b6b1a5"
+          }
+        }
+      },
+      "label": "Paragraph"
+    },
+    {
+      "id": "e00035",
+      "name": "text-basic",
+      "parent": "e00031",
+      "children": [],
+      "settings": {
+        "text": "Milled from a solid billet of premium metal using advanced CNC technology, our putters blend high-precision engineering with meticulous artistry. Every micro-feature is sculpted with obsessive attention to detail, ensuring a club that delivers unrivaled balance, control and feel on every stroke.",
+        "tag": "p",
+        "_cssGlobalClasses": [
+          "ggbody"
+        ],
+        "_typography": {
+          "color": {
+            "hex": "#b6b1a5"
+          }
+        }
+      },
+      "label": "Paragraph"
+    },
+    {
+      "id": "e00036",
+      "name": "text-basic",
+      "parent": "e00031",
+      "children": [],
+      "settings": {
+        "text": "Hand-finished with absolute care and built to last, our exclusive putters combine high performance with timeless Italian workmanship to elevate both your game and your collection.",
+        "tag": "p",
+        "_cssGlobalClasses": [
+          "ggbody"
+        ],
+        "_typography": {
+          "color": {
+            "hex": "#b6b1a5"
+          }
+        },
+        "_margin": {
+          "bottom": "0px"
+        }
+      },
+      "label": "Paragraph"
+    },
+    {
+      "id": "e00037",
+      "name": "image",
+      "parent": "e00030",
+      "children": [],
+      "settings": {
+        "image": {
+          "url": "",
+          "alt": "GG Putters CNC milling process in the Brescia workshop, Italy"
+        },
+        "altText": "GG Putters CNC milling process in the Brescia workshop, Italy",
+        "_border": {
+          "radius": {
+            "top": "16px",
+            "right": "16px",
+            "bottom": "16px",
+            "left": "16px"
+          }
+        },
+        "_height": "100%",
+        "_objectFit": "cover",
+        "_aspectRatio": "4/5"
+      },
+      "label": "About Image"
+    },
+    {
+      "id": "e00038",
+      "name": "section",
+      "parent": 0,
+      "children": [
+        "e00039",
+        "e00043",
+        "e00048"
+      ],
+      "settings": {
+        "_cssId": "shop",
+        "_background": {
+          "color": {
+            "hex": "#ffffff"
+          }
+        },
+        "_padding": {
+          "top": "120px",
+          "right": "24px",
+          "bottom": "120px",
+          "left": "24px"
+        },
+        "_padding:mobile_portrait": {
+          "top": "72px",
+          "right": "20px",
+          "bottom": "72px",
+          "left": "20px"
+        }
+      },
+      "label": "Products / Shop"
+    },
+    {
+      "id": "e00039",
+      "name": "container",
+      "parent": "e00038",
+      "children": [
+        "e00040",
+        "e00041",
+        "e00042"
+      ],
+      "settings": {
+        "_widthMax": "1180px",
+        "_display": "flex",
+        "_direction": "column",
+        "_alignItems": "center"
+      },
+      "label": "Products Header"
+    },
+    {
+      "id": "e00040",
+      "name": "heading",
+      "parent": "e00039",
+      "children": [],
+      "settings": {
+        "text": "Our products",
+        "tag": "div",
+        "_cssGlobalClasses": [
+          "ggeyeb"
+        ]
+      },
+      "label": "div: Our products"
+    },
+    {
+      "id": "e00041",
+      "name": "heading",
+      "parent": "e00039",
+      "children": [],
+      "settings": {
+        "text": "Shop Our Putters",
+        "tag": "h2",
+        "_cssGlobalClasses": [
+          "gghttl"
+        ],
+        "_typography": {
+          "color": {
+            "hex": "#1c1b18"
+          },
+          "text-align": "center"
+        }
+      },
+      "label": "h2: Shop Our Putters"
+    },
+    {
+      "id": "e00042",
+      "name": "text-basic",
+      "parent": "e00039",
+      "children": [],
+      "settings": {
+        "text": "Explore the collection — click any image to view the putter from every angle and add it to your bag.",
+        "tag": "p",
+        "_cssGlobalClasses": [
+          "gglead"
+        ],
+        "_typography": {
+          "text-align": "center"
+        },
+        "_margin": {
+          "left": "auto",
+          "right": "auto",
+          "bottom": "50px"
+        }
+      },
+      "label": "Paragraph"
+    },
+    {
+      "id": "e00043",
+      "name": "block",
+      "parent": "e00038",
+      "children": [
+        "e00044",
+        "e00045",
+        "e00046",
+        "e00047"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "gggrd3"
+        ],
+        "_widthMax": "1100px",
+        "_gridTemplateColumns": "repeat(4, minmax(0, 1fr))",
+        "_gridTemplateColumns:tablet_portrait": "repeat(2, minmax(0, 1fr))",
+        "_gridTemplateColumns:mobile_portrait": "repeat(2, minmax(0, 1fr))",
+        "_margin": {
+          "left": "auto",
+          "right": "auto",
+          "bottom": "48px"
+        }
+      },
+      "label": "Product Gallery"
+    },
+    {
+      "id": "e00044",
+      "name": "image",
+      "parent": "e00043",
+      "children": [],
+      "settings": {
+        "image": {
+          "url": "",
+          "alt": "GG milled putter — address view"
+        },
+        "altText": "GG milled putter — address view",
+        "link": {
+          "type": "external",
+          "url": "#shop",
+          "ariaLabel": "GG milled putter — address view"
+        },
+        "_border": {
+          "radius": {
+            "top": "12px",
+            "right": "12px",
+            "bottom": "12px",
+            "left": "12px"
+          }
+        },
+        "_aspectRatio": "1",
+        "_objectFit": "cover",
+        "_cursor": "pointer",
+        "_cssTransition": "transform 0.3s ease",
+        "_transform:hover": {
+          "scaleX": "1.03",
+          "scaleY": "1.03"
+        }
+      },
+      "label": "Product photo: GG milled putter — a"
+    },
+    {
+      "id": "e00045",
+      "name": "image",
+      "parent": "e00043",
+      "children": [],
+      "settings": {
+        "image": {
+          "url": "",
+          "alt": "GG milled putter — toe profile"
+        },
+        "altText": "GG milled putter — toe profile",
+        "link": {
+          "type": "external",
+          "url": "#shop",
+          "ariaLabel": "GG milled putter — toe profile"
+        },
+        "_border": {
+          "radius": {
+            "top": "12px",
+            "right": "12px",
+            "bottom": "12px",
+            "left": "12px"
+          }
+        },
+        "_aspectRatio": "1",
+        "_objectFit": "cover",
+        "_cursor": "pointer",
+        "_cssTransition": "transform 0.3s ease",
+        "_transform:hover": {
+          "scaleX": "1.03",
+          "scaleY": "1.03"
+        }
+      },
+      "label": "Product photo: GG milled putter — t"
+    },
+    {
+      "id": "e00046",
+      "name": "image",
+      "parent": "e00043",
+      "children": [],
+      "settings": {
+        "image": {
+          "url": "",
+          "alt": "GG milled putter — cavity back detail"
+        },
+        "altText": "GG milled putter — cavity back detail",
+        "link": {
+          "type": "external",
+          "url": "#shop",
+          "ariaLabel": "GG milled putter — cavity back detail"
+        },
+        "_border": {
+          "radius": {
+            "top": "12px",
+            "right": "12px",
+            "bottom": "12px",
+            "left": "12px"
+          }
+        },
+        "_aspectRatio": "1",
+        "_objectFit": "cover",
+        "_cursor": "pointer",
+        "_cssTransition": "transform 0.3s ease",
+        "_transform:hover": {
+          "scaleX": "1.03",
+          "scaleY": "1.03"
+        }
+      },
+      "label": "Product photo: GG milled putter — c"
+    },
+    {
+      "id": "e00047",
+      "name": "image",
+      "parent": "e00043",
+      "children": [],
+      "settings": {
+        "image": {
+          "url": "",
+          "alt": "GG milled putter — face insert close-up"
+        },
+        "altText": "GG milled putter — face insert close-up",
+        "link": {
+          "type": "external",
+          "url": "#shop",
+          "ariaLabel": "GG milled putter — face insert close-up"
+        },
+        "_border": {
+          "radius": {
+            "top": "12px",
+            "right": "12px",
+            "bottom": "12px",
+            "left": "12px"
+          }
+        },
+        "_aspectRatio": "1",
+        "_objectFit": "cover",
+        "_cursor": "pointer",
+        "_cssTransition": "transform 0.3s ease",
+        "_transform:hover": {
+          "scaleX": "1.03",
+          "scaleY": "1.03"
+        }
+      },
+      "label": "Product photo: GG milled putter — f"
+    },
+    {
+      "id": "e00048",
+      "name": "block",
+      "parent": "e00038",
+      "children": [
+        "e00049"
+      ],
+      "settings": {
+        "_display": "flex",
+        "_justifyContent": "center"
+      },
+      "label": "Shop CTA"
+    },
+    {
+      "id": "e00049",
+      "name": "button",
+      "parent": "e00048",
+      "children": [],
+      "settings": {
+        "text": "Shop Clubs",
+        "link": {
+          "type": "external",
+          "url": "#shop",
+          "ariaLabel": "Shop GG Putter clubs"
+        },
+        "_cssGlobalClasses": [
+          "ggbtnp"
+        ],
+        "_typography": {
+          "color": {
+            "hex": "#11110f"
+          }
+        }
+      },
+      "label": "Button: Shop Clubs"
+    },
+    {
+      "id": "e00050",
+      "name": "section",
+      "parent": 0,
+      "children": [
+        "e00051",
+        "e00055"
+      ],
+      "settings": {
+        "_cssId": "accessories",
+        "_background": {
+          "color": {
+            "hex": "#efe9db"
+          }
+        },
+        "_padding": {
+          "top": "120px",
+          "right": "24px",
+          "bottom": "120px",
+          "left": "24px"
+        },
+        "_padding:mobile_portrait": {
+          "top": "72px",
+          "right": "20px",
+          "bottom": "72px",
+          "left": "20px"
+        }
+      },
+      "label": "Accessories"
+    },
+    {
+      "id": "e00051",
+      "name": "container",
+      "parent": "e00050",
+      "children": [
+        "e00052",
+        "e00053",
+        "e00054"
+      ],
+      "settings": {
+        "_widthMax": "1180px",
+        "_display": "flex",
+        "_direction": "column",
+        "_alignItems": "center"
+      },
+      "label": "Accessories Header"
+    },
+    {
+      "id": "e00052",
+      "name": "heading",
+      "parent": "e00051",
+      "children": [],
+      "settings": {
+        "text": "Optional accessories",
+        "tag": "div",
+        "_cssGlobalClasses": [
+          "ggeyeb"
+        ]
+      },
+      "label": "div: Optional accessories"
+    },
+    {
+      "id": "e00053",
+      "name": "heading",
+      "parent": "e00051",
+      "children": [],
+      "settings": {
+        "text": "Optional Accessories",
+        "tag": "h2",
+        "_cssGlobalClasses": [
+          "gghttl"
+        ],
+        "_typography": {
+          "color": {
+            "hex": "#1c1b18"
+          },
+          "text-align": "center"
+        }
+      },
+      "label": "h2: Optional Accessories"
+    },
+    {
+      "id": "e00054",
+      "name": "text-basic",
+      "parent": "e00051",
+      "children": [],
+      "settings": {
+        "text": "Fine-tune feel and balance with interchangeable plates and weights — selectable by specification and quantity.",
+        "tag": "p",
+        "_cssGlobalClasses": [
+          "gglead"
+        ],
+        "_typography": {
+          "text-align": "center"
+        },
+        "_margin": {
+          "left": "auto",
+          "right": "auto",
+          "bottom": "52px"
+        }
+      },
+      "label": "Paragraph"
+    },
+    {
+      "id": "e00055",
+      "name": "block",
+      "parent": "e00050",
+      "children": [
+        "e00056",
+        "e00064"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "gggrd2"
+        ],
+        "_widthMax": "920px",
+        "_margin": {
+          "left": "auto",
+          "right": "auto"
+        },
+        "_alignItemsGrid": "stretch"
+      },
+      "label": "Accessories Grid"
+    },
+    {
+      "id": "e00056",
+      "name": "block",
+      "parent": "e00055",
+      "children": [
+        "e00057",
+        "e00058",
+        "e00059",
+        "e00060",
+        "e00061",
+        "e00062"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "ggcard"
+        ]
+      },
+      "label": "Accessory: Face Insert Plate"
+    },
+    {
+      "id": "e00057",
+      "name": "image",
+      "parent": "e00056",
+      "children": [],
+      "settings": {
+        "image": {
+          "url": "",
+          "alt": "GG putter interchangeable face insert plate"
+        },
+        "altText": "GG putter interchangeable face insert plate",
+        "_border": {
+          "radius": {
+            "top": "12px",
+            "right": "12px",
+            "bottom": "12px",
+            "left": "12px"
+          }
+        },
+        "_aspectRatio": "16/10",
+        "_objectFit": "cover",
+        "_margin": {
+          "bottom": "24px"
+        }
+      },
+      "label": "Image: GG putter interchangeabl"
+    },
+    {
+      "id": "e00058",
+      "name": "heading",
+      "parent": "e00056",
+      "children": [],
+      "settings": {
+        "text": "Face Insert Plate",
+        "tag": "h3",
+        "_typography": {
+          "font-family": "Playfair Display",
+          "font-size": "1.45rem",
+          "font-weight": "600",
+          "color": {
+            "hex": "#1c1b18"
+          }
+        },
+        "_margin": {
+          "bottom": "8px"
+        }
+      },
+      "label": "h3: Face Insert Plate"
+    },
+    {
+      "id": "e00059",
+      "name": "heading",
+      "parent": "e00056",
+      "children": [],
+      "settings": {
+        "text": "€52,00",
+        "tag": "div",
+        "_cssGlobalClasses": [
+          "ggprice"
+        ],
+        "_margin": {
+          "bottom": "18px"
+        }
+      },
+      "label": "div: €52,00"
+    },
+    {
+      "id": "e00060",
+      "name": "text-basic",
+      "parent": "e00056",
+      "children": [],
+      "settings": {
+        "text": "<strong>Plate:</strong> 2°, 3°, 4°",
+        "tag": "p",
+        "_cssGlobalClasses": [
+          "ggbody"
+        ]
+      },
+      "label": "Paragraph"
+    },
+    {
+      "id": "e00061",
+      "name": "text-basic",
+      "parent": "e00056",
+      "children": [],
+      "settings": {
+        "text": "Choose your option and quantity at checkout.",
+        "tag": "p",
+        "_cssGlobalClasses": [
+          "ggbody"
+        ],
+        "_typography": {
+          "font-size": "0.9rem",
+          "color": {
+            "hex": "#5d5a52"
+          }
+        },
+        "_margin": {
+          "bottom": "26px"
+        }
+      },
+      "label": "Paragraph"
+    },
+    {
+      "id": "e00062",
+      "name": "block",
+      "parent": "e00056",
+      "children": [
+        "e00063"
+      ],
+      "settings": {
+        "_margin": {
+          "top": "auto"
+        }
+      },
+      "label": "Buy"
+    },
+    {
+      "id": "e00063",
+      "name": "button",
+      "parent": "e00062",
+      "children": [],
+      "settings": {
+        "text": "Buy Now",
+        "link": {
+          "type": "external",
+          "url": "#shop",
+          "ariaLabel": "Buy Face Insert Plate"
+        },
+        "_cssGlobalClasses": [
+          "ggbtnp"
+        ],
+        "_typography": {
+          "color": {
+            "hex": "#11110f"
+          }
+        },
+        "_width": "fit-content"
+      },
+      "label": "Button: Buy Now"
+    },
+    {
+      "id": "e00064",
+      "name": "block",
+      "parent": "e00055",
+      "children": [
+        "e00065",
+        "e00066",
+        "e00067",
+        "e00068",
+        "e00069",
+        "e00070"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "ggcard"
+        ]
+      },
+      "label": "Accessory: Adjustable Weights"
+    },
+    {
+      "id": "e00065",
+      "name": "image",
+      "parent": "e00064",
+      "children": [],
+      "settings": {
+        "image": {
+          "url": "",
+          "alt": "GG putter adjustable weights set"
+        },
+        "altText": "GG putter adjustable weights set",
+        "_border": {
+          "radius": {
+            "top": "12px",
+            "right": "12px",
+            "bottom": "12px",
+            "left": "12px"
+          }
+        },
+        "_aspectRatio": "16/10",
+        "_objectFit": "cover",
+        "_margin": {
+          "bottom": "24px"
+        }
+      },
+      "label": "Image: GG putter adjustable wei"
+    },
+    {
+      "id": "e00066",
+      "name": "heading",
+      "parent": "e00064",
+      "children": [],
+      "settings": {
+        "text": "Adjustable Weights",
+        "tag": "h3",
+        "_typography": {
+          "font-family": "Playfair Display",
+          "font-size": "1.45rem",
+          "font-weight": "600",
+          "color": {
+            "hex": "#1c1b18"
+          }
+        },
+        "_margin": {
+          "bottom": "8px"
+        }
+      },
+      "label": "h3: Adjustable Weights"
+    },
+    {
+      "id": "e00067",
+      "name": "heading",
+      "parent": "e00064",
+      "children": [],
+      "settings": {
+        "text": "€21,00",
+        "tag": "div",
+        "_cssGlobalClasses": [
+          "ggprice"
+        ],
+        "_margin": {
+          "bottom": "18px"
+        }
+      },
+      "label": "div: €21,00"
+    },
+    {
+      "id": "e00068",
+      "name": "text-basic",
+      "parent": "e00064",
+      "children": [],
+      "settings": {
+        "text": "<strong>Weights:</strong> Light (1.19 oz), Medium (1.48 oz), Heavy (1.97 oz)",
+        "tag": "p",
+        "_cssGlobalClasses": [
+          "ggbody"
+        ]
+      },
+      "label": "Paragraph"
+    },
+    {
+      "id": "e00069",
+      "name": "text-basic",
+      "parent": "e00064",
+      "children": [],
+      "settings": {
+        "text": "Choose your option and quantity at checkout.",
+        "tag": "p",
+        "_cssGlobalClasses": [
+          "ggbody"
+        ],
+        "_typography": {
+          "font-size": "0.9rem",
+          "color": {
+            "hex": "#5d5a52"
+          }
+        },
+        "_margin": {
+          "bottom": "26px"
+        }
+      },
+      "label": "Paragraph"
+    },
+    {
+      "id": "e00070",
+      "name": "block",
+      "parent": "e00064",
+      "children": [
+        "e00071"
+      ],
+      "settings": {
+        "_margin": {
+          "top": "auto"
+        }
+      },
+      "label": "Buy"
+    },
+    {
+      "id": "e00071",
+      "name": "button",
+      "parent": "e00070",
+      "children": [],
+      "settings": {
+        "text": "Buy Now",
+        "link": {
+          "type": "external",
+          "url": "#shop",
+          "ariaLabel": "Buy Adjustable Weights"
+        },
+        "_cssGlobalClasses": [
+          "ggbtnp"
+        ],
+        "_typography": {
+          "color": {
+            "hex": "#11110f"
+          }
+        },
+        "_width": "fit-content"
+      },
+      "label": "Button: Buy Now"
+    },
+    {
+      "id": "e00072",
+      "name": "section",
+      "parent": 0,
+      "children": [
+        "e00073"
+      ],
+      "settings": {
+        "_cssId": "dealers",
+        "_background": {
+          "color": {
+            "hex": "#11110f"
+          }
+        },
+        "_padding": {
+          "top": "120px",
+          "right": "24px",
+          "bottom": "120px",
+          "left": "24px"
+        },
+        "_padding:mobile_portrait": {
+          "top": "72px",
+          "right": "20px",
+          "bottom": "72px",
+          "left": "20px"
+        }
+      },
+      "label": "Dealers"
+    },
+    {
+      "id": "e00073",
+      "name": "container",
+      "parent": "e00072",
+      "children": [
+        "e00074",
+        "e00077"
+      ],
+      "settings": {
+        "_widthMax": "1180px"
+      },
+      "label": "Dealers Inner"
+    },
+    {
+      "id": "e00074",
+      "name": "block",
+      "parent": "e00073",
+      "children": [
+        "e00075",
+        "e00076"
+      ],
+      "settings": {
+        "_display": "flex",
+        "_direction": "column",
+        "_alignItems": "center"
+      },
+      "label": "Dealers Header"
+    },
+    {
+      "id": "e00075",
+      "name": "heading",
+      "parent": "e00074",
+      "children": [],
+      "settings": {
+        "text": "Where to find us",
+        "tag": "div",
+        "_cssGlobalClasses": [
+          "ggeyeb"
+        ]
+      },
+      "label": "div: Where to find us"
+    },
+    {
+      "id": "e00076",
+      "name": "heading",
+      "parent": "e00074",
+      "children": [],
+      "settings": {
+        "text": "Fitters & Official Dealers",
+        "tag": "h2",
+        "_cssGlobalClasses": [
+          "gghttl"
+        ],
+        "_typography": {
+          "color": {
+            "hex": "#ffffff"
+          },
+          "text-align": "center"
+        },
+        "_margin": {
+          "bottom": "48px"
+        }
+      },
+      "label": "h2: Fitters & Official Deale"
+    },
+    {
+      "id": "e00077",
+      "name": "block",
+      "parent": "e00073",
+      "children": [
+        "e00078",
+        "e00084"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "gggrd2"
+        ],
+        "_alignItemsGrid": "start"
+      },
+      "label": "Dealers Grid"
+    },
+    {
+      "id": "e00078",
+      "name": "block",
+      "parent": "e00077",
+      "children": [
+        "e00079",
+        "e00080",
+        "e00081",
+        "e00082",
+        "e00083"
+      ],
+      "settings": {},
+      "label": "Dealer List"
+    },
+    {
+      "id": "e00079",
+      "name": "heading",
+      "parent": "e00078",
+      "children": [],
+      "settings": {
+        "text": "USA",
+        "tag": "h3",
+        "_typography": {
+          "font-family": "Inter",
+          "font-size": "0.85rem",
+          "font-weight": "700",
+          "text-transform": "uppercase",
+          "letter-spacing": "0.18em",
+          "color": {
+            "hex": "#b8924f"
+          }
+        },
+        "_margin": {
+          "bottom": "14px"
+        }
+      },
+      "label": "h3: USA"
+    },
+    {
+      "id": "e00080",
+      "name": "text-basic",
+      "parent": "e00078",
+      "children": [],
+      "settings": {
+        "text": "<strong>Ohio</strong> — TSH Golf",
+        "tag": "p",
+        "_cssGlobalClasses": [
+          "ggbody"
+        ],
+        "_typography": {
+          "color": {
+            "hex": "#ffffff"
+          }
+        },
+        "_margin": {
+          "bottom": "6px"
+        }
+      },
+      "label": "Paragraph"
+    },
+    {
+      "id": "e00081",
+      "name": "text-link",
+      "parent": "e00078",
+      "children": [],
+      "settings": {
+        "text": "www.tshgolf.com",
+        "link": {
+          "type": "external",
+          "url": "https://www.tshgolf.com",
+          "newTab": true
+        },
+        "_cssGlobalClasses": [
+          "ggclnk"
+        ]
+      },
+      "label": "Dealer link"
+    },
+    {
+      "id": "e00082",
+      "name": "heading",
+      "parent": "e00078",
+      "children": [],
+      "settings": {
+        "text": "Sales Representatives",
+        "tag": "h3",
+        "_typography": {
+          "font-family": "Inter",
+          "font-size": "0.85rem",
+          "font-weight": "700",
+          "text-transform": "uppercase",
+          "letter-spacing": "0.18em",
+          "color": {
+            "hex": "#b8924f"
+          }
+        },
+        "_margin": {
+          "top": "34px",
+          "bottom": "10px"
+        }
+      },
+      "label": "h3: Sales Representatives"
+    },
+    {
+      "id": "e00083",
+      "name": "text-basic",
+      "parent": "e00078",
+      "children": [],
+      "settings": {
+        "text": "Coverage is expanding worldwide. Contact us to find a representative near you.",
+        "tag": "p",
+        "_cssGlobalClasses": [
+          "ggbody"
+        ],
+        "_typography": {
+          "color": {
+            "hex": "#b6b1a5"
+          }
+        },
+        "_margin": {
+          "bottom": "0px"
+        }
+      },
+      "label": "Paragraph"
+    },
+    {
+      "id": "e00084",
+      "name": "block",
+      "parent": "e00077",
+      "children": [
+        "e00085",
+        "e00086",
+        "e00087"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "ggcard"
+        ],
+        "_background": {
+          "color": {
+            "hex": "#1b1b18"
+          }
+        },
+        "_border": {
+          "width": {
+            "top": "1px",
+            "right": "1px",
+            "bottom": "1px",
+            "left": "1px"
+          },
+          "style": "solid",
+          "color": {
+            "rgb": "rgba(184,146,79,0.35)"
+          },
+          "radius": {
+            "top": "16px",
+            "right": "16px",
+            "bottom": "16px",
+            "left": "16px"
+          }
+        }
+      },
+      "label": "Partner Card"
+    },
+    {
+      "id": "e00085",
+      "name": "heading",
+      "parent": "e00084",
+      "children": [],
+      "settings": {
+        "text": "Become an Official Partner",
+        "tag": "h3",
+        "_typography": {
+          "font-family": "Playfair Display",
+          "font-size": "1.6rem",
+          "font-weight": "600",
+          "color": {
+            "hex": "#ffffff"
+          }
+        },
+        "_margin": {
+          "bottom": "16px"
+        }
+      },
+      "label": "h3: Become an Official Partn"
+    },
+    {
+      "id": "e00086",
+      "name": "text-basic",
+      "parent": "e00084",
+      "children": [],
+      "settings": {
+        "text": "We are seeking qualified agents, fitters and distributors to represent our brand in uncovered regions. If you share our passion for precision and luxury, contact us today to explore partnership opportunities.",
+        "tag": "p",
+        "_cssGlobalClasses": [
+          "ggbody"
+        ],
+        "_typography": {
+          "color": {
+            "hex": "#b6b1a5"
+          }
+        },
+        "_margin": {
+          "bottom": "26px"
+        }
+      },
+      "label": "Paragraph"
+    },
+    {
+      "id": "e00087",
+      "name": "button",
+      "parent": "e00084",
+      "children": [],
+      "settings": {
+        "text": "Become a Partner",
+        "link": {
+          "type": "external",
+          "url": "mailto:info@ggputters.com",
+          "ariaLabel": "Email GG Putters to become an official partner"
+        },
+        "_cssGlobalClasses": [
+          "ggbtnp"
+        ],
+        "_typography": {
+          "color": {
+            "hex": "#11110f"
+          }
+        },
+        "_width": "fit-content"
+      },
+      "label": "Button: Become a Partner"
+    },
+    {
+      "id": "e00088",
+      "name": "section",
+      "parent": 0,
+      "children": [
+        "e00089",
+        "e00093"
+      ],
+      "settings": {
+        "_cssId": "contact",
+        "_background": {
+          "color": {
+            "hex": "#f7f4ed"
+          }
+        },
+        "_padding": {
+          "top": "120px",
+          "right": "24px",
+          "bottom": "120px",
+          "left": "24px"
+        },
+        "_padding:mobile_portrait": {
+          "top": "72px",
+          "right": "20px",
+          "bottom": "72px",
+          "left": "20px"
+        }
+      },
+      "label": "Contact"
+    },
+    {
+      "id": "e00089",
+      "name": "container",
+      "parent": "e00088",
+      "children": [
+        "e00090",
+        "e00091",
+        "e00092"
+      ],
+      "settings": {
+        "_widthMax": "1180px",
+        "_display": "flex",
+        "_direction": "column",
+        "_alignItems": "center"
+      },
+      "label": "Contact Header"
+    },
+    {
+      "id": "e00090",
+      "name": "heading",
+      "parent": "e00089",
+      "children": [],
+      "settings": {
+        "text": "Get in touch",
+        "tag": "div",
+        "_cssGlobalClasses": [
+          "ggeyeb"
+        ]
+      },
+      "label": "div: Get in touch"
+    },
+    {
+      "id": "e00091",
+      "name": "heading",
+      "parent": "e00089",
+      "children": [],
+      "settings": {
+        "text": "Contact Us",
+        "tag": "h2",
+        "_cssGlobalClasses": [
+          "gghttl"
+        ],
+        "_typography": {
+          "color": {
+            "hex": "#1c1b18"
+          },
+          "text-align": "center"
+        }
+      },
+      "label": "h2: Contact Us"
+    },
+    {
+      "id": "e00092",
+      "name": "text-basic",
+      "parent": "e00089",
+      "children": [],
+      "settings": {
+        "text": "Questions about a build, an order or a partnership? Our team is here to help.",
+        "tag": "p",
+        "_cssGlobalClasses": [
+          "gglead"
+        ],
+        "_typography": {
+          "text-align": "center"
+        },
+        "_margin": {
+          "left": "auto",
+          "right": "auto",
+          "bottom": "52px"
+        }
+      },
+      "label": "Paragraph"
+    },
+    {
+      "id": "e00093",
+      "name": "block",
+      "parent": "e00088",
+      "children": [
+        "e00094",
+        "e00098",
+        "e00102"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "gggrd3"
+        ],
+        "_widthMax": "1100px",
+        "_margin": {
+          "left": "auto",
+          "right": "auto"
+        }
+      },
+      "label": "Contact Grid"
+    },
+    {
+      "id": "e00094",
+      "name": "block",
+      "parent": "e00093",
+      "children": [
+        "e00095",
+        "e00096",
+        "e00097"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "ggcard"
+        ],
+        "_alignItems": "center"
+      },
+      "label": "Contact: Sales"
+    },
+    {
+      "id": "e00095",
+      "name": "heading",
+      "parent": "e00094",
+      "children": [],
+      "settings": {
+        "text": "Sales",
+        "tag": "h3",
+        "_typography": {
+          "font-family": "Inter",
+          "font-size": "0.85rem",
+          "font-weight": "700",
+          "text-transform": "uppercase",
+          "letter-spacing": "0.16em",
+          "color": {
+            "hex": "#b8924f"
+          }
+        },
+        "_margin": {
+          "bottom": "16px"
+        }
+      },
+      "label": "h3: Sales"
+    },
+    {
+      "id": "e00096",
+      "name": "text-link",
+      "parent": "e00094",
+      "children": [],
+      "settings": {
+        "text": "info@ggputters.com",
+        "link": {
+          "type": "external",
+          "url": "mailto:info@ggputters.com"
+        },
+        "_cssGlobalClasses": [
+          "ggclnk"
+        ],
+        "_display": "block",
+        "_margin": {
+          "bottom": "6px"
+        }
+      },
+      "label": "Email"
+    },
+    {
+      "id": "e00097",
+      "name": "text-link",
+      "parent": "e00094",
+      "children": [],
+      "settings": {
+        "text": "+39 349 880 0268",
+        "link": {
+          "type": "external",
+          "url": "tel:+393498800268"
+        },
+        "_typography": {
+          "font-family": "Inter",
+          "color": {
+            "hex": "#5d5a52"
+          }
+        },
+        "_display": "block",
+        "_margin": {
+          "bottom": "0px"
+        }
+      },
+      "label": "Phone"
+    },
+    {
+      "id": "e00098",
+      "name": "block",
+      "parent": "e00093",
+      "children": [
+        "e00099",
+        "e00100",
+        "e00101"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "ggcard"
+        ],
+        "_alignItems": "center"
+      },
+      "label": "Contact: Customer Service"
+    },
+    {
+      "id": "e00099",
+      "name": "heading",
+      "parent": "e00098",
+      "children": [],
+      "settings": {
+        "text": "Customer Service",
+        "tag": "h3",
+        "_typography": {
+          "font-family": "Inter",
+          "font-size": "0.85rem",
+          "font-weight": "700",
+          "text-transform": "uppercase",
+          "letter-spacing": "0.16em",
+          "color": {
+            "hex": "#b8924f"
+          }
+        },
+        "_margin": {
+          "bottom": "16px"
+        }
+      },
+      "label": "h3: Customer Service"
+    },
+    {
+      "id": "e00100",
+      "name": "text-link",
+      "parent": "e00098",
+      "children": [],
+      "settings": {
+        "text": "customerservice@ggputters.com",
+        "link": {
+          "type": "external",
+          "url": "mailto:customerservice@ggputters.com"
+        },
+        "_cssGlobalClasses": [
+          "ggclnk"
+        ],
+        "_display": "block",
+        "_margin": {
+          "bottom": "6px"
+        }
+      },
+      "label": "Email"
+    },
+    {
+      "id": "e00101",
+      "name": "text-link",
+      "parent": "e00098",
+      "children": [],
+      "settings": {
+        "text": "+39 375 794 2431",
+        "link": {
+          "type": "external",
+          "url": "tel:+393757942431"
+        },
+        "_typography": {
+          "font-family": "Inter",
+          "color": {
+            "hex": "#5d5a52"
+          }
+        },
+        "_display": "block",
+        "_margin": {
+          "bottom": "0px"
+        }
+      },
+      "label": "Phone"
+    },
+    {
+      "id": "e00102",
+      "name": "block",
+      "parent": "e00093",
+      "children": [
+        "e00103",
+        "e00104"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "ggcard"
+        ],
+        "_alignItems": "center"
+      },
+      "label": "Contact: Dealers / Agents"
+    },
+    {
+      "id": "e00103",
+      "name": "heading",
+      "parent": "e00102",
+      "children": [],
+      "settings": {
+        "text": "Dealers / Agents",
+        "tag": "h3",
+        "_typography": {
+          "font-family": "Inter",
+          "font-size": "0.85rem",
+          "font-weight": "700",
+          "text-transform": "uppercase",
+          "letter-spacing": "0.16em",
+          "color": {
+            "hex": "#b8924f"
+          }
+        },
+        "_margin": {
+          "bottom": "16px"
+        }
+      },
+      "label": "h3: Dealers / Agents"
+    },
+    {
+      "id": "e00104",
+      "name": "text-link",
+      "parent": "e00102",
+      "children": [],
+      "settings": {
+        "text": "office@ggputters.com",
+        "link": {
+          "type": "external",
+          "url": "mailto:office@ggputters.com"
+        },
+        "_cssGlobalClasses": [
+          "ggclnk"
+        ],
+        "_display": "block",
+        "_margin": {
+          "bottom": "6px"
+        }
+      },
+      "label": "Email"
+    },
+    {
+      "id": "e00105",
+      "name": "section",
+      "parent": 0,
+      "children": [
+        "e00106"
+      ],
+      "settings": {
+        "_cssId": "newsletter",
+        "_background": {
+          "color": {
+            "hex": "#11110f"
+          }
+        },
+        "_padding": {
+          "top": "96px",
+          "right": "24px",
+          "bottom": "96px",
+          "left": "24px"
+        },
+        "_padding:mobile_portrait": {
+          "top": "64px",
+          "right": "20px",
+          "bottom": "64px",
+          "left": "20px"
+        }
+      },
+      "label": "Newsletter"
+    },
+    {
+      "id": "e00106",
+      "name": "container",
+      "parent": "e00105",
+      "children": [
+        "e00107",
+        "e00108",
+        "e00109",
+        "e00110"
+      ],
+      "settings": {
+        "_widthMax": "640px",
+        "_display": "flex",
+        "_direction": "column",
+        "_alignItems": "center"
+      },
+      "label": "Newsletter Inner"
+    },
+    {
+      "id": "e00107",
+      "name": "heading",
+      "parent": "e00106",
+      "children": [],
+      "settings": {
+        "text": "Stay in the loop",
+        "tag": "div",
+        "_cssGlobalClasses": [
+          "ggeyeb"
+        ]
+      },
+      "label": "div: Stay in the loop"
+    },
+    {
+      "id": "e00108",
+      "name": "heading",
+      "parent": "e00106",
+      "children": [],
+      "settings": {
+        "text": "Join the Newsletter",
+        "tag": "h2",
+        "_cssGlobalClasses": [
+          "gghttl"
+        ],
+        "_typography": {
+          "color": {
+            "hex": "#ffffff"
+          },
+          "text-align": "center"
+        }
+      },
+      "label": "h2: Join the Newsletter"
+    },
+    {
+      "id": "e00109",
+      "name": "text-basic",
+      "parent": "e00106",
+      "children": [],
+      "settings": {
+        "text": "Be the first to hear about new releases, limited editions and craftsmanship stories.",
+        "tag": "p",
+        "_cssGlobalClasses": [
+          "gglead"
+        ],
+        "_typography": {
+          "color": {
+            "hex": "#b6b1a5"
+          },
+          "text-align": "center"
+        },
+        "_margin": {
+          "left": "auto",
+          "right": "auto",
+          "bottom": "32px"
+        }
+      },
+      "label": "Paragraph"
+    },
+    {
+      "id": "e00110",
+      "name": "form",
+      "parent": "e00106",
+      "children": [],
+      "settings": {
+        "fields": [
+          {
+            "type": "email",
+            "label": "Email",
+            "placeholder": "Enter your email address",
+            "required": true,
+            "id": "newslttr",
+            "width": "100"
+          }
+        ],
+        "showLabels": false,
+        "submitButtonText": "Subscribe",
+        "actions": [
+          "email"
+        ],
+        "emailSubject": "New newsletter subscription — GG Putters",
+        "emailTo": "info@ggputters.com",
+        "emailFromName": "GG Putters Website",
+        "successMessage": "Thank you for subscribing!",
+        "_widthMax": "480px",
+        "_margin": {
+          "left": "auto",
+          "right": "auto"
+        }
+      },
+      "label": "Newsletter Form"
+    },
+    {
+      "id": "e00111",
+      "name": "section",
+      "parent": 0,
+      "children": [
+        "e00112"
+      ],
+      "settings": {
+        "_background": {
+          "color": {
+            "hex": "#0b0b0a"
+          }
+        },
+        "_padding": {
+          "top": "44px",
+          "right": "24px",
+          "bottom": "44px",
+          "left": "24px"
+        },
+        "_border": {
+          "width": {
+            "top": "1px"
+          },
+          "style": "solid",
+          "color": {
+            "rgb": "rgba(255,255,255,0.08)"
+          }
+        }
+      },
+      "label": "Footer"
+    },
+    {
+      "id": "e00112",
+      "name": "container",
+      "parent": "e00111",
+      "children": [
+        "e00113",
+        "e00114",
+        "e00115"
+      ],
+      "settings": {
+        "_widthMax": "1180px",
+        "_display": "flex",
+        "_direction": "column",
+        "_alignItems": "center"
+      },
+      "label": "Footer Inner"
+    },
+    {
+      "id": "e00113",
+      "name": "heading",
+      "parent": "e00112",
+      "children": [],
+      "settings": {
+        "text": "GG Putters",
+        "tag": "div",
+        "_typography": {
+          "font-family": "Playfair Display",
+          "font-size": "1.4rem",
+          "font-weight": "600",
+          "letter-spacing": "0.12em",
+          "color": {
+            "hex": "#b8924f"
+          }
+        },
+        "_margin": {
+          "bottom": "10px"
+        }
+      },
+      "label": "div: GG Putters"
+    },
+    {
+      "id": "e00114",
+      "name": "text-basic",
+      "parent": "e00112",
+      "children": [],
+      "settings": {
+        "text": "Italian craft, Brescia engineering. Putters with a metalworking soul.",
+        "tag": "p",
+        "_typography": {
+          "font-family": "Inter",
+          "font-size": "0.9rem",
+          "color": {
+            "hex": "#b6b1a5"
+          },
+          "text-align": "center"
+        },
+        "_margin": {
+          "bottom": "16px"
+        }
+      },
+      "label": "Paragraph"
+    },
+    {
+      "id": "e00115",
+      "name": "text-basic",
+      "parent": "e00112",
+      "children": [],
+      "settings": {
+        "text": "© 2026 GG Putters. All rights reserved.",
+        "tag": "p",
+        "_typography": {
+          "font-family": "Inter",
+          "font-size": "0.8rem",
+          "color": {
+            "rgb": "rgba(255,255,255,0.4)"
+          },
+          "text-align": "center"
+        },
+        "_margin": {
+          "bottom": "0px"
+        }
+      },
+      "label": "Paragraph"
+    }
+  ],
+  "pageSettings": {
+    "pageTitle": "Handcrafted Italian Putters | CNC-Milled in Brescia — GG Putters",
+    "metaDescription": "GG Putters: luxury Italian putters CNC-milled in Brescia. Adjustable weighting, interchangeable face inserts and a soft, responsive feel for a straighter roll.",
+    "customCss": "html{scroll-behavior:smooth;}::selection{background:#b8924f;color:#11110f;}body{font-family:'Inter',sans-serif;}",
+    "customScriptsBodyFooter": "<script type=\"application/ld+json\">{\"@context\": \"https://schema.org\", \"@graph\": [{\"@type\": \"Organization\", \"@id\": \"https://www.ggputters.com/#organization\", \"name\": \"GG Putters\", \"url\": \"https://www.ggputters.com/\", \"description\": \"Handcrafted, CNC-milled luxury golf putters made in Brescia, Italy.\", \"email\": \"info@ggputters.com\", \"telephone\": \"+39 349 880 0268\", \"address\": {\"@type\": \"PostalAddress\", \"addressLocality\": \"Brescia\", \"addressCountry\": \"IT\"}, \"contactPoint\": [{\"@type\": \"ContactPoint\", \"contactType\": \"sales\", \"email\": \"info@ggputters.com\", \"telephone\": \"+39 349 880 0268\"}, {\"@type\": \"ContactPoint\", \"contactType\": \"customer service\", \"email\": \"customerservice@ggputters.com\", \"telephone\": \"+39 375 794 2431\"}, {\"@type\": \"ContactPoint\", \"contactType\": \"dealers\", \"email\": \"office@ggputters.com\"}]}, {\"@type\": \"WebSite\", \"@id\": \"https://www.ggputters.com/#website\", \"url\": \"https://www.ggputters.com/\", \"name\": \"GG Putters\", \"publisher\": {\"@id\": \"https://www.ggputters.com/#organization\"}}, {\"@type\": \"Product\", \"name\": \"GG Handcrafted CNC-Milled Putter\", \"brand\": {\"@type\": \"Brand\", \"name\": \"GG Putters\"}, \"description\": \"Italian handcrafted putter milled from a solid billet using advanced CNC technology, with adjustable perimeter weighting and interchangeable face inserts for a soft feel and straighter roll.\", \"material\": \"Aluminum, Stainless Steel\"}, {\"@type\": \"Product\", \"name\": \"Face Insert Plate\", \"brand\": {\"@type\": \"Brand\", \"name\": \"GG Putters\"}, \"description\": \"Interchangeable face insert plate for GG putters. Available in 2°, 3° and 4°.\", \"offers\": {\"@type\": \"Offer\", \"price\": \"52.00\", \"priceCurrency\": \"EUR\", \"availability\": \"https://schema.org/InStock\"}}, {\"@type\": \"Product\", \"name\": \"Adjustable Weights\", \"brand\": {\"@type\": \"Brand\", \"name\": \"GG Putters\"}, \"description\": \"Adjustable weights for GG putters. Light (1.19 oz), medium (1.48 oz) and heavy (1.97 oz).\", \"offers\": {\"@type\": \"Offer\", \"price\": \"21.00\", \"priceCurrency\": \"EUR\", \"availability\": \"https://schema.org/InStock\"}}]}</script>"
+  },
+  "templateSettings": {
+    "templateConditions": [
+      {
+        "main": "any"
+      }
+    ]
+  },
+  "global_classes": [
+    {
+      "id": "ggeyeb",
+      "name": "gg-eyebrow",
+      "settings": {
+        "_display": "inline-block",
+        "_typography": {
+          "text-transform": "uppercase",
+          "letter-spacing": "0.28em",
+          "font-size": "0.8rem",
+          "font-weight": "600",
+          "font-family": "Inter",
+          "color": {
+            "hex": "#b8924f"
+          }
+        },
+        "_margin": {
+          "bottom": "18px"
+        }
+      }
+    },
+    {
+      "id": "gghttl",
+      "name": "gg-title",
+      "settings": {
+        "_typography": {
+          "font-family": "Playfair Display",
+          "font-size": "clamp(2rem, 4vw, 3.1rem)",
+          "font-weight": "600",
+          "line-height": "1.12"
+        },
+        "_margin": {
+          "bottom": "22px"
+        }
+      }
+    },
+    {
+      "id": "gglead",
+      "name": "gg-lead",
+      "settings": {
+        "_typography": {
+          "font-family": "Inter",
+          "font-size": "1.15rem",
+          "line-height": "1.75",
+          "color": {
+            "hex": "#5d5a52"
+          }
+        },
+        "_widthMax": "640px"
+      }
+    },
+    {
+      "id": "ggbody",
+      "name": "gg-body",
+      "settings": {
+        "_typography": {
+          "font-family": "Inter",
+          "font-size": "1rem",
+          "line-height": "1.7",
+          "color": {
+            "hex": "#5d5a52"
+          }
+        },
+        "_margin": {
+          "bottom": "16px"
+        }
+      }
+    },
+    {
+      "id": "ggcard",
+      "name": "gg-card",
+      "settings": {
+        "_background": {
+          "color": {
+            "hex": "#ffffff"
+          }
+        },
+        "_border": {
+          "width": {
+            "top": "1px",
+            "right": "1px",
+            "bottom": "1px",
+            "left": "1px"
+          },
+          "style": "solid",
+          "color": {
+            "rgb": "rgba(17,17,15,0.08)"
+          },
+          "radius": {
+            "top": "16px",
+            "right": "16px",
+            "bottom": "16px",
+            "left": "16px"
+          }
+        },
+        "_padding": {
+          "top": "40px",
+          "right": "34px",
+          "bottom": "40px",
+          "left": "34px"
+        },
+        "_boxShadow": {
+          "values": {
+            "offsetX": "0",
+            "offsetY": "18",
+            "blur": "40",
+            "spread": "-24"
+          },
+          "color": {
+            "rgb": "rgba(17,17,15,0.18)"
+          }
+        },
+        "_height": "100%",
+        "_display": "flex",
+        "_direction": "column"
+      }
+    },
+    {
+      "id": "gggrd3",
+      "name": "gg-grid-3",
+      "settings": {
+        "_display": "grid",
+        "_gridTemplateColumns": "repeat(3, minmax(0, 1fr))",
+        "_gridGap": "28px",
+        "_gridTemplateColumns:tablet_portrait": "repeat(2, minmax(0, 1fr))",
+        "_gridTemplateColumns:mobile_portrait": "1fr"
+      }
+    },
+    {
+      "id": "gggrd2",
+      "name": "gg-grid-2",
+      "settings": {
+        "_display": "grid",
+        "_gridTemplateColumns": "repeat(2, minmax(0, 1fr))",
+        "_gridGap": "56px",
+        "_alignItemsGrid": "center",
+        "_gridTemplateColumns:mobile_landscape": "1fr"
+      }
+    },
+    {
+      "id": "ggbtnp",
+      "name": "gg-btn-primary",
+      "settings": {
+        "_background": {
+          "color": {
+            "hex": "#b8924f"
+          }
+        },
+        "_typography": {
+          "font-family": "Inter",
+          "font-weight": "600",
+          "font-size": "0.9rem",
+          "text-transform": "uppercase",
+          "letter-spacing": "0.08em",
+          "color": {
+            "hex": "#11110f"
+          }
+        },
+        "_padding": {
+          "top": "16px",
+          "right": "32px",
+          "bottom": "16px",
+          "left": "32px"
+        },
+        "_border": {
+          "radius": {
+            "top": "8px",
+            "right": "8px",
+            "bottom": "8px",
+            "left": "8px"
+          }
+        },
+        "_cssTransition": "background-color 0.3s ease, transform 0.3s ease",
+        "_background:hover": {
+          "color": {
+            "hex": "#d8b87a"
+          }
+        },
+        "_transform:hover": {
+          "translateY": "-2"
+        }
+      }
+    },
+    {
+      "id": "ggbtno",
+      "name": "gg-btn-outline",
+      "settings": {
+        "_background": {
+          "color": {
+            "rgb": "rgba(0,0,0,0)"
+          }
+        },
+        "_typography": {
+          "font-family": "Inter",
+          "font-weight": "600",
+          "font-size": "0.9rem",
+          "text-transform": "uppercase",
+          "letter-spacing": "0.08em",
+          "color": {
+            "hex": "#ffffff"
+          }
+        },
+        "_padding": {
+          "top": "16px",
+          "right": "32px",
+          "bottom": "16px",
+          "left": "32px"
+        },
+        "_border": {
+          "width": {
+            "top": "1px",
+            "right": "1px",
+            "bottom": "1px",
+            "left": "1px"
+          },
+          "style": "solid",
+          "color": {
+            "rgb": "rgba(255,255,255,0.45)"
+          },
+          "radius": {
+            "top": "8px",
+            "right": "8px",
+            "bottom": "8px",
+            "left": "8px"
+          }
+        },
+        "_cssTransition": "all 0.3s ease",
+        "_background:hover": {
+          "color": {
+            "hex": "#b8924f"
+          }
+        },
+        "_border:hover": {
+          "color": {
+            "hex": "#b8924f"
+          }
+        },
+        "_typography:hover": {
+          "color": {
+            "hex": "#11110f"
+          }
+        }
+      }
+    },
+    {
+      "id": "ggfico",
+      "name": "gg-feature-icon",
+      "settings": {
+        "_typography": {
+          "font-size": "2rem",
+          "color": {
+            "hex": "#b8924f"
+          }
+        },
+        "_margin": {
+          "bottom": "22px"
+        }
+      }
+    },
+    {
+      "id": "ggclnk",
+      "name": "gg-contact-link",
+      "settings": {
+        "_typography": {
+          "font-family": "Inter",
+          "font-weight": "600",
+          "color": {
+            "hex": "#b8924f"
+          }
+        },
+        "_cssTransition": "color 0.25s ease",
+        "_typography:hover": {
+          "color": {
+            "hex": "#d8b87a"
+          }
+        }
+      }
+    },
+    {
+      "id": "ggprice",
+      "name": "gg-price",
+      "settings": {
+        "_typography": {
+          "font-family": "Playfair Display",
+          "font-size": "1.9rem",
+          "font-weight": "600",
+          "color": {
+            "hex": "#b8924f"
+          }
+        }
+      }
+    }
+  ],
+  "globalElements": [],
+  "globalVariables": [],
+  "globalVariablesCategories": [],
+  "version": "2.3.6"
+}
