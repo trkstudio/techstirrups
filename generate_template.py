@@ -674,6 +674,30 @@ for r in roots:
     flatten(r, 0)
 
 # ----------------------------------------------------------------------------
+# Strip font-family / font-size: the site's theme styles already define fonts
+# and sizes for the relevant tags. Icon sizing (font-size on `icon` elements
+# and the `ggfico` icon class) is preserved, as there it is the icon size.
+# ----------------------------------------------------------------------------
+ICON_SIZE_CLASSES = {"ggfico"}
+
+def strip_fonts(settings, keep_font_size=False):
+    for key in list(settings.keys()):
+        if key == "_typography" or key.startswith("_typography:"):
+            typo = settings[key]
+            if isinstance(typo, dict):
+                typo.pop("font-family", None)
+                if not keep_font_size:
+                    typo.pop("font-size", None)
+                if not typo:
+                    del settings[key]
+
+for node in elements:
+    strip_fonts(node["settings"], keep_font_size=(node["name"] == "icon"))
+
+for cls in global_classes:
+    strip_fonts(cls["settings"], keep_font_size=(cls["id"] in ICON_SIZE_CLASSES))
+
+# ----------------------------------------------------------------------------
 # Page settings: SEO meta, custom CSS, JSON-LD (Organization, WebSite,
 # Products, FAQPage)
 # ----------------------------------------------------------------------------
@@ -726,8 +750,7 @@ graph = [
 json_ld = {"@context": "https://schema.org", "@graph": graph}
 
 custom_css = ("html{scroll-behavior:smooth;}"
-              "::selection{background:#b8924f;color:#11110f;}"
-              "body{font-family:'Inter',sans-serif;}")
+              "::selection{background:#b8924f;color:#11110f;}")
 
 page_settings = {
     "pageTitle": "Custom Milled Putters Made in Italy | Antares &amp; Orion — GG Putters",

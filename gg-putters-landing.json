@@ -77,11 +77,9 @@
           "gghttl"
         ],
         "_typography": {
-          "font-family": "Playfair Display",
           "color": {
             "hex": "#ffffff"
           },
-          "font-size": "clamp(2.4rem, 5vw, 3.9rem)",
           "font-weight": "600",
           "line-height": "1.08",
           "text-align": "center"
@@ -101,9 +99,7 @@
         "text": "Light years ahead. Designed to win.",
         "tag": "div",
         "_typography": {
-          "font-family": "Playfair Display",
           "font-style": "italic",
-          "font-size": "1.4rem",
           "color": {
             "hex": "#d8b87a"
           },
@@ -361,8 +357,6 @@
         "text": "Milled from a single block",
         "tag": "h3",
         "_typography": {
-          "font-family": "Playfair Display",
-          "font-size": "1.4rem",
           "font-weight": "600",
           "color": {
             "hex": "#1c1b18"
@@ -447,8 +441,6 @@
         "text": "3-position adjustable weighting",
         "tag": "h3",
         "_typography": {
-          "font-family": "Playfair Display",
-          "font-size": "1.4rem",
           "font-weight": "600",
           "color": {
             "hex": "#1c1b18"
@@ -533,8 +525,6 @@
         "text": "Interchangeable faces &amp; necks",
         "tag": "h3",
         "_typography": {
-          "font-family": "Playfair Display",
-          "font-size": "1.4rem",
           "font-weight": "600",
           "color": {
             "hex": "#1c1b18"
@@ -774,8 +764,6 @@
         "text": "Antares",
         "tag": "h3",
         "_typography": {
-          "font-family": "Playfair Display",
-          "font-size": "1.7rem",
           "font-weight": "600",
           "color": {
             "hex": "#1c1b18"
@@ -807,8 +795,6 @@
         "text": "Blade Putter",
         "tag": "div",
         "_typography": {
-          "font-family": "Inter",
-          "font-size": "0.8rem",
           "font-weight": "700",
           "text-transform": "uppercase",
           "letter-spacing": "0.16em",
@@ -865,7 +851,6 @@
           "ggbody"
         ],
         "_typography": {
-          "font-size": "0.9rem",
           "color": {
             "hex": "#5d5a52"
           }
@@ -988,8 +973,6 @@
         "text": "Orion",
         "tag": "h3",
         "_typography": {
-          "font-family": "Playfair Display",
-          "font-size": "1.7rem",
           "font-weight": "600",
           "color": {
             "hex": "#1c1b18"
@@ -1021,8 +1004,6 @@
         "text": "Mallet Putter",
         "tag": "div",
         "_typography": {
-          "font-family": "Inter",
-          "font-size": "0.8rem",
           "font-weight": "700",
           "text-transform": "uppercase",
           "letter-spacing": "0.16em",
@@ -1079,7 +1060,6 @@
           "ggbody"
         ],
         "_typography": {
-          "font-size": "0.9rem",
           "color": {
             "hex": "#5d5a52"
           }
@@ -1321,8 +1301,6 @@
           }
         },
         "_typography": {
-          "font-family": "Inter",
-          "font-size": "0.85rem",
           "font-weight": "700",
           "text-transform": "uppercase",
           "letter-spacing": "0.08em",
@@ -1354,8 +1332,6 @@
           }
         },
         "_typography": {
-          "font-family": "Inter",
-          "font-size": "0.85rem",
           "font-weight": "700",
           "text-transform": "uppercase",
           "letter-spacing": "0.08em",
@@ -1387,8 +1363,6 @@
           }
         },
         "_typography": {
-          "font-family": "Inter",
-          "font-size": "0.85rem",
           "font-weight": "700",
           "text-transform": "uppercase",
           "letter-spacing": "0.08em",
@@ -1415,8 +1389,6 @@
         "text": "Head style",
         "tag": "p",
         "_typography": {
-          "font-family": "Inter",
-          "font-size": "0.98rem",
           "color": {
             "hex": "#1c1b18"
           },
@@ -1453,8 +1425,6 @@
         "text": "Blade",
         "tag": "p",
         "_typography": {
-          "font-family": "Inter",
-          "font-size": "0.98rem",
           "color": {
             "hex": "#5d5a52"
           },
@@ -1491,8 +1461,6 @@
         "text": "Mallet",
         "tag": "p",
         "_typography": {
-          "font-family": "Inter",
-          "font-size": "0.98rem",
           "color": {
             "hex": "#5d5a52"
           },
@@ -1529,8 +1497,6 @@
         "text": "Forgiveness (MOI)",
         "tag": "p",
         "_typography": {
-          "font-family": "Inter",
-          "font-size": "0.98rem",
           "color": {
             "hex": "#1c1b18"
           },
@@ -1567,8 +1533,6 @@
         "text": "Medium",
         "tag": "p",
         "_typography": {
-          "font-family": "Inter",
-          "font-size": "0.98rem",
           "color": {
             "hex": "#5d5a52"
           },
@@ -1605,8 +1569,6 @@
         "text": "High",
         "tag": "p",
         "_typography": {
-          "font-family": "Inter",
-          "font-size": "0.98rem",
           "color": {
             "hex": "#5d5a52"
           },
@@ -1643,8 +1605,6 @@
         "text": "Best for",
         "tag": "p",
         "_typography": {
-          "font-family": "Inter",
-          "font-size": "0.98rem",
           "color": {
             "hex": "#1c1b18"
           },
@@ -1681,8 +1641,6 @@
         "text": "Feel &amp; arc stroke",
         "tag": "p",
         "_typography": {
-          "font-family": "Inter",
-          "font-size": "0.98rem",
           "color": {
             "hex": "#5d5a52"
           },
@@ -1719,8 +1677,6 @@
         "text": "Stability &amp; straight stroke",
         "tag": "p",
         "_typography": {
-          "font-family": "Inter",
-          "font-size": "0.98rem",
           "color": {
             "hex": "#5d5a52"
           },
@@ -1757,8 +1713,6 @@
         "text": "Weight system",
         "tag": "p",
         "_typography": {
-          "font-family": "Inter",
-          "font-size": "0.98rem",
           "color": {
             "hex": "#1c1b18"
           },
@@ -1795,8 +1749,6 @@
         "text": "3 positions",
         "tag": "p",
         "_typography": {
-          "font-family": "Inter",
-          "font-size": "0.98rem",
           "color": {
             "hex": "#5d5a52"
           },
@@ -1833,8 +1785,6 @@
         "text": "3 positions",
         "tag": "p",
         "_typography": {
-          "font-family": "Inter",
-          "font-size": "0.98rem",
           "color": {
             "hex": "#5d5a52"
           },
@@ -1871,8 +1821,6 @@
         "text": "Full putter",
         "tag": "p",
         "_typography": {
-          "font-family": "Inter",
-          "font-size": "0.98rem",
           "color": {
             "hex": "#1c1b18"
           },
@@ -1909,8 +1857,6 @@
         "text": "€353",
         "tag": "p",
         "_typography": {
-          "font-family": "Inter",
-          "font-size": "0.98rem",
           "color": {
             "hex": "#5d5a52"
           },
@@ -1947,8 +1893,6 @@
         "text": "€353",
         "tag": "p",
         "_typography": {
-          "font-family": "Inter",
-          "font-size": "0.98rem",
           "color": {
             "hex": "#5d5a52"
           },
@@ -1985,8 +1929,6 @@
         "text": "Clubhead only",
         "tag": "p",
         "_typography": {
-          "font-family": "Inter",
-          "font-size": "0.98rem",
           "color": {
             "hex": "#1c1b18"
           },
@@ -2023,8 +1965,6 @@
         "text": "€285",
         "tag": "p",
         "_typography": {
-          "font-family": "Inter",
-          "font-size": "0.98rem",
           "color": {
             "hex": "#5d5a52"
           },
@@ -2061,8 +2001,6 @@
         "text": "€285",
         "tag": "p",
         "_typography": {
-          "font-family": "Inter",
-          "font-size": "0.98rem",
           "color": {
             "hex": "#5d5a52"
           },
@@ -2432,8 +2370,6 @@
         "text": "Clubfaces 1°–3°",
         "tag": "h3",
         "_typography": {
-          "font-family": "Playfair Display",
-          "font-size": "1.2rem",
           "font-weight": "600",
           "color": {
             "hex": "#1c1b18"
@@ -2451,8 +2387,6 @@
         "text": "€52",
         "tag": "div",
         "_typography": {
-          "font-family": "Playfair Display",
-          "font-size": "1.2rem",
           "font-weight": "600",
           "color": {
             "hex": "#b8924f"
@@ -2472,9 +2406,6 @@
         "_cssGlobalClasses": [
           "ggbody"
         ],
-        "_typography": {
-          "font-size": "0.92rem"
-        },
         "_margin": {
           "top": "8px",
           "bottom": "0px"
@@ -2528,8 +2459,6 @@
         "text": "Extra Weights",
         "tag": "h3",
         "_typography": {
-          "font-family": "Playfair Display",
-          "font-size": "1.2rem",
           "font-weight": "600",
           "color": {
             "hex": "#1c1b18"
@@ -2547,8 +2476,6 @@
         "text": "€21",
         "tag": "div",
         "_typography": {
-          "font-family": "Playfair Display",
-          "font-size": "1.2rem",
           "font-weight": "600",
           "color": {
             "hex": "#b8924f"
@@ -2568,9 +2495,6 @@
         "_cssGlobalClasses": [
           "ggbody"
         ],
-        "_typography": {
-          "font-size": "0.92rem"
-        },
         "_margin": {
           "top": "8px",
           "bottom": "0px"
@@ -2624,8 +2548,6 @@
         "text": "Putter Cover",
         "tag": "h3",
         "_typography": {
-          "font-family": "Playfair Display",
-          "font-size": "1.2rem",
           "font-weight": "600",
           "color": {
             "hex": "#1c1b18"
@@ -2643,8 +2565,6 @@
         "text": "€32",
         "tag": "div",
         "_typography": {
-          "font-family": "Playfair Display",
-          "font-size": "1.2rem",
           "font-weight": "600",
           "color": {
             "hex": "#b8924f"
@@ -2664,9 +2584,6 @@
         "_cssGlobalClasses": [
           "ggbody"
         ],
-        "_typography": {
-          "font-size": "0.92rem"
-        },
         "_margin": {
           "top": "8px",
           "bottom": "0px"
@@ -2720,8 +2637,6 @@
         "text": "Spare Parts Kit",
         "tag": "h3",
         "_typography": {
-          "font-family": "Playfair Display",
-          "font-size": "1.2rem",
           "font-weight": "600",
           "color": {
             "hex": "#1c1b18"
@@ -2739,8 +2654,6 @@
         "text": "€149",
         "tag": "div",
         "_typography": {
-          "font-family": "Playfair Display",
-          "font-size": "1.2rem",
           "font-weight": "600",
           "color": {
             "hex": "#b8924f"
@@ -2760,9 +2673,6 @@
         "_cssGlobalClasses": [
           "ggbody"
         ],
-        "_typography": {
-          "font-size": "0.92rem"
-        },
         "_margin": {
           "top": "8px",
           "bottom": "0px"
@@ -2816,8 +2726,6 @@
         "text": "Torque Wrench",
         "tag": "h3",
         "_typography": {
-          "font-family": "Playfair Display",
-          "font-size": "1.2rem",
           "font-weight": "600",
           "color": {
             "hex": "#1c1b18"
@@ -2835,8 +2743,6 @@
         "text": "€63",
         "tag": "div",
         "_typography": {
-          "font-family": "Playfair Display",
-          "font-size": "1.2rem",
           "font-weight": "600",
           "color": {
             "hex": "#b8924f"
@@ -2856,9 +2762,6 @@
         "_cssGlobalClasses": [
           "ggbody"
         ],
-        "_typography": {
-          "font-size": "0.92rem"
-        },
         "_margin": {
           "top": "8px",
           "bottom": "0px"
@@ -3010,8 +2913,6 @@
         "text": "Worldwide shipping",
         "tag": "h3",
         "_typography": {
-          "font-family": "Inter",
-          "font-size": "1rem",
           "font-weight": "700",
           "color": {
             "hex": "#1c1b18"
@@ -3033,8 +2934,6 @@
         "text": "BRT in Italy, FedEx worldwide — shipped within 5–6 business days.",
         "tag": "p",
         "_typography": {
-          "font-family": "Inter",
-          "font-size": "0.88rem",
           "line-height": "1.6",
           "color": {
             "hex": "#5d5a52"
@@ -3094,8 +2993,6 @@
         "text": "2-year warranty",
         "tag": "h3",
         "_typography": {
-          "font-family": "Inter",
-          "font-size": "1rem",
           "font-weight": "700",
           "color": {
             "hex": "#1c1b18"
@@ -3117,8 +3014,6 @@
         "text": "Covered against conformity defects and failures.",
         "tag": "p",
         "_typography": {
-          "font-family": "Inter",
-          "font-size": "0.88rem",
           "line-height": "1.6",
           "color": {
             "hex": "#5d5a52"
@@ -3178,8 +3073,6 @@
         "text": "14-day returns",
         "tag": "h3",
         "_typography": {
-          "font-family": "Inter",
-          "font-size": "1rem",
           "font-weight": "700",
           "color": {
             "hex": "#1c1b18"
@@ -3201,8 +3094,6 @@
         "text": "Right of withdrawal within 14 days; refund within 30 days.",
         "tag": "p",
         "_typography": {
-          "font-family": "Inter",
-          "font-size": "0.88rem",
           "line-height": "1.6",
           "color": {
             "hex": "#5d5a52"
@@ -3262,8 +3153,6 @@
         "text": "Secure payments",
         "tag": "h3",
         "_typography": {
-          "font-family": "Inter",
-          "font-size": "1rem",
           "font-weight": "700",
           "color": {
             "hex": "#1c1b18"
@@ -3285,8 +3174,6 @@
         "text": "Visa, Mastercard, Amex, PayPal &amp; Klarna. Prices include VAT.",
         "tag": "p",
         "_typography": {
-          "font-family": "Inter",
-          "font-size": "0.88rem",
           "line-height": "1.6",
           "color": {
             "hex": "#5d5a52"
@@ -3513,8 +3400,6 @@
         "text": "What's inside the Fitter Kit",
         "tag": "h3",
         "_typography": {
-          "font-family": "Playfair Display",
-          "font-size": "1.35rem",
           "font-weight": "600",
           "color": {
             "hex": "#ffffff"
@@ -3708,8 +3593,6 @@
         "text": "What makes GG Putters different from other putters?",
         "tag": "h3",
         "_typography": {
-          "font-family": "Playfair Display",
-          "font-size": "1.25rem",
           "font-weight": "600",
           "color": {
             "hex": "#1c1b18"
@@ -3774,8 +3657,6 @@
         "text": "Should I choose the Antares or the Orion?",
         "tag": "h3",
         "_typography": {
-          "font-family": "Playfair Display",
-          "font-size": "1.25rem",
           "font-weight": "600",
           "color": {
             "hex": "#1c1b18"
@@ -3840,8 +3721,6 @@
         "text": "Are GG Putters customizable?",
         "tag": "h3",
         "_typography": {
-          "font-family": "Playfair Display",
-          "font-size": "1.25rem",
           "font-weight": "600",
           "color": {
             "hex": "#1c1b18"
@@ -3906,8 +3785,6 @@
         "text": "How much does a GG Putter cost?",
         "tag": "h3",
         "_typography": {
-          "font-family": "Playfair Display",
-          "font-size": "1.25rem",
           "font-weight": "600",
           "color": {
             "hex": "#1c1b18"
@@ -3972,8 +3849,6 @@
         "text": "Where are GG Putters made and what warranty applies?",
         "tag": "h3",
         "_typography": {
-          "font-family": "Playfair Display",
-          "font-size": "1.25rem",
           "font-weight": "600",
           "color": {
             "hex": "#1c1b18"
@@ -4038,8 +3913,6 @@
         "text": "How can I pay and how is my order shipped?",
         "tag": "h3",
         "_typography": {
-          "font-family": "Playfair Display",
-          "font-size": "1.25rem",
           "font-weight": "600",
           "color": {
             "hex": "#1c1b18"
@@ -4104,8 +3977,6 @@
         "text": "Can I return a GG Putter?",
         "tag": "h3",
         "_typography": {
-          "font-family": "Playfair Display",
-          "font-size": "1.25rem",
           "font-weight": "600",
           "color": {
             "hex": "#1c1b18"
@@ -4284,8 +4155,6 @@
         "text": "Info &amp; Sales",
         "tag": "h3",
         "_typography": {
-          "font-family": "Inter",
-          "font-size": "0.85rem",
           "font-weight": "700",
           "text-transform": "uppercase",
           "letter-spacing": "0.16em",
@@ -4311,7 +4180,6 @@
           "url": "mailto:info@ggputters.com"
         },
         "_typography": {
-          "font-family": "Inter",
           "color": {
             "hex": "#b8924f"
           }
@@ -4338,7 +4206,6 @@
           "url": "tel:+393311099739"
         },
         "_typography": {
-          "font-family": "Inter",
           "color": {
             "hex": "#5d5a52"
           }
@@ -4375,8 +4242,6 @@
         "text": "Office &amp; Dealers",
         "tag": "h3",
         "_typography": {
-          "font-family": "Inter",
-          "font-size": "0.85rem",
           "font-weight": "700",
           "text-transform": "uppercase",
           "letter-spacing": "0.16em",
@@ -4402,7 +4267,6 @@
           "url": "mailto:office@ggputters.com"
         },
         "_typography": {
-          "font-family": "Inter",
           "color": {
             "hex": "#b8924f"
           }
@@ -4442,8 +4306,6 @@
         "text": "Headquarters",
         "tag": "h3",
         "_typography": {
-          "font-family": "Inter",
-          "font-size": "0.85rem",
           "font-weight": "700",
           "text-transform": "uppercase",
           "letter-spacing": "0.16em",
@@ -4469,7 +4331,6 @@
           "url": "https://shop.ggputters.com/contact/"
         },
         "_typography": {
-          "font-family": "Inter",
           "color": {
             "hex": "#5d5a52"
           }
@@ -4678,8 +4539,6 @@
         "text": "GG Putters",
         "tag": "div",
         "_typography": {
-          "font-family": "Playfair Display",
-          "font-size": "1.4rem",
           "font-weight": "600",
           "letter-spacing": "0.12em",
           "color": {
@@ -4701,8 +4560,6 @@
         "text": "Italian craft, Brescia engineering. Putters with a metalworking soul.",
         "tag": "p",
         "_typography": {
-          "font-family": "Inter",
-          "font-size": "0.9rem",
           "color": {
             "hex": "#b6b1a5"
           },
@@ -4723,8 +4580,6 @@
         "text": "GG PUTTERS is a brand of GM PRODUCTION srl · VAT IT03351530989 · Palazzolo sull'Oglio (BS), Italy",
         "tag": "p",
         "_typography": {
-          "font-family": "Inter",
-          "font-size": "0.82rem",
           "color": {
             "rgb": "rgba(255,255,255,0.5)"
           },
@@ -4745,8 +4600,6 @@
         "text": "© 2026 GG Putters. All rights reserved.",
         "tag": "p",
         "_typography": {
-          "font-family": "Inter",
-          "font-size": "0.78rem",
           "color": {
             "rgb": "rgba(255,255,255,0.38)"
           },
@@ -4762,7 +4615,7 @@
   "pageSettings": {
     "pageTitle": "Custom Milled Putters Made in Italy | Antares &amp; Orion — GG Putters",
     "metaDescription": "GG Putters: custom milled golf putters made in Brescia, Italy. Antares blade and Orion mallet from €353, 3-position adjustable weights and interchangeable faces.",
-    "customCss": "html{scroll-behavior:smooth;}::selection{background:#b8924f;color:#11110f;}body{font-family:'Inter',sans-serif;}",
+    "customCss": "html{scroll-behavior:smooth;}::selection{background:#b8924f;color:#11110f;}",
     "customScriptsBodyFooter": "<script type=\"application/ld+json\">{\"@context\": \"https://schema.org\", \"@graph\": [{\"@type\": \"Organization\", \"@id\": \"https://shop.ggputters.com/#organization\", \"name\": \"GG Putters\", \"legalName\": \"GM PRODUCTION srl\", \"url\": \"https://shop.ggputters.com/\", \"description\": \"Handcrafted, CNC-milled custom golf putters made in Brescia, Italy.\", \"email\": \"info@ggputters.com\", \"telephone\": \"+39 331 1099739\", \"vatID\": \"IT03351530989\", \"address\": {\"@type\": \"PostalAddress\", \"streetAddress\": \"Via Taranto, 7\", \"addressLocality\": \"Palazzolo sull'Oglio\", \"addressRegion\": \"BS\", \"postalCode\": \"25036\", \"addressCountry\": \"IT\"}, \"contactPoint\": [{\"@type\": \"ContactPoint\", \"contactType\": \"sales\", \"email\": \"info@ggputters.com\", \"telephone\": \"+39 331 1099739\"}, {\"@type\": \"ContactPoint\", \"contactType\": \"customer service\", \"email\": \"office@ggputters.com\"}]}, {\"@type\": \"WebSite\", \"@id\": \"https://shop.ggputters.com/#website\", \"url\": \"https://shop.ggputters.com/\", \"name\": \"GG Putters\", \"publisher\": {\"@id\": \"https://shop.ggputters.com/#organization\"}}, {\"@type\": \"Product\", \"name\": \"GG Antares\", \"brand\": {\"@type\": \"Brand\", \"name\": \"GG Putters\"}, \"category\": \"Golf Putter\", \"material\": \"Aluminum, Steel\", \"description\": \"Milled blade putter for feel and arc strokes, with a 3-position adjustable weight system and interchangeable faces.\", \"url\": \"https://shop.ggputters.com/putters/antares/\", \"offers\": {\"@type\": \"Offer\", \"price\": \"353.00\", \"priceCurrency\": \"EUR\", \"availability\": \"https://schema.org/InStock\", \"url\": \"https://shop.ggputters.com/putters/antares/\", \"priceValidUntil\": \"2026-12-31\", \"shippingDetails\": {\"@type\": \"OfferShippingDetails\", \"shippingDestination\": {\"@type\": \"DefinedRegion\", \"addressCountry\": \"IT\"}, \"deliveryTime\": {\"@type\": \"ShippingDeliveryTime\", \"handlingTime\": {\"@type\": \"QuantitativeValue\", \"minValue\": 5, \"maxValue\": 6, \"unitCode\": \"DAY\"}}}, \"hasMerchantReturnPolicy\": {\"@type\": \"MerchantReturnPolicy\", \"applicableCountry\": \"IT\", \"returnPolicyCategory\": \"https://schema.org/MerchantReturnFiniteReturnWindow\", \"merchantReturnDays\": 14, \"returnMethod\": \"https://schema.org/ReturnByMail\", \"refundType\": \"https://schema.org/FullRefund\"}}}, {\"@type\": \"Product\", \"name\": \"GG Orion\", \"brand\": {\"@type\": \"Brand\", \"name\": \"GG Putters\"}, \"category\": \"Golf Putter\", \"material\": \"Aluminum, Steel\", \"description\": \"Milled mallet putter engineered for stability and higher forgiveness (MOI), with a 3-position adjustable weight system.\", \"url\": \"https://shop.ggputters.com/putters/orion/\", \"offers\": {\"@type\": \"Offer\", \"price\": \"353.00\", \"priceCurrency\": \"EUR\", \"availability\": \"https://schema.org/InStock\", \"url\": \"https://shop.ggputters.com/putters/orion/\", \"priceValidUntil\": \"2026-12-31\", \"shippingDetails\": {\"@type\": \"OfferShippingDetails\", \"shippingDestination\": {\"@type\": \"DefinedRegion\", \"addressCountry\": \"IT\"}, \"deliveryTime\": {\"@type\": \"ShippingDeliveryTime\", \"handlingTime\": {\"@type\": \"QuantitativeValue\", \"minValue\": 5, \"maxValue\": 6, \"unitCode\": \"DAY\"}}}, \"hasMerchantReturnPolicy\": {\"@type\": \"MerchantReturnPolicy\", \"applicableCountry\": \"IT\", \"returnPolicyCategory\": \"https://schema.org/MerchantReturnFiniteReturnWindow\", \"merchantReturnDays\": 14, \"returnMethod\": \"https://schema.org/ReturnByMail\", \"refundType\": \"https://schema.org/FullRefund\"}}}, {\"@type\": \"Product\", \"name\": \"GG Clubfaces\", \"brand\": {\"@type\": \"Brand\", \"name\": \"GG Putters\"}, \"category\": \"Golf Putter\", \"material\": \"Aluminum, Steel\", \"description\": \"Interchangeable face inserts (1°–3°) to tune loft and feel.\", \"url\": \"https://shop.ggputters.com/putters/clubfaces/\", \"offers\": {\"@type\": \"Offer\", \"price\": \"52.00\", \"priceCurrency\": \"EUR\", \"availability\": \"https://schema.org/InStock\", \"url\": \"https://shop.ggputters.com/putters/clubfaces/\", \"priceValidUntil\": \"2026-12-31\"}}, {\"@type\": \"Product\", \"name\": \"GG Extra Weights\", \"brand\": {\"@type\": \"Brand\", \"name\": \"GG Putters\"}, \"category\": \"Golf Putter\", \"material\": \"Aluminum, Steel\", \"description\": \"Heavy and light weights for the 3-position weighting system.\", \"url\": \"https://shop.ggputters.com/putters/extra-weights/\", \"offers\": {\"@type\": \"Offer\", \"price\": \"21.00\", \"priceCurrency\": \"EUR\", \"availability\": \"https://schema.org/InStock\", \"url\": \"https://shop.ggputters.com/putters/extra-weights/\", \"priceValidUntil\": \"2026-12-31\"}}, {\"@type\": \"FAQPage\", \"@id\": \"https://shop.ggputters.com/#faq\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"What makes GG Putters different from other putters?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"GG Putters are milled in Brescia, Italy from a single block of aluminum and steel, with a 3-position adjustable weight system and interchangeable faces (1°–3°) and necks for full customization.\"}}, {\"@type\": \"Question\", \"name\": \"Should I choose the Antares or the Orion?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Choose the Antares blade if you favour feel and an arc stroke; choose the Orion mallet for higher stability and forgiveness. Both are priced at €353.\"}}, {\"@type\": \"Question\", \"name\": \"Are GG Putters customizable?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Yes. You can adjust the three weights, swap clubfaces from 1° to 3°, and change necks (lie and offset) to match your stroke.\"}}, {\"@type\": \"Question\", \"name\": \"How much does a GG Putter cost?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"A full GG Putter costs €353; the clubhead-only version is €285. Accessories range from €21 (extra weights) to €149 (spare parts kit).\"}}, {\"@type\": \"Question\", \"name\": \"Where are GG Putters made and what warranty applies?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"GG Putters are made in Palazzolo sull'Oglio (Brescia), Italy by GM PRODUCTION srl, milled without heating, and covered by a 2-year warranty; orders ship within 5–6 business days.\"}}, {\"@type\": \"Question\", \"name\": \"How can I pay and how is my order shipped?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"You can pay by credit card (Visa, Mastercard, American Express), PayPal or Klarna; prices include VAT. Orders ship with BRT in Italy and FedEx worldwide, usually within 5–6 business days.\"}}, {\"@type\": \"Question\", \"name\": \"Can I return a GG Putter?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Yes. You can exercise the right of withdrawal within 14 days of receipt; once the returned product is verified, the refund is issued within 30 days to your original payment method.\"}}]}]}</script>"
   },
   "templateSettings": {
@@ -4781,9 +4634,7 @@
         "_typography": {
           "text-transform": "uppercase",
           "letter-spacing": "0.28em",
-          "font-size": "0.8rem",
           "font-weight": "600",
-          "font-family": "Inter",
           "color": {
             "hex": "#b8924f"
           }
@@ -4798,8 +4649,6 @@
       "name": "gg-title",
       "settings": {
         "_typography": {
-          "font-family": "Playfair Display",
-          "font-size": "clamp(2rem, 4vw, 3.1rem)",
           "font-weight": "600",
           "line-height": "1.12"
         },
@@ -4813,8 +4662,6 @@
       "name": "gg-lead",
       "settings": {
         "_typography": {
-          "font-family": "Inter",
-          "font-size": "1.15rem",
           "line-height": "1.75",
           "color": {
             "hex": "#5d5a52"
@@ -4828,8 +4675,6 @@
       "name": "gg-body",
       "settings": {
         "_typography": {
-          "font-family": "Inter",
-          "font-size": "1rem",
           "line-height": "1.7",
           "color": {
             "hex": "#5d5a52"
@@ -4845,8 +4690,6 @@
       "name": "gg-definition",
       "settings": {
         "_typography": {
-          "font-family": "Inter",
-          "font-size": "1rem",
           "font-weight": "600",
           "line-height": "1.6",
           "color": {
@@ -4939,9 +4782,7 @@
           }
         },
         "_typography": {
-          "font-family": "Inter",
           "font-weight": "600",
-          "font-size": "0.9rem",
           "text-transform": "uppercase",
           "letter-spacing": "0.08em",
           "color": {
@@ -4983,9 +4824,7 @@
           }
         },
         "_typography": {
-          "font-family": "Inter",
           "font-weight": "600",
-          "font-size": "0.9rem",
           "text-transform": "uppercase",
           "letter-spacing": "0.08em",
           "color": {
@@ -5054,7 +4893,6 @@
       "name": "gg-contact-link",
       "settings": {
         "_typography": {
-          "font-family": "Inter",
           "font-weight": "600",
           "color": {
             "hex": "#b8924f"
@@ -5073,8 +4911,6 @@
       "name": "gg-price",
       "settings": {
         "_typography": {
-          "font-family": "Playfair Display",
-          "font-size": "1.9rem",
           "font-weight": "600",
           "color": {
             "hex": "#b8924f"
