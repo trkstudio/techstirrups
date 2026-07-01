@@ -19,9 +19,12 @@ Costruita dalle sezioni **Accessories** e **Fitter Kit**, con una **Head SEO/GEO
 - **JSON-LD**: `Organization`, `BreadcrumbList`, `CollectionPage`, `ItemList` dei 5
   accessori (`Product` + `Offer` in EUR, `isAccessoryOrSparePartFor` → Antares/Orion),
   `Product` (Fitter Kit), **`HowTo`** (setup pesi/facce) e **`FAQPage`** (7 Q/A).
-- Contenuti GEO: definizioni in una frase, dati concreti (pesi 1.19/1.48/1.97 oz, lofts 1°–3°,
-  prezzi €21–€149), guida **HowTo** in 4 step, FAQ, link interni ai prodotti reali.
-- Stesso stile della landing: **nessun colore**, layout **Flex fluido**, accessibilità.
+
+**Testi dedicati e unici** (non clonati dalla landing): ogni accessorio ha definizione +
+descrizione d'uso + specifiche; in più una **tabella semantica `<table>`** "at a glance",
+una **guida all'acquisto** ("Which accessory do you need?"), un Fitter Kit riscritto per
+i fitter/pro shop, e FAQ specifiche. Dati concreti: pesi 1.19/1.48/1.97 oz, lofts 1°–3°,
+prezzi €21–€149. Stesso stile della landing: **nessun colore**, layout **Flex fluido**, accessibilità.
 
 ## Come importare in Bricks
 

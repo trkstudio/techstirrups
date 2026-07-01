@@ -161,7 +161,8 @@
       "parent": "a00010",
       "children": [
         "a00012",
-        "a00016"
+        "a00016",
+        "a00057"
       ],
       "settings": {},
       "label": "Container"
@@ -188,13 +189,13 @@
       "parent": "a00012",
       "children": [],
       "settings": {
-        "text": "Optional accessories",
+        "text": "Milled accessories",
         "tag": "p",
         "_cssGlobalClasses": [
           "ggeye"
         ]
       },
-      "label": "Eyebrow: Optional accessori"
+      "label": "Eyebrow: Milled accessories"
     },
     {
       "id": "a00014",
@@ -202,7 +203,7 @@
       "parent": "a00012",
       "children": [],
       "settings": {
-        "text": "Accessories &amp; Spare Parts",
+        "text": "Accessories &amp; Spare Parts for GG Putters",
         "tag": "h2",
         "_cssGlobalClasses": [
           "ggh"
@@ -216,7 +217,7 @@
       "parent": "a00012",
       "children": [],
       "settings": {
-        "text": "Every accessory is milled to match the GG system. Quick guide: clubfaces set loft, weights set balance, the wrench sets everything to spec.",
+        "text": "Fine-tune loft with clubfaces, dial in balance with weights, protect the head with a cover, and keep everything serviceable with the spare parts kit and torque wrench — all milled to the GG standard and priced from €21 to €149.",
         "tag": "p",
         "_cssGlobalClasses": [
           "gglead"
@@ -230,10 +231,10 @@
       "parent": "a00011",
       "children": [
         "a00017",
-        "a00024",
-        "a00031",
-        "a00038",
-        "a00045"
+        "a00025",
+        "a00033",
+        "a00041",
+        "a00049"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -252,7 +253,8 @@
         "a00020",
         "a00021",
         "a00022",
-        "a00023"
+        "a00023",
+        "a00024"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -301,7 +303,7 @@
       "parent": "a00017",
       "children": [],
       "settings": {
-        "text": "€52",
+        "text": "<strong>€52</strong>",
         "tag": "p"
       },
       "label": "Text"
@@ -312,7 +314,7 @@
       "parent": "a00017",
       "children": [],
       "settings": {
-        "text": "Clubfaces are interchangeable face inserts that set the loft and feel of your putter.",
+        "text": "Clubfaces are interchangeable milled face inserts that change the loft and feel of a GG putter.",
         "tag": "p"
       },
       "label": "Text"
@@ -323,13 +325,23 @@
       "parent": "a00017",
       "children": [],
       "settings": {
-        "text": "Available from 1° to 3°. Compatible with both Antares and Orion.",
+        "text": "Swapping the insert lets you tune roll and sound without buying a new putter: a higher degree adds forward loft for slower greens, a lower degree keeps the ball firmer on fast surfaces.",
         "tag": "p"
       },
       "label": "Text"
     },
     {
       "id": "a00023",
+      "name": "text",
+      "parent": "a00017",
+      "children": [],
+      "settings": {
+        "text": "<ul><li>Lofts: 1°, 2°, 3°</li><li>Milled to the GG face standard</li><li>Fits Antares and Orion</li></ul>"
+      },
+      "label": "Specs"
+    },
+    {
+      "id": "a00024",
       "name": "text-link",
       "parent": "a00017",
       "children": [],
@@ -346,16 +358,17 @@
       "label": "View Clubfaces"
     },
     {
-      "id": "a00024",
+      "id": "a00025",
       "name": "block",
       "parent": "a00016",
       "children": [
-        "a00025",
         "a00026",
         "a00027",
         "a00028",
         "a00029",
-        "a00030"
+        "a00030",
+        "a00031",
+        "a00032"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -365,9 +378,9 @@
       "label": "Accessory: Extra Weights"
     },
     {
-      "id": "a00025",
+      "id": "a00026",
       "name": "icon",
-      "parent": "a00024",
+      "parent": "a00025",
       "children": [],
       "settings": {
         "icon": {
@@ -385,9 +398,9 @@
       "label": "Icon"
     },
     {
-      "id": "a00026",
+      "id": "a00027",
       "name": "heading",
-      "parent": "a00024",
+      "parent": "a00025",
       "children": [],
       "settings": {
         "text": "Extra Weights",
@@ -399,23 +412,12 @@
       "label": "h3: Extra Weights"
     },
     {
-      "id": "a00027",
-      "name": "text-basic",
-      "parent": "a00024",
-      "children": [],
-      "settings": {
-        "text": "€21",
-        "tag": "p"
-      },
-      "label": "Text"
-    },
-    {
       "id": "a00028",
       "name": "text-basic",
-      "parent": "a00024",
+      "parent": "a00025",
       "children": [],
       "settings": {
-        "text": "Extra weights are swappable head weights for the 3-position weighting system.",
+        "text": "<strong>€21</strong>",
         "tag": "p"
       },
       "label": "Text"
@@ -423,18 +425,39 @@
     {
       "id": "a00029",
       "name": "text-basic",
-      "parent": "a00024",
+      "parent": "a00025",
       "children": [],
       "settings": {
-        "text": "Light 1.19 oz, medium 1.48 oz, heavy 1.97 oz — bullet or flat.",
+        "text": "Extra weights are swappable head weights for the three-position balance system.",
         "tag": "p"
       },
       "label": "Text"
     },
     {
       "id": "a00030",
+      "name": "text-basic",
+      "parent": "a00025",
+      "children": [],
+      "settings": {
+        "text": "Moving weight changes the balance point and the natural arc of your stroke: heavier weights add stability, lighter weights increase feel. Bullet and flat shapes suit different placements.",
+        "tag": "p"
+      },
+      "label": "Text"
+    },
+    {
+      "id": "a00031",
+      "name": "text",
+      "parent": "a00025",
+      "children": [],
+      "settings": {
+        "text": "<ul><li>Light 1.19 oz · Medium 1.48 oz · Heavy 1.97 oz</li><li>Bullet or flat</li><li>3 dedicated weight points</li></ul>"
+      },
+      "label": "Specs"
+    },
+    {
+      "id": "a00032",
       "name": "text-link",
-      "parent": "a00024",
+      "parent": "a00025",
       "children": [],
       "settings": {
         "text": "View product",
@@ -449,16 +472,17 @@
       "label": "View Extra Weights"
     },
     {
-      "id": "a00031",
+      "id": "a00033",
       "name": "block",
       "parent": "a00016",
       "children": [
-        "a00032",
-        "a00033",
         "a00034",
         "a00035",
         "a00036",
-        "a00037"
+        "a00037",
+        "a00038",
+        "a00039",
+        "a00040"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -468,9 +492,9 @@
       "label": "Accessory: Putter Cover"
     },
     {
-      "id": "a00032",
+      "id": "a00034",
       "name": "icon",
-      "parent": "a00031",
+      "parent": "a00033",
       "children": [],
       "settings": {
         "icon": {
@@ -488,9 +512,9 @@
       "label": "Icon"
     },
     {
-      "id": "a00033",
+      "id": "a00035",
       "name": "heading",
-      "parent": "a00031",
+      "parent": "a00033",
       "children": [],
       "settings": {
         "text": "Putter Cover",
@@ -502,42 +526,52 @@
       "label": "h3: Putter Cover"
     },
     {
-      "id": "a00034",
-      "name": "text-basic",
-      "parent": "a00031",
-      "children": [],
-      "settings": {
-        "text": "€32",
-        "tag": "p"
-      },
-      "label": "Text"
-    },
-    {
-      "id": "a00035",
-      "name": "text-basic",
-      "parent": "a00031",
-      "children": [],
-      "settings": {
-        "text": "A putter cover is a protective headcover that shields the milled head from impacts and scratches.",
-        "tag": "p"
-      },
-      "label": "Text"
-    },
-    {
       "id": "a00036",
       "name": "text-basic",
-      "parent": "a00031",
+      "parent": "a00033",
       "children": [],
       "settings": {
-        "text": "Tailored to the GG head shape.",
+        "text": "<strong>€32</strong>",
         "tag": "p"
       },
       "label": "Text"
     },
     {
       "id": "a00037",
+      "name": "text-basic",
+      "parent": "a00033",
+      "children": [],
+      "settings": {
+        "text": "A putter cover is a fitted headcover that protects the milled head in the bag and in storage.",
+        "tag": "p"
+      },
+      "label": "Text"
+    },
+    {
+      "id": "a00038",
+      "name": "text-basic",
+      "parent": "a00033",
+      "children": [],
+      "settings": {
+        "text": "It shields the face insert and the head edges from knocks, bag rash and moisture, preserving the anodized finish between rounds.",
+        "tag": "p"
+      },
+      "label": "Text"
+    },
+    {
+      "id": "a00039",
+      "name": "text",
+      "parent": "a00033",
+      "children": [],
+      "settings": {
+        "text": "<ul><li>Shaped to the GG head</li><li>Protects face and edges</li><li>Everyday carry protection</li></ul>"
+      },
+      "label": "Specs"
+    },
+    {
+      "id": "a00040",
       "name": "text-link",
-      "parent": "a00031",
+      "parent": "a00033",
       "children": [],
       "settings": {
         "text": "View product",
@@ -552,16 +586,17 @@
       "label": "View Putter Cover"
     },
     {
-      "id": "a00038",
+      "id": "a00041",
       "name": "block",
       "parent": "a00016",
       "children": [
-        "a00039",
-        "a00040",
-        "a00041",
         "a00042",
         "a00043",
-        "a00044"
+        "a00044",
+        "a00045",
+        "a00046",
+        "a00047",
+        "a00048"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -571,9 +606,9 @@
       "label": "Accessory: Spare Parts Kit"
     },
     {
-      "id": "a00039",
+      "id": "a00042",
       "name": "icon",
-      "parent": "a00038",
+      "parent": "a00041",
       "children": [],
       "settings": {
         "icon": {
@@ -591,9 +626,9 @@
       "label": "Icon"
     },
     {
-      "id": "a00040",
+      "id": "a00043",
       "name": "heading",
-      "parent": "a00038",
+      "parent": "a00041",
       "children": [],
       "settings": {
         "text": "Spare Parts Kit",
@@ -605,42 +640,52 @@
       "label": "h3: Spare Parts Kit"
     },
     {
-      "id": "a00041",
-      "name": "text-basic",
-      "parent": "a00038",
-      "children": [],
-      "settings": {
-        "text": "€149",
-        "tag": "p"
-      },
-      "label": "Text"
-    },
-    {
-      "id": "a00042",
-      "name": "text-basic",
-      "parent": "a00038",
-      "children": [],
-      "settings": {
-        "text": "The spare parts kit is a set of replacement components to keep your putter game-ready.",
-        "tag": "p"
-      },
-      "label": "Text"
-    },
-    {
-      "id": "a00043",
-      "name": "text-basic",
-      "parent": "a00038",
-      "children": [],
-      "settings": {
-        "text": "Includes screws, weights and hardware.",
-        "tag": "p"
-      },
-      "label": "Text"
-    },
-    {
       "id": "a00044",
+      "name": "text-basic",
+      "parent": "a00041",
+      "children": [],
+      "settings": {
+        "text": "<strong>€149</strong>",
+        "tag": "p"
+      },
+      "label": "Text"
+    },
+    {
+      "id": "a00045",
+      "name": "text-basic",
+      "parent": "a00041",
+      "children": [],
+      "settings": {
+        "text": "The spare parts kit is a complete set of replacement hardware for your GG putter.",
+        "tag": "p"
+      },
+      "label": "Text"
+    },
+    {
+      "id": "a00046",
+      "name": "text-basic",
+      "parent": "a00041",
+      "children": [],
+      "settings": {
+        "text": "It bundles the small components most likely to wear or get lost, so your putter stays serviceable for years and you are never off the green waiting on a single screw.",
+        "tag": "p"
+      },
+      "label": "Text"
+    },
+    {
+      "id": "a00047",
+      "name": "text",
+      "parent": "a00041",
+      "children": [],
+      "settings": {
+        "text": "<ul><li>Screws, weights and hardware</li><li>For long-term maintenance</li><li>Fits Antares and Orion</li></ul>"
+      },
+      "label": "Specs"
+    },
+    {
+      "id": "a00048",
       "name": "text-link",
-      "parent": "a00038",
+      "parent": "a00041",
       "children": [],
       "settings": {
         "text": "View product",
@@ -655,16 +700,17 @@
       "label": "View Spare Parts Kit"
     },
     {
-      "id": "a00045",
+      "id": "a00049",
       "name": "block",
       "parent": "a00016",
       "children": [
-        "a00046",
-        "a00047",
-        "a00048",
-        "a00049",
         "a00050",
-        "a00051"
+        "a00051",
+        "a00052",
+        "a00053",
+        "a00054",
+        "a00055",
+        "a00056"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -674,9 +720,9 @@
       "label": "Accessory: Torque Wrench"
     },
     {
-      "id": "a00046",
+      "id": "a00050",
       "name": "icon",
-      "parent": "a00045",
+      "parent": "a00049",
       "children": [],
       "settings": {
         "icon": {
@@ -694,9 +740,9 @@
       "label": "Icon"
     },
     {
-      "id": "a00047",
+      "id": "a00051",
       "name": "heading",
-      "parent": "a00045",
+      "parent": "a00049",
       "children": [],
       "settings": {
         "text": "Torque Wrench",
@@ -708,42 +754,52 @@
       "label": "h3: Torque Wrench"
     },
     {
-      "id": "a00048",
+      "id": "a00052",
       "name": "text-basic",
-      "parent": "a00045",
+      "parent": "a00049",
       "children": [],
       "settings": {
-        "text": "€63",
+        "text": "<strong>€63</strong>",
         "tag": "p"
       },
       "label": "Text"
     },
     {
-      "id": "a00049",
+      "id": "a00053",
       "name": "text-basic",
-      "parent": "a00045",
+      "parent": "a00049",
       "children": [],
       "settings": {
-        "text": "The torque wrench is a precision tool to tighten weights and faces to the correct spec.",
+        "text": "The torque wrench is a precision tool that tightens weights and faces to the correct, repeatable spec.",
         "tag": "p"
       },
       "label": "Text"
     },
     {
-      "id": "a00050",
+      "id": "a00054",
       "name": "text-basic",
-      "parent": "a00045",
+      "parent": "a00049",
       "children": [],
       "settings": {
-        "text": "Ensures repeatable, secure adjustments.",
+        "text": "Setting each component to the right torque prevents loosening during play and protects the threads, so every adjustment is secure and consistent.",
         "tag": "p"
       },
       "label": "Text"
     },
     {
-      "id": "a00051",
+      "id": "a00055",
+      "name": "text",
+      "parent": "a00049",
+      "children": [],
+      "settings": {
+        "text": "<ul><li>Pre-set, repeatable torque</li><li>For weights and clubfaces</li><li>Protects the threads</li></ul>"
+      },
+      "label": "Specs"
+    },
+    {
+      "id": "a00056",
       "name": "text-link",
-      "parent": "a00045",
+      "parent": "a00049",
       "children": [],
       "settings": {
         "text": "View product",
@@ -758,11 +814,171 @@
       "label": "View Torque Wrench"
     },
     {
-      "id": "a00052",
+      "id": "a00057",
+      "name": "block",
+      "parent": "a00011",
+      "children": [
+        "a00058",
+        "a00059"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "ggcol"
+        ],
+        "_widthMax": "820px",
+        "_margin": {
+          "left": "auto",
+          "right": "auto",
+          "top": "clamp(2rem,4vw,3rem)"
+        },
+        "_rowGap": "1rem"
+      },
+      "label": "At a glance"
+    },
+    {
+      "id": "a00058",
+      "name": "heading",
+      "parent": "a00057",
+      "children": [],
+      "settings": {
+        "text": "Accessories at a glance",
+        "tag": "h3",
+        "_cssGlobalClasses": [
+          "ggh"
+        ]
+      },
+      "label": "h3: Accessories at a glance"
+    },
+    {
+      "id": "a00059",
+      "name": "text",
+      "parent": "a00057",
+      "children": [],
+      "settings": {
+        "text": "<table><caption>GG Putters accessories at a glance</caption><thead><tr><th scope=\"col\">Accessory</th><th scope=\"col\">What it does</th><th scope=\"col\">Options</th><th scope=\"col\">Price</th></tr></thead><tbody><tr><th scope=\"row\">Clubfaces</th><td>Set loft &amp; feel</td><td>1°–3°</td><td>€52</td></tr><tr><th scope=\"row\">Extra Weights</th><td>Set balance &amp; arc</td><td>1.19 / 1.48 / 1.97 oz</td><td>€21</td></tr><tr><th scope=\"row\">Putter Cover</th><td>Protect the head</td><td>GG head shape</td><td>€32</td></tr><tr><th scope=\"row\">Spare Parts Kit</th><td>Maintain &amp; replace</td><td>Screws / weights / hardware</td><td>€149</td></tr><tr><th scope=\"row\">Torque Wrench</th><td>Adjust to spec</td><td>Pre-set torque</td><td>€63</td></tr></tbody></table>"
+      },
+      "label": "At-a-glance table"
+    },
+    {
+      "id": "a00060",
       "name": "section",
       "parent": 0,
       "children": [
-        "a00053"
+        "a00061"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "ggsect"
+        ],
+        "_cssId": "guide"
+      },
+      "label": "Buying guide"
+    },
+    {
+      "id": "a00061",
+      "name": "container",
+      "parent": "a00060",
+      "children": [
+        "a00062",
+        "a00066"
+      ],
+      "settings": {},
+      "label": "Container"
+    },
+    {
+      "id": "a00062",
+      "name": "block",
+      "parent": "a00061",
+      "children": [
+        "a00063",
+        "a00064",
+        "a00065"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "gghead"
+        ]
+      },
+      "label": "Header"
+    },
+    {
+      "id": "a00063",
+      "name": "heading",
+      "parent": "a00062",
+      "children": [],
+      "settings": {
+        "text": "Buying guide",
+        "tag": "p",
+        "_cssGlobalClasses": [
+          "ggeye"
+        ]
+      },
+      "label": "Eyebrow: Buying guide"
+    },
+    {
+      "id": "a00064",
+      "name": "heading",
+      "parent": "a00062",
+      "children": [],
+      "settings": {
+        "text": "Which accessory do you need?",
+        "tag": "h2",
+        "_cssGlobalClasses": [
+          "ggh"
+        ]
+      },
+      "label": "h2: Which accessory do you n"
+    },
+    {
+      "id": "a00065",
+      "name": "text-basic",
+      "parent": "a00062",
+      "children": [],
+      "settings": {
+        "text": "Match the upgrade to your goal — here is the fastest way to decide.",
+        "tag": "p",
+        "_cssGlobalClasses": [
+          "gglead"
+        ]
+      },
+      "label": "Text"
+    },
+    {
+      "id": "a00066",
+      "name": "block",
+      "parent": "a00061",
+      "children": [
+        "a00067"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "ggcol"
+        ],
+        "_widthMax": "760px",
+        "_margin": {
+          "left": "auto",
+          "right": "auto"
+        },
+        "_rowGap": "0.5rem"
+      },
+      "label": "Guide list wrap"
+    },
+    {
+      "id": "a00067",
+      "name": "text",
+      "parent": "a00066",
+      "children": [],
+      "settings": {
+        "text": "<ul><li><strong>Want more stability?</strong> Fit the heavy 1.97 oz weight (from €21).</li><li><strong>Struggling on slow greens?</strong> Try a higher-degree clubface, up to 3° (€52).</li><li><strong>Adjusting at home?</strong> The torque wrench sets weights and faces to spec (€63).</li><li><strong>Protecting your investment?</strong> Add the fitted putter cover (€32).</li><li><strong>Fitting clients?</strong> The Fitter Kit covers every head, loft and weight combination.</li></ul>"
+      },
+      "label": "Guide list"
+    },
+    {
+      "id": "a00068",
+      "name": "section",
+      "parent": 0,
+      "children": [
+        "a00069"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -772,24 +988,24 @@
       "label": "Compatibility band"
     },
     {
-      "id": "a00053",
+      "id": "a00069",
       "name": "container",
-      "parent": "a00052",
+      "parent": "a00068",
       "children": [
-        "a00054"
+        "a00070"
       ],
       "settings": {},
       "label": "Container"
     },
     {
-      "id": "a00054",
+      "id": "a00070",
       "name": "block",
-      "parent": "a00053",
+      "parent": "a00069",
       "children": [
-        "a00055",
-        "a00059",
-        "a00063",
-        "a00067"
+        "a00071",
+        "a00075",
+        "a00079",
+        "a00083"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -799,13 +1015,13 @@
       "label": "Row"
     },
     {
-      "id": "a00055",
+      "id": "a00071",
       "name": "block",
-      "parent": "a00054",
+      "parent": "a00070",
       "children": [
-        "a00056",
-        "a00057",
-        "a00058"
+        "a00072",
+        "a00073",
+        "a00074"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -815,9 +1031,9 @@
       "label": "Trust: Fits Antares &amp; Orion"
     },
     {
-      "id": "a00056",
+      "id": "a00072",
       "name": "icon",
-      "parent": "a00055",
+      "parent": "a00071",
       "children": [],
       "settings": {
         "icon": {
@@ -835,9 +1051,9 @@
       "label": "Icon"
     },
     {
-      "id": "a00057",
+      "id": "a00073",
       "name": "heading",
-      "parent": "a00055",
+      "parent": "a00071",
       "children": [],
       "settings": {
         "text": "Fits Antares &amp; Orion",
@@ -849,9 +1065,9 @@
       "label": "h3: Fits Antares &amp; Orion"
     },
     {
-      "id": "a00058",
+      "id": "a00074",
       "name": "text-basic",
-      "parent": "a00055",
+      "parent": "a00071",
       "children": [],
       "settings": {
         "text": "All accessories are compatible with both GG putter models.",
@@ -860,13 +1076,13 @@
       "label": "Text"
     },
     {
-      "id": "a00059",
+      "id": "a00075",
       "name": "block",
-      "parent": "a00054",
+      "parent": "a00070",
       "children": [
-        "a00060",
-        "a00061",
-        "a00062"
+        "a00076",
+        "a00077",
+        "a00078"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -876,9 +1092,9 @@
       "label": "Trust: Set to spec"
     },
     {
-      "id": "a00060",
+      "id": "a00076",
       "name": "icon",
-      "parent": "a00059",
+      "parent": "a00075",
       "children": [],
       "settings": {
         "icon": {
@@ -896,9 +1112,9 @@
       "label": "Icon"
     },
     {
-      "id": "a00061",
+      "id": "a00077",
       "name": "heading",
-      "parent": "a00059",
+      "parent": "a00075",
       "children": [],
       "settings": {
         "text": "Set to spec",
@@ -910,9 +1126,9 @@
       "label": "h3: Set to spec"
     },
     {
-      "id": "a00062",
+      "id": "a00078",
       "name": "text-basic",
-      "parent": "a00059",
+      "parent": "a00075",
       "children": [],
       "settings": {
         "text": "Use the torque wrench for repeatable, secure adjustments.",
@@ -921,13 +1137,13 @@
       "label": "Text"
     },
     {
-      "id": "a00063",
+      "id": "a00079",
       "name": "block",
-      "parent": "a00054",
+      "parent": "a00070",
       "children": [
-        "a00064",
-        "a00065",
-        "a00066"
+        "a00080",
+        "a00081",
+        "a00082"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -937,9 +1153,9 @@
       "label": "Trust: 2-year warranty"
     },
     {
-      "id": "a00064",
+      "id": "a00080",
       "name": "icon",
-      "parent": "a00063",
+      "parent": "a00079",
       "children": [],
       "settings": {
         "icon": {
@@ -957,9 +1173,9 @@
       "label": "Icon"
     },
     {
-      "id": "a00065",
+      "id": "a00081",
       "name": "heading",
-      "parent": "a00063",
+      "parent": "a00079",
       "children": [],
       "settings": {
         "text": "2-year warranty",
@@ -971,9 +1187,9 @@
       "label": "h3: 2-year warranty"
     },
     {
-      "id": "a00066",
+      "id": "a00082",
       "name": "text-basic",
-      "parent": "a00063",
+      "parent": "a00079",
       "children": [],
       "settings": {
         "text": "GG products are covered against conformity defects.",
@@ -982,13 +1198,13 @@
       "label": "Text"
     },
     {
-      "id": "a00067",
+      "id": "a00083",
       "name": "block",
-      "parent": "a00054",
+      "parent": "a00070",
       "children": [
-        "a00068",
-        "a00069",
-        "a00070"
+        "a00084",
+        "a00085",
+        "a00086"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -998,9 +1214,9 @@
       "label": "Trust: Fast shipping"
     },
     {
-      "id": "a00068",
+      "id": "a00084",
       "name": "icon",
-      "parent": "a00067",
+      "parent": "a00083",
       "children": [],
       "settings": {
         "icon": {
@@ -1018,9 +1234,9 @@
       "label": "Icon"
     },
     {
-      "id": "a00069",
+      "id": "a00085",
       "name": "heading",
-      "parent": "a00067",
+      "parent": "a00083",
       "children": [],
       "settings": {
         "text": "Fast shipping",
@@ -1032,9 +1248,9 @@
       "label": "h3: Fast shipping"
     },
     {
-      "id": "a00070",
+      "id": "a00086",
       "name": "text-basic",
-      "parent": "a00067",
+      "parent": "a00083",
       "children": [],
       "settings": {
         "text": "BRT in Italy, FedEx worldwide — within 5–6 business days.",
@@ -1043,11 +1259,11 @@
       "label": "Text"
     },
     {
-      "id": "a00071",
+      "id": "a00087",
       "name": "section",
       "parent": 0,
       "children": [
-        "a00072"
+        "a00088"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -1058,24 +1274,24 @@
       "label": "How to"
     },
     {
-      "id": "a00072",
+      "id": "a00088",
       "name": "container",
-      "parent": "a00071",
+      "parent": "a00087",
       "children": [
-        "a00073",
-        "a00077"
+        "a00089",
+        "a00093"
       ],
       "settings": {},
       "label": "Container"
     },
     {
-      "id": "a00073",
+      "id": "a00089",
       "name": "block",
-      "parent": "a00072",
+      "parent": "a00088",
       "children": [
-        "a00074",
-        "a00075",
-        "a00076"
+        "a00090",
+        "a00091",
+        "a00092"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -1085,9 +1301,9 @@
       "label": "Header"
     },
     {
-      "id": "a00074",
+      "id": "a00090",
       "name": "heading",
-      "parent": "a00073",
+      "parent": "a00089",
       "children": [],
       "settings": {
         "text": "Setup guide",
@@ -1099,9 +1315,9 @@
       "label": "Eyebrow: Setup guide"
     },
     {
-      "id": "a00075",
+      "id": "a00091",
       "name": "heading",
-      "parent": "a00073",
+      "parent": "a00089",
       "children": [],
       "settings": {
         "text": "How to customize your GG putter",
@@ -1113,9 +1329,9 @@
       "label": "h2: How to customize your GG"
     },
     {
-      "id": "a00076",
+      "id": "a00092",
       "name": "text-basic",
-      "parent": "a00073",
+      "parent": "a00089",
       "children": [],
       "settings": {
         "text": "In four steps you can rebalance the head and change the face — no specialist tools beyond the GG torque wrench.",
@@ -1127,11 +1343,11 @@
       "label": "Text"
     },
     {
-      "id": "a00077",
+      "id": "a00093",
       "name": "block",
-      "parent": "a00072",
+      "parent": "a00088",
       "children": [
-        "a00078"
+        "a00094"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -1147,9 +1363,9 @@
       "label": "HowTo Steps"
     },
     {
-      "id": "a00078",
+      "id": "a00094",
       "name": "text",
-      "parent": "a00077",
+      "parent": "a00093",
       "children": [],
       "settings": {
         "text": "<ol><li><strong>Loosen the weight screws.</strong> Loosen the three weight screws using the GG torque wrench.</li><li><strong>Position the three weights.</strong> Place the weights across the three points to match your stroke arc — light 1.19 oz, medium 1.48 oz, heavy 1.97 oz.</li><li><strong>Set loft and feel.</strong> Swap the clubface insert (1°–3°) to dial in your preferred loft and feel.</li><li><strong>Tighten to spec.</strong> Tighten everything back to the correct torque with the wrench.</li></ol>"
@@ -1157,11 +1373,11 @@
       "label": "Steps"
     },
     {
-      "id": "a00079",
+      "id": "a00095",
       "name": "section",
       "parent": 0,
       "children": [
-        "a00080"
+        "a00096"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -1172,66 +1388,50 @@
       "label": "Fitter Kit"
     },
     {
-      "id": "a00080",
+      "id": "a00096",
       "name": "container",
-      "parent": "a00079",
+      "parent": "a00095",
       "children": [
-        "a00081"
+        "a00097",
+        "a00101"
       ],
       "settings": {},
       "label": "Container"
     },
     {
-      "id": "a00081",
+      "id": "a00097",
       "name": "block",
-      "parent": "a00080",
+      "parent": "a00096",
       "children": [
-        "a00082",
-        "a00089"
+        "a00098",
+        "a00099",
+        "a00100"
       ],
       "settings": {
         "_cssGlobalClasses": [
-          "ggrow"
+          "gghead"
         ]
       },
-      "label": "Row"
+      "label": "Header"
     },
     {
-      "id": "a00082",
-      "name": "block",
-      "parent": "a00081",
-      "children": [
-        "a00083",
-        "a00084",
-        "a00085",
-        "a00086",
-        "a00087"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "ggcolw"
-        ]
-      },
-      "label": "Fitter Text"
-    },
-    {
-      "id": "a00083",
+      "id": "a00098",
       "name": "heading",
-      "parent": "a00082",
+      "parent": "a00097",
       "children": [],
       "settings": {
-        "text": "For fitters",
+        "text": "For fitters, pro shops &amp; club builders",
         "tag": "p",
         "_cssGlobalClasses": [
           "ggeye"
         ]
       },
-      "label": "Eyebrow: For fitters"
+      "label": "Eyebrow: For fitters, pro s"
     },
     {
-      "id": "a00084",
+      "id": "a00099",
       "name": "heading",
-      "parent": "a00082",
+      "parent": "a00097",
       "children": [],
       "settings": {
         "text": "The GG Putters Fitter Kit",
@@ -1243,33 +1443,93 @@
       "label": "h2: The GG Putters Fitter Ki"
     },
     {
-      "id": "a00085",
+      "id": "a00100",
       "name": "text-basic",
-      "parent": "a00082",
+      "parent": "a00097",
       "children": [],
       "settings": {
-        "text": "The Fitter Kit is a modular fitting system that lets professionals test every putter configuration with a client in a single session.",
-        "tag": "p"
+        "text": "A professional fitting system that builds and tests every head, loft, weight and neck combination in a single appointment.",
+        "tag": "p",
+        "_cssGlobalClasses": [
+          "gglead"
+        ]
       },
       "label": "Text"
     },
     {
-      "id": "a00086",
-      "name": "text-basic",
-      "parent": "a00082",
-      "children": [],
-      "settings": {
-        "text": "Handcrafted in Italy and fully modular — from head shape to insert, feel and balance — so each player leaves with a putter that is uniquely theirs.",
-        "tag": "p"
-      },
-      "label": "Text"
-    },
-    {
-      "id": "a00087",
+      "id": "a00101",
       "name": "block",
-      "parent": "a00082",
+      "parent": "a00096",
       "children": [
-        "a00088"
+        "a00102",
+        "a00108"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "ggrow"
+        ]
+      },
+      "label": "Row"
+    },
+    {
+      "id": "a00102",
+      "name": "block",
+      "parent": "a00101",
+      "children": [
+        "a00103",
+        "a00104",
+        "a00105",
+        "a00106"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "ggcolw"
+        ]
+      },
+      "label": "Fitter Text"
+    },
+    {
+      "id": "a00103",
+      "name": "heading",
+      "parent": "a00102",
+      "children": [],
+      "settings": {
+        "text": "Fit by feel, not by guesswork",
+        "tag": "h3",
+        "_cssGlobalClasses": [
+          "ggh"
+        ]
+      },
+      "label": "h3: Fit by feel, not by gues"
+    },
+    {
+      "id": "a00104",
+      "name": "text-basic",
+      "parent": "a00102",
+      "children": [],
+      "settings": {
+        "text": "With the kit on the bench, a player can compare changes back to back — blade against mallet, loft against loft, light weight against heavy — and immediately feel which setup rolls the ball best for their stroke.",
+        "tag": "p"
+      },
+      "label": "Text"
+    },
+    {
+      "id": "a00105",
+      "name": "text-basic",
+      "parent": "a00102",
+      "children": [],
+      "settings": {
+        "text": "A putter dialled in during fitting is genuinely made-to-measure, which typically means happier customers, fewer returns and a stronger case for a premium custom build.",
+        "tag": "p"
+      },
+      "label": "Text"
+    },
+    {
+      "id": "a00106",
+      "name": "block",
+      "parent": "a00102",
+      "children": [
+        "a00107"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -1279,31 +1539,32 @@
       "label": "Fitter CTA"
     },
     {
-      "id": "a00088",
+      "id": "a00107",
       "name": "button",
-      "parent": "a00087",
+      "parent": "a00106",
       "children": [],
       "settings": {
-        "text": "Request the Fitter Kit",
+        "text": "Request the Fitter Kit or book a demo",
         "link": {
           "type": "external",
           "url": "https://shop.ggputters.com/for-fitters/",
           "newTab": true,
-          "ariaLabel": "Request the Fitter Kit"
+          "ariaLabel": "Request the GG Putters Fitter Kit or book a demo"
         },
         "_cssGlobalClasses": [
           "ggbtn"
         ]
       },
-      "label": "Button: Request the Fitter Kit"
+      "label": "Button: Request the Fitter Kit or book a demo"
     },
     {
-      "id": "a00089",
+      "id": "a00108",
       "name": "block",
-      "parent": "a00081",
+      "parent": "a00101",
       "children": [
-        "a00090",
-        "a00091"
+        "a00109",
+        "a00110",
+        "a00111"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -1313,9 +1574,9 @@
       "label": "Fitter Kit List"
     },
     {
-      "id": "a00090",
+      "id": "a00109",
       "name": "heading",
-      "parent": "a00089",
+      "parent": "a00108",
       "children": [],
       "settings": {
         "text": "What's inside the Fitter Kit",
@@ -1327,21 +1588,32 @@
       "label": "h3: What's inside the Fitter"
     },
     {
-      "id": "a00091",
+      "id": "a00110",
       "name": "text",
-      "parent": "a00089",
+      "parent": "a00108",
       "children": [],
       "settings": {
-        "text": "<ul><li>2 heads — one Antares and one Orion</li><li>3 lofts (1°, 2°, 3°)</li><li>Weights kit — 2 heavy and 2 light (bullet or flat)</li><li>Necks (lie and offset)</li><li>Screws and hex screwdriver</li></ul>"
+        "text": "<ul><li>2 heads — one Antares (blade) and one Orion (mallet)</li><li>3 lofts to swap — 1°, 2° and 3°</li><li>Weights kit — 2 heavy and 2 light (bullet or flat)</li><li>Necks — lie and offset options</li><li>Screws and a hex screwdriver to reconfigure on the spot</li></ul>"
       },
       "label": "Kit list"
     },
     {
-      "id": "a00092",
+      "id": "a00111",
+      "name": "text-basic",
+      "parent": "a00108",
+      "children": [],
+      "settings": {
+        "text": "Everything needed to demonstrate the full GG system to a client in one sitting.",
+        "tag": "p"
+      },
+      "label": "Text"
+    },
+    {
+      "id": "a00112",
       "name": "section",
       "parent": 0,
       "children": [
-        "a00093"
+        "a00113"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -1352,24 +1624,24 @@
       "label": "FAQ"
     },
     {
-      "id": "a00093",
+      "id": "a00113",
       "name": "container",
-      "parent": "a00092",
+      "parent": "a00112",
       "children": [
-        "a00094",
-        "a00098"
+        "a00114",
+        "a00118"
       ],
       "settings": {},
       "label": "Container"
     },
     {
-      "id": "a00094",
+      "id": "a00114",
       "name": "block",
-      "parent": "a00093",
+      "parent": "a00113",
       "children": [
-        "a00095",
-        "a00096",
-        "a00097"
+        "a00115",
+        "a00116",
+        "a00117"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -1379,9 +1651,9 @@
       "label": "Header"
     },
     {
-      "id": "a00095",
+      "id": "a00115",
       "name": "heading",
-      "parent": "a00094",
+      "parent": "a00114",
       "children": [],
       "settings": {
         "text": "FAQ",
@@ -1393,9 +1665,9 @@
       "label": "Eyebrow: FAQ"
     },
     {
-      "id": "a00096",
+      "id": "a00116",
       "name": "heading",
-      "parent": "a00094",
+      "parent": "a00114",
       "children": [],
       "settings": {
         "text": "Accessories &amp; Fitter Kit — FAQ",
@@ -1407,9 +1679,9 @@
       "label": "h2: Accessories &amp; Fitter"
     },
     {
-      "id": "a00097",
+      "id": "a00117",
       "name": "text-basic",
-      "parent": "a00094",
+      "parent": "a00114",
       "children": [],
       "settings": {
         "text": "Quick answers about compatibility, weights, lofts, tools, pricing and the Fitter Kit.",
@@ -1421,17 +1693,17 @@
       "label": "Text"
     },
     {
-      "id": "a00098",
+      "id": "a00118",
       "name": "block",
-      "parent": "a00093",
+      "parent": "a00113",
       "children": [
-        "a00099",
-        "a00102",
-        "a00105",
-        "a00108",
-        "a00111",
-        "a00114",
-        "a00117"
+        "a00119",
+        "a00122",
+        "a00125",
+        "a00128",
+        "a00131",
+        "a00134",
+        "a00137"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -1447,291 +1719,291 @@
       "label": "FAQ List"
     },
     {
-      "id": "a00099",
-      "name": "block",
-      "parent": "a00098",
-      "children": [
-        "a00100",
-        "a00101"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "ggcol"
-        ]
-      },
-      "label": "FAQ: Are GG Putters accesso"
-    },
-    {
-      "id": "a00100",
-      "name": "heading",
-      "parent": "a00099",
-      "children": [],
-      "settings": {
-        "text": "Are GG Putters accessories compatible with both Antares and Orion?",
-        "tag": "h3",
-        "_cssGlobalClasses": [
-          "ggh"
-        ]
-      },
-      "label": "h3: Are GG Putters accessori"
-    },
-    {
-      "id": "a00101",
-      "name": "text-basic",
-      "parent": "a00099",
-      "children": [],
-      "settings": {
-        "text": "Yes. GG Putters use a modular system, so weights, clubfaces and necks fit both the Antares blade and the Orion mallet.",
-        "tag": "p"
-      },
-      "label": "Text"
-    },
-    {
-      "id": "a00102",
-      "name": "block",
-      "parent": "a00098",
-      "children": [
-        "a00103",
-        "a00104"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "ggcol"
-        ]
-      },
-      "label": "FAQ: What weights are avail"
-    },
-    {
-      "id": "a00103",
-      "name": "heading",
-      "parent": "a00102",
-      "children": [],
-      "settings": {
-        "text": "What weights are available and how heavy are they?",
-        "tag": "h3",
-        "_cssGlobalClasses": [
-          "ggh"
-        ]
-      },
-      "label": "h3: What weights are availab"
-    },
-    {
-      "id": "a00104",
-      "name": "text-basic",
-      "parent": "a00102",
-      "children": [],
-      "settings": {
-        "text": "Three weights are available — light 1.19 oz, medium 1.48 oz and heavy 1.97 oz — in bullet or flat shape, priced at €21.",
-        "tag": "p"
-      },
-      "label": "Text"
-    },
-    {
-      "id": "a00105",
-      "name": "block",
-      "parent": "a00098",
-      "children": [
-        "a00106",
-        "a00107"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "ggcol"
-        ]
-      },
-      "label": "FAQ: What clubface lofts ca"
-    },
-    {
-      "id": "a00106",
-      "name": "heading",
-      "parent": "a00105",
-      "children": [],
-      "settings": {
-        "text": "What clubface lofts can I choose?",
-        "tag": "h3",
-        "_cssGlobalClasses": [
-          "ggh"
-        ]
-      },
-      "label": "h3: What clubface lofts can "
-    },
-    {
-      "id": "a00107",
-      "name": "text-basic",
-      "parent": "a00105",
-      "children": [],
-      "settings": {
-        "text": "Interchangeable clubfaces are available from 1° to 3° and cost €52, letting you tune loft and feel.",
-        "tag": "p"
-      },
-      "label": "Text"
-    },
-    {
-      "id": "a00108",
-      "name": "block",
-      "parent": "a00098",
-      "children": [
-        "a00109",
-        "a00110"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "ggcol"
-        ]
-      },
-      "label": "FAQ: Do I need the torque w"
-    },
-    {
-      "id": "a00109",
-      "name": "heading",
-      "parent": "a00108",
-      "children": [],
-      "settings": {
-        "text": "Do I need the torque wrench to change weights or faces?",
-        "tag": "h3",
-        "_cssGlobalClasses": [
-          "ggh"
-        ]
-      },
-      "label": "h3: Do I need the torque wre"
-    },
-    {
-      "id": "a00110",
-      "name": "text-basic",
-      "parent": "a00108",
-      "children": [],
-      "settings": {
-        "text": "It is recommended: the GG torque wrench (€63) sets every weight and face to the correct, repeatable torque spec.",
-        "tag": "p"
-      },
-      "label": "Text"
-    },
-    {
-      "id": "a00111",
-      "name": "block",
-      "parent": "a00098",
-      "children": [
-        "a00112",
-        "a00113"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "ggcol"
-        ]
-      },
-      "label": "FAQ: What is included in th"
-    },
-    {
-      "id": "a00112",
-      "name": "heading",
-      "parent": "a00111",
-      "children": [],
-      "settings": {
-        "text": "What is included in the Spare Parts Kit?",
-        "tag": "h3",
-        "_cssGlobalClasses": [
-          "ggh"
-        ]
-      },
-      "label": "h3: What is included in the "
-    },
-    {
-      "id": "a00113",
-      "name": "text-basic",
-      "parent": "a00111",
-      "children": [],
-      "settings": {
-        "text": "The Spare Parts Kit (€149) includes replacement screws, weights and hardware to keep your putter game-ready.",
-        "tag": "p"
-      },
-      "label": "Text"
-    },
-    {
-      "id": "a00114",
-      "name": "block",
-      "parent": "a00098",
-      "children": [
-        "a00115",
-        "a00116"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "ggcol"
-        ]
-      },
-      "label": "FAQ: What's inside the Fitt"
-    },
-    {
-      "id": "a00115",
-      "name": "heading",
-      "parent": "a00114",
-      "children": [],
-      "settings": {
-        "text": "What's inside the Fitter Kit?",
-        "tag": "h3",
-        "_cssGlobalClasses": [
-          "ggh"
-        ]
-      },
-      "label": "h3: What's inside the Fitter"
-    },
-    {
-      "id": "a00116",
-      "name": "text-basic",
-      "parent": "a00114",
-      "children": [],
-      "settings": {
-        "text": "The Fitter Kit contains 2 heads (one Antares and one Orion), 3 lofts (1°, 2°, 3°), a weights kit (2 heavy + 2 light), necks (lie and offset), plus screws and a hex screwdriver.",
-        "tag": "p"
-      },
-      "label": "Text"
-    },
-    {
-      "id": "a00117",
-      "name": "block",
-      "parent": "a00098",
-      "children": [
-        "a00118",
-        "a00119"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "ggcol"
-        ]
-      },
-      "label": "FAQ: How much do GG Putters"
-    },
-    {
-      "id": "a00118",
-      "name": "heading",
-      "parent": "a00117",
-      "children": [],
-      "settings": {
-        "text": "How much do GG Putters accessories cost?",
-        "tag": "h3",
-        "_cssGlobalClasses": [
-          "ggh"
-        ]
-      },
-      "label": "h3: How much do GG Putters a"
-    },
-    {
       "id": "a00119",
-      "name": "text-basic",
-      "parent": "a00117",
-      "children": [],
+      "name": "block",
+      "parent": "a00118",
+      "children": [
+        "a00120",
+        "a00121"
+      ],
       "settings": {
-        "text": "Accessories range from €21 (extra weights) to €149 (spare parts kit); clubfaces €52, putter cover €32, torque wrench €63.",
-        "tag": "p"
+        "_cssGlobalClasses": [
+          "ggcol"
+        ]
       },
-      "label": "Text"
+      "label": "FAQ: Which GG accessory sho"
     },
     {
       "id": "a00120",
+      "name": "heading",
+      "parent": "a00119",
+      "children": [],
+      "settings": {
+        "text": "Which GG accessory should I buy first?",
+        "tag": "h3",
+        "_cssGlobalClasses": [
+          "ggh"
+        ]
+      },
+      "label": "h3: Which GG accessory shoul"
+    },
+    {
+      "id": "a00121",
+      "name": "text-basic",
+      "parent": "a00119",
+      "children": [],
+      "settings": {
+        "text": "For most players, extra weights (€21) give the biggest change to balance and feel; add clubfaces (€52) to adjust loft, and the torque wrench (€63) if you plan to adjust the putter yourself.",
+        "tag": "p"
+      },
+      "label": "Text"
+    },
+    {
+      "id": "a00122",
+      "name": "block",
+      "parent": "a00118",
+      "children": [
+        "a00123",
+        "a00124"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "ggcol"
+        ]
+      },
+      "label": "FAQ: How do the three weigh"
+    },
+    {
+      "id": "a00123",
+      "name": "heading",
+      "parent": "a00122",
+      "children": [],
+      "settings": {
+        "text": "How do the three weights change my putter?",
+        "tag": "h3",
+        "_cssGlobalClasses": [
+          "ggh"
+        ]
+      },
+      "label": "h3: How do the three weights"
+    },
+    {
+      "id": "a00124",
+      "name": "text-basic",
+      "parent": "a00122",
+      "children": [],
+      "settings": {
+        "text": "The weights sit in three points and shift the head's balance: the 1.97 oz heavy weight adds stability for a straighter stroke, while the 1.19 oz light weight increases feel; the 1.48 oz medium sits in between.",
+        "tag": "p"
+      },
+      "label": "Text"
+    },
+    {
+      "id": "a00125",
+      "name": "block",
+      "parent": "a00118",
+      "children": [
+        "a00126",
+        "a00127"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "ggcol"
+        ]
+      },
+      "label": "FAQ: How many clubface loft"
+    },
+    {
+      "id": "a00126",
+      "name": "heading",
+      "parent": "a00125",
+      "children": [],
+      "settings": {
+        "text": "How many clubface lofts are available and why do they matter?",
+        "tag": "h3",
+        "_cssGlobalClasses": [
+          "ggh"
+        ]
+      },
+      "label": "h3: How many clubface lofts "
+    },
+    {
+      "id": "a00127",
+      "name": "text-basic",
+      "parent": "a00125",
+      "children": [],
+      "settings": {
+        "text": "Clubfaces come in 1°, 2° and 3° (€52). A higher loft helps lift the ball into a smooth roll on slower greens; a lower loft keeps it firmer on fast surfaces.",
+        "tag": "p"
+      },
+      "label": "Text"
+    },
+    {
+      "id": "a00128",
+      "name": "block",
+      "parent": "a00118",
+      "children": [
+        "a00129",
+        "a00130"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "ggcol"
+        ]
+      },
+      "label": "FAQ: Can I adjust the putte"
+    },
+    {
+      "id": "a00129",
+      "name": "heading",
+      "parent": "a00128",
+      "children": [],
+      "settings": {
+        "text": "Can I adjust the putter myself, or do I need a fitter?",
+        "tag": "h3",
+        "_cssGlobalClasses": [
+          "ggh"
+        ]
+      },
+      "label": "h3: Can I adjust the putter "
+    },
+    {
+      "id": "a00130",
+      "name": "text-basic",
+      "parent": "a00128",
+      "children": [],
+      "settings": {
+        "text": "You can adjust weights and faces at home with the GG torque wrench (€63): loosen, reposition, swap the face, then tighten to spec. For a full fitting across models, use the Fitter Kit.",
+        "tag": "p"
+      },
+      "label": "Text"
+    },
+    {
+      "id": "a00131",
+      "name": "block",
+      "parent": "a00118",
+      "children": [
+        "a00132",
+        "a00133"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "ggcol"
+        ]
+      },
+      "label": "FAQ: Do the accessories fit"
+    },
+    {
+      "id": "a00132",
+      "name": "heading",
+      "parent": "a00131",
+      "children": [],
+      "settings": {
+        "text": "Do the accessories fit both the Antares and the Orion?",
+        "tag": "h3",
+        "_cssGlobalClasses": [
+          "ggh"
+        ]
+      },
+      "label": "h3: Do the accessories fit b"
+    },
+    {
+      "id": "a00133",
+      "name": "text-basic",
+      "parent": "a00131",
+      "children": [],
+      "settings": {
+        "text": "Yes. The GG system is modular, so weights, clubfaces and necks are interchangeable between the Antares blade and the Orion mallet.",
+        "tag": "p"
+      },
+      "label": "Text"
+    },
+    {
+      "id": "a00134",
+      "name": "block",
+      "parent": "a00118",
+      "children": [
+        "a00135",
+        "a00136"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "ggcol"
+        ]
+      },
+      "label": "FAQ: What does the Fitter K"
+    },
+    {
+      "id": "a00135",
+      "name": "heading",
+      "parent": "a00134",
+      "children": [],
+      "settings": {
+        "text": "What does the Fitter Kit include and who is it for?",
+        "tag": "h3",
+        "_cssGlobalClasses": [
+          "ggh"
+        ]
+      },
+      "label": "h3: What does the Fitter Kit"
+    },
+    {
+      "id": "a00136",
+      "name": "text-basic",
+      "parent": "a00134",
+      "children": [],
+      "settings": {
+        "text": "The Fitter Kit is aimed at fitters, pro shops and club builders. It carries two heads (Antares and Orion), three lofts (1°–3°), a weights kit (2 heavy, 2 light), necks (lie and offset) and the tools to build any configuration.",
+        "tag": "p"
+      },
+      "label": "Text"
+    },
+    {
+      "id": "a00137",
+      "name": "block",
+      "parent": "a00118",
+      "children": [
+        "a00138",
+        "a00139"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "ggcol"
+        ]
+      },
+      "label": "FAQ: Are accessories under "
+    },
+    {
+      "id": "a00138",
+      "name": "heading",
+      "parent": "a00137",
+      "children": [],
+      "settings": {
+        "text": "Are accessories under warranty and how fast do they ship?",
+        "tag": "h3",
+        "_cssGlobalClasses": [
+          "ggh"
+        ]
+      },
+      "label": "h3: Are accessories under wa"
+    },
+    {
+      "id": "a00139",
+      "name": "text-basic",
+      "parent": "a00137",
+      "children": [],
+      "settings": {
+        "text": "GG accessories carry the same 2-year warranty as the putters and ship with BRT in Italy and FedEx worldwide, usually within 5–6 business days.",
+        "tag": "p"
+      },
+      "label": "Text"
+    },
+    {
+      "id": "a00140",
       "name": "section",
       "parent": 0,
       "children": [
-        "a00121"
+        "a00141"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -1742,24 +2014,24 @@
       "label": "Contact"
     },
     {
-      "id": "a00121",
+      "id": "a00141",
       "name": "container",
-      "parent": "a00120",
+      "parent": "a00140",
       "children": [
-        "a00122"
+        "a00142"
       ],
       "settings": {},
       "label": "Container"
     },
     {
-      "id": "a00122",
+      "id": "a00142",
       "name": "block",
-      "parent": "a00121",
+      "parent": "a00141",
       "children": [
-        "a00123",
-        "a00124",
-        "a00125",
-        "a00126"
+        "a00143",
+        "a00144",
+        "a00145",
+        "a00146"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -1769,9 +2041,9 @@
       "label": "Contact Content"
     },
     {
-      "id": "a00123",
+      "id": "a00143",
       "name": "heading",
-      "parent": "a00122",
+      "parent": "a00142",
       "children": [],
       "settings": {
         "text": "Need help choosing?",
@@ -1783,9 +2055,9 @@
       "label": "Eyebrow: Need help choosing"
     },
     {
-      "id": "a00124",
+      "id": "a00144",
       "name": "heading",
-      "parent": "a00122",
+      "parent": "a00142",
       "children": [],
       "settings": {
         "text": "Talk to the GG Putters team",
@@ -1797,9 +2069,9 @@
       "label": "h2: Talk to the GG Putters t"
     },
     {
-      "id": "a00125",
+      "id": "a00145",
       "name": "text-basic",
-      "parent": "a00122",
+      "parent": "a00142",
       "children": [],
       "settings": {
         "text": "Not sure which weights or face you need? Our team in Brescia will help you set up your putter.",
@@ -1811,12 +2083,12 @@
       "label": "Text"
     },
     {
-      "id": "a00126",
+      "id": "a00146",
       "name": "block",
-      "parent": "a00122",
+      "parent": "a00142",
       "children": [
-        "a00127",
-        "a00128"
+        "a00147",
+        "a00148"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -1826,9 +2098,9 @@
       "label": "Contact links"
     },
     {
-      "id": "a00127",
+      "id": "a00147",
       "name": "text-link",
-      "parent": "a00126",
+      "parent": "a00146",
       "children": [],
       "settings": {
         "text": "info@ggputters.com",
@@ -1843,9 +2115,9 @@
       "label": "Email"
     },
     {
-      "id": "a00128",
+      "id": "a00148",
       "name": "text-link",
-      "parent": "a00126",
+      "parent": "a00146",
       "children": [],
       "settings": {
         "text": "+39 331 1099739",
@@ -1860,11 +2132,11 @@
       "label": "Phone"
     },
     {
-      "id": "a00129",
+      "id": "a00149",
       "name": "section",
       "parent": 0,
       "children": [
-        "a00130"
+        "a00150"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -1874,24 +2146,24 @@
       "label": "Footer"
     },
     {
-      "id": "a00130",
+      "id": "a00150",
       "name": "container",
-      "parent": "a00129",
+      "parent": "a00149",
       "children": [
-        "a00131"
+        "a00151"
       ],
       "settings": {},
       "label": "Container"
     },
     {
-      "id": "a00131",
+      "id": "a00151",
       "name": "block",
-      "parent": "a00130",
+      "parent": "a00150",
       "children": [
-        "a00132",
-        "a00133",
-        "a00134",
-        "a00135"
+        "a00152",
+        "a00153",
+        "a00154",
+        "a00155"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -1901,9 +2173,9 @@
       "label": "Footer Content"
     },
     {
-      "id": "a00132",
+      "id": "a00152",
       "name": "heading",
-      "parent": "a00131",
+      "parent": "a00151",
       "children": [],
       "settings": {
         "text": "GG Putters",
@@ -1915,9 +2187,9 @@
       "label": "Brand"
     },
     {
-      "id": "a00133",
+      "id": "a00153",
       "name": "text-basic",
-      "parent": "a00131",
+      "parent": "a00151",
       "children": [],
       "settings": {
         "text": "Italian craft, Brescia engineering. Putters with a metalworking soul.",
@@ -1926,9 +2198,9 @@
       "label": "Text"
     },
     {
-      "id": "a00134",
+      "id": "a00154",
       "name": "text-basic",
-      "parent": "a00131",
+      "parent": "a00151",
       "children": [],
       "settings": {
         "text": "GG PUTTERS is a brand of GM PRODUCTION srl · VAT IT03351530989 · Palazzolo sull'Oglio (BS), Italy",
@@ -1937,9 +2209,9 @@
       "label": "Text"
     },
     {
-      "id": "a00135",
+      "id": "a00155",
       "name": "text-basic",
-      "parent": "a00131",
+      "parent": "a00151",
       "children": [],
       "settings": {
         "text": "© 2026 GG Putters. All rights reserved.",
@@ -1952,7 +2224,7 @@
     "pageTitle": "Putter Accessories, Spare Parts & Fitter Kit | GG Putters",
     "metaDescription": "GG Putters accessories: interchangeable clubfaces (1°–3°), adjustable weights (1.19–1.97 oz), covers, spare parts and the torque wrench, from €21 to €149. Compatible with Antares and Orion. Professional Fitter Kit available.",
     "customCss": ":where(a,button,input,textarea,select,summary,[tabindex]):focus-visible{outline:3px solid currentColor;outline-offset:3px;}[id]{scroll-margin-top:1.5rem;}img{max-width:100%;height:auto;}@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important;}}",
-    "customScriptsHeader": "<link rel=\"canonical\" href=\"https://shop.ggputters.com/accessories/\"><meta name=\"robots\" content=\"index,follow,max-image-preview:large\"><meta name=\"description\" content=\"GG Putters accessories: interchangeable clubfaces (1°–3°), adjustable weights (1.19–1.97 oz), covers, spare parts and the torque wrench, from €21 to €149. Compatible with Antares and Orion. Professional Fitter Kit available.\"><meta property=\"og:type\" content=\"website\"><meta property=\"og:site_name\" content=\"GG Putters\"><meta property=\"og:title\" content=\"Putter Accessories, Spare Parts & Fitter Kit | GG Putters\"><meta property=\"og:description\" content=\"GG Putters accessories: interchangeable clubfaces (1°–3°), adjustable weights (1.19–1.97 oz), covers, spare parts and the torque wrench, from €21 to €149. Compatible with Antares and Orion. Professional Fitter Kit available.\"><meta property=\"og:url\" content=\"https://shop.ggputters.com/accessories/\"><meta property=\"og:image\" content=\"https://shop.ggputters.com/wp-content/uploads/gg-accessories-og.jpg\"><meta property=\"og:locale\" content=\"en_US\"><meta name=\"twitter:card\" content=\"summary_large_image\"><meta name=\"twitter:title\" content=\"Putter Accessories, Spare Parts & Fitter Kit | GG Putters\"><meta name=\"twitter:description\" content=\"GG Putters accessories: interchangeable clubfaces (1°–3°), adjustable weights (1.19–1.97 oz), covers, spare parts and the torque wrench, from €21 to €149. Compatible with Antares and Orion. Professional Fitter Kit available.\"><meta name=\"twitter:image\" content=\"https://shop.ggputters.com/wp-content/uploads/gg-accessories-og.jpg\"><script type=\"application/ld+json\">{\"@context\": \"https://schema.org\", \"@graph\": [{\"@type\": \"Organization\", \"@id\": \"https://shop.ggputters.com/#organization\", \"name\": \"GG Putters\", \"legalName\": \"GM PRODUCTION srl\", \"url\": \"https://shop.ggputters.com/\", \"vatID\": \"IT03351530989\", \"email\": \"info@ggputters.com\", \"telephone\": \"+39 331 1099739\", \"address\": {\"@type\": \"PostalAddress\", \"streetAddress\": \"Via Taranto, 7\", \"addressLocality\": \"Palazzolo sull'Oglio\", \"addressRegion\": \"BS\", \"postalCode\": \"25036\", \"addressCountry\": \"IT\"}}, {\"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://shop.ggputters.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Accessories\", \"item\": \"https://shop.ggputters.com/accessories/\"}]}, {\"@type\": \"CollectionPage\", \"@id\": \"https://shop.ggputters.com/accessories/#webpage\", \"url\": \"https://shop.ggputters.com/accessories/\", \"name\": \"Putter Accessories, Spare Parts & Fitter Kit | GG Putters\", \"description\": \"GG Putters accessories: interchangeable clubfaces (1°–3°), adjustable weights (1.19–1.97 oz), covers, spare parts and the torque wrench, from €21 to €149. Compatible with Antares and Orion. Professional Fitter Kit available.\", \"isPartOf\": {\"@id\": \"https://shop.ggputters.com/#organization\"}}, {\"@type\": \"ItemList\", \"name\": \"GG Putters Accessories\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"item\": {\"@type\": \"Product\", \"name\": \"GG Clubfaces\", \"brand\": {\"@type\": \"Brand\", \"name\": \"GG Putters\"}, \"category\": \"Golf Putter Accessory\", \"description\": \"Clubfaces are interchangeable face inserts that set the loft and feel of your putter. Available from 1° to 3°. Compatible with both Antares and Orion.\", \"url\": \"https://shop.ggputters.com/putters/clubfaces/\", \"isAccessoryOrSparePartFor\": [{\"@type\": \"Product\", \"name\": \"GG Antares\", \"url\": \"https://shop.ggputters.com/putters/antares/\"}, {\"@type\": \"Product\", \"name\": \"GG Orion\", \"url\": \"https://shop.ggputters.com/putters/orion/\"}], \"offers\": {\"@type\": \"Offer\", \"price\": \"52.00\", \"priceCurrency\": \"EUR\", \"availability\": \"https://schema.org/InStock\", \"url\": \"https://shop.ggputters.com/putters/clubfaces/\", \"priceValidUntil\": \"2026-12-31\"}}}, {\"@type\": \"ListItem\", \"position\": 2, \"item\": {\"@type\": \"Product\", \"name\": \"GG Extra Weights\", \"brand\": {\"@type\": \"Brand\", \"name\": \"GG Putters\"}, \"category\": \"Golf Putter Accessory\", \"description\": \"Extra weights are swappable head weights for the 3-position weighting system. Light 1.19 oz, medium 1.48 oz, heavy 1.97 oz — bullet or flat.\", \"url\": \"https://shop.ggputters.com/putters/extra-weights/\", \"isAccessoryOrSparePartFor\": [{\"@type\": \"Product\", \"name\": \"GG Antares\", \"url\": \"https://shop.ggputters.com/putters/antares/\"}, {\"@type\": \"Product\", \"name\": \"GG Orion\", \"url\": \"https://shop.ggputters.com/putters/orion/\"}], \"offers\": {\"@type\": \"Offer\", \"price\": \"21.00\", \"priceCurrency\": \"EUR\", \"availability\": \"https://schema.org/InStock\", \"url\": \"https://shop.ggputters.com/putters/extra-weights/\", \"priceValidUntil\": \"2026-12-31\"}}}, {\"@type\": \"ListItem\", \"position\": 3, \"item\": {\"@type\": \"Product\", \"name\": \"GG Putter Cover\", \"brand\": {\"@type\": \"Brand\", \"name\": \"GG Putters\"}, \"category\": \"Golf Putter Accessory\", \"description\": \"A putter cover is a protective headcover that shields the milled head from impacts and scratches. Tailored to the GG head shape.\", \"url\": \"https://shop.ggputters.com/putters/putter-covers/\", \"isAccessoryOrSparePartFor\": [{\"@type\": \"Product\", \"name\": \"GG Antares\", \"url\": \"https://shop.ggputters.com/putters/antares/\"}, {\"@type\": \"Product\", \"name\": \"GG Orion\", \"url\": \"https://shop.ggputters.com/putters/orion/\"}], \"offers\": {\"@type\": \"Offer\", \"price\": \"32.00\", \"priceCurrency\": \"EUR\", \"availability\": \"https://schema.org/InStock\", \"url\": \"https://shop.ggputters.com/putters/putter-covers/\", \"priceValidUntil\": \"2026-12-31\"}}}, {\"@type\": \"ListItem\", \"position\": 4, \"item\": {\"@type\": \"Product\", \"name\": \"GG Spare Parts Kit\", \"brand\": {\"@type\": \"Brand\", \"name\": \"GG Putters\"}, \"category\": \"Golf Putter Accessory\", \"description\": \"The spare parts kit is a set of replacement components to keep your putter game-ready. Includes screws, weights and hardware.\", \"url\": \"https://shop.ggputters.com/putters/spare-parts-kit/\", \"isAccessoryOrSparePartFor\": [{\"@type\": \"Product\", \"name\": \"GG Antares\", \"url\": \"https://shop.ggputters.com/putters/antares/\"}, {\"@type\": \"Product\", \"name\": \"GG Orion\", \"url\": \"https://shop.ggputters.com/putters/orion/\"}], \"offers\": {\"@type\": \"Offer\", \"price\": \"149.00\", \"priceCurrency\": \"EUR\", \"availability\": \"https://schema.org/InStock\", \"url\": \"https://shop.ggputters.com/putters/spare-parts-kit/\", \"priceValidUntil\": \"2026-12-31\"}}}, {\"@type\": \"ListItem\", \"position\": 5, \"item\": {\"@type\": \"Product\", \"name\": \"GG Torque Wrench\", \"brand\": {\"@type\": \"Brand\", \"name\": \"GG Putters\"}, \"category\": \"Golf Putter Accessory\", \"description\": \"The torque wrench is a precision tool to tighten weights and faces to the correct spec. Ensures repeatable, secure adjustments.\", \"url\": \"https://shop.ggputters.com/putters/torque-wrench/\", \"isAccessoryOrSparePartFor\": [{\"@type\": \"Product\", \"name\": \"GG Antares\", \"url\": \"https://shop.ggputters.com/putters/antares/\"}, {\"@type\": \"Product\", \"name\": \"GG Orion\", \"url\": \"https://shop.ggputters.com/putters/orion/\"}], \"offers\": {\"@type\": \"Offer\", \"price\": \"63.00\", \"priceCurrency\": \"EUR\", \"availability\": \"https://schema.org/InStock\", \"url\": \"https://shop.ggputters.com/putters/torque-wrench/\", \"priceValidUntil\": \"2026-12-31\"}}}]}, {\"@type\": \"Product\", \"name\": \"GG Putters Fitter Kit\", \"brand\": {\"@type\": \"Brand\", \"name\": \"GG Putters\"}, \"category\": \"Golf Fitting Kit\", \"url\": \"https://shop.ggputters.com/for-fitters/\", \"description\": \"Modular fitting kit for professionals: 2 heads (Antares and Orion), 3 lofts (1°–3°), weights kit, necks (lie/offset) and tools.\"}, {\"@type\": \"HowTo\", \"name\": \"How to customize your GG putter\", \"description\": \"Rebalance the head and change the face of a GG putter using the torque wrench, weights and clubfaces.\", \"tool\": [{\"@type\": \"HowToTool\", \"name\": \"GG torque wrench\"}], \"supply\": [{\"@type\": \"HowToSupply\", \"name\": \"GG weights (1.19/1.48/1.97 oz)\"}, {\"@type\": \"HowToSupply\", \"name\": \"GG clubfaces (1°–3°)\"}], \"step\": [{\"@type\": \"HowToStep\", \"position\": 1, \"name\": \"Loosen the weight screws\", \"text\": \"Loosen the three weight screws using the GG torque wrench.\"}, {\"@type\": \"HowToStep\", \"position\": 2, \"name\": \"Position the three weights\", \"text\": \"Place the weights across the three points to match your stroke arc — light 1.19 oz, medium 1.48 oz, heavy 1.97 oz.\"}, {\"@type\": \"HowToStep\", \"position\": 3, \"name\": \"Set loft and feel\", \"text\": \"Swap the clubface insert (1°–3°) to dial in your preferred loft and feel.\"}, {\"@type\": \"HowToStep\", \"position\": 4, \"name\": \"Tighten to spec\", \"text\": \"Tighten everything back to the correct torque with the wrench.\"}]}, {\"@type\": \"FAQPage\", \"@id\": \"https://shop.ggputters.com/accessories/#faq\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"Are GG Putters accessories compatible with both Antares and Orion?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Yes. GG Putters use a modular system, so weights, clubfaces and necks fit both the Antares blade and the Orion mallet.\"}}, {\"@type\": \"Question\", \"name\": \"What weights are available and how heavy are they?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Three weights are available — light 1.19 oz, medium 1.48 oz and heavy 1.97 oz — in bullet or flat shape, priced at €21.\"}}, {\"@type\": \"Question\", \"name\": \"What clubface lofts can I choose?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Interchangeable clubfaces are available from 1° to 3° and cost €52, letting you tune loft and feel.\"}}, {\"@type\": \"Question\", \"name\": \"Do I need the torque wrench to change weights or faces?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"It is recommended: the GG torque wrench (€63) sets every weight and face to the correct, repeatable torque spec.\"}}, {\"@type\": \"Question\", \"name\": \"What is included in the Spare Parts Kit?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"The Spare Parts Kit (€149) includes replacement screws, weights and hardware to keep your putter game-ready.\"}}, {\"@type\": \"Question\", \"name\": \"What's inside the Fitter Kit?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"The Fitter Kit contains 2 heads (one Antares and one Orion), 3 lofts (1°, 2°, 3°), a weights kit (2 heavy + 2 light), necks (lie and offset), plus screws and a hex screwdriver.\"}}, {\"@type\": \"Question\", \"name\": \"How much do GG Putters accessories cost?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Accessories range from €21 (extra weights) to €149 (spare parts kit); clubfaces €52, putter cover €32, torque wrench €63.\"}}]}]}</script>"
+    "customScriptsHeader": "<link rel=\"canonical\" href=\"https://shop.ggputters.com/accessories/\"><meta name=\"robots\" content=\"index,follow,max-image-preview:large\"><meta name=\"description\" content=\"GG Putters accessories: interchangeable clubfaces (1°–3°), adjustable weights (1.19–1.97 oz), covers, spare parts and the torque wrench, from €21 to €149. Compatible with Antares and Orion. Professional Fitter Kit available.\"><meta property=\"og:type\" content=\"website\"><meta property=\"og:site_name\" content=\"GG Putters\"><meta property=\"og:title\" content=\"Putter Accessories, Spare Parts & Fitter Kit | GG Putters\"><meta property=\"og:description\" content=\"GG Putters accessories: interchangeable clubfaces (1°–3°), adjustable weights (1.19–1.97 oz), covers, spare parts and the torque wrench, from €21 to €149. Compatible with Antares and Orion. Professional Fitter Kit available.\"><meta property=\"og:url\" content=\"https://shop.ggputters.com/accessories/\"><meta property=\"og:image\" content=\"https://shop.ggputters.com/wp-content/uploads/gg-accessories-og.jpg\"><meta property=\"og:locale\" content=\"en_US\"><meta name=\"twitter:card\" content=\"summary_large_image\"><meta name=\"twitter:title\" content=\"Putter Accessories, Spare Parts & Fitter Kit | GG Putters\"><meta name=\"twitter:description\" content=\"GG Putters accessories: interchangeable clubfaces (1°–3°), adjustable weights (1.19–1.97 oz), covers, spare parts and the torque wrench, from €21 to €149. Compatible with Antares and Orion. Professional Fitter Kit available.\"><meta name=\"twitter:image\" content=\"https://shop.ggputters.com/wp-content/uploads/gg-accessories-og.jpg\"><script type=\"application/ld+json\">{\"@context\": \"https://schema.org\", \"@graph\": [{\"@type\": \"Organization\", \"@id\": \"https://shop.ggputters.com/#organization\", \"name\": \"GG Putters\", \"legalName\": \"GM PRODUCTION srl\", \"url\": \"https://shop.ggputters.com/\", \"vatID\": \"IT03351530989\", \"email\": \"info@ggputters.com\", \"telephone\": \"+39 331 1099739\", \"address\": {\"@type\": \"PostalAddress\", \"streetAddress\": \"Via Taranto, 7\", \"addressLocality\": \"Palazzolo sull'Oglio\", \"addressRegion\": \"BS\", \"postalCode\": \"25036\", \"addressCountry\": \"IT\"}}, {\"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://shop.ggputters.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Accessories\", \"item\": \"https://shop.ggputters.com/accessories/\"}]}, {\"@type\": \"CollectionPage\", \"@id\": \"https://shop.ggputters.com/accessories/#webpage\", \"url\": \"https://shop.ggputters.com/accessories/\", \"name\": \"Putter Accessories, Spare Parts & Fitter Kit | GG Putters\", \"description\": \"GG Putters accessories: interchangeable clubfaces (1°–3°), adjustable weights (1.19–1.97 oz), covers, spare parts and the torque wrench, from €21 to €149. Compatible with Antares and Orion. Professional Fitter Kit available.\", \"isPartOf\": {\"@id\": \"https://shop.ggputters.com/#organization\"}}, {\"@type\": \"ItemList\", \"name\": \"GG Putters Accessories\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"item\": {\"@type\": \"Product\", \"name\": \"GG Clubfaces\", \"brand\": {\"@type\": \"Brand\", \"name\": \"GG Putters\"}, \"category\": \"Golf Putter Accessory\", \"description\": \"Clubfaces are interchangeable milled face inserts that change the loft and feel of a GG putter. Swapping the insert lets you tune roll and sound without buying a new putter: a higher degree adds forward loft for slower greens, a lower degree keeps the ball firmer on fast surfaces.\", \"url\": \"https://shop.ggputters.com/putters/clubfaces/\", \"isAccessoryOrSparePartFor\": [{\"@type\": \"Product\", \"name\": \"GG Antares\", \"url\": \"https://shop.ggputters.com/putters/antares/\"}, {\"@type\": \"Product\", \"name\": \"GG Orion\", \"url\": \"https://shop.ggputters.com/putters/orion/\"}], \"offers\": {\"@type\": \"Offer\", \"price\": \"52.00\", \"priceCurrency\": \"EUR\", \"availability\": \"https://schema.org/InStock\", \"url\": \"https://shop.ggputters.com/putters/clubfaces/\", \"priceValidUntil\": \"2026-12-31\"}}}, {\"@type\": \"ListItem\", \"position\": 2, \"item\": {\"@type\": \"Product\", \"name\": \"GG Extra Weights\", \"brand\": {\"@type\": \"Brand\", \"name\": \"GG Putters\"}, \"category\": \"Golf Putter Accessory\", \"description\": \"Extra weights are swappable head weights for the three-position balance system. Moving weight changes the balance point and the natural arc of your stroke: heavier weights add stability, lighter weights increase feel. Bullet and flat shapes suit different placements.\", \"url\": \"https://shop.ggputters.com/putters/extra-weights/\", \"isAccessoryOrSparePartFor\": [{\"@type\": \"Product\", \"name\": \"GG Antares\", \"url\": \"https://shop.ggputters.com/putters/antares/\"}, {\"@type\": \"Product\", \"name\": \"GG Orion\", \"url\": \"https://shop.ggputters.com/putters/orion/\"}], \"offers\": {\"@type\": \"Offer\", \"price\": \"21.00\", \"priceCurrency\": \"EUR\", \"availability\": \"https://schema.org/InStock\", \"url\": \"https://shop.ggputters.com/putters/extra-weights/\", \"priceValidUntil\": \"2026-12-31\"}}}, {\"@type\": \"ListItem\", \"position\": 3, \"item\": {\"@type\": \"Product\", \"name\": \"GG Putter Cover\", \"brand\": {\"@type\": \"Brand\", \"name\": \"GG Putters\"}, \"category\": \"Golf Putter Accessory\", \"description\": \"A putter cover is a fitted headcover that protects the milled head in the bag and in storage. It shields the face insert and the head edges from knocks, bag rash and moisture, preserving the anodized finish between rounds.\", \"url\": \"https://shop.ggputters.com/putters/putter-covers/\", \"isAccessoryOrSparePartFor\": [{\"@type\": \"Product\", \"name\": \"GG Antares\", \"url\": \"https://shop.ggputters.com/putters/antares/\"}, {\"@type\": \"Product\", \"name\": \"GG Orion\", \"url\": \"https://shop.ggputters.com/putters/orion/\"}], \"offers\": {\"@type\": \"Offer\", \"price\": \"32.00\", \"priceCurrency\": \"EUR\", \"availability\": \"https://schema.org/InStock\", \"url\": \"https://shop.ggputters.com/putters/putter-covers/\", \"priceValidUntil\": \"2026-12-31\"}}}, {\"@type\": \"ListItem\", \"position\": 4, \"item\": {\"@type\": \"Product\", \"name\": \"GG Spare Parts Kit\", \"brand\": {\"@type\": \"Brand\", \"name\": \"GG Putters\"}, \"category\": \"Golf Putter Accessory\", \"description\": \"The spare parts kit is a complete set of replacement hardware for your GG putter. It bundles the small components most likely to wear or get lost, so your putter stays serviceable for years and you are never off the green waiting on a single screw.\", \"url\": \"https://shop.ggputters.com/putters/spare-parts-kit/\", \"isAccessoryOrSparePartFor\": [{\"@type\": \"Product\", \"name\": \"GG Antares\", \"url\": \"https://shop.ggputters.com/putters/antares/\"}, {\"@type\": \"Product\", \"name\": \"GG Orion\", \"url\": \"https://shop.ggputters.com/putters/orion/\"}], \"offers\": {\"@type\": \"Offer\", \"price\": \"149.00\", \"priceCurrency\": \"EUR\", \"availability\": \"https://schema.org/InStock\", \"url\": \"https://shop.ggputters.com/putters/spare-parts-kit/\", \"priceValidUntil\": \"2026-12-31\"}}}, {\"@type\": \"ListItem\", \"position\": 5, \"item\": {\"@type\": \"Product\", \"name\": \"GG Torque Wrench\", \"brand\": {\"@type\": \"Brand\", \"name\": \"GG Putters\"}, \"category\": \"Golf Putter Accessory\", \"description\": \"The torque wrench is a precision tool that tightens weights and faces to the correct, repeatable spec. Setting each component to the right torque prevents loosening during play and protects the threads, so every adjustment is secure and consistent.\", \"url\": \"https://shop.ggputters.com/putters/torque-wrench/\", \"isAccessoryOrSparePartFor\": [{\"@type\": \"Product\", \"name\": \"GG Antares\", \"url\": \"https://shop.ggputters.com/putters/antares/\"}, {\"@type\": \"Product\", \"name\": \"GG Orion\", \"url\": \"https://shop.ggputters.com/putters/orion/\"}], \"offers\": {\"@type\": \"Offer\", \"price\": \"63.00\", \"priceCurrency\": \"EUR\", \"availability\": \"https://schema.org/InStock\", \"url\": \"https://shop.ggputters.com/putters/torque-wrench/\", \"priceValidUntil\": \"2026-12-31\"}}}]}, {\"@type\": \"Product\", \"name\": \"GG Putters Fitter Kit\", \"brand\": {\"@type\": \"Brand\", \"name\": \"GG Putters\"}, \"category\": \"Golf Fitting Kit\", \"url\": \"https://shop.ggputters.com/for-fitters/\", \"description\": \"Modular fitting kit for professionals: 2 heads (Antares and Orion), 3 lofts (1°–3°), weights kit, necks (lie/offset) and tools.\"}, {\"@type\": \"HowTo\", \"name\": \"How to customize your GG putter\", \"description\": \"Rebalance the head and change the face of a GG putter using the torque wrench, weights and clubfaces.\", \"tool\": [{\"@type\": \"HowToTool\", \"name\": \"GG torque wrench\"}], \"supply\": [{\"@type\": \"HowToSupply\", \"name\": \"GG weights (1.19/1.48/1.97 oz)\"}, {\"@type\": \"HowToSupply\", \"name\": \"GG clubfaces (1°–3°)\"}], \"step\": [{\"@type\": \"HowToStep\", \"position\": 1, \"name\": \"Loosen the weight screws\", \"text\": \"Loosen the three weight screws using the GG torque wrench.\"}, {\"@type\": \"HowToStep\", \"position\": 2, \"name\": \"Position the three weights\", \"text\": \"Place the weights across the three points to match your stroke arc — light 1.19 oz, medium 1.48 oz, heavy 1.97 oz.\"}, {\"@type\": \"HowToStep\", \"position\": 3, \"name\": \"Set loft and feel\", \"text\": \"Swap the clubface insert (1°–3°) to dial in your preferred loft and feel.\"}, {\"@type\": \"HowToStep\", \"position\": 4, \"name\": \"Tighten to spec\", \"text\": \"Tighten everything back to the correct torque with the wrench.\"}]}, {\"@type\": \"FAQPage\", \"@id\": \"https://shop.ggputters.com/accessories/#faq\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"Which GG accessory should I buy first?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"For most players, extra weights (€21) give the biggest change to balance and feel; add clubfaces (€52) to adjust loft, and the torque wrench (€63) if you plan to adjust the putter yourself.\"}}, {\"@type\": \"Question\", \"name\": \"How do the three weights change my putter?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"The weights sit in three points and shift the head's balance: the 1.97 oz heavy weight adds stability for a straighter stroke, while the 1.19 oz light weight increases feel; the 1.48 oz medium sits in between.\"}}, {\"@type\": \"Question\", \"name\": \"How many clubface lofts are available and why do they matter?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Clubfaces come in 1°, 2° and 3° (€52). A higher loft helps lift the ball into a smooth roll on slower greens; a lower loft keeps it firmer on fast surfaces.\"}}, {\"@type\": \"Question\", \"name\": \"Can I adjust the putter myself, or do I need a fitter?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"You can adjust weights and faces at home with the GG torque wrench (€63): loosen, reposition, swap the face, then tighten to spec. For a full fitting across models, use the Fitter Kit.\"}}, {\"@type\": \"Question\", \"name\": \"Do the accessories fit both the Antares and the Orion?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Yes. The GG system is modular, so weights, clubfaces and necks are interchangeable between the Antares blade and the Orion mallet.\"}}, {\"@type\": \"Question\", \"name\": \"What does the Fitter Kit include and who is it for?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"The Fitter Kit is aimed at fitters, pro shops and club builders. It carries two heads (Antares and Orion), three lofts (1°–3°), a weights kit (2 heavy, 2 light), necks (lie and offset) and the tools to build any configuration.\"}}, {\"@type\": \"Question\", \"name\": \"Are accessories under warranty and how fast do they ship?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"GG accessories carry the same 2-year warranty as the putters and ship with BRT in Italy and FedEx worldwide, usually within 5–6 business days.\"}}]}]}</script>"
   },
   "templateSettings": {
     "templateConditions": [
