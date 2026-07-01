@@ -1,42 +1,54 @@
 {
-  "name": "gg-accessories-page",
-  "title": "GG Putters — Accessories & Fitter Kit",
-  "type": "content",
+  "name": "gg-accessories",
+  "title": "gg-accessories",
+  "type": "section",
   "content": [
     {
-      "id": "a00001",
+      "id": "c00001",
       "name": "section",
       "parent": 0,
       "children": [
-        "a00002"
+        "c00002"
       ],
       "settings": {
         "_cssGlobalClasses": [
           "ggsect"
         ],
-        "_cssId": "top"
+        "_cssId": "top",
+        "_background": {
+          "image": {
+            "id": 71,
+            "filename": "bg-square-gg.jpg",
+            "size": "large",
+            "full": "https://ggputters.com/shop/wp-content/uploads/2026/06/bg-square-gg.jpg",
+            "url": "https://ggputters.com/shop/wp-content/uploads/2026/06/bg-square-gg-1024x1024.jpg"
+          },
+          "attachment": "fixed",
+          "position": "center center"
+        }
       },
       "label": "Head / Hero"
     },
     {
-      "id": "a00002",
+      "id": "c00002",
       "name": "container",
-      "parent": "a00001",
+      "parent": "c00001",
       "children": [
-        "a00003"
+        "c00003"
       ],
       "settings": {},
       "label": "Container"
     },
     {
-      "id": "a00003",
+      "id": "c00003",
       "name": "block",
-      "parent": "a00002",
+      "parent": "c00002",
       "children": [
-        "a00004",
-        "a00005",
-        "a00006",
-        "a00007"
+        "c00004",
+        "c00005",
+        "c00006",
+        "c00007",
+        "c00008"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -46,54 +58,97 @@
       "label": "Hero Content"
     },
     {
-      "id": "a00004",
+      "id": "c00004",
       "name": "heading",
-      "parent": "a00003",
+      "parent": "c00003",
       "children": [],
       "settings": {
         "text": "Accessories &amp; Fitter Kit",
         "tag": "p",
         "_cssGlobalClasses": [
-          "ggeye"
-        ]
+          "ggeyeb"
+        ],
+        "_typography": {
+          "color": {
+            "id": "gyxxbr",
+            "name": "",
+            "raw": "var(--slate-bright)",
+            "light": "hsl(218 30.79% 76.77%)"
+          }
+        }
       },
-      "label": "Eyebrow: Accessories &amp; "
+      "label": "Eyebrow: Accessories &amp"
     },
     {
-      "id": "a00005",
+      "id": "c00005",
+      "name": "image",
+      "parent": "c00003",
+      "children": [],
+      "settings": {
+        "image": {
+          "id": 79,
+          "filename": "logo-gg-gold.svg",
+          "size": "full",
+          "full": "https://ggputters.com/shop/wp-content/uploads/2026/06/logo-gg-gold.svg",
+          "url": "https://ggputters.com/shop/wp-content/uploads/2026/06/logo-gg-gold.svg"
+        },
+        "_cssGlobalClasses": [
+          "ggimg"
+        ],
+        "_width": "12rem"
+      },
+      "label": "Logo"
+    },
+    {
+      "id": "c00006",
       "name": "heading",
-      "parent": "a00003",
+      "parent": "c00003",
       "children": [],
       "settings": {
         "text": "GG Putters Accessories, Spare Parts &amp; Fitter Kit",
         "tag": "h1",
         "_cssGlobalClasses": [
           "ggh"
-        ]
+        ],
+        "_typography": {
+          "color": {
+            "id": "oiksff",
+            "raw": "var(--platinum)",
+            "light": "#f7f6f8"
+          },
+          "font-size": "var(--text-l)"
+        }
       },
       "label": "H1"
     },
     {
-      "id": "a00006",
+      "id": "c00007",
       "name": "text-basic",
-      "parent": "a00003",
+      "parent": "c00003",
       "children": [],
       "settings": {
         "text": "Customize and maintain your GG putter with milled accessories — interchangeable clubfaces, adjustable weights, covers and tools — priced from €21 to €149 and compatible with both Antares and Orion.",
         "tag": "p",
         "_cssGlobalClasses": [
           "gglead"
-        ]
+        ],
+        "_typography": {
+          "color": {
+            "id": "oiksff",
+            "raw": "var(--platinum)",
+            "light": "#f7f6f8"
+          }
+        }
       },
       "label": "Text"
     },
     {
-      "id": "a00007",
+      "id": "c00008",
       "name": "block",
-      "parent": "a00003",
+      "parent": "c00003",
       "children": [
-        "a00008",
-        "a00009"
+        "c00009",
+        "c00010"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -103,9 +158,9 @@
       "label": "Hero CTAs"
     },
     {
-      "id": "a00008",
+      "id": "c00009",
       "name": "button",
-      "parent": "a00007",
+      "parent": "c00008",
       "children": [],
       "settings": {
         "text": "Shop Accessories",
@@ -122,9 +177,9 @@
       "label": "Button: Shop Accessories"
     },
     {
-      "id": "a00009",
+      "id": "c00010",
       "name": "button",
-      "parent": "a00007",
+      "parent": "c00008",
       "children": [],
       "settings": {
         "text": "Request the Fitter Kit",
@@ -141,40 +196,47 @@
       "label": "Button: Request the Fitter Kit"
     },
     {
-      "id": "a00010",
+      "id": "c00011",
       "name": "section",
       "parent": 0,
       "children": [
-        "a00011"
+        "c00012"
       ],
       "settings": {
         "_cssGlobalClasses": [
           "ggsect"
         ],
-        "_cssId": "accessories"
+        "_cssId": "accessories",
+        "_background": {
+          "color": {
+            "id": "oiksff",
+            "raw": "var(--platinum)",
+            "light": "#f7f6f8"
+          }
+        }
       },
       "label": "Accessories"
     },
     {
-      "id": "a00011",
+      "id": "c00012",
       "name": "container",
-      "parent": "a00010",
+      "parent": "c00011",
       "children": [
-        "a00012",
-        "a00016",
-        "a00057"
+        "c00013",
+        "c00017",
+        "c00058"
       ],
       "settings": {},
       "label": "Container"
     },
     {
-      "id": "a00012",
+      "id": "c00013",
       "name": "block",
-      "parent": "a00011",
+      "parent": "c00012",
       "children": [
-        "a00013",
-        "a00014",
-        "a00015"
+        "c00014",
+        "c00015",
+        "c00016"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -184,94 +246,141 @@
       "label": "Header"
     },
     {
-      "id": "a00013",
+      "id": "c00014",
       "name": "heading",
-      "parent": "a00012",
+      "parent": "c00013",
       "children": [],
       "settings": {
         "text": "Milled accessories",
         "tag": "p",
         "_cssGlobalClasses": [
-          "ggeye"
-        ]
+          "ggeyeb"
+        ],
+        "_typography": {
+          "color": {
+            "id": "rhefaq",
+            "raw": "var(--kachi-iro)",
+            "light": "#1f2b51"
+          }
+        }
       },
-      "label": "Eyebrow: Milled accessories"
+      "label": "Eyebrow: Milled accessori"
     },
     {
-      "id": "a00014",
+      "id": "c00015",
       "name": "heading",
-      "parent": "a00012",
+      "parent": "c00013",
       "children": [],
       "settings": {
         "text": "Accessories &amp; Spare Parts for GG Putters",
         "tag": "h2",
         "_cssGlobalClasses": [
           "ggh"
-        ]
+        ],
+        "_typography": {
+          "color": {
+            "id": "oehxwa",
+            "name": "",
+            "raw": "var(--kachi-iro-3)",
+            "light": "hsl(226 44.63% 45%)"
+          }
+        }
       },
-      "label": "h2: Accessories &amp; Spare "
+      "label": "h2: Accessories &amp; Spar"
     },
     {
-      "id": "a00015",
+      "id": "c00016",
       "name": "text-basic",
-      "parent": "a00012",
+      "parent": "c00013",
       "children": [],
       "settings": {
         "text": "Fine-tune loft with clubfaces, dial in balance with weights, protect the head with a cover, and keep everything serviceable with the spare parts kit and torque wrench — all milled to the GG standard and priced from €21 to €149.",
         "tag": "p",
         "_cssGlobalClasses": [
           "gglead"
-        ]
+        ],
+        "_typography": {
+          "color": {
+            "id": "rhefaq",
+            "raw": "var(--kachi-iro)",
+            "light": "#1f2b51"
+          }
+        }
       },
       "label": "Text"
     },
     {
-      "id": "a00016",
+      "id": "c00017",
       "name": "block",
-      "parent": "a00011",
+      "parent": "c00012",
       "children": [
-        "a00017",
-        "a00025",
-        "a00033",
-        "a00041",
-        "a00049"
+        "c00018",
+        "c00026",
+        "c00034",
+        "c00042",
+        "c00050"
       ],
       "settings": {
         "_cssGlobalClasses": [
           "ggrow"
-        ]
+        ],
+        "_direction": "row"
       },
       "label": "Accessories Grid"
     },
     {
-      "id": "a00017",
+      "id": "c00018",
       "name": "block",
-      "parent": "a00016",
+      "parent": "c00017",
       "children": [
-        "a00018",
-        "a00019",
-        "a00020",
-        "a00021",
-        "a00022",
-        "a00023",
-        "a00024"
+        "c00019",
+        "c00020",
+        "c00021",
+        "c00022",
+        "c00023",
+        "c00024",
+        "c00025"
       ],
       "settings": {
         "_cssGlobalClasses": [
           "ggcol"
-        ]
+        ],
+        "_boxShadow": {
+          "color": {
+            "id": "daywbl",
+            "raw": "var(--champagne)",
+            "light": "#d4af37"
+          },
+          "values": {
+            "blur": "var(--text-s)"
+          }
+        },
+        "_border": {
+          "radius": {
+            "top": "14",
+            "right": "14",
+            "bottom": "14",
+            "left": "14"
+          }
+        },
+        "_padding": {
+          "top": "14",
+          "right": "14",
+          "bottom": "14",
+          "left": "14"
+        }
       },
       "label": "Accessory: Clubfaces"
     },
     {
-      "id": "a00018",
+      "id": "c00019",
       "name": "icon",
-      "parent": "a00017",
+      "parent": "c00018",
       "children": [],
       "settings": {
         "icon": {
-          "library": "themify",
-          "icon": "ti-layers"
+          "library": "ionicons",
+          "icon": "ion-ios-albums"
         },
         "_attributes": [
           {
@@ -279,61 +388,97 @@
             "name": "aria-hidden",
             "value": "true"
           }
-        ]
+        ],
+        "iconColor": {
+          "id": "daywbl",
+          "raw": "var(--champagne)",
+          "light": "#d4af37"
+        },
+        "iconSize": "36"
       },
       "label": "Icon"
     },
     {
-      "id": "a00019",
+      "id": "c00020",
       "name": "heading",
-      "parent": "a00017",
+      "parent": "c00018",
       "children": [],
       "settings": {
         "text": "Clubfaces",
         "tag": "h3",
         "_cssGlobalClasses": [
           "ggh"
-        ]
+        ],
+        "_typography": {
+          "color": {
+            "id": "tplylp",
+            "name": "",
+            "raw": "var(--kachi-iro-4)",
+            "light": "hsl(226 58.04% 56.53%)"
+          },
+          "font-size": "var(--text-m)"
+        }
       },
       "label": "h3: Clubfaces"
     },
     {
-      "id": "a00020",
-      "name": "text-basic",
-      "parent": "a00017",
+      "id": "c00021",
+      "name": "heading",
+      "parent": "c00018",
       "children": [],
       "settings": {
-        "text": "<strong>€52</strong>",
-        "tag": "p"
+        "text": "€52",
+        "tag": "p",
+        "_typography": {
+          "color": {
+            "id": "daywbl",
+            "raw": "var(--champagne)",
+            "light": "#d4af37"
+          }
+        }
       },
-      "label": "Text"
+      "label": "p: €52"
     },
     {
-      "id": "a00021",
+      "id": "c00022",
       "name": "text-basic",
-      "parent": "a00017",
+      "parent": "c00018",
       "children": [],
       "settings": {
         "text": "Clubfaces are interchangeable milled face inserts that change the loft and feel of a GG putter.",
-        "tag": "p"
+        "tag": "p",
+        "_typography": {
+          "color": {
+            "id": "rhefaq",
+            "raw": "var(--kachi-iro)",
+            "light": "#1f2b51"
+          }
+        }
       },
       "label": "Text"
     },
     {
-      "id": "a00022",
+      "id": "c00023",
       "name": "text-basic",
-      "parent": "a00017",
+      "parent": "c00018",
       "children": [],
       "settings": {
-        "text": "Swapping the insert lets you tune roll and sound without buying a new putter: a higher degree adds forward loft for slower greens, a lower degree keeps the ball firmer on fast surfaces.",
-        "tag": "p"
+        "text": "Swap the insert to tune roll and sound without buying a new putter: a higher degree adds forward loft for slower greens, a lower degree keeps the ball firmer on fast surfaces.",
+        "tag": "p",
+        "_typography": {
+          "color": {
+            "id": "rhefaq",
+            "raw": "var(--kachi-iro)",
+            "light": "#1f2b51"
+          }
+        }
       },
       "label": "Text"
     },
     {
-      "id": "a00023",
+      "id": "c00024",
       "name": "text",
-      "parent": "a00017",
+      "parent": "c00018",
       "children": [],
       "settings": {
         "text": "<ul><li>Lofts: 1°, 2°, 3°</li><li>Milled to the GG face standard</li><li>Fits Antares and Orion</li></ul>"
@@ -341,9 +486,9 @@
       "label": "Specs"
     },
     {
-      "id": "a00024",
+      "id": "c00025",
       "name": "text-link",
-      "parent": "a00017",
+      "parent": "c00018",
       "children": [],
       "settings": {
         "text": "View product",
@@ -358,34 +503,58 @@
       "label": "View Clubfaces"
     },
     {
-      "id": "a00025",
+      "id": "c00026",
       "name": "block",
-      "parent": "a00016",
+      "parent": "c00017",
       "children": [
-        "a00026",
-        "a00027",
-        "a00028",
-        "a00029",
-        "a00030",
-        "a00031",
-        "a00032"
+        "c00027",
+        "c00028",
+        "c00029",
+        "c00030",
+        "c00031",
+        "c00032",
+        "c00033"
       ],
       "settings": {
         "_cssGlobalClasses": [
           "ggcol"
-        ]
+        ],
+        "_boxShadow": {
+          "color": {
+            "id": "daywbl",
+            "raw": "var(--champagne)",
+            "light": "#d4af37"
+          },
+          "values": {
+            "blur": "var(--text-s)"
+          }
+        },
+        "_border": {
+          "radius": {
+            "top": "14",
+            "right": "14",
+            "bottom": "14",
+            "left": "14"
+          }
+        },
+        "_padding": {
+          "top": "14",
+          "right": "14",
+          "bottom": "14",
+          "left": "14"
+        }
       },
       "label": "Accessory: Extra Weights"
     },
     {
-      "id": "a00026",
+      "id": "c00027",
       "name": "icon",
-      "parent": "a00025",
+      "parent": "c00026",
       "children": [],
       "settings": {
         "icon": {
-          "library": "themify",
-          "icon": "ti-control-shuffle"
+          "library": "ionicons",
+          "icon": "ion-ios-options"
         },
         "_attributes": [
           {
@@ -393,61 +562,97 @@
             "name": "aria-hidden",
             "value": "true"
           }
-        ]
+        ],
+        "iconColor": {
+          "id": "daywbl",
+          "raw": "var(--champagne)",
+          "light": "#d4af37"
+        },
+        "iconSize": "36"
       },
       "label": "Icon"
     },
     {
-      "id": "a00027",
+      "id": "c00028",
       "name": "heading",
-      "parent": "a00025",
+      "parent": "c00026",
       "children": [],
       "settings": {
         "text": "Extra Weights",
         "tag": "h3",
         "_cssGlobalClasses": [
           "ggh"
-        ]
+        ],
+        "_typography": {
+          "color": {
+            "id": "tplylp",
+            "name": "",
+            "raw": "var(--kachi-iro-4)",
+            "light": "hsl(226 58.04% 56.53%)"
+          },
+          "font-size": "var(--text-m)"
+        }
       },
       "label": "h3: Extra Weights"
     },
     {
-      "id": "a00028",
-      "name": "text-basic",
-      "parent": "a00025",
+      "id": "c00029",
+      "name": "heading",
+      "parent": "c00026",
       "children": [],
       "settings": {
-        "text": "<strong>€21</strong>",
-        "tag": "p"
+        "text": "€21",
+        "tag": "p",
+        "_typography": {
+          "color": {
+            "id": "daywbl",
+            "raw": "var(--champagne)",
+            "light": "#d4af37"
+          }
+        }
       },
-      "label": "Text"
+      "label": "p: €21"
     },
     {
-      "id": "a00029",
+      "id": "c00030",
       "name": "text-basic",
-      "parent": "a00025",
+      "parent": "c00026",
       "children": [],
       "settings": {
         "text": "Extra weights are swappable head weights for the three-position balance system.",
-        "tag": "p"
+        "tag": "p",
+        "_typography": {
+          "color": {
+            "id": "rhefaq",
+            "raw": "var(--kachi-iro)",
+            "light": "#1f2b51"
+          }
+        }
       },
       "label": "Text"
     },
     {
-      "id": "a00030",
+      "id": "c00031",
       "name": "text-basic",
-      "parent": "a00025",
+      "parent": "c00026",
       "children": [],
       "settings": {
         "text": "Moving weight changes the balance point and the natural arc of your stroke: heavier weights add stability, lighter weights increase feel. Bullet and flat shapes suit different placements.",
-        "tag": "p"
+        "tag": "p",
+        "_typography": {
+          "color": {
+            "id": "rhefaq",
+            "raw": "var(--kachi-iro)",
+            "light": "#1f2b51"
+          }
+        }
       },
       "label": "Text"
     },
     {
-      "id": "a00031",
+      "id": "c00032",
       "name": "text",
-      "parent": "a00025",
+      "parent": "c00026",
       "children": [],
       "settings": {
         "text": "<ul><li>Light 1.19 oz · Medium 1.48 oz · Heavy 1.97 oz</li><li>Bullet or flat</li><li>3 dedicated weight points</li></ul>"
@@ -455,9 +660,9 @@
       "label": "Specs"
     },
     {
-      "id": "a00032",
+      "id": "c00033",
       "name": "text-link",
-      "parent": "a00025",
+      "parent": "c00026",
       "children": [],
       "settings": {
         "text": "View product",
@@ -472,34 +677,58 @@
       "label": "View Extra Weights"
     },
     {
-      "id": "a00033",
+      "id": "c00034",
       "name": "block",
-      "parent": "a00016",
+      "parent": "c00017",
       "children": [
-        "a00034",
-        "a00035",
-        "a00036",
-        "a00037",
-        "a00038",
-        "a00039",
-        "a00040"
+        "c00035",
+        "c00036",
+        "c00037",
+        "c00038",
+        "c00039",
+        "c00040",
+        "c00041"
       ],
       "settings": {
         "_cssGlobalClasses": [
           "ggcol"
-        ]
+        ],
+        "_boxShadow": {
+          "color": {
+            "id": "daywbl",
+            "raw": "var(--champagne)",
+            "light": "#d4af37"
+          },
+          "values": {
+            "blur": "var(--text-s)"
+          }
+        },
+        "_border": {
+          "radius": {
+            "top": "14",
+            "right": "14",
+            "bottom": "14",
+            "left": "14"
+          }
+        },
+        "_padding": {
+          "top": "14",
+          "right": "14",
+          "bottom": "14",
+          "left": "14"
+        }
       },
       "label": "Accessory: Putter Cover"
     },
     {
-      "id": "a00034",
+      "id": "c00035",
       "name": "icon",
-      "parent": "a00033",
+      "parent": "c00034",
       "children": [],
       "settings": {
         "icon": {
-          "library": "themify",
-          "icon": "ti-shield"
+          "library": "ionicons",
+          "icon": "ion-ios-umbrella"
         },
         "_attributes": [
           {
@@ -507,61 +736,97 @@
             "name": "aria-hidden",
             "value": "true"
           }
-        ]
+        ],
+        "iconColor": {
+          "id": "daywbl",
+          "raw": "var(--champagne)",
+          "light": "#d4af37"
+        },
+        "iconSize": "36"
       },
       "label": "Icon"
     },
     {
-      "id": "a00035",
+      "id": "c00036",
       "name": "heading",
-      "parent": "a00033",
+      "parent": "c00034",
       "children": [],
       "settings": {
         "text": "Putter Cover",
         "tag": "h3",
         "_cssGlobalClasses": [
           "ggh"
-        ]
+        ],
+        "_typography": {
+          "color": {
+            "id": "tplylp",
+            "name": "",
+            "raw": "var(--kachi-iro-4)",
+            "light": "hsl(226 58.04% 56.53%)"
+          },
+          "font-size": "var(--text-m)"
+        }
       },
       "label": "h3: Putter Cover"
     },
     {
-      "id": "a00036",
-      "name": "text-basic",
-      "parent": "a00033",
+      "id": "c00037",
+      "name": "heading",
+      "parent": "c00034",
       "children": [],
       "settings": {
-        "text": "<strong>€32</strong>",
-        "tag": "p"
+        "text": "€32",
+        "tag": "p",
+        "_typography": {
+          "color": {
+            "id": "daywbl",
+            "raw": "var(--champagne)",
+            "light": "#d4af37"
+          }
+        }
       },
-      "label": "Text"
+      "label": "p: €32"
     },
     {
-      "id": "a00037",
+      "id": "c00038",
       "name": "text-basic",
-      "parent": "a00033",
+      "parent": "c00034",
       "children": [],
       "settings": {
         "text": "A putter cover is a fitted headcover that protects the milled head in the bag and in storage.",
-        "tag": "p"
+        "tag": "p",
+        "_typography": {
+          "color": {
+            "id": "rhefaq",
+            "raw": "var(--kachi-iro)",
+            "light": "#1f2b51"
+          }
+        }
       },
       "label": "Text"
     },
     {
-      "id": "a00038",
+      "id": "c00039",
       "name": "text-basic",
-      "parent": "a00033",
+      "parent": "c00034",
       "children": [],
       "settings": {
         "text": "It shields the face insert and the head edges from knocks, bag rash and moisture, preserving the anodized finish between rounds.",
-        "tag": "p"
+        "tag": "p",
+        "_typography": {
+          "color": {
+            "id": "rhefaq",
+            "raw": "var(--kachi-iro)",
+            "light": "#1f2b51"
+          }
+        }
       },
       "label": "Text"
     },
     {
-      "id": "a00039",
+      "id": "c00040",
       "name": "text",
-      "parent": "a00033",
+      "parent": "c00034",
       "children": [],
       "settings": {
         "text": "<ul><li>Shaped to the GG head</li><li>Protects face and edges</li><li>Everyday carry protection</li></ul>"
@@ -569,9 +834,9 @@
       "label": "Specs"
     },
     {
-      "id": "a00040",
+      "id": "c00041",
       "name": "text-link",
-      "parent": "a00033",
+      "parent": "c00034",
       "children": [],
       "settings": {
         "text": "View product",
@@ -586,34 +851,58 @@
       "label": "View Putter Cover"
     },
     {
-      "id": "a00041",
+      "id": "c00042",
       "name": "block",
-      "parent": "a00016",
+      "parent": "c00017",
       "children": [
-        "a00042",
-        "a00043",
-        "a00044",
-        "a00045",
-        "a00046",
-        "a00047",
-        "a00048"
+        "c00043",
+        "c00044",
+        "c00045",
+        "c00046",
+        "c00047",
+        "c00048",
+        "c00049"
       ],
       "settings": {
         "_cssGlobalClasses": [
           "ggcol"
-        ]
+        ],
+        "_boxShadow": {
+          "color": {
+            "id": "daywbl",
+            "raw": "var(--champagne)",
+            "light": "#d4af37"
+          },
+          "values": {
+            "blur": "var(--text-s)"
+          }
+        },
+        "_border": {
+          "radius": {
+            "top": "14",
+            "right": "14",
+            "bottom": "14",
+            "left": "14"
+          }
+        },
+        "_padding": {
+          "top": "14",
+          "right": "14",
+          "bottom": "14",
+          "left": "14"
+        }
       },
       "label": "Accessory: Spare Parts Kit"
     },
     {
-      "id": "a00042",
+      "id": "c00043",
       "name": "icon",
-      "parent": "a00041",
+      "parent": "c00042",
       "children": [],
       "settings": {
         "icon": {
-          "library": "themify",
-          "icon": "ti-package"
+          "library": "ionicons",
+          "icon": "ion-ios-construct"
         },
         "_attributes": [
           {
@@ -621,61 +910,97 @@
             "name": "aria-hidden",
             "value": "true"
           }
-        ]
+        ],
+        "iconColor": {
+          "id": "daywbl",
+          "raw": "var(--champagne)",
+          "light": "#d4af37"
+        },
+        "iconSize": "36"
       },
       "label": "Icon"
     },
     {
-      "id": "a00043",
+      "id": "c00044",
       "name": "heading",
-      "parent": "a00041",
+      "parent": "c00042",
       "children": [],
       "settings": {
         "text": "Spare Parts Kit",
         "tag": "h3",
         "_cssGlobalClasses": [
           "ggh"
-        ]
+        ],
+        "_typography": {
+          "color": {
+            "id": "tplylp",
+            "name": "",
+            "raw": "var(--kachi-iro-4)",
+            "light": "hsl(226 58.04% 56.53%)"
+          },
+          "font-size": "var(--text-m)"
+        }
       },
       "label": "h3: Spare Parts Kit"
     },
     {
-      "id": "a00044",
-      "name": "text-basic",
-      "parent": "a00041",
+      "id": "c00045",
+      "name": "heading",
+      "parent": "c00042",
       "children": [],
       "settings": {
-        "text": "<strong>€149</strong>",
-        "tag": "p"
+        "text": "€149",
+        "tag": "p",
+        "_typography": {
+          "color": {
+            "id": "daywbl",
+            "raw": "var(--champagne)",
+            "light": "#d4af37"
+          }
+        }
       },
-      "label": "Text"
+      "label": "p: €149"
     },
     {
-      "id": "a00045",
+      "id": "c00046",
       "name": "text-basic",
-      "parent": "a00041",
+      "parent": "c00042",
       "children": [],
       "settings": {
         "text": "The spare parts kit is a complete set of replacement hardware for your GG putter.",
-        "tag": "p"
+        "tag": "p",
+        "_typography": {
+          "color": {
+            "id": "rhefaq",
+            "raw": "var(--kachi-iro)",
+            "light": "#1f2b51"
+          }
+        }
       },
       "label": "Text"
     },
     {
-      "id": "a00046",
+      "id": "c00047",
       "name": "text-basic",
-      "parent": "a00041",
+      "parent": "c00042",
       "children": [],
       "settings": {
         "text": "It bundles the small components most likely to wear or get lost, so your putter stays serviceable for years and you are never off the green waiting on a single screw.",
-        "tag": "p"
+        "tag": "p",
+        "_typography": {
+          "color": {
+            "id": "rhefaq",
+            "raw": "var(--kachi-iro)",
+            "light": "#1f2b51"
+          }
+        }
       },
       "label": "Text"
     },
     {
-      "id": "a00047",
+      "id": "c00048",
       "name": "text",
-      "parent": "a00041",
+      "parent": "c00042",
       "children": [],
       "settings": {
         "text": "<ul><li>Screws, weights and hardware</li><li>For long-term maintenance</li><li>Fits Antares and Orion</li></ul>"
@@ -683,9 +1008,9 @@
       "label": "Specs"
     },
     {
-      "id": "a00048",
+      "id": "c00049",
       "name": "text-link",
-      "parent": "a00041",
+      "parent": "c00042",
       "children": [],
       "settings": {
         "text": "View product",
@@ -700,34 +1025,58 @@
       "label": "View Spare Parts Kit"
     },
     {
-      "id": "a00049",
+      "id": "c00050",
       "name": "block",
-      "parent": "a00016",
+      "parent": "c00017",
       "children": [
-        "a00050",
-        "a00051",
-        "a00052",
-        "a00053",
-        "a00054",
-        "a00055",
-        "a00056"
+        "c00051",
+        "c00052",
+        "c00053",
+        "c00054",
+        "c00055",
+        "c00056",
+        "c00057"
       ],
       "settings": {
         "_cssGlobalClasses": [
           "ggcol"
-        ]
+        ],
+        "_boxShadow": {
+          "color": {
+            "id": "daywbl",
+            "raw": "var(--champagne)",
+            "light": "#d4af37"
+          },
+          "values": {
+            "blur": "var(--text-s)"
+          }
+        },
+        "_border": {
+          "radius": {
+            "top": "14",
+            "right": "14",
+            "bottom": "14",
+            "left": "14"
+          }
+        },
+        "_padding": {
+          "top": "14",
+          "right": "14",
+          "bottom": "14",
+          "left": "14"
+        }
       },
       "label": "Accessory: Torque Wrench"
     },
     {
-      "id": "a00050",
+      "id": "c00051",
       "name": "icon",
-      "parent": "a00049",
+      "parent": "c00050",
       "children": [],
       "settings": {
         "icon": {
-          "library": "themify",
-          "icon": "ti-wand"
+          "library": "ionicons",
+          "icon": "ion-ios-build"
         },
         "_attributes": [
           {
@@ -735,61 +1084,97 @@
             "name": "aria-hidden",
             "value": "true"
           }
-        ]
+        ],
+        "iconColor": {
+          "id": "daywbl",
+          "raw": "var(--champagne)",
+          "light": "#d4af37"
+        },
+        "iconSize": "36"
       },
       "label": "Icon"
     },
     {
-      "id": "a00051",
+      "id": "c00052",
       "name": "heading",
-      "parent": "a00049",
+      "parent": "c00050",
       "children": [],
       "settings": {
         "text": "Torque Wrench",
         "tag": "h3",
         "_cssGlobalClasses": [
           "ggh"
-        ]
+        ],
+        "_typography": {
+          "color": {
+            "id": "tplylp",
+            "name": "",
+            "raw": "var(--kachi-iro-4)",
+            "light": "hsl(226 58.04% 56.53%)"
+          },
+          "font-size": "var(--text-m)"
+        }
       },
       "label": "h3: Torque Wrench"
     },
     {
-      "id": "a00052",
-      "name": "text-basic",
-      "parent": "a00049",
+      "id": "c00053",
+      "name": "heading",
+      "parent": "c00050",
       "children": [],
       "settings": {
-        "text": "<strong>€63</strong>",
-        "tag": "p"
+        "text": "€63",
+        "tag": "p",
+        "_typography": {
+          "color": {
+            "id": "daywbl",
+            "raw": "var(--champagne)",
+            "light": "#d4af37"
+          }
+        }
       },
-      "label": "Text"
+      "label": "p: €63"
     },
     {
-      "id": "a00053",
+      "id": "c00054",
       "name": "text-basic",
-      "parent": "a00049",
+      "parent": "c00050",
       "children": [],
       "settings": {
         "text": "The torque wrench is a precision tool that tightens weights and faces to the correct, repeatable spec.",
-        "tag": "p"
+        "tag": "p",
+        "_typography": {
+          "color": {
+            "id": "rhefaq",
+            "raw": "var(--kachi-iro)",
+            "light": "#1f2b51"
+          }
+        }
       },
       "label": "Text"
     },
     {
-      "id": "a00054",
+      "id": "c00055",
       "name": "text-basic",
-      "parent": "a00049",
+      "parent": "c00050",
       "children": [],
       "settings": {
         "text": "Setting each component to the right torque prevents loosening during play and protects the threads, so every adjustment is secure and consistent.",
-        "tag": "p"
+        "tag": "p",
+        "_typography": {
+          "color": {
+            "id": "rhefaq",
+            "raw": "var(--kachi-iro)",
+            "light": "#1f2b51"
+          }
+        }
       },
       "label": "Text"
     },
     {
-      "id": "a00055",
+      "id": "c00056",
       "name": "text",
-      "parent": "a00049",
+      "parent": "c00050",
       "children": [],
       "settings": {
         "text": "<ul><li>Pre-set, repeatable torque</li><li>For weights and clubfaces</li><li>Protects the threads</li></ul>"
@@ -797,9 +1182,9 @@
       "label": "Specs"
     },
     {
-      "id": "a00056",
+      "id": "c00057",
       "name": "text-link",
-      "parent": "a00049",
+      "parent": "c00050",
       "children": [],
       "settings": {
         "text": "View product",
@@ -814,12 +1199,12 @@
       "label": "View Torque Wrench"
     },
     {
-      "id": "a00057",
+      "id": "c00058",
       "name": "block",
-      "parent": "a00011",
+      "parent": "c00012",
       "children": [
-        "a00058",
-        "a00059"
+        "c00059",
+        "c00060"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -836,23 +1221,31 @@
       "label": "At a glance"
     },
     {
-      "id": "a00058",
+      "id": "c00059",
       "name": "heading",
-      "parent": "a00057",
+      "parent": "c00058",
       "children": [],
       "settings": {
         "text": "Accessories at a glance",
         "tag": "h3",
         "_cssGlobalClasses": [
           "ggh"
-        ]
+        ],
+        "_typography": {
+          "color": {
+            "id": "oehxwa",
+            "name": "",
+            "raw": "var(--kachi-iro-3)",
+            "light": "hsl(226 44.63% 45%)"
+          }
+        }
       },
-      "label": "h3: Accessories at a glance"
+      "label": "h3: Accessories at a glanc"
     },
     {
-      "id": "a00059",
+      "id": "c00060",
       "name": "text",
-      "parent": "a00057",
+      "parent": "c00058",
       "children": [],
       "settings": {
         "text": "<table><caption>GG Putters accessories at a glance</caption><thead><tr><th scope=\"col\">Accessory</th><th scope=\"col\">What it does</th><th scope=\"col\">Options</th><th scope=\"col\">Price</th></tr></thead><tbody><tr><th scope=\"row\">Clubfaces</th><td>Set loft &amp; feel</td><td>1°–3°</td><td>€52</td></tr><tr><th scope=\"row\">Extra Weights</th><td>Set balance &amp; arc</td><td>1.19 / 1.48 / 1.97 oz</td><td>€21</td></tr><tr><th scope=\"row\">Putter Cover</th><td>Protect the head</td><td>GG head shape</td><td>€32</td></tr><tr><th scope=\"row\">Spare Parts Kit</th><td>Maintain &amp; replace</td><td>Screws / weights / hardware</td><td>€149</td></tr><tr><th scope=\"row\">Torque Wrench</th><td>Adjust to spec</td><td>Pre-set torque</td><td>€63</td></tr></tbody></table>"
@@ -860,39 +1253,47 @@
       "label": "At-a-glance table"
     },
     {
-      "id": "a00060",
+      "id": "c00061",
       "name": "section",
       "parent": 0,
       "children": [
-        "a00061"
+        "c00062"
       ],
       "settings": {
         "_cssGlobalClasses": [
           "ggsect"
         ],
-        "_cssId": "guide"
+        "_cssId": "guide",
+        "_background": {
+          "color": {
+            "id": "gyxxbr",
+            "name": "",
+            "raw": "var(--slate-bright)",
+            "light": "hsl(218 30.79% 76.77%)"
+          }
+        }
       },
       "label": "Buying guide"
     },
     {
-      "id": "a00061",
+      "id": "c00062",
       "name": "container",
-      "parent": "a00060",
+      "parent": "c00061",
       "children": [
-        "a00062",
-        "a00066"
+        "c00063",
+        "c00067"
       ],
       "settings": {},
       "label": "Container"
     },
     {
-      "id": "a00062",
+      "id": "c00063",
       "name": "block",
-      "parent": "a00061",
+      "parent": "c00062",
       "children": [
-        "a00063",
-        "a00064",
-        "a00065"
+        "c00064",
+        "c00065",
+        "c00066"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -902,53 +1303,75 @@
       "label": "Header"
     },
     {
-      "id": "a00063",
+      "id": "c00064",
       "name": "heading",
-      "parent": "a00062",
+      "parent": "c00063",
       "children": [],
       "settings": {
         "text": "Buying guide",
         "tag": "p",
         "_cssGlobalClasses": [
-          "ggeye"
-        ]
+          "ggeyeb"
+        ],
+        "_typography": {
+          "color": {
+            "id": "rhefaq",
+            "raw": "var(--kachi-iro)",
+            "light": "#1f2b51"
+          }
+        }
       },
       "label": "Eyebrow: Buying guide"
     },
     {
-      "id": "a00064",
+      "id": "c00065",
       "name": "heading",
-      "parent": "a00062",
+      "parent": "c00063",
       "children": [],
       "settings": {
         "text": "Which accessory do you need?",
         "tag": "h2",
         "_cssGlobalClasses": [
           "ggh"
-        ]
+        ],
+        "_typography": {
+          "color": {
+            "id": "oehxwa",
+            "name": "",
+            "raw": "var(--kachi-iro-3)",
+            "light": "hsl(226 44.63% 45%)"
+          }
+        }
       },
-      "label": "h2: Which accessory do you n"
+      "label": "h2: Which accessory do you"
     },
     {
-      "id": "a00065",
+      "id": "c00066",
       "name": "text-basic",
-      "parent": "a00062",
+      "parent": "c00063",
       "children": [],
       "settings": {
         "text": "Match the upgrade to your goal — here is the fastest way to decide.",
         "tag": "p",
         "_cssGlobalClasses": [
           "gglead"
-        ]
+        ],
+        "_typography": {
+          "color": {
+            "id": "rhefaq",
+            "raw": "var(--kachi-iro)",
+            "light": "#1f2b51"
+          }
+        }
       },
       "label": "Text"
     },
     {
-      "id": "a00066",
+      "id": "c00067",
       "name": "block",
-      "parent": "a00061",
+      "parent": "c00062",
       "children": [
-        "a00067"
+        "c00068"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -958,15 +1381,14 @@
         "_margin": {
           "left": "auto",
           "right": "auto"
-        },
-        "_rowGap": "0.5rem"
+        }
       },
-      "label": "Guide list wrap"
+      "label": "Guide"
     },
     {
-      "id": "a00067",
+      "id": "c00068",
       "name": "text",
-      "parent": "a00066",
+      "parent": "c00067",
       "children": [],
       "settings": {
         "text": "<ul><li><strong>Want more stability?</strong> Fit the heavy 1.97 oz weight (from €21).</li><li><strong>Struggling on slow greens?</strong> Try a higher-degree clubface, up to 3° (€52).</li><li><strong>Adjusting at home?</strong> The torque wrench sets weights and faces to spec (€63).</li><li><strong>Protecting your investment?</strong> Add the fitted putter cover (€32).</li><li><strong>Fitting clients?</strong> The Fitter Kit covers every head, loft and weight combination.</li></ul>"
@@ -974,71 +1396,114 @@
       "label": "Guide list"
     },
     {
-      "id": "a00068",
+      "id": "c00069",
       "name": "section",
       "parent": 0,
       "children": [
-        "a00069"
+        "c00070"
       ],
       "settings": {
         "_cssGlobalClasses": [
           "ggsect"
-        ]
+        ],
+        "_background": {
+          "color": {
+            "id": "fdwsdc",
+            "raw": "var(--kachi-iro-6-l-4)",
+            "light": "hsl(227, 5%, 82%)"
+          }
+        }
       },
-      "label": "Compatibility band"
+      "label": "Trust"
     },
     {
-      "id": "a00069",
+      "id": "c00070",
       "name": "container",
-      "parent": "a00068",
+      "parent": "c00069",
       "children": [
-        "a00070"
+        "c00071",
+        "c00080"
       ],
       "settings": {},
       "label": "Container"
     },
     {
-      "id": "a00070",
+      "id": "c00071",
       "name": "block",
-      "parent": "a00069",
+      "parent": "c00070",
       "children": [
-        "a00071",
-        "a00075",
-        "a00079",
-        "a00083"
+        "c00072",
+        "c00076"
       ],
       "settings": {
         "_cssGlobalClasses": [
           "ggrow"
-        ]
+        ],
+        "_direction": "row"
       },
-      "label": "Row"
+      "label": "Trust Row 1"
     },
     {
-      "id": "a00071",
+      "id": "c00072",
       "name": "block",
-      "parent": "a00070",
+      "parent": "c00071",
       "children": [
-        "a00072",
-        "a00073",
-        "a00074"
+        "c00073",
+        "c00074",
+        "c00075"
       ],
       "settings": {
         "_cssGlobalClasses": [
           "ggcol"
-        ]
+        ],
+        "_boxShadow": {
+          "color": {
+            "id": "daywbl",
+            "raw": "var(--champagne)",
+            "light": "#d4af37"
+          },
+          "values": {
+            "blur": "var(--text-s)"
+          }
+        },
+        "_border": {
+          "radius": {
+            "top": "14",
+            "right": "14",
+            "bottom": "14",
+            "left": "14"
+          }
+        },
+        "_padding": {
+          "top": "14",
+          "right": "14",
+          "bottom": "14",
+          "left": "14"
+        },
+        "_alignItems": "flex-start",
+        "_margin": {
+          "top": "15",
+          "bottom": "30"
+        },
+        "_background": {
+          "color": {
+            "id": "oiksff",
+            "raw": "var(--platinum)",
+            "light": "#f7f6f8"
+          }
+        }
       },
       "label": "Trust: Fits Antares &amp; Orion"
     },
     {
-      "id": "a00072",
+      "id": "c00073",
       "name": "icon",
-      "parent": "a00071",
+      "parent": "c00072",
       "children": [],
       "settings": {
         "icon": {
-          "library": "themify",
-          "icon": "ti-check-box"
+          "library": "ionicons",
+          "icon": "ion-ios-checkmark-circle"
         },
         "_attributes": [
           {
@@ -1046,60 +1511,117 @@
             "name": "aria-hidden",
             "value": "true"
           }
-        ]
+        ],
+        "iconColor": {
+          "id": "daywbl",
+          "raw": "var(--champagne)",
+          "light": "#d4af37"
+        },
+        "iconSize": "36"
       },
       "label": "Icon"
     },
     {
-      "id": "a00073",
+      "id": "c00074",
       "name": "heading",
-      "parent": "a00071",
+      "parent": "c00072",
       "children": [],
       "settings": {
         "text": "Fits Antares &amp; Orion",
         "tag": "h3",
         "_cssGlobalClasses": [
           "ggh"
-        ]
+        ],
+        "_typography": {
+          "color": {
+            "id": "oehxwa",
+            "name": "",
+            "raw": "var(--kachi-iro-3)",
+            "light": "hsl(226 44.63% 45%)"
+          }
+        }
       },
-      "label": "h3: Fits Antares &amp; Orion"
+      "label": "h3: Fits Antares &amp; Ori"
     },
     {
-      "id": "a00074",
+      "id": "c00075",
       "name": "text-basic",
-      "parent": "a00071",
+      "parent": "c00072",
       "children": [],
       "settings": {
         "text": "All accessories are compatible with both GG putter models.",
-        "tag": "p"
+        "tag": "p",
+        "_typography": {
+          "color": {
+            "id": "rhefaq",
+            "raw": "var(--kachi-iro)",
+            "light": "#1f2b51"
+          }
+        }
       },
       "label": "Text"
     },
     {
-      "id": "a00075",
+      "id": "c00076",
       "name": "block",
-      "parent": "a00070",
+      "parent": "c00071",
       "children": [
-        "a00076",
-        "a00077",
-        "a00078"
+        "c00077",
+        "c00078",
+        "c00079"
       ],
       "settings": {
         "_cssGlobalClasses": [
           "ggcol"
-        ]
+        ],
+        "_boxShadow": {
+          "color": {
+            "id": "daywbl",
+            "raw": "var(--champagne)",
+            "light": "#d4af37"
+          },
+          "values": {
+            "blur": "var(--text-s)"
+          }
+        },
+        "_border": {
+          "radius": {
+            "top": "14",
+            "right": "14",
+            "bottom": "14",
+            "left": "14"
+          }
+        },
+        "_padding": {
+          "top": "14",
+          "right": "14",
+          "bottom": "14",
+          "left": "14"
+        },
+        "_alignItems": "flex-start",
+        "_margin": {
+          "top": "15",
+          "bottom": "30"
+        },
+        "_background": {
+          "color": {
+            "id": "oiksff",
+            "raw": "var(--platinum)",
+            "light": "#f7f6f8"
+          }
+        }
       },
       "label": "Trust: Set to spec"
     },
     {
-      "id": "a00076",
+      "id": "c00077",
       "name": "icon",
-      "parent": "a00075",
+      "parent": "c00076",
       "children": [],
       "settings": {
         "icon": {
-          "library": "themify",
-          "icon": "ti-settings"
+          "library": "ionicons",
+          "icon": "ion-ios-settings"
         },
         "_attributes": [
           {
@@ -1107,55 +1629,128 @@
             "name": "aria-hidden",
             "value": "true"
           }
-        ]
+        ],
+        "iconColor": {
+          "id": "daywbl",
+          "raw": "var(--champagne)",
+          "light": "#d4af37"
+        },
+        "iconSize": "36"
       },
       "label": "Icon"
     },
     {
-      "id": "a00077",
+      "id": "c00078",
       "name": "heading",
-      "parent": "a00075",
+      "parent": "c00076",
       "children": [],
       "settings": {
         "text": "Set to spec",
         "tag": "h3",
         "_cssGlobalClasses": [
           "ggh"
-        ]
+        ],
+        "_typography": {
+          "color": {
+            "id": "oehxwa",
+            "name": "",
+            "raw": "var(--kachi-iro-3)",
+            "light": "hsl(226 44.63% 45%)"
+          }
+        }
       },
       "label": "h3: Set to spec"
     },
     {
-      "id": "a00078",
+      "id": "c00079",
       "name": "text-basic",
-      "parent": "a00075",
+      "parent": "c00076",
       "children": [],
       "settings": {
         "text": "Use the torque wrench for repeatable, secure adjustments.",
-        "tag": "p"
+        "tag": "p",
+        "_typography": {
+          "color": {
+            "id": "rhefaq",
+            "raw": "var(--kachi-iro)",
+            "light": "#1f2b51"
+          }
+        }
       },
       "label": "Text"
     },
     {
-      "id": "a00079",
+      "id": "c00080",
       "name": "block",
-      "parent": "a00070",
+      "parent": "c00070",
       "children": [
-        "a00080",
-        "a00081",
-        "a00082"
+        "c00081",
+        "c00085"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "ggrow"
+        ],
+        "_direction": "row"
+      },
+      "label": "Trust Row 2"
+    },
+    {
+      "id": "c00081",
+      "name": "block",
+      "parent": "c00080",
+      "children": [
+        "c00082",
+        "c00083",
+        "c00084"
       ],
       "settings": {
         "_cssGlobalClasses": [
           "ggcol"
-        ]
+        ],
+        "_boxShadow": {
+          "color": {
+            "id": "daywbl",
+            "raw": "var(--champagne)",
+            "light": "#d4af37"
+          },
+          "values": {
+            "blur": "var(--text-s)"
+          }
+        },
+        "_border": {
+          "radius": {
+            "top": "14",
+            "right": "14",
+            "bottom": "14",
+            "left": "14"
+          }
+        },
+        "_padding": {
+          "top": "14",
+          "right": "14",
+          "bottom": "14",
+          "left": "14"
+        },
+        "_alignItems": "flex-start",
+        "_margin": {
+          "top": "15",
+          "bottom": "30"
+        },
+        "_background": {
+          "color": {
+            "id": "oiksff",
+            "raw": "var(--platinum)",
+            "light": "#f7f6f8"
+          }
+        }
       },
       "label": "Trust: 2-year warranty"
     },
     {
-      "id": "a00080",
+      "id": "c00082",
       "name": "icon",
-      "parent": "a00079",
+      "parent": "c00081",
       "children": [],
       "settings": {
         "icon": {
@@ -1168,55 +1763,112 @@
             "name": "aria-hidden",
             "value": "true"
           }
-        ]
+        ],
+        "iconColor": {
+          "id": "daywbl",
+          "raw": "var(--champagne)",
+          "light": "#d4af37"
+        },
+        "iconSize": "36"
       },
       "label": "Icon"
     },
     {
-      "id": "a00081",
+      "id": "c00083",
       "name": "heading",
-      "parent": "a00079",
+      "parent": "c00081",
       "children": [],
       "settings": {
         "text": "2-year warranty",
         "tag": "h3",
         "_cssGlobalClasses": [
           "ggh"
-        ]
+        ],
+        "_typography": {
+          "color": {
+            "id": "oehxwa",
+            "name": "",
+            "raw": "var(--kachi-iro-3)",
+            "light": "hsl(226 44.63% 45%)"
+          }
+        }
       },
       "label": "h3: 2-year warranty"
     },
     {
-      "id": "a00082",
+      "id": "c00084",
       "name": "text-basic",
-      "parent": "a00079",
+      "parent": "c00081",
       "children": [],
       "settings": {
         "text": "GG products are covered against conformity defects.",
-        "tag": "p"
+        "tag": "p",
+        "_typography": {
+          "color": {
+            "id": "rhefaq",
+            "raw": "var(--kachi-iro)",
+            "light": "#1f2b51"
+          }
+        }
       },
       "label": "Text"
     },
     {
-      "id": "a00083",
+      "id": "c00085",
       "name": "block",
-      "parent": "a00070",
+      "parent": "c00080",
       "children": [
-        "a00084",
-        "a00085",
-        "a00086"
+        "c00086",
+        "c00087",
+        "c00088"
       ],
       "settings": {
         "_cssGlobalClasses": [
           "ggcol"
-        ]
+        ],
+        "_boxShadow": {
+          "color": {
+            "id": "daywbl",
+            "raw": "var(--champagne)",
+            "light": "#d4af37"
+          },
+          "values": {
+            "blur": "var(--text-s)"
+          }
+        },
+        "_border": {
+          "radius": {
+            "top": "14",
+            "right": "14",
+            "bottom": "14",
+            "left": "14"
+          }
+        },
+        "_padding": {
+          "top": "14",
+          "right": "14",
+          "bottom": "14",
+          "left": "14"
+        },
+        "_alignItems": "flex-start",
+        "_margin": {
+          "top": "15",
+          "bottom": "30"
+        },
+        "_background": {
+          "color": {
+            "id": "oiksff",
+            "raw": "var(--platinum)",
+            "light": "#f7f6f8"
+          }
+        }
       },
       "label": "Trust: Fast shipping"
     },
     {
-      "id": "a00084",
+      "id": "c00086",
       "name": "icon",
-      "parent": "a00083",
+      "parent": "c00085",
       "children": [],
       "settings": {
         "icon": {
@@ -1229,69 +1881,97 @@
             "name": "aria-hidden",
             "value": "true"
           }
-        ]
+        ],
+        "iconColor": {
+          "id": "daywbl",
+          "raw": "var(--champagne)",
+          "light": "#d4af37"
+        },
+        "iconSize": "36"
       },
       "label": "Icon"
     },
     {
-      "id": "a00085",
+      "id": "c00087",
       "name": "heading",
-      "parent": "a00083",
+      "parent": "c00085",
       "children": [],
       "settings": {
         "text": "Fast shipping",
         "tag": "h3",
         "_cssGlobalClasses": [
           "ggh"
-        ]
+        ],
+        "_typography": {
+          "color": {
+            "id": "oehxwa",
+            "name": "",
+            "raw": "var(--kachi-iro-3)",
+            "light": "hsl(226 44.63% 45%)"
+          }
+        }
       },
       "label": "h3: Fast shipping"
     },
     {
-      "id": "a00086",
+      "id": "c00088",
       "name": "text-basic",
-      "parent": "a00083",
+      "parent": "c00085",
       "children": [],
       "settings": {
         "text": "BRT in Italy, FedEx worldwide — within 5–6 business days.",
-        "tag": "p"
+        "tag": "p",
+        "_typography": {
+          "color": {
+            "id": "rhefaq",
+            "raw": "var(--kachi-iro)",
+            "light": "#1f2b51"
+          }
+        }
       },
       "label": "Text"
     },
     {
-      "id": "a00087",
+      "id": "c00089",
       "name": "section",
       "parent": 0,
       "children": [
-        "a00088"
+        "c00090"
       ],
       "settings": {
         "_cssGlobalClasses": [
           "ggsect"
         ],
-        "_cssId": "setup"
+        "_cssId": "setup",
+        "_background": {
+          "color": {
+            "id": "oiksff",
+            "raw": "var(--platinum)",
+            "light": "#f7f6f8"
+          }
+        }
       },
       "label": "How to"
     },
     {
-      "id": "a00088",
+      "id": "c00090",
       "name": "container",
-      "parent": "a00087",
+      "parent": "c00089",
       "children": [
-        "a00089",
-        "a00093"
+        "c00091",
+        "c00095"
       ],
       "settings": {},
       "label": "Container"
     },
     {
-      "id": "a00089",
+      "id": "c00091",
       "name": "block",
-      "parent": "a00088",
+      "parent": "c00090",
       "children": [
-        "a00090",
-        "a00091",
-        "a00092"
+        "c00092",
+        "c00093",
+        "c00094"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -1301,53 +1981,75 @@
       "label": "Header"
     },
     {
-      "id": "a00090",
+      "id": "c00092",
       "name": "heading",
-      "parent": "a00089",
+      "parent": "c00091",
       "children": [],
       "settings": {
         "text": "Setup guide",
         "tag": "p",
         "_cssGlobalClasses": [
-          "ggeye"
-        ]
+          "ggeyeb"
+        ],
+        "_typography": {
+          "color": {
+            "id": "rhefaq",
+            "raw": "var(--kachi-iro)",
+            "light": "#1f2b51"
+          }
+        }
       },
       "label": "Eyebrow: Setup guide"
     },
     {
-      "id": "a00091",
+      "id": "c00093",
       "name": "heading",
-      "parent": "a00089",
+      "parent": "c00091",
       "children": [],
       "settings": {
         "text": "How to customize your GG putter",
         "tag": "h2",
         "_cssGlobalClasses": [
           "ggh"
-        ]
+        ],
+        "_typography": {
+          "color": {
+            "id": "oehxwa",
+            "name": "",
+            "raw": "var(--kachi-iro-3)",
+            "light": "hsl(226 44.63% 45%)"
+          }
+        }
       },
-      "label": "h2: How to customize your GG"
+      "label": "h2: How to customize your "
     },
     {
-      "id": "a00092",
+      "id": "c00094",
       "name": "text-basic",
-      "parent": "a00089",
+      "parent": "c00091",
       "children": [],
       "settings": {
         "text": "In four steps you can rebalance the head and change the face — no specialist tools beyond the GG torque wrench.",
         "tag": "p",
         "_cssGlobalClasses": [
           "gglead"
-        ]
+        ],
+        "_typography": {
+          "color": {
+            "id": "rhefaq",
+            "raw": "var(--kachi-iro)",
+            "light": "#1f2b51"
+          }
+        }
       },
       "label": "Text"
     },
     {
-      "id": "a00093",
+      "id": "c00095",
       "name": "block",
-      "parent": "a00088",
+      "parent": "c00090",
       "children": [
-        "a00094"
+        "c00096"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -1357,15 +2059,14 @@
         "_margin": {
           "left": "auto",
           "right": "auto"
-        },
-        "_rowGap": "0.5rem"
+        }
       },
       "label": "HowTo Steps"
     },
     {
-      "id": "a00094",
+      "id": "c00096",
       "name": "text",
-      "parent": "a00093",
+      "parent": "c00095",
       "children": [],
       "settings": {
         "text": "<ol><li><strong>Loosen the weight screws.</strong> Loosen the three weight screws using the GG torque wrench.</li><li><strong>Position the three weights.</strong> Place the weights across the three points to match your stroke arc — light 1.19 oz, medium 1.48 oz, heavy 1.97 oz.</li><li><strong>Set loft and feel.</strong> Swap the clubface insert (1°–3°) to dial in your preferred loft and feel.</li><li><strong>Tighten to spec.</strong> Tighten everything back to the correct torque with the wrench.</li></ol>"
@@ -1373,39 +2074,46 @@
       "label": "Steps"
     },
     {
-      "id": "a00095",
+      "id": "c00097",
       "name": "section",
       "parent": 0,
       "children": [
-        "a00096"
+        "c00098"
       ],
       "settings": {
         "_cssGlobalClasses": [
           "ggsect"
         ],
-        "_cssId": "fitters"
+        "_cssId": "fitters",
+        "_background": {
+          "color": {
+            "id": "rhefaq",
+            "raw": "var(--kachi-iro)",
+            "light": "#1f2b51"
+          }
+        }
       },
       "label": "Fitter Kit"
     },
     {
-      "id": "a00096",
+      "id": "c00098",
       "name": "container",
-      "parent": "a00095",
+      "parent": "c00097",
       "children": [
-        "a00097",
-        "a00101"
+        "c00099",
+        "c00103"
       ],
       "settings": {},
       "label": "Container"
     },
     {
-      "id": "a00097",
+      "id": "c00099",
       "name": "block",
-      "parent": "a00096",
+      "parent": "c00098",
       "children": [
-        "a00098",
-        "a00099",
-        "a00100"
+        "c00100",
+        "c00101",
+        "c00102"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -1415,71 +2123,94 @@
       "label": "Header"
     },
     {
-      "id": "a00098",
+      "id": "c00100",
       "name": "heading",
-      "parent": "a00097",
+      "parent": "c00099",
       "children": [],
       "settings": {
         "text": "For fitters, pro shops &amp; club builders",
         "tag": "p",
         "_cssGlobalClasses": [
-          "ggeye"
-        ]
+          "ggeyeb"
+        ],
+        "_typography": {
+          "color": {
+            "id": "daywbl",
+            "raw": "var(--champagne)",
+            "light": "#d4af37"
+          }
+        }
       },
-      "label": "Eyebrow: For fitters, pro s"
+      "label": "Eyebrow: For fitters, pro"
     },
     {
-      "id": "a00099",
+      "id": "c00101",
       "name": "heading",
-      "parent": "a00097",
+      "parent": "c00099",
       "children": [],
       "settings": {
         "text": "The GG Putters Fitter Kit",
         "tag": "h2",
         "_cssGlobalClasses": [
           "ggh"
-        ]
+        ],
+        "_typography": {
+          "color": {
+            "id": "oiksff",
+            "raw": "var(--platinum)",
+            "light": "#f7f6f8"
+          }
+        }
       },
-      "label": "h2: The GG Putters Fitter Ki"
+      "label": "h2: The GG Putters Fitter "
     },
     {
-      "id": "a00100",
+      "id": "c00102",
       "name": "text-basic",
-      "parent": "a00097",
+      "parent": "c00099",
       "children": [],
       "settings": {
         "text": "A professional fitting system that builds and tests every head, loft, weight and neck combination in a single appointment.",
         "tag": "p",
         "_cssGlobalClasses": [
           "gglead"
-        ]
+        ],
+        "_typography": {
+          "color": {
+            "id": "gyxxbr",
+            "name": "",
+            "raw": "var(--slate-bright)",
+            "light": "hsl(218 30.79% 76.77%)"
+          }
+        }
       },
       "label": "Text"
     },
     {
-      "id": "a00101",
+      "id": "c00103",
       "name": "block",
-      "parent": "a00096",
+      "parent": "c00098",
       "children": [
-        "a00102",
-        "a00108"
+        "c00104",
+        "c00110"
       ],
       "settings": {
         "_cssGlobalClasses": [
           "ggrow"
-        ]
+        ],
+        "_direction": "row"
       },
       "label": "Row"
     },
     {
-      "id": "a00102",
+      "id": "c00104",
       "name": "block",
-      "parent": "a00101",
+      "parent": "c00103",
       "children": [
-        "a00103",
-        "a00104",
-        "a00105",
-        "a00106"
+        "c00105",
+        "c00106",
+        "c00107",
+        "c00108"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -1489,47 +2220,69 @@
       "label": "Fitter Text"
     },
     {
-      "id": "a00103",
+      "id": "c00105",
       "name": "heading",
-      "parent": "a00102",
+      "parent": "c00104",
       "children": [],
       "settings": {
         "text": "Fit by feel, not by guesswork",
         "tag": "h3",
         "_cssGlobalClasses": [
           "ggh"
-        ]
+        ],
+        "_typography": {
+          "color": {
+            "id": "daywbl",
+            "raw": "var(--champagne)",
+            "light": "#d4af37"
+          },
+          "font-size": "var(--text-m)"
+        }
       },
-      "label": "h3: Fit by feel, not by gues"
+      "label": "h3: Fit by feel, not by gu"
     },
     {
-      "id": "a00104",
+      "id": "c00106",
       "name": "text-basic",
-      "parent": "a00102",
+      "parent": "c00104",
       "children": [],
       "settings": {
         "text": "With the kit on the bench, a player can compare changes back to back — blade against mallet, loft against loft, light weight against heavy — and immediately feel which setup rolls the ball best for their stroke.",
-        "tag": "p"
+        "tag": "p",
+        "_typography": {
+          "color": {
+            "id": "oiksff",
+            "raw": "var(--platinum)",
+            "light": "#f7f6f8"
+          }
+        }
       },
       "label": "Text"
     },
     {
-      "id": "a00105",
+      "id": "c00107",
       "name": "text-basic",
-      "parent": "a00102",
+      "parent": "c00104",
       "children": [],
       "settings": {
         "text": "A putter dialled in during fitting is genuinely made-to-measure, which typically means happier customers, fewer returns and a stronger case for a premium custom build.",
-        "tag": "p"
+        "tag": "p",
+        "_typography": {
+          "color": {
+            "id": "oiksff",
+            "raw": "var(--platinum)",
+            "light": "#f7f6f8"
+          }
+        }
       },
       "label": "Text"
     },
     {
-      "id": "a00106",
+      "id": "c00108",
       "name": "block",
-      "parent": "a00102",
+      "parent": "c00104",
       "children": [
-        "a00107"
+        "c00109"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -1539,9 +2292,9 @@
       "label": "Fitter CTA"
     },
     {
-      "id": "a00107",
+      "id": "c00109",
       "name": "button",
-      "parent": "a00106",
+      "parent": "c00108",
       "children": [],
       "settings": {
         "text": "Request the Fitter Kit or book a demo",
@@ -1558,39 +2311,85 @@
       "label": "Button: Request the Fitter Kit or book a demo"
     },
     {
-      "id": "a00108",
+      "id": "c00110",
       "name": "block",
-      "parent": "a00101",
+      "parent": "c00103",
       "children": [
-        "a00109",
-        "a00110",
-        "a00111"
+        "c00111",
+        "c00112",
+        "c00113"
       ],
       "settings": {
         "_cssGlobalClasses": [
           "ggcolw"
-        ]
+        ],
+        "_boxShadow": {
+          "color": {
+            "id": "daywbl",
+            "raw": "var(--champagne)",
+            "light": "#d4af37"
+          },
+          "values": {
+            "blur": "var(--text-s)"
+          }
+        },
+        "_border": {
+          "radius": {
+            "top": "14",
+            "right": "14",
+            "bottom": "14",
+            "left": "14"
+          }
+        },
+        "_padding": {
+          "top": "14",
+          "right": "14",
+          "bottom": "14",
+          "left": "14"
+        },
+        "_background": {
+          "color": {
+            "id": "ukqcoe",
+            "raw": "var(--kachi-iro-6-t-3)",
+            "light": "hsla(226, 45%, 10%, 0.6)"
+          }
+        },
+        "_typography": {
+          "color": {
+            "id": "fdwsdc",
+            "raw": "var(--kachi-iro-6-l-4)",
+            "light": "hsl(227, 5%, 82%)"
+          }
+        }
       },
-      "label": "Fitter Kit List"
+      "label": "Fitter Kit Card"
     },
     {
-      "id": "a00109",
+      "id": "c00111",
       "name": "heading",
-      "parent": "a00108",
+      "parent": "c00110",
       "children": [],
       "settings": {
         "text": "What's inside the Fitter Kit",
         "tag": "h3",
         "_cssGlobalClasses": [
           "ggh"
-        ]
+        ],
+        "_typography": {
+          "color": {
+            "id": "daywbl",
+            "raw": "var(--champagne)",
+            "light": "#d4af37"
+          },
+          "font-size": "var(--text-m)"
+        }
       },
-      "label": "h3: What's inside the Fitter"
+      "label": "h3: What's inside the Fitt"
     },
     {
-      "id": "a00110",
+      "id": "c00112",
       "name": "text",
-      "parent": "a00108",
+      "parent": "c00110",
       "children": [],
       "settings": {
         "text": "<ul><li>2 heads — one Antares (blade) and one Orion (mallet)</li><li>3 lofts to swap — 1°, 2° and 3°</li><li>Weights kit — 2 heavy and 2 light (bullet or flat)</li><li>Necks — lie and offset options</li><li>Screws and a hex screwdriver to reconfigure on the spot</li></ul>"
@@ -1598,50 +2397,75 @@
       "label": "Kit list"
     },
     {
-      "id": "a00111",
+      "id": "c00113",
       "name": "text-basic",
-      "parent": "a00108",
+      "parent": "c00110",
       "children": [],
       "settings": {
         "text": "Everything needed to demonstrate the full GG system to a client in one sitting.",
-        "tag": "p"
+        "tag": "p",
+        "_typography": {
+          "color": {
+            "id": "gyxxbr",
+            "name": "",
+            "raw": "var(--slate-bright)",
+            "light": "hsl(218 30.79% 76.77%)"
+          }
+        }
       },
       "label": "Text"
     },
     {
-      "id": "a00112",
+      "id": "c00114",
       "name": "section",
       "parent": 0,
       "children": [
-        "a00113"
+        "c00115"
       ],
       "settings": {
         "_cssGlobalClasses": [
           "ggsect"
         ],
-        "_cssId": "faq"
+        "_cssId": "faq",
+        "_background": {
+          "color": {
+            "id": "oiksff",
+            "raw": "var(--platinum)",
+            "light": "#f7f6f8"
+          }
+        },
+        "_shapeDividers": [
+          {
+            "id": "t00017",
+            "shape": "stroke-2",
+            "fill": {
+              "raw": "rgba(212, 175, 55, 0.12)"
+            },
+            "flipVertical": true
+          }
+        ]
       },
       "label": "FAQ"
     },
     {
-      "id": "a00113",
+      "id": "c00115",
       "name": "container",
-      "parent": "a00112",
+      "parent": "c00114",
       "children": [
-        "a00114",
-        "a00118"
+        "c00116",
+        "c00120"
       ],
       "settings": {},
       "label": "Container"
     },
     {
-      "id": "a00114",
+      "id": "c00116",
       "name": "block",
-      "parent": "a00113",
+      "parent": "c00115",
       "children": [
-        "a00115",
-        "a00116",
-        "a00117"
+        "c00117",
+        "c00118",
+        "c00119"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -1651,59 +2475,75 @@
       "label": "Header"
     },
     {
-      "id": "a00115",
+      "id": "c00117",
       "name": "heading",
-      "parent": "a00114",
+      "parent": "c00116",
       "children": [],
       "settings": {
         "text": "FAQ",
         "tag": "p",
         "_cssGlobalClasses": [
-          "ggeye"
-        ]
+          "ggeyeb"
+        ],
+        "_typography": {
+          "color": {
+            "id": "rhefaq",
+            "raw": "var(--kachi-iro)",
+            "light": "#1f2b51"
+          }
+        }
       },
       "label": "Eyebrow: FAQ"
     },
     {
-      "id": "a00116",
+      "id": "c00118",
       "name": "heading",
-      "parent": "a00114",
+      "parent": "c00116",
       "children": [],
       "settings": {
         "text": "Accessories &amp; Fitter Kit — FAQ",
         "tag": "h2",
         "_cssGlobalClasses": [
           "ggh"
-        ]
+        ],
+        "_typography": {
+          "color": {
+            "id": "oehxwa",
+            "name": "",
+            "raw": "var(--kachi-iro-3)",
+            "light": "hsl(226 44.63% 45%)"
+          }
+        }
       },
-      "label": "h2: Accessories &amp; Fitter"
+      "label": "h2: Accessories &amp; Fitt"
     },
     {
-      "id": "a00117",
+      "id": "c00119",
       "name": "text-basic",
-      "parent": "a00114",
+      "parent": "c00116",
       "children": [],
       "settings": {
         "text": "Quick answers about compatibility, weights, lofts, tools, pricing and the Fitter Kit.",
         "tag": "p",
         "_cssGlobalClasses": [
           "gglead"
-        ]
+        ],
+        "_typography": {
+          "color": {
+            "id": "rhefaq",
+            "raw": "var(--kachi-iro)",
+            "light": "#1f2b51"
+          }
+        }
       },
       "label": "Text"
     },
     {
-      "id": "a00118",
+      "id": "c00120",
       "name": "block",
-      "parent": "a00113",
+      "parent": "c00115",
       "children": [
-        "a00119",
-        "a00122",
-        "a00125",
-        "a00128",
-        "a00131",
-        "a00134",
-        "a00137"
+        "c00121"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -1719,388 +2559,327 @@
       "label": "FAQ List"
     },
     {
-      "id": "a00119",
-      "name": "block",
-      "parent": "a00118",
-      "children": [
-        "a00120",
-        "a00121"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "ggcol"
-        ]
-      },
-      "label": "FAQ: Which GG accessory sho"
-    },
-    {
-      "id": "a00120",
-      "name": "heading",
-      "parent": "a00119",
+      "id": "c00121",
+      "name": "accordion",
+      "parent": "c00120",
       "children": [],
       "settings": {
-        "text": "Which GG accessory should I buy first?",
-        "tag": "h3",
-        "_cssGlobalClasses": [
-          "ggh"
-        ]
+        "accordions": [
+          {
+            "title": "Which GG accessory should I buy first?",
+            "content": "<p>For most players, extra weights (€21) give the biggest change to balance and feel; add clubfaces (€52) to adjust loft, and the torque wrench (€63) if you plan to adjust the putter yourself.</p>",
+            "id": "t00010"
+          },
+          {
+            "title": "How do the three weights change my putter?",
+            "content": "<p>The weights sit in three points and shift the head's balance: the 1.97 oz heavy weight adds stability for a straighter stroke, while the 1.19 oz light weight increases feel; the 1.48 oz medium sits in between.</p>",
+            "id": "t00011"
+          },
+          {
+            "title": "How many clubface lofts are available and why do they matter?",
+            "content": "<p>Clubfaces come in 1°, 2° and 3° (€52). A higher loft helps lift the ball into a smooth roll on slower greens; a lower loft keeps it firmer on fast surfaces.</p>",
+            "id": "t00012"
+          },
+          {
+            "title": "Can I adjust the putter myself, or do I need a fitter?",
+            "content": "<p>You can adjust weights and faces at home with the GG torque wrench (€63): loosen, reposition, swap the face, then tighten to spec. For a full fitting across models, use the Fitter Kit.</p>",
+            "id": "t00013"
+          },
+          {
+            "title": "Do the accessories fit both the Antares and the Orion?",
+            "content": "<p>Yes. The GG system is modular, so weights, clubfaces and necks are interchangeable between the Antares blade and the Orion mallet.</p>",
+            "id": "t00014"
+          },
+          {
+            "title": "What does the Fitter Kit include and who is it for?",
+            "content": "<p>The Fitter Kit is aimed at fitters, pro shops and club builders. It carries two heads (Antares and Orion), three lofts (1°–3°), a weights kit (2 heavy, 2 light), necks (lie and offset) and the tools to build any configuration.</p>",
+            "id": "t00015"
+          },
+          {
+            "title": "Are accessories under warranty and how fast do they ship?",
+            "content": "<p>GG accessories carry the same 2-year warranty as the putters and ship with BRT in Italy and FedEx worldwide, usually within 5–6 business days.</p>",
+            "id": "t00016"
+          }
+        ],
+        "titleTag": "h3",
+        "icon": {
+          "icon": "ion-ios-arrow-forward",
+          "library": "ionicons"
+        },
+        "iconExpanded": {
+          "icon": "ion-ios-arrow-down",
+          "library": "ionicons"
+        },
+        "transition": "333",
+        "titlePadding": {
+          "left": "15",
+          "right": "15"
+        },
+        "faqSchema": true,
+        "iconTypography": {
+          "color": {
+            "id": "daywbl",
+            "raw": "var(--champagne)",
+            "light": "#d4af37"
+          },
+          "font-size": "var(--text-l)"
+        },
+        "contentTypography": {
+          "color": {
+            "id": "rhefaq",
+            "raw": "var(--kachi-iro)",
+            "light": "#1f2b51"
+          }
+        },
+        "contentPadding": {
+          "left": "30",
+          "right": "30"
+        },
+        "contentBorder": {
+          "style": "solid",
+          "color": {
+            "id": "daywbl",
+            "raw": "var(--champagne)",
+            "light": "#d4af37"
+          },
+          "width": {
+            "top": "1",
+            "right": "1",
+            "bottom": "1",
+            "left": "1"
+          }
+        },
+        "titleActiveBorder": {
+          "width": {
+            "top": "2",
+            "right": "2",
+            "bottom": "2",
+            "left": "2"
+          },
+          "style": "solid",
+          "color": {
+            "id": "daywbl",
+            "raw": "var(--champagne)",
+            "light": "#d4af37"
+          },
+          "radius": {
+            "top": "7",
+            "right": "7",
+            "bottom": "7",
+            "left": "7"
+          }
+        },
+        "titleActiveTypography": {
+          "color": {
+            "id": "oehxwa",
+            "name": "",
+            "raw": "var(--kachi-iro-3)",
+            "light": "hsl(226 44.63% 45%)"
+          }
+        },
+        "titleTypography": {
+          "color": {
+            "id": "nndbjg",
+            "name": "",
+            "raw": "var(--kachi-iro-2)",
+            "light": "hsl(226 44.63% 33.48%)"
+          },
+          "text-align": "left",
+          "font-weight": "600"
+        },
+        "iconPosition": "left",
+        "_typography": {
+          "font-size": "var(--text-s)"
+        }
       },
-      "label": "h3: Which GG accessory shoul"
+      "label": "FAQ Accordion"
     },
     {
-      "id": "a00121",
-      "name": "text-basic",
-      "parent": "a00119",
-      "children": [],
-      "settings": {
-        "text": "For most players, extra weights (€21) give the biggest change to balance and feel; add clubfaces (€52) to adjust loft, and the torque wrench (€63) if you plan to adjust the putter yourself.",
-        "tag": "p"
-      },
-      "label": "Text"
-    },
-    {
-      "id": "a00122",
-      "name": "block",
-      "parent": "a00118",
-      "children": [
-        "a00123",
-        "a00124"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "ggcol"
-        ]
-      },
-      "label": "FAQ: How do the three weigh"
-    },
-    {
-      "id": "a00123",
-      "name": "heading",
-      "parent": "a00122",
-      "children": [],
-      "settings": {
-        "text": "How do the three weights change my putter?",
-        "tag": "h3",
-        "_cssGlobalClasses": [
-          "ggh"
-        ]
-      },
-      "label": "h3: How do the three weights"
-    },
-    {
-      "id": "a00124",
-      "name": "text-basic",
-      "parent": "a00122",
-      "children": [],
-      "settings": {
-        "text": "The weights sit in three points and shift the head's balance: the 1.97 oz heavy weight adds stability for a straighter stroke, while the 1.19 oz light weight increases feel; the 1.48 oz medium sits in between.",
-        "tag": "p"
-      },
-      "label": "Text"
-    },
-    {
-      "id": "a00125",
-      "name": "block",
-      "parent": "a00118",
-      "children": [
-        "a00126",
-        "a00127"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "ggcol"
-        ]
-      },
-      "label": "FAQ: How many clubface loft"
-    },
-    {
-      "id": "a00126",
-      "name": "heading",
-      "parent": "a00125",
-      "children": [],
-      "settings": {
-        "text": "How many clubface lofts are available and why do they matter?",
-        "tag": "h3",
-        "_cssGlobalClasses": [
-          "ggh"
-        ]
-      },
-      "label": "h3: How many clubface lofts "
-    },
-    {
-      "id": "a00127",
-      "name": "text-basic",
-      "parent": "a00125",
-      "children": [],
-      "settings": {
-        "text": "Clubfaces come in 1°, 2° and 3° (€52). A higher loft helps lift the ball into a smooth roll on slower greens; a lower loft keeps it firmer on fast surfaces.",
-        "tag": "p"
-      },
-      "label": "Text"
-    },
-    {
-      "id": "a00128",
-      "name": "block",
-      "parent": "a00118",
-      "children": [
-        "a00129",
-        "a00130"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "ggcol"
-        ]
-      },
-      "label": "FAQ: Can I adjust the putte"
-    },
-    {
-      "id": "a00129",
-      "name": "heading",
-      "parent": "a00128",
-      "children": [],
-      "settings": {
-        "text": "Can I adjust the putter myself, or do I need a fitter?",
-        "tag": "h3",
-        "_cssGlobalClasses": [
-          "ggh"
-        ]
-      },
-      "label": "h3: Can I adjust the putter "
-    },
-    {
-      "id": "a00130",
-      "name": "text-basic",
-      "parent": "a00128",
-      "children": [],
-      "settings": {
-        "text": "You can adjust weights and faces at home with the GG torque wrench (€63): loosen, reposition, swap the face, then tighten to spec. For a full fitting across models, use the Fitter Kit.",
-        "tag": "p"
-      },
-      "label": "Text"
-    },
-    {
-      "id": "a00131",
-      "name": "block",
-      "parent": "a00118",
-      "children": [
-        "a00132",
-        "a00133"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "ggcol"
-        ]
-      },
-      "label": "FAQ: Do the accessories fit"
-    },
-    {
-      "id": "a00132",
-      "name": "heading",
-      "parent": "a00131",
-      "children": [],
-      "settings": {
-        "text": "Do the accessories fit both the Antares and the Orion?",
-        "tag": "h3",
-        "_cssGlobalClasses": [
-          "ggh"
-        ]
-      },
-      "label": "h3: Do the accessories fit b"
-    },
-    {
-      "id": "a00133",
-      "name": "text-basic",
-      "parent": "a00131",
-      "children": [],
-      "settings": {
-        "text": "Yes. The GG system is modular, so weights, clubfaces and necks are interchangeable between the Antares blade and the Orion mallet.",
-        "tag": "p"
-      },
-      "label": "Text"
-    },
-    {
-      "id": "a00134",
-      "name": "block",
-      "parent": "a00118",
-      "children": [
-        "a00135",
-        "a00136"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "ggcol"
-        ]
-      },
-      "label": "FAQ: What does the Fitter K"
-    },
-    {
-      "id": "a00135",
-      "name": "heading",
-      "parent": "a00134",
-      "children": [],
-      "settings": {
-        "text": "What does the Fitter Kit include and who is it for?",
-        "tag": "h3",
-        "_cssGlobalClasses": [
-          "ggh"
-        ]
-      },
-      "label": "h3: What does the Fitter Kit"
-    },
-    {
-      "id": "a00136",
-      "name": "text-basic",
-      "parent": "a00134",
-      "children": [],
-      "settings": {
-        "text": "The Fitter Kit is aimed at fitters, pro shops and club builders. It carries two heads (Antares and Orion), three lofts (1°–3°), a weights kit (2 heavy, 2 light), necks (lie and offset) and the tools to build any configuration.",
-        "tag": "p"
-      },
-      "label": "Text"
-    },
-    {
-      "id": "a00137",
-      "name": "block",
-      "parent": "a00118",
-      "children": [
-        "a00138",
-        "a00139"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "ggcol"
-        ]
-      },
-      "label": "FAQ: Are accessories under "
-    },
-    {
-      "id": "a00138",
-      "name": "heading",
-      "parent": "a00137",
-      "children": [],
-      "settings": {
-        "text": "Are accessories under warranty and how fast do they ship?",
-        "tag": "h3",
-        "_cssGlobalClasses": [
-          "ggh"
-        ]
-      },
-      "label": "h3: Are accessories under wa"
-    },
-    {
-      "id": "a00139",
-      "name": "text-basic",
-      "parent": "a00137",
-      "children": [],
-      "settings": {
-        "text": "GG accessories carry the same 2-year warranty as the putters and ship with BRT in Italy and FedEx worldwide, usually within 5–6 business days.",
-        "tag": "p"
-      },
-      "label": "Text"
-    },
-    {
-      "id": "a00140",
+      "id": "c00122",
       "name": "section",
       "parent": 0,
       "children": [
-        "a00141"
+        "c00123"
       ],
       "settings": {
         "_cssGlobalClasses": [
           "ggsect"
         ],
-        "_cssId": "contact"
+        "_cssId": "contact",
+        "_gradient": {
+          "colors": [
+            {
+              "id": "g0001",
+              "color": {
+                "id": "gyxxbr",
+                "name": "",
+                "raw": "var(--slate-bright)",
+                "light": "hsl(218 30.79% 76.77%)"
+              }
+            },
+            {
+              "id": "g0002",
+              "color": {
+                "id": "oiksff",
+                "raw": "var(--platinum)",
+                "light": "#f7f6f8"
+              }
+            }
+          ]
+        }
       },
       "label": "Contact"
     },
     {
-      "id": "a00141",
+      "id": "c00123",
       "name": "container",
-      "parent": "a00140",
+      "parent": "c00122",
       "children": [
-        "a00142"
+        "c00124",
+        "c00128"
       ],
       "settings": {},
       "label": "Container"
     },
     {
-      "id": "a00142",
+      "id": "c00124",
       "name": "block",
-      "parent": "a00141",
+      "parent": "c00123",
       "children": [
-        "a00143",
-        "a00144",
-        "a00145",
-        "a00146"
+        "c00125",
+        "c00126",
+        "c00127"
       ],
       "settings": {
         "_cssGlobalClasses": [
           "gghead"
         ]
       },
-      "label": "Contact Content"
+      "label": "Header"
     },
     {
-      "id": "a00143",
+      "id": "c00125",
       "name": "heading",
-      "parent": "a00142",
+      "parent": "c00124",
       "children": [],
       "settings": {
         "text": "Need help choosing?",
         "tag": "p",
         "_cssGlobalClasses": [
-          "ggeye"
-        ]
+          "ggeyeb"
+        ],
+        "_typography": {
+          "color": {
+            "id": "rhefaq",
+            "raw": "var(--kachi-iro)",
+            "light": "#1f2b51"
+          }
+        }
       },
-      "label": "Eyebrow: Need help choosing"
+      "label": "Eyebrow: Need help choosi"
     },
     {
-      "id": "a00144",
+      "id": "c00126",
       "name": "heading",
-      "parent": "a00142",
+      "parent": "c00124",
       "children": [],
       "settings": {
         "text": "Talk to the GG Putters team",
         "tag": "h2",
         "_cssGlobalClasses": [
           "ggh"
-        ]
+        ],
+        "_typography": {
+          "color": {
+            "id": "nndbjg",
+            "name": "",
+            "raw": "var(--kachi-iro-2)",
+            "light": "hsl(226 44.63% 33.48%)"
+          }
+        }
       },
-      "label": "h2: Talk to the GG Putters t"
+      "label": "h2: Talk to the GG Putters"
     },
     {
-      "id": "a00145",
+      "id": "c00127",
       "name": "text-basic",
-      "parent": "a00142",
+      "parent": "c00124",
       "children": [],
       "settings": {
         "text": "Not sure which weights or face you need? Our team in Brescia will help you set up your putter.",
         "tag": "p",
         "_cssGlobalClasses": [
           "gglead"
-        ]
+        ],
+        "_typography": {
+          "color": {
+            "id": "rhefaq",
+            "raw": "var(--kachi-iro)",
+            "light": "#1f2b51"
+          }
+        }
       },
       "label": "Text"
     },
     {
-      "id": "a00146",
+      "id": "c00128",
       "name": "block",
-      "parent": "a00142",
+      "parent": "c00123",
       "children": [
-        "a00147",
-        "a00148"
+        "c00129",
+        "c00133",
+        "c00136"
       ],
       "settings": {
         "_cssGlobalClasses": [
-          "ggcta"
-        ]
+          "ggrow"
+        ],
+        "_direction": "row"
       },
-      "label": "Contact links"
+      "label": "Row"
     },
     {
-      "id": "a00147",
+      "id": "c00129",
+      "name": "block",
+      "parent": "c00128",
+      "children": [
+        "c00130",
+        "c00131",
+        "c00132"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "ggcol"
+        ]
+      },
+      "label": "Contact: Info &amp; Sales"
+    },
+    {
+      "id": "c00130",
+      "name": "heading",
+      "parent": "c00129",
+      "children": [],
+      "settings": {
+        "text": "Info &amp; Sales",
+        "tag": "h3",
+        "_cssGlobalClasses": [
+          "ggh"
+        ],
+        "_typography": {
+          "color": {
+            "id": "nndbjg",
+            "name": "",
+            "raw": "var(--kachi-iro-2)",
+            "light": "hsl(226 44.63% 33.48%)"
+          }
+        }
+      },
+      "label": "h3: Info &amp; Sales"
+    },
+    {
+      "id": "c00131",
       "name": "text-link",
-      "parent": "a00146",
+      "parent": "c00129",
       "children": [],
       "settings": {
         "text": "info@ggputters.com",
@@ -2115,9 +2894,9 @@
       "label": "Email"
     },
     {
-      "id": "a00148",
+      "id": "c00132",
       "name": "text-link",
-      "parent": "a00146",
+      "parent": "c00129",
       "children": [],
       "settings": {
         "text": "+39 331 1099739",
@@ -2132,38 +2911,189 @@
       "label": "Phone"
     },
     {
-      "id": "a00149",
+      "id": "c00133",
+      "name": "block",
+      "parent": "c00128",
+      "children": [
+        "c00134",
+        "c00135"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "ggcol"
+        ]
+      },
+      "label": "Contact: Office &amp; Dealers"
+    },
+    {
+      "id": "c00134",
+      "name": "heading",
+      "parent": "c00133",
+      "children": [],
+      "settings": {
+        "text": "Office &amp; Dealers",
+        "tag": "h3",
+        "_cssGlobalClasses": [
+          "ggh"
+        ],
+        "_typography": {
+          "color": {
+            "id": "nndbjg",
+            "name": "",
+            "raw": "var(--kachi-iro-2)",
+            "light": "hsl(226 44.63% 33.48%)"
+          }
+        }
+      },
+      "label": "h3: Office &amp; Dealers"
+    },
+    {
+      "id": "c00135",
+      "name": "text-link",
+      "parent": "c00133",
+      "children": [],
+      "settings": {
+        "text": "office@ggputters.com",
+        "link": {
+          "type": "external",
+          "url": "mailto:office@ggputters.com"
+        },
+        "_cssGlobalClasses": [
+          "gglink"
+        ]
+      },
+      "label": "Email"
+    },
+    {
+      "id": "c00136",
+      "name": "block",
+      "parent": "c00128",
+      "children": [
+        "c00137",
+        "c00138"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "ggcol"
+        ]
+      },
+      "label": "Contact: Headquarters"
+    },
+    {
+      "id": "c00137",
+      "name": "heading",
+      "parent": "c00136",
+      "children": [],
+      "settings": {
+        "text": "Headquarters",
+        "tag": "h3",
+        "_cssGlobalClasses": [
+          "ggh"
+        ],
+        "_typography": {
+          "color": {
+            "id": "nndbjg",
+            "name": "",
+            "raw": "var(--kachi-iro-2)",
+            "light": "hsl(226 44.63% 33.48%)"
+          }
+        }
+      },
+      "label": "h3: Headquarters"
+    },
+    {
+      "id": "c00138",
+      "name": "text-link",
+      "parent": "c00136",
+      "children": [],
+      "settings": {
+        "text": "Palazzolo sull'Oglio (BS), Italy",
+        "link": {
+          "type": "external",
+          "url": "https://shop.ggputters.com/contact/"
+        },
+        "_cssGlobalClasses": [
+          "gglink"
+        ]
+      },
+      "label": "Address"
+    },
+    {
+      "id": "c00139",
       "name": "section",
       "parent": 0,
       "children": [
-        "a00150"
+        "c00140"
       ],
       "settings": {
         "_cssGlobalClasses": [
           "ggsect"
-        ]
+        ],
+        "_gradient": {
+          "colors": [
+            {
+              "id": "g0003",
+              "color": {
+                "id": "ivivyf",
+                "name": "",
+                "raw": "var(--kachi-iro-6)",
+                "light": "hsl(226 44.63% 10.43%)",
+                "darkModeEnabled": true,
+                "dark": "hsl(226 44.62% 89.57%)"
+              }
+            },
+            {
+              "id": "g0004",
+              "color": {
+                "id": "rhefaq",
+                "raw": "var(--kachi-iro)",
+                "light": "#1f2b51"
+              }
+            },
+            {
+              "id": "g0005",
+              "color": {
+                "id": "ivivyf",
+                "name": "",
+                "raw": "var(--kachi-iro-6)",
+                "light": "hsl(226 44.63% 10.43%)",
+                "darkModeEnabled": true,
+                "dark": "hsl(226 44.62% 89.57%)"
+              }
+            }
+          ]
+        }
       },
       "label": "Footer"
     },
     {
-      "id": "a00150",
+      "id": "c00140",
       "name": "container",
-      "parent": "a00149",
+      "parent": "c00139",
       "children": [
-        "a00151"
+        "c00141"
       ],
-      "settings": {},
+      "settings": {
+        "_typography": {
+          "color": {
+            "id": "oiksff",
+            "raw": "var(--platinum)",
+            "light": "#f7f6f8"
+          }
+        }
+      },
       "label": "Container"
     },
     {
-      "id": "a00151",
+      "id": "c00141",
       "name": "block",
-      "parent": "a00150",
+      "parent": "c00140",
       "children": [
-        "a00152",
-        "a00153",
-        "a00154",
-        "a00155"
+        "c00142",
+        "c00143",
+        "c00144",
+        "c00145",
+        "c00146"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -2173,67 +3103,126 @@
       "label": "Footer Content"
     },
     {
-      "id": "a00152",
+      "id": "c00142",
       "name": "heading",
-      "parent": "a00151",
+      "parent": "c00141",
       "children": [],
       "settings": {
         "text": "GG Putters",
         "tag": "p",
         "_cssGlobalClasses": [
-          "ggeye"
-        ]
+          "ggeyeb"
+        ],
+        "_typography": {
+          "color": {
+            "id": "daywbl",
+            "raw": "var(--champagne)",
+            "light": "#d4af37"
+          }
+        }
       },
       "label": "Brand"
     },
     {
-      "id": "a00153",
+      "id": "c00143",
+      "name": "image",
+      "parent": "c00141",
+      "children": [],
+      "settings": {
+        "image": {
+          "id": 79,
+          "filename": "logo-gg-gold.svg",
+          "size": "full",
+          "full": "https://ggputters.com/shop/wp-content/uploads/2026/06/logo-gg-gold.svg",
+          "url": "https://ggputters.com/shop/wp-content/uploads/2026/06/logo-gg-gold.svg"
+        },
+        "_cssGlobalClasses": [
+          "ggimg"
+        ],
+        "_heightMax": "7vh"
+      },
+      "label": "Footer Logo"
+    },
+    {
+      "id": "c00144",
       "name": "text-basic",
-      "parent": "a00151",
+      "parent": "c00141",
       "children": [],
       "settings": {
         "text": "Italian craft, Brescia engineering. Putters with a metalworking soul.",
-        "tag": "p"
+        "tag": "p",
+        "_typography": {
+          "color": {
+            "id": "daywbl",
+            "raw": "var(--champagne)",
+            "light": "#d4af37"
+          }
+        }
       },
       "label": "Text"
     },
     {
-      "id": "a00154",
+      "id": "c00145",
       "name": "text-basic",
-      "parent": "a00151",
+      "parent": "c00141",
       "children": [],
       "settings": {
         "text": "GG PUTTERS is a brand of GM PRODUCTION srl · VAT IT03351530989 · Palazzolo sull'Oglio (BS), Italy",
-        "tag": "p"
+        "tag": "p",
+        "_typography": {
+          "color": {
+            "id": "daywbl",
+            "raw": "var(--champagne)",
+            "light": "#d4af37"
+          }
+        }
       },
       "label": "Text"
     },
     {
-      "id": "a00155",
+      "id": "c00146",
       "name": "text-basic",
-      "parent": "a00151",
+      "parent": "c00141",
       "children": [],
       "settings": {
         "text": "© 2026 GG Putters. All rights reserved.",
-        "tag": "p"
+        "tag": "p",
+        "_typography": {
+          "color": {
+            "id": "daywbl",
+            "raw": "var(--champagne)",
+            "light": "#d4af37"
+          }
+        }
       },
       "label": "Text"
     }
   ],
+  "templateType": "section",
   "pageSettings": {
     "pageTitle": "Putter Accessories, Spare Parts & Fitter Kit | GG Putters",
     "metaDescription": "GG Putters accessories: interchangeable clubfaces (1°–3°), adjustable weights (1.19–1.97 oz), covers, spare parts and the torque wrench, from €21 to €149. Compatible with Antares and Orion. Professional Fitter Kit available.",
-    "customCss": ":where(a,button,input,textarea,select,summary,[tabindex]):focus-visible{outline:3px solid currentColor;outline-offset:3px;}[id]{scroll-margin-top:1.5rem;}img{max-width:100%;height:auto;}@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important;}}",
-    "customScriptsHeader": "<link rel=\"canonical\" href=\"https://shop.ggputters.com/accessories/\"><meta name=\"robots\" content=\"index,follow,max-image-preview:large\"><meta name=\"description\" content=\"GG Putters accessories: interchangeable clubfaces (1°–3°), adjustable weights (1.19–1.97 oz), covers, spare parts and the torque wrench, from €21 to €149. Compatible with Antares and Orion. Professional Fitter Kit available.\"><meta property=\"og:type\" content=\"website\"><meta property=\"og:site_name\" content=\"GG Putters\"><meta property=\"og:title\" content=\"Putter Accessories, Spare Parts & Fitter Kit | GG Putters\"><meta property=\"og:description\" content=\"GG Putters accessories: interchangeable clubfaces (1°–3°), adjustable weights (1.19–1.97 oz), covers, spare parts and the torque wrench, from €21 to €149. Compatible with Antares and Orion. Professional Fitter Kit available.\"><meta property=\"og:url\" content=\"https://shop.ggputters.com/accessories/\"><meta property=\"og:image\" content=\"https://shop.ggputters.com/wp-content/uploads/gg-accessories-og.jpg\"><meta property=\"og:locale\" content=\"en_US\"><meta name=\"twitter:card\" content=\"summary_large_image\"><meta name=\"twitter:title\" content=\"Putter Accessories, Spare Parts & Fitter Kit | GG Putters\"><meta name=\"twitter:description\" content=\"GG Putters accessories: interchangeable clubfaces (1°–3°), adjustable weights (1.19–1.97 oz), covers, spare parts and the torque wrench, from €21 to €149. Compatible with Antares and Orion. Professional Fitter Kit available.\"><meta name=\"twitter:image\" content=\"https://shop.ggputters.com/wp-content/uploads/gg-accessories-og.jpg\"><script type=\"application/ld+json\">{\"@context\": \"https://schema.org\", \"@graph\": [{\"@type\": \"Organization\", \"@id\": \"https://shop.ggputters.com/#organization\", \"name\": \"GG Putters\", \"legalName\": \"GM PRODUCTION srl\", \"url\": \"https://shop.ggputters.com/\", \"vatID\": \"IT03351530989\", \"email\": \"info@ggputters.com\", \"telephone\": \"+39 331 1099739\", \"address\": {\"@type\": \"PostalAddress\", \"streetAddress\": \"Via Taranto, 7\", \"addressLocality\": \"Palazzolo sull'Oglio\", \"addressRegion\": \"BS\", \"postalCode\": \"25036\", \"addressCountry\": \"IT\"}}, {\"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://shop.ggputters.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Accessories\", \"item\": \"https://shop.ggputters.com/accessories/\"}]}, {\"@type\": \"CollectionPage\", \"@id\": \"https://shop.ggputters.com/accessories/#webpage\", \"url\": \"https://shop.ggputters.com/accessories/\", \"name\": \"Putter Accessories, Spare Parts & Fitter Kit | GG Putters\", \"description\": \"GG Putters accessories: interchangeable clubfaces (1°–3°), adjustable weights (1.19–1.97 oz), covers, spare parts and the torque wrench, from €21 to €149. Compatible with Antares and Orion. Professional Fitter Kit available.\", \"isPartOf\": {\"@id\": \"https://shop.ggputters.com/#organization\"}}, {\"@type\": \"ItemList\", \"name\": \"GG Putters Accessories\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"item\": {\"@type\": \"Product\", \"name\": \"GG Clubfaces\", \"brand\": {\"@type\": \"Brand\", \"name\": \"GG Putters\"}, \"category\": \"Golf Putter Accessory\", \"description\": \"Clubfaces are interchangeable milled face inserts that change the loft and feel of a GG putter. Swapping the insert lets you tune roll and sound without buying a new putter: a higher degree adds forward loft for slower greens, a lower degree keeps the ball firmer on fast surfaces.\", \"url\": \"https://shop.ggputters.com/putters/clubfaces/\", \"isAccessoryOrSparePartFor\": [{\"@type\": \"Product\", \"name\": \"GG Antares\", \"url\": \"https://shop.ggputters.com/putters/antares/\"}, {\"@type\": \"Product\", \"name\": \"GG Orion\", \"url\": \"https://shop.ggputters.com/putters/orion/\"}], \"offers\": {\"@type\": \"Offer\", \"price\": \"52.00\", \"priceCurrency\": \"EUR\", \"availability\": \"https://schema.org/InStock\", \"url\": \"https://shop.ggputters.com/putters/clubfaces/\", \"priceValidUntil\": \"2026-12-31\"}}}, {\"@type\": \"ListItem\", \"position\": 2, \"item\": {\"@type\": \"Product\", \"name\": \"GG Extra Weights\", \"brand\": {\"@type\": \"Brand\", \"name\": \"GG Putters\"}, \"category\": \"Golf Putter Accessory\", \"description\": \"Extra weights are swappable head weights for the three-position balance system. Moving weight changes the balance point and the natural arc of your stroke: heavier weights add stability, lighter weights increase feel. Bullet and flat shapes suit different placements.\", \"url\": \"https://shop.ggputters.com/putters/extra-weights/\", \"isAccessoryOrSparePartFor\": [{\"@type\": \"Product\", \"name\": \"GG Antares\", \"url\": \"https://shop.ggputters.com/putters/antares/\"}, {\"@type\": \"Product\", \"name\": \"GG Orion\", \"url\": \"https://shop.ggputters.com/putters/orion/\"}], \"offers\": {\"@type\": \"Offer\", \"price\": \"21.00\", \"priceCurrency\": \"EUR\", \"availability\": \"https://schema.org/InStock\", \"url\": \"https://shop.ggputters.com/putters/extra-weights/\", \"priceValidUntil\": \"2026-12-31\"}}}, {\"@type\": \"ListItem\", \"position\": 3, \"item\": {\"@type\": \"Product\", \"name\": \"GG Putter Cover\", \"brand\": {\"@type\": \"Brand\", \"name\": \"GG Putters\"}, \"category\": \"Golf Putter Accessory\", \"description\": \"A putter cover is a fitted headcover that protects the milled head in the bag and in storage. It shields the face insert and the head edges from knocks, bag rash and moisture, preserving the anodized finish between rounds.\", \"url\": \"https://shop.ggputters.com/putters/putter-covers/\", \"isAccessoryOrSparePartFor\": [{\"@type\": \"Product\", \"name\": \"GG Antares\", \"url\": \"https://shop.ggputters.com/putters/antares/\"}, {\"@type\": \"Product\", \"name\": \"GG Orion\", \"url\": \"https://shop.ggputters.com/putters/orion/\"}], \"offers\": {\"@type\": \"Offer\", \"price\": \"32.00\", \"priceCurrency\": \"EUR\", \"availability\": \"https://schema.org/InStock\", \"url\": \"https://shop.ggputters.com/putters/putter-covers/\", \"priceValidUntil\": \"2026-12-31\"}}}, {\"@type\": \"ListItem\", \"position\": 4, \"item\": {\"@type\": \"Product\", \"name\": \"GG Spare Parts Kit\", \"brand\": {\"@type\": \"Brand\", \"name\": \"GG Putters\"}, \"category\": \"Golf Putter Accessory\", \"description\": \"The spare parts kit is a complete set of replacement hardware for your GG putter. It bundles the small components most likely to wear or get lost, so your putter stays serviceable for years and you are never off the green waiting on a single screw.\", \"url\": \"https://shop.ggputters.com/putters/spare-parts-kit/\", \"isAccessoryOrSparePartFor\": [{\"@type\": \"Product\", \"name\": \"GG Antares\", \"url\": \"https://shop.ggputters.com/putters/antares/\"}, {\"@type\": \"Product\", \"name\": \"GG Orion\", \"url\": \"https://shop.ggputters.com/putters/orion/\"}], \"offers\": {\"@type\": \"Offer\", \"price\": \"149.00\", \"priceCurrency\": \"EUR\", \"availability\": \"https://schema.org/InStock\", \"url\": \"https://shop.ggputters.com/putters/spare-parts-kit/\", \"priceValidUntil\": \"2026-12-31\"}}}, {\"@type\": \"ListItem\", \"position\": 5, \"item\": {\"@type\": \"Product\", \"name\": \"GG Torque Wrench\", \"brand\": {\"@type\": \"Brand\", \"name\": \"GG Putters\"}, \"category\": \"Golf Putter Accessory\", \"description\": \"The torque wrench is a precision tool that tightens weights and faces to the correct, repeatable spec. Setting each component to the right torque prevents loosening during play and protects the threads, so every adjustment is secure and consistent.\", \"url\": \"https://shop.ggputters.com/putters/torque-wrench/\", \"isAccessoryOrSparePartFor\": [{\"@type\": \"Product\", \"name\": \"GG Antares\", \"url\": \"https://shop.ggputters.com/putters/antares/\"}, {\"@type\": \"Product\", \"name\": \"GG Orion\", \"url\": \"https://shop.ggputters.com/putters/orion/\"}], \"offers\": {\"@type\": \"Offer\", \"price\": \"63.00\", \"priceCurrency\": \"EUR\", \"availability\": \"https://schema.org/InStock\", \"url\": \"https://shop.ggputters.com/putters/torque-wrench/\", \"priceValidUntil\": \"2026-12-31\"}}}]}, {\"@type\": \"Product\", \"name\": \"GG Putters Fitter Kit\", \"brand\": {\"@type\": \"Brand\", \"name\": \"GG Putters\"}, \"category\": \"Golf Fitting Kit\", \"url\": \"https://shop.ggputters.com/for-fitters/\", \"description\": \"Modular fitting kit for professionals: 2 heads (Antares and Orion), 3 lofts (1°–3°), weights kit, necks (lie/offset) and tools.\"}, {\"@type\": \"HowTo\", \"name\": \"How to customize your GG putter\", \"description\": \"Rebalance the head and change the face of a GG putter using the torque wrench, weights and clubfaces.\", \"tool\": [{\"@type\": \"HowToTool\", \"name\": \"GG torque wrench\"}], \"supply\": [{\"@type\": \"HowToSupply\", \"name\": \"GG weights (1.19/1.48/1.97 oz)\"}, {\"@type\": \"HowToSupply\", \"name\": \"GG clubfaces (1°–3°)\"}], \"step\": [{\"@type\": \"HowToStep\", \"position\": 1, \"name\": \"Loosen the weight screws\", \"text\": \"Loosen the three weight screws using the GG torque wrench.\"}, {\"@type\": \"HowToStep\", \"position\": 2, \"name\": \"Position the three weights\", \"text\": \"Place the weights across the three points to match your stroke arc — light 1.19 oz, medium 1.48 oz, heavy 1.97 oz.\"}, {\"@type\": \"HowToStep\", \"position\": 3, \"name\": \"Set loft and feel\", \"text\": \"Swap the clubface insert (1°–3°) to dial in your preferred loft and feel.\"}, {\"@type\": \"HowToStep\", \"position\": 4, \"name\": \"Tighten to spec\", \"text\": \"Tighten everything back to the correct torque with the wrench.\"}]}, {\"@type\": \"FAQPage\", \"@id\": \"https://shop.ggputters.com/accessories/#faq\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"Which GG accessory should I buy first?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"For most players, extra weights (€21) give the biggest change to balance and feel; add clubfaces (€52) to adjust loft, and the torque wrench (€63) if you plan to adjust the putter yourself.\"}}, {\"@type\": \"Question\", \"name\": \"How do the three weights change my putter?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"The weights sit in three points and shift the head's balance: the 1.97 oz heavy weight adds stability for a straighter stroke, while the 1.19 oz light weight increases feel; the 1.48 oz medium sits in between.\"}}, {\"@type\": \"Question\", \"name\": \"How many clubface lofts are available and why do they matter?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Clubfaces come in 1°, 2° and 3° (€52). A higher loft helps lift the ball into a smooth roll on slower greens; a lower loft keeps it firmer on fast surfaces.\"}}, {\"@type\": \"Question\", \"name\": \"Can I adjust the putter myself, or do I need a fitter?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"You can adjust weights and faces at home with the GG torque wrench (€63): loosen, reposition, swap the face, then tighten to spec. For a full fitting across models, use the Fitter Kit.\"}}, {\"@type\": \"Question\", \"name\": \"Do the accessories fit both the Antares and the Orion?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Yes. The GG system is modular, so weights, clubfaces and necks are interchangeable between the Antares blade and the Orion mallet.\"}}, {\"@type\": \"Question\", \"name\": \"What does the Fitter Kit include and who is it for?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"The Fitter Kit is aimed at fitters, pro shops and club builders. It carries two heads (Antares and Orion), three lofts (1°–3°), a weights kit (2 heavy, 2 light), necks (lie and offset) and the tools to build any configuration.\"}}, {\"@type\": \"Question\", \"name\": \"Are accessories under warranty and how fast do they ship?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"GG accessories carry the same 2-year warranty as the putters and ship with BRT in Italy and FedEx worldwide, usually within 5–6 business days.\"}}]}]}</script>"
-  },
-  "templateSettings": {
-    "templateConditions": [
-      {
-        "main": "any"
-      }
-    ]
+    "customScriptsHeader": "<link rel=\"canonical\" href=\"https://shop.ggputters.com/accessories/\"><meta name=\"robots\" content=\"index,follow,max-image-preview:large\"><meta name=\"description\" content=\"GG Putters accessories: interchangeable clubfaces (1°–3°), adjustable weights (1.19–1.97 oz), covers, spare parts and the torque wrench, from €21 to €149. Compatible with Antares and Orion. Professional Fitter Kit available.\"><meta property=\"og:type\" content=\"website\"><meta property=\"og:site_name\" content=\"GG Putters\"><meta property=\"og:title\" content=\"Putter Accessories, Spare Parts & Fitter Kit | GG Putters\"><meta property=\"og:description\" content=\"GG Putters accessories: interchangeable clubfaces (1°–3°), adjustable weights (1.19–1.97 oz), covers, spare parts and the torque wrench, from €21 to €149. Compatible with Antares and Orion. Professional Fitter Kit available.\"><meta property=\"og:url\" content=\"https://shop.ggputters.com/accessories/\"><meta property=\"og:image\" content=\"https://ggputters.com/shop/wp-content/uploads/2026/06/logo-gg-gold.svg\"><meta name=\"twitter:card\" content=\"summary_large_image\"><meta name=\"twitter:title\" content=\"Putter Accessories, Spare Parts & Fitter Kit | GG Putters\"><meta name=\"twitter:description\" content=\"GG Putters accessories: interchangeable clubfaces (1°–3°), adjustable weights (1.19–1.97 oz), covers, spare parts and the torque wrench, from €21 to €149. Compatible with Antares and Orion. Professional Fitter Kit available.\"><script type=\"application/ld+json\">{\"@context\": \"https://schema.org\", \"@graph\": [{\"@type\": \"Organization\", \"@id\": \"https://shop.ggputters.com/#organization\", \"name\": \"GG Putters\", \"legalName\": \"GM PRODUCTION srl\", \"url\": \"https://shop.ggputters.com/\", \"vatID\": \"IT03351530989\", \"email\": \"info@ggputters.com\", \"telephone\": \"+39 331 1099739\", \"address\": {\"@type\": \"PostalAddress\", \"streetAddress\": \"Via Taranto, 7\", \"addressLocality\": \"Palazzolo sull'Oglio\", \"addressRegion\": \"BS\", \"postalCode\": \"25036\", \"addressCountry\": \"IT\"}}, {\"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://shop.ggputters.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Accessories\", \"item\": \"https://shop.ggputters.com/accessories/\"}]}, {\"@type\": \"CollectionPage\", \"@id\": \"https://shop.ggputters.com/accessories/#webpage\", \"url\": \"https://shop.ggputters.com/accessories/\", \"name\": \"Putter Accessories, Spare Parts & Fitter Kit | GG Putters\", \"description\": \"GG Putters accessories: interchangeable clubfaces (1°–3°), adjustable weights (1.19–1.97 oz), covers, spare parts and the torque wrench, from €21 to €149. Compatible with Antares and Orion. Professional Fitter Kit available.\", \"isPartOf\": {\"@id\": \"https://shop.ggputters.com/#organization\"}}, {\"@type\": \"ItemList\", \"name\": \"GG Putters Accessories\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"item\": {\"@type\": \"Product\", \"name\": \"GG Clubfaces\", \"brand\": {\"@type\": \"Brand\", \"name\": \"GG Putters\"}, \"category\": \"Golf Putter Accessory\", \"description\": \"Clubfaces are interchangeable milled face inserts that change the loft and feel of a GG putter. Swap the insert to tune roll and sound without buying a new putter: a higher degree adds forward loft for slower greens, a lower degree keeps the ball firmer on fast surfaces.\", \"url\": \"https://shop.ggputters.com/putters/clubfaces/\", \"isAccessoryOrSparePartFor\": [{\"@type\": \"Product\", \"name\": \"GG Antares\", \"url\": \"https://shop.ggputters.com/putters/antares/\"}, {\"@type\": \"Product\", \"name\": \"GG Orion\", \"url\": \"https://shop.ggputters.com/putters/orion/\"}], \"offers\": {\"@type\": \"Offer\", \"price\": \"52.00\", \"priceCurrency\": \"EUR\", \"availability\": \"https://schema.org/InStock\", \"url\": \"https://shop.ggputters.com/putters/clubfaces/\", \"priceValidUntil\": \"2026-12-31\"}}}, {\"@type\": \"ListItem\", \"position\": 2, \"item\": {\"@type\": \"Product\", \"name\": \"GG Extra Weights\", \"brand\": {\"@type\": \"Brand\", \"name\": \"GG Putters\"}, \"category\": \"Golf Putter Accessory\", \"description\": \"Extra weights are swappable head weights for the three-position balance system. Moving weight changes the balance point and the natural arc of your stroke: heavier weights add stability, lighter weights increase feel. Bullet and flat shapes suit different placements.\", \"url\": \"https://shop.ggputters.com/putters/extra-weights/\", \"isAccessoryOrSparePartFor\": [{\"@type\": \"Product\", \"name\": \"GG Antares\", \"url\": \"https://shop.ggputters.com/putters/antares/\"}, {\"@type\": \"Product\", \"name\": \"GG Orion\", \"url\": \"https://shop.ggputters.com/putters/orion/\"}], \"offers\": {\"@type\": \"Offer\", \"price\": \"21.00\", \"priceCurrency\": \"EUR\", \"availability\": \"https://schema.org/InStock\", \"url\": \"https://shop.ggputters.com/putters/extra-weights/\", \"priceValidUntil\": \"2026-12-31\"}}}, {\"@type\": \"ListItem\", \"position\": 3, \"item\": {\"@type\": \"Product\", \"name\": \"GG Putter Cover\", \"brand\": {\"@type\": \"Brand\", \"name\": \"GG Putters\"}, \"category\": \"Golf Putter Accessory\", \"description\": \"A putter cover is a fitted headcover that protects the milled head in the bag and in storage. It shields the face insert and the head edges from knocks, bag rash and moisture, preserving the anodized finish between rounds.\", \"url\": \"https://shop.ggputters.com/putters/putter-covers/\", \"isAccessoryOrSparePartFor\": [{\"@type\": \"Product\", \"name\": \"GG Antares\", \"url\": \"https://shop.ggputters.com/putters/antares/\"}, {\"@type\": \"Product\", \"name\": \"GG Orion\", \"url\": \"https://shop.ggputters.com/putters/orion/\"}], \"offers\": {\"@type\": \"Offer\", \"price\": \"32.00\", \"priceCurrency\": \"EUR\", \"availability\": \"https://schema.org/InStock\", \"url\": \"https://shop.ggputters.com/putters/putter-covers/\", \"priceValidUntil\": \"2026-12-31\"}}}, {\"@type\": \"ListItem\", \"position\": 4, \"item\": {\"@type\": \"Product\", \"name\": \"GG Spare Parts Kit\", \"brand\": {\"@type\": \"Brand\", \"name\": \"GG Putters\"}, \"category\": \"Golf Putter Accessory\", \"description\": \"The spare parts kit is a complete set of replacement hardware for your GG putter. It bundles the small components most likely to wear or get lost, so your putter stays serviceable for years and you are never off the green waiting on a single screw.\", \"url\": \"https://shop.ggputters.com/putters/spare-parts-kit/\", \"isAccessoryOrSparePartFor\": [{\"@type\": \"Product\", \"name\": \"GG Antares\", \"url\": \"https://shop.ggputters.com/putters/antares/\"}, {\"@type\": \"Product\", \"name\": \"GG Orion\", \"url\": \"https://shop.ggputters.com/putters/orion/\"}], \"offers\": {\"@type\": \"Offer\", \"price\": \"149.00\", \"priceCurrency\": \"EUR\", \"availability\": \"https://schema.org/InStock\", \"url\": \"https://shop.ggputters.com/putters/spare-parts-kit/\", \"priceValidUntil\": \"2026-12-31\"}}}, {\"@type\": \"ListItem\", \"position\": 5, \"item\": {\"@type\": \"Product\", \"name\": \"GG Torque Wrench\", \"brand\": {\"@type\": \"Brand\", \"name\": \"GG Putters\"}, \"category\": \"Golf Putter Accessory\", \"description\": \"The torque wrench is a precision tool that tightens weights and faces to the correct, repeatable spec. Setting each component to the right torque prevents loosening during play and protects the threads, so every adjustment is secure and consistent.\", \"url\": \"https://shop.ggputters.com/putters/torque-wrench/\", \"isAccessoryOrSparePartFor\": [{\"@type\": \"Product\", \"name\": \"GG Antares\", \"url\": \"https://shop.ggputters.com/putters/antares/\"}, {\"@type\": \"Product\", \"name\": \"GG Orion\", \"url\": \"https://shop.ggputters.com/putters/orion/\"}], \"offers\": {\"@type\": \"Offer\", \"price\": \"63.00\", \"priceCurrency\": \"EUR\", \"availability\": \"https://schema.org/InStock\", \"url\": \"https://shop.ggputters.com/putters/torque-wrench/\", \"priceValidUntil\": \"2026-12-31\"}}}]}, {\"@type\": \"Product\", \"name\": \"GG Putters Fitter Kit\", \"brand\": {\"@type\": \"Brand\", \"name\": \"GG Putters\"}, \"category\": \"Golf Fitting Kit\", \"url\": \"https://shop.ggputters.com/for-fitters/\", \"description\": \"Modular fitting kit for professionals: 2 heads (Antares and Orion), 3 lofts (1°–3°), weights kit, necks (lie/offset) and tools.\"}, {\"@type\": \"HowTo\", \"name\": \"How to customize your GG putter\", \"description\": \"Rebalance the head and change the face of a GG putter using the torque wrench, weights and clubfaces.\", \"tool\": [{\"@type\": \"HowToTool\", \"name\": \"GG torque wrench\"}], \"supply\": [{\"@type\": \"HowToSupply\", \"name\": \"GG weights (1.19/1.48/1.97 oz)\"}, {\"@type\": \"HowToSupply\", \"name\": \"GG clubfaces (1°–3°)\"}], \"step\": [{\"@type\": \"HowToStep\", \"position\": 1, \"name\": \"Loosen the weight screws\", \"text\": \"Loosen the three weight screws using the GG torque wrench.\"}, {\"@type\": \"HowToStep\", \"position\": 2, \"name\": \"Position the three weights\", \"text\": \"Place the weights across the three points to match your stroke arc — light 1.19 oz, medium 1.48 oz, heavy 1.97 oz.\"}, {\"@type\": \"HowToStep\", \"position\": 3, \"name\": \"Set loft and feel\", \"text\": \"Swap the clubface insert (1°–3°) to dial in your preferred loft and feel.\"}, {\"@type\": \"HowToStep\", \"position\": 4, \"name\": \"Tighten to spec\", \"text\": \"Tighten everything back to the correct torque with the wrench.\"}]}]}</script>"
   },
   "global_classes": [
+    {
+      "id": "ggeyeb",
+      "name": "gg-eyebrow",
+      "settings": {
+        "_typography": {
+          "text-transform": "uppercase",
+          "letter-spacing": "0.18em",
+          "font-weight": "600"
+        }
+      }
+    },
+    {
+      "id": "gglead",
+      "name": "gg-lead",
+      "settings": {
+        "_widthMax": "65ch"
+      }
+    },
     {
       "id": "ggsect",
       "name": "gg-section",
@@ -2317,24 +3306,6 @@
       }
     },
     {
-      "id": "ggeye",
-      "name": "gg-eyebrow",
-      "settings": {
-        "_typography": {
-          "text-transform": "uppercase",
-          "letter-spacing": "0.18em",
-          "font-weight": "600"
-        }
-      }
-    },
-    {
-      "id": "gglead",
-      "name": "gg-lead",
-      "settings": {
-        "_widthMax": "65ch"
-      }
-    },
-    {
       "id": "ggimg",
       "name": "gg-img",
       "settings": {
@@ -2367,9 +3338,5 @@
         }
       }
     }
-  ],
-  "globalElements": [],
-  "globalVariables": [],
-  "globalVariablesCategories": [],
-  "version": "2.3.6"
+  ]
 }

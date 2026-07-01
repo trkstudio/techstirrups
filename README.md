@@ -24,7 +24,13 @@ Costruita dalle sezioni **Accessories** e **Fitter Kit**, con una **Head SEO/GEO
 descrizione d'uso + specifiche; in più una **tabella semantica `<table>`** "at a glance",
 una **guida all'acquisto** ("Which accessory do you need?"), un Fitter Kit riscritto per
 i fitter/pro shop, e FAQ specifiche. Dati concreti: pesi 1.19/1.48/1.97 oz, lofts 1°–3°,
-prezzi €21–€149. Stesso stile della landing: **nessun colore**, layout **Flex fluido**, accessibilità.
+prezzi €21–€149.
+
+**Adattata allo stile della `gg-home` rifinita online**: usa la palette del sito
+(`--champagne`, `--kachi-iro*`, `--platinum`, `--slate-bright`), card con box-shadow
+champagne + radius/padding 14, icone ionicons/themify, **FAQ come elemento `accordion`**
+(con `faqSchema`), sfondi immagine/gradiente. **Riusa le classi globali già importate**
+(referenziate per id, non ridefinite) ed esporta come `type: section` come la home.
 
 ## Come importare in Bricks
 
